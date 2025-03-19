@@ -1,0 +1,493 @@
+Example Number,Gorgias Code
+1,"rule(r1, attend_concert, []) :- rainy_day.
+rule(r2, visit_doctor, []) :- rainy_day.
+rule(p1, prefer(r1, r2), [])."
+2,"rule(r1, morning_run, []) :- invitation_from_friend.
+rule(r2, reply_emails, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- holiday_season.
+rule(c3, prefer(c2, c1), [])."
+3,"rule(r1, morning_run, []) :- important_meeting.
+rule(r2, finish_report, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- birthday_today.
+rule(c3, prefer(c2, c1), [])."
+4,"rule(r1, ride_bike, []) :- new_restaurant_to_try.
+rule(r2, go_to(restaurant), []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), [])."
+5,"rule(r1, visit_doctor, []) :- discount_on_flight.
+rule(r2, yoga_session, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), [])."
+6,"rule(r1, give_presentation, []) :- hot_day.
+rule(r2, read_book, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- medical_appointmentgood_weather.
+rule(c1, prefer(p2, p1), [])."
+7,"rule(r1, go_to(theater), []) :- friend_in_town.
+rule(r2, go_to(cinema), []) :- friend_in_town.
+rule(p1, prefer(r1, r2), [])."
+8,"rule(r1, go_to(park), []) :- urgent_deadline.
+rule(r2, finish_report, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), [])."
+9,"rule(r1, visit_doctor, []) :- birthday_today.
+rule(r2, travel_abroad, []) :- birthday_today.
+rule(p1, prefer(r1, r2), [])."
+10,"rule(r1, visit_family, []) :- low_budget.
+rule(r2, reply_emails, []) :- low_budget.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), [])."
+11,"rule(r1, cook_dinner, []) :- expensive_event.
+rule(r2, visit_family, []) :- expensive_event.
+rule(p1, prefer(r1, r2), [])."
+12,"rule(r1, travel_abroad, []) :- new_restaurant_to_try.
+rule(r2, finish_report, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- important_meeting.
+rule(c1, prefer(p2, p1), [])."
+13,"rule(r1, cook_dinner, []) :- urgent_deadline.
+rule(r2, travel_abroad, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- hot_day.
+rule(c3, prefer(c2, c1), [])."
+14,"rule(r1, cook_dinner, []) :- medical_appointmentgood_weather.
+rule(r2, go_to(theater), []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), [])."
+15,"rule(r1, give_presentation, []) :- holiday_season.
+rule(r2, book_flight, []) :- holiday_season.
+rule(p1, prefer(r1, r2), [])."
+16,"rule(r1, go_to(restaurant), []) :- medical_appointmentgood_weather.
+rule(r2, finish_report, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), [])."
+17,"rule(r1, attend_concert, []) :- invitation_from_friend.
+rule(r2, reply_emails, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), [])."
+18,"rule(r1, finish_report, []) :- snowstorm.
+rule(r2, attend_concert, []) :- snowstorm.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), [])."
+19,"rule(r1, reply_emails, []) :- urgent_deadline.
+rule(r2, buy_groceries, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), [])."
+20,"rule(r1, buy_groceries, []) :- weekend.
+rule(r2, go_to(cinema), []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), [])."
+21,"rule(r1, read_book, []) :- important_meeting.
+rule(r2, attend_concert, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- weekend.
+rule(c3, prefer(c2, c1), [])."
+22,"rule(r1, reply_emails, []) :- holiday_season.
+rule(r2, visit_doctor, []) :- holiday_season.
+rule(p1, prefer(r1, r2), [])."
+23,"rule(r1, go_shopping, []) :- invitation_from_friend.
+rule(r2, buy_groceries, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), [])."
+24,"rule(r1, give_presentation, []) :- boss_in_office.
+rule(r2, visit_family, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- concert_nearby.
+rule(c3, prefer(c2, c1), [])."
+25,"rule(r1, drive_car, []) :- boss_in_office.
+rule(r2, cook_dinner, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), [])."
+26,"rule(r1, drive_car, []) :- night_time.
+rule(r2, attend_concert, []) :- night_time.
+rule(p1, prefer(r1, r2), [])."
+27,"rule(r1, go_shopping, []) :- birthday_today.
+rule(r2, clean_house, []) :- birthday_today.
+rule(p1, prefer(r1, r2), [])."
+28,"rule(r1, ride_bike, []) :- holiday_season.
+rule(r2, go_to(theater), []) :- holiday_season.
+rule(p1, prefer(r1, r2), [])."
+29,"rule(r1, go_to(restaurant), []) :- important_meeting.
+rule(r2, ride_bike, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), [])."
+30,"rule(r1, visit_family, []) :- morning_rush.
+rule(r2, drive_car, []) :- morning_rush.
+rule(p1, prefer(r1, r2), [])."
+31,"rule(r1, buy_groceries, []) :- night_time.
+rule(r2, finish_report, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- rainy_day.
+rule(c3, prefer(c2, c1), [])."
+32,"rule(r1, read_book, []) :- holiday_season.
+rule(r2, visit_doctor, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- discount_on_flight.
+rule(c3, prefer(c2, c1), [])."
+33,"rule(r1, go_to(park), []) :- rainy_day.
+rule(r2, drive_car, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), [])."
+34,"rule(r1, attend_concert, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), [])."
+35,"rule(r1, go_to(park), []) :- discount_on_flight.
+rule(r2, travel_abroad, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), [])."
+36,"rule(r1, yoga_session, []) :- night_time.
+rule(r2, give_presentation, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- feeling_sick.
+rule(c3, prefer(c2, c1), [])."
+37,"rule(r1, go_to(cinema), []) :- night_time.
+rule(r2, attend_meeting, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- urgent_deadline.
+rule(c3, prefer(c2, c1), [])."
+38,"rule(r1, yoga_session, []) :- got_bonus.
+rule(r2, reply_emails, []) :- got_bonus.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- boss_in_office.
+rule(c3, prefer(c2, c1), [])."
+39,"rule(r1, book_flight, []) :- rainy_day.
+rule(r2, clean_house, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- low_budget.
+rule(c3, prefer(c2, c1), [])."
+40,"rule(r1, go_to(cinema), []) :- medical_appointmentgood_weather.
+rule(r2, reply_emails, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), [])."
+41,"rule(r1, attend_concert, []) :- family_gathering.
+rule(r2, give_presentation, []) :- family_gathering.
+rule(p1, prefer(r1, r2), [])."
+42,"rule(r1, go_to(cinema), []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- got_bonus.
+rule(c3, prefer(c2, c1), [])."
+43,"rule(r1, read_book, []) :- invitation_from_friend.
+rule(r2, book_flight, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- urgent_deadline.
+rule(c3, prefer(c2, c1), [])."
+44,"rule(r1, buy_groceries, []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), [])."
+45,"rule(r1, morning_run, []) :- rainy_day.
+rule(r2, reply_emails, []) :- rainy_day.
+rule(p1, prefer(r1, r2), [])."
+46,"rule(r1, cook_dinner, []) :- urgent_deadline.
+rule(r2, visit_doctor, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- team_project_due.
+rule(c3, prefer(c2, c1), [])."
+47,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, give_presentation, []) :- family_gathering.
+rule(p1, prefer(r1, r2), [])."
+48,"rule(r1, drive_car, []) :- weekend.
+rule(r2, go_shopping, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- medical_appointmentgood_weather.
+rule(c3, prefer(c2, c1), [])."
+49,"rule(r1, ride_bike, []) :- urgent_deadline.
+rule(r2, go_shopping, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- friend_in_town.
+rule(c3, prefer(c2, c1), [])."
+50,"rule(r1, ride_bike, []) :- boss_in_office.
+rule(r2, yoga_session, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), [])."
+51,"rule(r1, visit_family, []) :- hot_day.
+rule(r2, go_shopping, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- urgent_deadline.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- night_time.
+rule(c3, prefer(c2, c1), [])."
+52,"rule(r1, drive_car, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- concert_nearby.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- boss_in_office.
+rule(c3, prefer(c2, c1), [])."
+53,"rule(r1, attend_meeting, []) :- concert_nearby.
+rule(r2, drive_car, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), [])."
+54,"rule(r1, go_to(park), []) :- night_time.
+rule(r2, take_bus, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), [])."
+55,"rule(r1, go_gym, []) :- rainy_day.
+rule(r2, visit_family, []) :- rainy_day.
+rule(p1, prefer(r1, r2), [])."
+56,"rule(r1, buy_groceries, []) :- weekend.
+rule(r2, yoga_session, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), [])."
+57,"rule(r1, go_shopping, []) :- snowstorm.
+rule(r2, clean_house, []) :- snowstorm.
+rule(p1, prefer(r1, r2), [])."
+58,"rule(r1, go_to(restaurant), []) :- hot_day.
+rule(r2, take_bus, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), [])."
+59,"rule(r1, morning_run, []) :- friend_in_town.
+rule(r2, book_flight, []) :- friend_in_town.
+rule(p1, prefer(r1, r2), [])."
+60,"rule(r1, finish_report, []) :- expensive_event.
+rule(r2, go_to(cinema), []) :- expensive_event.
+rule(p1, prefer(r1, r2), [])."
+61,"rule(r1, yoga_session, []) :- night_time.
+rule(r2, ride_bike, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), [])."
+62,"rule(r1, morning_run, []) :- hot_day.
+rule(r2, go_gym, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), [])."
+63,"rule(r1, attend_concert, []) :- family_gathering.
+rule(r2, book_flight, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), [])."
+64,"rule(r1, ride_bike, []) :- holiday_season.
+rule(r2, clean_house, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), [])."
+65,"rule(r1, cook_dinner, []) :- medical_appointmentgood_weather.
+rule(r2, book_flight, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- team_project_due.
+rule(c3, prefer(c2, c1), [])."
+66,"rule(r1, go_to(restaurant), []) :- feeling_sick.
+rule(r2, go_to(park), []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- boss_in_office.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- wedding_anniversary.
+rule(c3, prefer(c2, c1), [])."
+67,"rule(r1, ride_bike, []) :- new_restaurant_to_try.
+rule(r2, buy_groceries, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- team_project_due.
+rule(c1, prefer(p2, p1), [])."
+68,"rule(r1, clean_house, []) :- new_restaurant_to_try.
+rule(r2, book_flight, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- night_time.
+rule(c1, prefer(p2, p1), [])."
+69,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, morning_run, []) :- family_gathering.
+rule(p1, prefer(r1, r2), [])."
+70,"rule(r1, travel_abroad, []) :- night_time.
+rule(r2, ride_bike, []) :- night_time.
+rule(p1, prefer(r1, r2), [])."
+71,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, read_book, []) :- family_gathering.
+rule(p1, prefer(r1, r2), [])."
+72,"rule(r1, buy_groceries, []) :- hot_day.
+rule(r2, take_bus, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- night_time.
+rule(c3, prefer(c2, c1), [])."
+73,"rule(r1, drive_car, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), [])."
+74,"rule(r1, yoga_session, []) :- morning_rush.
+rule(r2, cook_dinner, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- medical_appointmentgood_weather.
+rule(c1, prefer(p2, p1), [])."
+75,"rule(r1, go_gym, []) :- holiday_season.
+rule(r2, give_presentation, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- boss_in_office.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), [])."
+76,"rule(r1, clean_house, []) :- feeling_sick.
+rule(r2, visit_family, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- family_gathering.
+rule(c3, prefer(c2, c1), [])."
+77,"rule(r1, clean_house, []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), [])."
+78,"rule(r1, attend_concert, []) :- holiday_season.
+rule(r2, book_flight, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- family_gathering.
+rule(c3, prefer(c2, c1), [])."
+79,"rule(r1, go_to(park), []) :- wedding_anniversary.
+rule(r2, drive_car, []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- important_meeting.
+rule(c3, prefer(c2, c1), [])."
+80,"rule(r1, yoga_session, []) :- hot_day.
+rule(r2, attend_concert, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), [])."
+81,"rule(r1, clean_house, []) :- wedding_anniversary.
+rule(r2, go_to(restaurant), []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), [])."
+82,"rule(r1, book_flight, []) :- expensive_event.
+rule(r2, go_shopping, []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), [])."
+83,"rule(r1, attend_meeting, []) :- team_project_due.
+rule(r2, go_to(park), []) :- team_project_due.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- discount_on_flight.
+rule(c3, prefer(c2, c1), [])."
+84,"rule(r1, visit_doctor, []) :- low_budget.
+rule(r2, book_flight, []) :- low_budget.
+rule(p1, prefer(r1, r2), [])."
+85,"rule(r1, cook_dinner, []) :- family_gathering.
+rule(r2, visit_family, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), [])."
+86,"rule(r1, drive_car, []) :- discount_on_flight.
+rule(r2, visit_doctor, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), [])."
+87,"rule(r1, attend_meeting, []) :- wedding_anniversary.
+rule(r2, go_to(park), []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), [])."
+88,"rule(r1, go_shopping, []) :- discount_on_flight.
+rule(r2, morning_run, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), [])."
+89,"rule(r1, give_presentation, []) :- new_restaurant_to_try.
+rule(r2, drive_car, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- low_budget.
+rule(c3, prefer(c2, c1), [])."
+90,"rule(r1, cook_dinner, []) :- invitation_from_friend.
+rule(r2, buy_groceries, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), [])."
+91,"rule(r1, clean_house, []) :- weekend.
+rule(r2, visit_doctor, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), [])."
+92,"rule(r1, morning_run, []) :- boss_in_office.
+rule(r2, cook_dinner, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), [])."
+93,"rule(r1, take_bus, []) :- birthday_today.
+rule(r2, buy_groceries, []) :- birthday_today.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), [])."
+94,"rule(r1, yoga_session, []) :- low_budget.
+rule(r2, cook_dinner, []) :- low_budget.
+rule(p1, prefer(r1, r2), [])."
+95,"rule(r1, go_to(park), []) :- invitation_from_friend.
+rule(r2, book_flight, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- got_bonus.
+rule(c3, prefer(c2, c1), [])."
+96,"rule(r1, reply_emails, []) :- morning_rush.
+rule(r2, yoga_session, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), [])."
+97,"rule(r1, book_flight, []) :- expensive_event.
+rule(r2, attend_concert, []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), [])."
+98,"rule(r1, go_shopping, []) :- hot_day.
+rule(r2, clean_house, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), [])."
+99,"rule(r1, travel_abroad, []) :- concert_nearby.
+rule(r2, go_shopping, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), [])."
+100,"rule(r1, go_to(restaurant), []) :- rainy_day.
+rule(r2, yoga_session, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), [])."

@@ -1,0 +1,493 @@
+Example Number,Gorgias Code,NL Translation
+1,"rule(r1, attend_concert, []) :- rainy_day.
+rule(r2, visit_doctor, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).","""When it is a rainy day, I can either attend a concert or visit the doctor. Generally, I prefer to attend a concert over visiting the doctor."""
+2,"rule(r1, morning_run, []) :- invitation_from_friend.
+rule(r2, reply_emails, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- holiday_season.
+rule(c3, prefer(c2, c1), []).","When I receive an invitation from a friend, I can either go for a morning run or reply to emails. I generally prefer to go for a morning run, but if my friend is in town, I prefer to reply to emails. However, during the holiday season, I prefer to go for a morning run rather than reply to emails."
+3,"rule(r1, morning_run, []) :- important_meeting.
+rule(r2, finish_report, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- birthday_today.
+rule(c3, prefer(c2, c1), []).","When there is an important meeting, I can either go for a morning run or finish a report. I generally prefer to go for a morning run, but if there is a morning rush, I prefer to finish the report. If it's my birthday today, I prefer finishing the report over going for a morning run."
+4,"rule(r1, ride_bike, []) :- new_restaurant_to_try.
+rule(r2, go_to(restaurant), []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).","""When there is a new restaurant to try, I can either ride my bike or go to the restaurant. Generally, I prefer to ride my bike over going to the restaurant."""
+5,"rule(r1, visit_doctor, []) :- discount_on_flight.
+rule(r2, yoga_session, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).","""When there is a discount on the flight, I can either visit the doctor or attend a yoga session. Generally, I prefer to visit the doctor, but if there is a morning rush, I prefer to attend a yoga session."""
+6,"rule(r1, give_presentation, []) :- hot_day.
+rule(r2, read_book, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- medical_appointmentgood_weather.
+rule(c1, prefer(p2, p1), []).","When it is a hot day, I can either give a presentation or read a book. Generally, I prefer to give a presentation, but if there is a medical appointment or the weather is good, I prefer to read a book."
+7,"rule(r1, go_to(theater), []) :- friend_in_town.
+rule(r2, go_to(cinema), []) :- friend_in_town.
+rule(p1, prefer(r1, r2), []).","When my friend is in town, I prefer to go to the theater over going to the cinema."
+8,"rule(r1, go_to(park), []) :- urgent_deadline.
+rule(r2, finish_report, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).","When there is an urgent deadline, I can either go to the park or finish the report. Generally, I prefer to go to the park, but if it's our wedding anniversary, I prefer to finish the report."
+9,"rule(r1, visit_doctor, []) :- birthday_today.
+rule(r2, travel_abroad, []) :- birthday_today.
+rule(p1, prefer(r1, r2), []).","When it is my birthday today, I can either visit the doctor or travel abroad. Generally, I prefer to visit the doctor over traveling abroad on my birthday."
+10,"rule(r1, visit_family, []) :- low_budget.
+rule(r2, reply_emails, []) :- low_budget.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), []).","""When on a low budget, I can either visit family or reply to emails. Generally, I prefer to visit family, but if there is a snowstorm, I prefer to reply to emails."""
+11,"rule(r1, cook_dinner, []) :- expensive_event.
+rule(r2, visit_family, []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).","""When there is an expensive event, I can either cook dinner or visit family. Generally, I prefer to cook dinner over visiting family."""
+12,"rule(r1, travel_abroad, []) :- new_restaurant_to_try.
+rule(r2, finish_report, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- important_meeting.
+rule(c1, prefer(p2, p1), []).","""When there is a new restaurant to try, I can either travel abroad or finish a report. Generally, I prefer to travel abroad, but if there is an important meeting, I prefer to finish the report."""
+13,"rule(r1, cook_dinner, []) :- urgent_deadline.
+rule(r2, travel_abroad, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- hot_day.
+rule(c3, prefer(c2, c1), []).","When there is an urgent deadline, I can either cook dinner or travel abroad. Generally, I prefer to cook dinner over traveling abroad. However, if there is an invitation from a friend, I prefer to travel abroad. Additionally, if it is a hot day, I prefer cooking dinner over traveling abroad if given the choice between the two preferences."
+14,"rule(r1, cook_dinner, []) :- medical_appointmentgood_weather.
+rule(r2, go_to(theater), []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).","""When I have a medical appointment and the weather is good, I can either cook dinner or go to the theater. Generally, I prefer to cook dinner over going to the theater."""
+15,"rule(r1, give_presentation, []) :- holiday_season.
+rule(r2, book_flight, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).","""When it is holiday season, I can either give a presentation or book a flight. Generally, I prefer to give a presentation over booking a flight."""
+16,"rule(r1, go_to(restaurant), []) :- medical_appointmentgood_weather.
+rule(r2, finish_report, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), []).","""When I have a medical appointment and the weather is good, I can either go to a restaurant or finish a report. Generally, I prefer to go to a restaurant, but if there is a new restaurant to try, I prefer to finish the report."""
+17,"rule(r1, attend_concert, []) :- invitation_from_friend.
+rule(r2, reply_emails, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).","""When I receive an invitation from a friend, I can either attend a concert or reply to emails. In general, I prefer to attend the concert, but if there is a friend in town, I prefer to reply to emails."""
+18,"rule(r1, finish_report, []) :- snowstorm.
+rule(r2, attend_concert, []) :- snowstorm.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), []).","When there is a snowstorm, I can either finish the report or attend the concert. Generally, I prefer to finish the report, but if there is a new restaurant to try, I prefer to attend the concert."
+19,"rule(r1, reply_emails, []) :- urgent_deadline.
+rule(r2, buy_groceries, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).","When there is an urgent deadline, I can either reply to emails or buy groceries. Generally, I prefer to reply to emails, but if I have an invitation from a friend, I prefer to buy groceries."
+20,"rule(r1, buy_groceries, []) :- weekend.
+rule(r2, go_to(cinema), []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).","""When it is the weekend, I can either buy groceries or go to the cinema. Generally, I prefer to buy groceries, but if I have a low budget, I prefer to go to the cinema."""
+21,"rule(r1, read_book, []) :- important_meeting.
+rule(r2, attend_concert, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- weekend.
+rule(c3, prefer(c2, c1), []).","When there is an important meeting, I can either read a book or attend a concert. I generally prefer to read a book, but if there is a family gathering, I prefer to attend a concert. Additionally, if it's the weekend, I prefer to read a book over attending a concert."
+22,"rule(r1, reply_emails, []) :- holiday_season.
+rule(r2, visit_doctor, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).","When it is the holiday season, I can either reply to emails or visit the doctor. Generally, I prefer to reply to emails over visiting the doctor."
+23,"rule(r1, go_shopping, []) :- invitation_from_friend.
+rule(r2, buy_groceries, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).","If I receive an invitation from a friend, I prefer to go shopping rather than buying groceries."
+24,"rule(r1, give_presentation, []) :- boss_in_office.
+rule(r2, visit_family, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- concert_nearby.
+rule(c3, prefer(c2, c1), []).","When the boss is in the office, I can either give a presentation or visit family. Generally, I prefer to give a presentation, but if there is a family gathering, I prefer to visit family. Additionally, if there is a concert nearby, I prefer to give a presentation over visiting family."
+25,"rule(r1, drive_car, []) :- boss_in_office.
+rule(r2, cook_dinner, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).","""When the boss is in the office, I can either drive the car or cook dinner. Generally, I prefer to drive the car over cooking dinner."""
+26,"rule(r1, drive_car, []) :- night_time.
+rule(r2, attend_concert, []) :- night_time.
+rule(p1, prefer(r1, r2), []).","""When it is nighttime, I can either drive a car or attend a concert. Generally, I prefer to drive a car over attending a concert."""
+27,"rule(r1, go_shopping, []) :- birthday_today.
+rule(r2, clean_house, []) :- birthday_today.
+rule(p1, prefer(r1, r2), []).","""When it is my birthday today, I can either go shopping or clean the house. Generally, I prefer to go shopping over cleaning the house."""
+28,"rule(r1, ride_bike, []) :- holiday_season.
+rule(r2, go_to(theater), []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).","""When it is the holiday season, I can either ride a bike or go to the theater. Generally, I prefer to ride a bike over going to the theater."""
+29,"rule(r1, go_to(restaurant), []) :- important_meeting.
+rule(r2, ride_bike, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).","When there is an important meeting, I can either go to a restaurant or ride a bike. Generally, I prefer to go to a restaurant, but if it is my birthday today, I prefer to ride a bike."
+30,"rule(r1, visit_family, []) :- morning_rush.
+rule(r2, drive_car, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).","""When there is a morning rush, I can either visit family or drive a car. Generally, I prefer to visit family over driving a car during the morning rush."""
+31,"rule(r1, buy_groceries, []) :- night_time.
+rule(r2, finish_report, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- rainy_day.
+rule(c3, prefer(c2, c1), []).","When it is nighttime, I can either buy groceries or finish a report. I generally prefer to buy groceries, but if the budget is low, I prefer to finish the report. Additionally, if it is a rainy day, I prefer to buy groceries over finishing the report."
+32,"rule(r1, read_book, []) :- holiday_season.
+rule(r2, visit_doctor, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- discount_on_flight.
+rule(c3, prefer(c2, c1), []).","During the holiday season, if it is a holiday season, I can either read a book or visit the doctor. In general, I prefer to read a book, but if it is a wedding anniversary, I prefer to visit the doctor. Additionally, if there is a discount on a flight, I prefer to read a book over visiting the doctor."
+33,"rule(r1, go_to(park), []) :- rainy_day.
+rule(r2, drive_car, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), []).","On a rainy day, I can either go to the park or drive a car. I generally prefer to go to the park, but if it's my wedding anniversary, I prefer to drive a car. However, if there is a new restaurant to try out, I prefer going to the park over driving a car on my wedding anniversary."
+34,"rule(r1, attend_concert, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).","When feeling sick, I prefer to attend a concert over attending a meeting."
+35,"rule(r1, go_to(park), []) :- discount_on_flight.
+rule(r2, travel_abroad, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), []).","When there is a discount on flight, I can either go to the park or travel abroad. I generally prefer to go to the park, but if it is a rainy day, I prefer to travel abroad. Additionally, if there is a new restaurant to try, I prefer going to the park over traveling abroad."
+36,"rule(r1, yoga_session, []) :- night_time.
+rule(r2, give_presentation, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- feeling_sick.
+rule(c3, prefer(c2, c1), []).","When it is nighttime, I can either attend a yoga session or give a presentation. Generally, I prefer to attend a yoga session, but if there is a discount on a flight, I prefer to give a presentation. If I am feeling sick, I prefer attending a yoga session over giving a presentation when there is a discount on a flight."
+37,"rule(r1, go_to(cinema), []) :- night_time.
+rule(r2, attend_meeting, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- urgent_deadline.
+rule(c3, prefer(c2, c1), []).","When it is nighttime, I can either go to the cinema or attend a meeting. Generally, I prefer to go to the cinema, but during the holiday season, I prefer to attend a meeting. If there is an urgent deadline, I prefer to go to the cinema over attending a meeting."
+38,"rule(r1, yoga_session, []) :- got_bonus.
+rule(r2, reply_emails, []) :- got_bonus.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- boss_in_office.
+rule(c3, prefer(c2, c1), []).","When I receive a bonus, I can either attend a yoga session or reply to emails. I generally prefer attending a yoga session over replying to emails. However, if there is a family gathering, I prefer to reply to emails. If my boss is in the office, I prefer attending a yoga session over replying to emails."
+39,"rule(r1, book_flight, []) :- rainy_day.
+rule(r2, clean_house, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- low_budget.
+rule(c3, prefer(c2, c1), []).","When it is a rainy day, I can either book a flight or clean the house. Generally, I prefer to book a flight over cleaning the house, but if there is a snowstorm, I prefer to clean the house. Additionally, if I am on a low budget, I prefer booking a flight over cleaning the house in a snowstorm."
+40,"rule(r1, go_to(cinema), []) :- medical_appointmentgood_weather.
+rule(r2, reply_emails, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).","""When I have a medical appointment and the weather is good, I can either go to the cinema or reply to emails. Generally, I prefer to go to the cinema, but if it is my birthday today, I prefer to reply to emails."""
+41,"rule(r1, attend_concert, []) :- family_gathering.
+rule(r2, give_presentation, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).","""When there is a family gathering, I can either attend a concert or give a presentation. Generally, I prefer to attend a concert over giving a presentation."""
+42,"rule(r1, go_to(cinema), []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- got_bonus.
+rule(c3, prefer(c2, c1), []).","When there is a concert nearby, I can either go to the cinema or reply to emails. I generally prefer to go to the cinema, but if it is my birthday today, I prefer to reply to emails. If I received a bonus, I prefer to go to the cinema over replying to emails."
+43,"rule(r1, read_book, []) :- invitation_from_friend.
+rule(r2, book_flight, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- urgent_deadline.
+rule(c3, prefer(c2, c1), []).","When there is an invitation from a friend, I can either read a book or book a flight. I generally prefer to read a book, but if there is a discount on the flight, I prefer to book a flight. Additionally, if there is an urgent deadline, I prefer to read a book over booking a flight."
+44,"rule(r1, buy_groceries, []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).","When there is a concert nearby, I can either buy groceries or reply to emails. Generally, I prefer to buy groceries over replying to emails."
+45,"rule(r1, morning_run, []) :- rainy_day.
+rule(r2, reply_emails, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).","When it is a rainy day, I prefer to go for a morning run over replying to emails."
+46,"rule(r1, cook_dinner, []) :- urgent_deadline.
+rule(r2, visit_doctor, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- team_project_due.
+rule(c3, prefer(c2, c1), []).","""When there is an urgent deadline, I can either cook dinner or visit the doctor. Generally, I prefer to cook dinner over visiting the doctor. However, if it is the holiday season, I prefer to visit the doctor over cooking dinner. Furthermore, if there is a team project due, I prefer cooking dinner over visiting the doctor."""
+47,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, give_presentation, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).","""When there is a family gathering, I can either reply to emails or give a presentation. Generally, I prefer to reply to emails over giving a presentation."""
+48,"rule(r1, drive_car, []) :- weekend.
+rule(r2, go_shopping, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- medical_appointmentgood_weather.
+rule(c3, prefer(c2, c1), []).","When it is the weekend, I can either drive the car or go shopping. Generally, I prefer to drive the car, but if I receive an invitation from a friend, I prefer to go shopping. Additionally, if there is a medical appointment and the weather is good, I prefer driving the car over going shopping."
+49,"rule(r1, ride_bike, []) :- urgent_deadline.
+rule(r2, go_shopping, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- friend_in_town.
+rule(c3, prefer(c2, c1), []).","When there is an urgent deadline, I can either ride my bike or go shopping. I generally prefer to ride my bike, but if it's my birthday today, I prefer to go shopping. Additionally, if a friend is in town, I prefer riding my bike over going shopping."
+50,"rule(r1, ride_bike, []) :- boss_in_office.
+rule(r2, yoga_session, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).","""When the boss is in the office, I can either ride my bike or attend a yoga session. I generally prefer to ride my bike, but if there is a family gathering, I prefer to attend the yoga session."""
+51,"rule(r1, visit_family, []) :- hot_day.
+rule(r2, go_shopping, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- urgent_deadline.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- night_time.
+rule(c3, prefer(c2, c1), []).","When it is a hot day, I can either visit family or go shopping. Generally, I prefer to visit family, but if there is an urgent deadline, I prefer to go shopping. Additionally, if it is night time, I prefer to visit family over going shopping."
+52,"rule(r1, drive_car, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- concert_nearby.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- boss_in_office.
+rule(c3, prefer(c2, c1), []).","""When feeling sick, I can either drive a car or attend a meeting. I generally prefer to drive a car over attending a meeting. However, if there is a concert nearby, I prefer to attend the meeting. If the boss is in the office, I prefer to drive the car over attending the meeting."""
+53,"rule(r1, attend_meeting, []) :- concert_nearby.
+rule(r2, drive_car, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).","""When there is a concert nearby, I can either attend the meeting or drive the car. I generally prefer to attend the meeting over driving the car."""
+54,"rule(r1, go_to(park), []) :- night_time.
+rule(r2, take_bus, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).","""When it is nighttime, I can either go to the park or take the bus. Generally, I prefer to go to the park, but during the morning rush, I prefer to take the bus."""
+55,"rule(r1, go_gym, []) :- rainy_day.
+rule(r2, visit_family, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).","""When it is a rainy day, I can either go to the gym or visit family. Generally, I prefer to go to the gym over visiting family."""
+56,"rule(r1, buy_groceries, []) :- weekend.
+rule(r2, yoga_session, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).","""When it is the weekend, I can either buy groceries or attend a yoga session. Generally, I prefer to buy groceries, but if I am on a low budget, I prefer to attend a yoga session."""
+57,"rule(r1, go_shopping, []) :- snowstorm.
+rule(r2, clean_house, []) :- snowstorm.
+rule(p1, prefer(r1, r2), []).","When there is a snowstorm, I can either go shopping or clean the house. Generally, I prefer to go shopping over cleaning the house."
+58,"rule(r1, go_to(restaurant), []) :- hot_day.
+rule(r2, take_bus, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), []).","When it is a hot day, I can either go to a restaurant or take the bus. Generally, I prefer to go to a restaurant, but if there is a new restaurant to try, then I prefer to take the bus."
+59,"rule(r1, morning_run, []) :- friend_in_town.
+rule(r2, book_flight, []) :- friend_in_town.
+rule(p1, prefer(r1, r2), []).","""When my friend is in town, I can either go for a morning run or book a flight. I generally prefer to go for a morning run over booking a flight."""
+60,"rule(r1, finish_report, []) :- expensive_event.
+rule(r2, go_to(cinema), []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).","If there is an expensive event, I will either finish the report or go to the cinema. Generally, I prefer to finish the report over going to the cinema."
+61,"rule(r1, yoga_session, []) :- night_time.
+rule(r2, ride_bike, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), []).","""When it is nighttime, I can either have a yoga session or ride a bike. Generally, I prefer to have a yoga session, but if I am feeling sick, I prefer to ride a bike."""
+62,"rule(r1, morning_run, []) :- hot_day.
+rule(r2, go_gym, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), []).","""When it is a hot day, I can either go for a morning run or go to the gym. Generally, I prefer to go for a morning run, but if it is a rainy day, I prefer to go to the gym."""
+63,"rule(r1, attend_concert, []) :- family_gathering.
+rule(r2, book_flight, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), []).","When there is a family gathering, I can either attend a concert or book a flight. Generally, I prefer to attend a concert, but if I am feeling sick, I prefer to book a flight."
+64,"rule(r1, ride_bike, []) :- holiday_season.
+rule(r2, clean_house, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_gathering.
+rule(c1, prefer(p2, p1), []).","When it is the holiday season, I can either ride my bike or clean the house. Generally, I prefer to ride my bike, but if there is a family gathering, I prefer to clean the house."
+65,"rule(r1, cook_dinner, []) :- medical_appointmentgood_weather.
+rule(r2, book_flight, []) :- medical_appointmentgood_weather.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- team_project_due.
+rule(c3, prefer(c2, c1), []).","When there is a medical appointment and the weather is good, I can either cook dinner or book a flight. Generally, I prefer to cook dinner, but if it's a hot day, I prefer to book a flight. If there is a team project due, I prefer to cook dinner over booking a flight."
+66,"rule(r1, go_to(restaurant), []) :- feeling_sick.
+rule(r2, go_to(park), []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- boss_in_office.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- wedding_anniversary.
+rule(c3, prefer(c2, c1), []).","When feeling sick, I can either go to a restaurant or go to the park. Generally, I prefer to go to a restaurant, but if my boss is in the office, I prefer to go to the park. Additionally, if it's my wedding anniversary, I prefer to go to a restaurant over going to the park when feeling sick."
+67,"rule(r1, ride_bike, []) :- new_restaurant_to_try.
+rule(r2, buy_groceries, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- team_project_due.
+rule(c1, prefer(p2, p1), []).","""When there is a new restaurant to try, I can either ride my bike or buy groceries. Generally, I prefer to ride my bike, but if there is a team project due, I prefer to buy groceries."""
+68,"rule(r1, clean_house, []) :- new_restaurant_to_try.
+rule(r2, book_flight, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- night_time.
+rule(c1, prefer(p2, p1), []).","When there is a new restaurant to try, I can either clean the house or book a flight. Generally, I prefer to clean the house, but if it is nighttime, I prefer to book a flight."
+69,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, morning_run, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).","""When there is a family gathering, I can either reply to emails or go for a morning run. Generally, I prefer to reply to emails over going for a morning run."""
+70,"rule(r1, travel_abroad, []) :- night_time.
+rule(r2, ride_bike, []) :- night_time.
+rule(p1, prefer(r1, r2), []).","""When it is nighttime, I can either travel abroad or ride a bike. Generally, I prefer to travel abroad."""
+71,"rule(r1, reply_emails, []) :- family_gathering.
+rule(r2, read_book, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).","When there is a family gathering, I can either reply to emails or read a book. Generally, I prefer to reply to emails over reading a book."
+72,"rule(r1, buy_groceries, []) :- hot_day.
+rule(r2, take_bus, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- night_time.
+rule(c3, prefer(c2, c1), []).","When it is a hot day, I can either buy groceries or take the bus. Generally, I prefer to buy groceries, but if my friend is in town, I prefer to take the bus. Additionally, if it is nighttime, I prefer to buy groceries over taking the bus."
+73,"rule(r1, drive_car, []) :- feeling_sick.
+rule(r2, attend_meeting, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).","""When feeling sick, I can either drive a car or attend a meeting. Generally, I prefer to drive a car over attending a meeting."""
+74,"rule(r1, yoga_session, []) :- morning_rush.
+rule(r2, cook_dinner, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- medical_appointmentgood_weather.
+rule(c1, prefer(p2, p1), []).","""When there is a morning rush, I can either have a yoga session or cook dinner. I generally prefer to have a yoga session, but if there is a medical appointment and the weather is good, I prefer to cook dinner."""
+75,"rule(r1, go_gym, []) :- holiday_season.
+rule(r2, give_presentation, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- boss_in_office.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.
+rule(c3, prefer(c2, c1), []).","When it is the holiday season, I can either go to the gym or give a presentation. Generally, I prefer to go to the gym, but if the boss is in the office, I prefer to give a presentation. Additionally, if there is a new restaurant to try, I prefer going to the gym over giving a presentation."
+76,"rule(r1, clean_house, []) :- feeling_sick.
+rule(r2, visit_family, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- family_gathering.
+rule(c3, prefer(c2, c1), []).","When feeling sick, I can either clean the house or visit family. I generally prefer to clean the house when feeling sick, but if there is a new restaurant to try, I prefer to visit family. Additionally, if there is a family gathering, I prefer to visit family over cleaning the house when feeling sick."
+77,"rule(r1, clean_house, []) :- concert_nearby.
+rule(r2, reply_emails, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).","When there is a concert nearby, I can either clean the house or reply to emails. Generally, I prefer to clean the house."
+78,"rule(r1, attend_concert, []) :- holiday_season.
+rule(r2, book_flight, []) :- holiday_season.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- family_gathering.
+rule(c3, prefer(c2, c1), []).","When it is the holiday season, I can either attend a concert or book a flight. I generally prefer to attend a concert over booking a flight. However, if it is my birthday today, I prefer to book a flight. If there is a family gathering, I prefer to attend a concert over booking a flight."
+79,"rule(r1, go_to(park), []) :- wedding_anniversary.
+rule(r2, drive_car, []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- important_meeting.
+rule(c3, prefer(c2, c1), []).","When it is our wedding anniversary, I can either go to the park or drive the car. Generally, I prefer to go to the park, but if it's during the morning rush, I prefer to drive the car. Additionally, if there is an important meeting, I prefer going to the park over driving the car."
+80,"rule(r1, yoga_session, []) :- hot_day.
+rule(r2, attend_concert, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).","When it is a hot day, I can either attend a yoga session or attend a concert. Generally, I prefer to attend a yoga session, but if I receive an invitation from a friend, I prefer to attend a concert."
+81,"rule(r1, clean_house, []) :- wedding_anniversary.
+rule(r2, go_to(restaurant), []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), []).","When it is your wedding anniversary, you can either clean the house or go to a restaurant. Generally, you prefer to clean the house over going to a restaurant."
+82,"rule(r1, book_flight, []) :- expensive_event.
+rule(r2, go_shopping, []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).","When there is an expensive event, I can either book a flight or go shopping. Generally, I prefer to book a flight, but if it's my wedding anniversary, I prefer to go shopping."
+83,"rule(r1, attend_meeting, []) :- team_project_due.
+rule(r2, go_to(park), []) :- team_project_due.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- discount_on_flight.
+rule(c3, prefer(c2, c1), []).","""When the team project is due, I can either attend a meeting or go to the park. Generally, I prefer to attend the meeting, but if it is a rainy day, I prefer to go to the park. If there is a discount on a flight, I prefer to attend the meeting over going to the park."""
+84,"rule(r1, visit_doctor, []) :- low_budget.
+rule(r2, book_flight, []) :- low_budget.
+rule(p1, prefer(r1, r2), []).","""When on a low budget, I prefer to visit the doctor over booking a flight."""
+85,"rule(r1, cook_dinner, []) :- family_gathering.
+rule(r2, visit_family, []) :- family_gathering.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), []).","When there is a family gathering, I can either cook dinner or visit family. Generally, I prefer to cook dinner, but if there is a snowstorm, I prefer to visit family."
+86,"rule(r1, drive_car, []) :- discount_on_flight.
+rule(r2, visit_doctor, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).","When there is a discount on flights, I can either drive the car or visit the doctor. I generally prefer to drive the car, but if there is a morning rush, I prefer to visit the doctor."
+87,"rule(r1, attend_meeting, []) :- wedding_anniversary.
+rule(r2, go_to(park), []) :- wedding_anniversary.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- discount_on_flight.
+rule(c1, prefer(p2, p1), []).","""When it is my wedding anniversary, I can either attend a meeting or go to the park. Generally, I prefer to attend the meeting, but if there is a discount on a flight, I prefer to go to the park."""
+88,"rule(r1, go_shopping, []) :- discount_on_flight.
+rule(r2, morning_run, []) :- discount_on_flight.
+rule(p1, prefer(r1, r2), []).","""When there is a discount on flights, I can either go shopping or go for a morning run. Generally, I prefer to go shopping over going for a morning run."""
+89,"rule(r1, give_presentation, []) :- new_restaurant_to_try.
+rule(r2, drive_car, []) :- new_restaurant_to_try.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- low_budget.
+rule(c3, prefer(c2, c1), []).","When there is a new restaurant to try, I can either give a presentation or drive a car. Generally, I prefer to give a presentation, but if it is a hot day, I prefer to drive a car. Additionally, if I have a low budget, I prefer to drive a car over giving a presentation."
+90,"rule(r1, cook_dinner, []) :- invitation_from_friend.
+rule(r2, buy_groceries, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).","""When I receive an invitation from a friend, I can either cook dinner or buy groceries. Generally, I prefer to cook dinner, but if it is our wedding anniversary, I prefer to buy groceries."""
+91,"rule(r1, clean_house, []) :- weekend.
+rule(r2, visit_doctor, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).","When it is the weekend, I can either clean the house or visit the doctor. Generally, I prefer to clean the house, but during the holiday season, I prefer to visit the doctor."
+92,"rule(r1, morning_run, []) :- boss_in_office.
+rule(r2, cook_dinner, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+rule(c1, prefer(p2, p1), []).","When the boss is in the office, I can either go for a morning run or cook dinner. Generally, I prefer to go for a morning run, but if it's my birthday today, I prefer to cook dinner."
+93,"rule(r1, take_bus, []) :- birthday_today.
+rule(r2, buy_groceries, []) :- birthday_today.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).","When it is my birthday today, I can either take the bus or buy groceries. Generally, I prefer to take the bus, but if it is my wedding anniversary, then I prefer to buy groceries."
+94,"rule(r1, yoga_session, []) :- low_budget.
+rule(r2, cook_dinner, []) :- low_budget.
+rule(p1, prefer(r1, r2), []).","When on a low budget, I prefer to have a yoga session over cooking dinner."
+95,"rule(r1, go_to(park), []) :- invitation_from_friend.
+rule(r2, book_flight, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- friend_in_town.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- got_bonus.
+rule(c3, prefer(c2, c1), []).","""When I receive an invitation from a friend, I can either go to the park or book a flight. Generally, I prefer to go to the park, but if my friend is in town, I prefer to book a flight. If I receive a bonus, I prefer to go to the park over booking a flight."""
+96,"rule(r1, reply_emails, []) :- morning_rush.
+rule(r2, yoga_session, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(c1, prefer(p2, p1), []).","When there is a morning rush, I can either reply to emails or have a yoga session. Generally, I prefer to reply to emails, but if there is a snowstorm, I prefer to have a yoga session."
+97,"rule(r1, book_flight, []) :- expensive_event.
+rule(r2, attend_concert, []) :- expensive_event.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day.
+rule(c1, prefer(p2, p1), []).","When there is an expensive event, I can either book a flight or attend a concert. Generally, I prefer to book a flight, but if it is a hot day, I prefer to attend a concert."
+98,"rule(r1, go_shopping, []) :- hot_day.
+rule(r2, clean_house, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), []).","""When it is a hot day, I can either go shopping or clean the house. Generally, I prefer to go shopping but if I am feeling sick, I prefer to clean the house."""
+99,"rule(r1, travel_abroad, []) :- concert_nearby.
+rule(r2, go_shopping, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).","""When there is a concert nearby, I can either travel abroad or go shopping. Generally, I prefer to travel abroad over going shopping."""
+100,"rule(r1, go_to(restaurant), []) :- rainy_day.
+rule(r2, yoga_session, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []).","When it is a rainy day, I can either go to a restaurant or attend a yoga session. Generally, I prefer to go to a restaurant, but during the holiday season, I prefer to attend a yoga session."
