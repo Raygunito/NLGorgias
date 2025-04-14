@@ -1,0 +1,1202 @@
+[
+    {
+        "Example Number": 1,
+        "Gorgias Code": ":- dynamic birthday_today/0, concert_nearby/0\nrule(r1, clean_house, []) :- birthday_today.\nrule(r2, call_client, []) :- birthday_today.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- concert_nearby.\nrule(c1, prefer(p2, p1), []).\ncomplement(call_client, clean_house).\ncomplement(clean_house, call_client)."
+    },
+    {
+        "Example Number": 2,
+        "Gorgias Code": ":- dynamic networking_event/0, important_meeting/0, afternoon/0.\nrule(r1, travel_abroad, []) :- networking_event.\nrule(r2, finish_report, []) :- important_meeting.\nrule(p1, prefer(r1, r2), []) :- networking_event, important_meeting.\nrule(p2, prefer(r2, r1), []) :- networking_event, important_meeting, job_interview.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- afternoon.\nrule(c3, prefer(c2, c1), []).\ncomplement(finish_report, travel_abroad).\ncomplement(travel_abroad, finish_report).\ncomplement(networking_event, important_meeting).\ncomplement(important_meeting, networking_event)."
+    },
+    {
+        "Example Number": 3,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, morning_rush/0.\nrule(r1, take_picnic, []) :- urgent_deadline.\nrule(r2, visit_family, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []) :- urgent_deadline, morning_rush.\nrule(p2, prefer(r2, r1), []) :- urgent_deadline, morning_rush, subscription_due.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_family, take_picnic).\ncomplement(take_picnic, visit_family).\ncomplement(urgent_deadline, morning_rush).\ncomplement(morning_rush, urgent_deadline)."
+    },
+    {
+        "Example Number": 4,
+        "Gorgias Code": ":- dynamic good_weather/0, rainy_day/0, early_morning/0, unexpected_guest/0, moving_house/0.\nrule(r1, make_coffee, []) :- good_weather.\nrule(r2, cook_dinner, []) :- rainy_day.\nrule(p1, prefer(r1, r2), []) :- good_weather, rainy_day.\nrule(p2, prefer(r2, r1), []) :- good_weather, rainy_day, afternoon.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- early_morning.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- unexpected_guest.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- moving_house.\nrule(c5, prefer(c4, c3), []).\ncomplement(cook_dinner, make_coffee).\ncomplement(make_coffee, cook_dinner).\ncomplement(good_weather, rainy_day).\ncomplement(rainy_day, good_weather)."
+    },
+    {
+        "Example Number": 5,
+        "Gorgias Code": ":- dynamic night_time/0, team_project_due/0, dusk/0.\nrule(r1, morning_run, []) :- night_time.\nrule(r2, organize_workspace, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- night_time, team_project_due.\nrule(p2, prefer(r2, r1), []) :- night_time, team_project_due, job_interview.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- dusk.\nrule(c3, prefer(c2, c1), []).\ncomplement(organize_workspace, morning_run).\ncomplement(morning_run, organize_workspace).\ncomplement(night_time, team_project_due).\ncomplement(team_project_due, night_time)."
+    },
+    {
+        "Example Number": 6,
+        "Gorgias Code": ":- dynamic humid_day/0, new_restaurant_to_try/0, financial_aid/0\nrule(r1, submit_timesheet, []) :- humid_day.\nrule(r2, morning_run, []) :- humid_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\ncomplement(morning_run, submit_timesheet).\ncomplement(submit_timesheet, morning_run)."
+    },
+    {
+        "Example Number": 7,
+        "Gorgias Code": ":- dynamic got_bonus/0, deadline_missed/0, feeling_sick/0\nrule(r1, take_bus, []) :- got_bonus.\nrule(r2, take_picnic, []) :- got_bonus.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- deadline_missed.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- feeling_sick.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_picnic, take_bus).\ncomplement(take_bus, take_picnic)."
+    },
+    {
+        "Example Number": 8,
+        "Gorgias Code": ":- dynamic family_emergency/0, invitation_from_friend/0, expensive_event/0.\nrule(r1, travel_abroad, []) :- family_emergency.\nrule(r2, reply_emails, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- family_emergency, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- family_emergency, invitation_from_friend, urgent_deadline.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- expensive_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(reply_emails, travel_abroad).\ncomplement(travel_abroad, reply_emails).\ncomplement(family_emergency, invitation_from_friend).\ncomplement(invitation_from_friend, family_emergency)."
+    },
+    {
+        "Example Number": 9,
+        "Gorgias Code": ":- dynamic new_neighbor/0, moving_house/0, feeling_sick/0\nrule(r1, cycle_to_work, []) :- new_neighbor.\nrule(r2, buy_groceries, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- moving_house.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- feeling_sick.\nrule(c3, prefer(c2, c1), []).\ncomplement(buy_groceries, cycle_to_work).\ncomplement(cycle_to_work, buy_groceries)."
+    },
+    {
+        "Example Number": 10,
+        "Gorgias Code": ":- dynamic hot_day/0, new_neighbor/0, school_reunion/0.\nrule(r1, cycle_to_work, []) :- hot_day.\nrule(r2, go_to_bar, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []) :- hot_day, new_neighbor.\nrule(p2, prefer(r2, r1), []) :- hot_day, new_neighbor, relationship_break.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to_bar, cycle_to_work).\ncomplement(cycle_to_work, go_to_bar).\ncomplement(hot_day, new_neighbor).\ncomplement(new_neighbor, hot_day)."
+    },
+    {
+        "Example Number": 11,
+        "Gorgias Code": ":- dynamic got_bonus/0.\nrule(r1, water_plants, []) :- got_bonus.\nrule(r2, book_flight, []) :- got_bonus.\nrule(p1, prefer(r1, r2), []).\ncomplement(book_flight, water_plants).\ncomplement(water_plants, book_flight)."
+    },
+    {
+        "Example Number": 12,
+        "Gorgias Code": ":- dynamic weekend/0, new_neighbor/0, important_meeting/0\nrule(r1, morning_run, []) :- weekend.\nrule(r2, attend_concert, []) :- weekend.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_neighbor.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- important_meeting.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_concert, morning_run).\ncomplement(morning_run, attend_concert)."
+    },
+    {
+        "Example Number": 13,
+        "Gorgias Code": ":- dynamic low_budget/0.\nrule(r1, order_taxi, []) :- low_budget.\nrule(r2, join_fitness_class, []) :- low_budget.\nrule(p1, prefer(r1, r2), []).\ncomplement(join_fitness_class, order_taxi).\ncomplement(order_taxi, join_fitness_class)."
+    },
+    {
+        "Example Number": 14,
+        "Gorgias Code": ":- dynamic relationship_break/0, weekend/0, holiday_season/0.\nrule(r1, order_taxi, []) :- relationship_break.\nrule(r2, read_book, []) :- weekend.\nrule(p1, prefer(r1, r2), []) :- relationship_break, weekend.\nrule(p2, prefer(r2, r1), []) :- relationship_break, weekend, friend_in_town.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- holiday_season.\nrule(c3, prefer(c2, c1), []).\ncomplement(read_book, order_taxi).\ncomplement(order_taxi, read_book).\ncomplement(relationship_break, weekend).\ncomplement(weekend, relationship_break)."
+    },
+    {
+        "Example Number": 15,
+        "Gorgias Code": ":- dynamic team_project_due/0, new_restaurant_to_try/0\nrule(r1, cook_dinner, []) :- team_project_due.\nrule(r2, reply_emails, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\ncomplement(reply_emails, cook_dinner).\ncomplement(cook_dinner, reply_emails)."
+    },
+    {
+        "Example Number": 16,
+        "Gorgias Code": ":- dynamic low_budget/0.\nrule(r1, swim_session, []) :- low_budget.\nrule(r2, order_taxi, []) :- low_budget.\nrule(p1, prefer(r1, r2), []).\ncomplement(order_taxi, swim_session).\ncomplement(swim_session, order_taxi)."
+    },
+    {
+        "Example Number": 17,
+        "Gorgias Code": ":- dynamic financial_aid/0, important_meeting/0, extended_work_hours/0, discount_on_flight/0, dusk/0.\nrule(r1, attend_workshop, []) :- financial_aid.\nrule(r2, drive_car, []) :- important_meeting.\nrule(p1, prefer(r1, r2), []) :- financial_aid, important_meeting.\nrule(p2, prefer(r2, r1), []) :- financial_aid, important_meeting, family_emergency.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- extended_work_hours.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- discount_on_flight.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- dusk.\nrule(c5, prefer(c4, c3), []).\ncomplement(drive_car, attend_workshop).\ncomplement(attend_workshop, drive_car).\ncomplement(financial_aid, important_meeting).\ncomplement(important_meeting, financial_aid)."
+    },
+    {
+        "Example Number": 18,
+        "Gorgias Code": ":- dynamic new_neighbor/0, rainy_day/0, project_extension/0.\nrule(r1, pay_bills, []) :- new_neighbor.\nrule(r2, prepare_report, []) :- rainy_day.\nrule(p1, prefer(r1, r2), []) :- new_neighbor, rainy_day.\nrule(p2, prefer(r2, r1), []) :- new_neighbor, rainy_day, morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- project_extension.\nrule(c3, prefer(c2, c1), []).\ncomplement(prepare_report, pay_bills).\ncomplement(pay_bills, prepare_report).\ncomplement(new_neighbor, rainy_day).\ncomplement(rainy_day, new_neighbor)."
+    },
+    {
+        "Example Number": 19,
+        "Gorgias Code": ":- dynamic concert_nearby/0, good_weather/0\nrule(r1, cycle_to_work, []) :- concert_nearby.\nrule(r2, visit_doctor, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- good_weather.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_doctor, cycle_to_work).\ncomplement(cycle_to_work, visit_doctor)."
+    },
+    {
+        "Example Number": 20,
+        "Gorgias Code": ":- dynamic party_invitation/0, boss_in_office/0\nrule(r1, travel_abroad, []) :- party_invitation.\nrule(r2, update_project_plan, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- boss_in_office.\nrule(c1, prefer(p2, p1), []).\ncomplement(update_project_plan, travel_abroad).\ncomplement(travel_abroad, update_project_plan)."
+    },
+    {
+        "Example Number": 21,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, birthday_today/0.\nrule(r1, go_to(cinema), []) :- invitation_from_friend.\nrule(r2, drive_car, []) :- birthday_today.\nrule(p1, prefer(r1, r2), []) :- invitation_from_friend, birthday_today.\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend, birthday_today, rainy_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(drive_car, go_to(cinema)).\ncomplement(go_to(cinema), drive_car).\ncomplement(invitation_from_friend, birthday_today).\ncomplement(birthday_today, invitation_from_friend)."
+    },
+    {
+        "Example Number": 22,
+        "Gorgias Code": ":- dynamic lunch_time/0, team_project_due/0, holiday_season/0\nrule(r1, go_to(theater), []) :- lunch_time.\nrule(r2, swim_session, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- holiday_season.\nrule(c3, prefer(c2, c1), []).\ncomplement(swim_session, go_to(theater)).\ncomplement(go_to(theater), swim_session)."
+    },
+    {
+        "Example Number": 23,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, team_project_due/0.\nrule(r1, go_gym, []) :- invitation_from_friend.\nrule(r2, reply_emails, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- invitation_from_friend, team_project_due.\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend, team_project_due, good_weather.\nrule(c1, prefer(p2, p1), []).\ncomplement(reply_emails, go_gym).\ncomplement(go_gym, reply_emails).\ncomplement(invitation_from_friend, team_project_due).\ncomplement(team_project_due, invitation_from_friend)."
+    },
+    {
+        "Example Number": 24,
+        "Gorgias Code": ":- dynamic humid_day/0, windy_day/0, community_event/0.\nrule(r1, meditate, []) :- humid_day.\nrule(r2, dispose_trash, []) :- windy_day.\nrule(p1, prefer(r1, r2), []) :- humid_day, windy_day.\nrule(p2, prefer(r2, r1), []) :- humid_day, windy_day, team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- community_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(dispose_trash, meditate).\ncomplement(meditate, dispose_trash).\ncomplement(humid_day, windy_day).\ncomplement(windy_day, humid_day)."
+    },
+    {
+        "Example Number": 25,
+        "Gorgias Code": ":- dynamic windy_day/0, party_invitation/0, early_morning/0.\nrule(r1, use_subway, []) :- windy_day.\nrule(r2, go_gym, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []) :- windy_day, party_invitation.\nrule(p2, prefer(r2, r1), []) :- windy_day, party_invitation, deadline_missed.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- early_morning.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_gym, use_subway).\ncomplement(use_subway, go_gym).\ncomplement(windy_day, party_invitation).\ncomplement(party_invitation, windy_day)."
+    },
+    {
+        "Example Number": 26,
+        "Gorgias Code": ":- dynamic client_feedback/0.\nrule(r1, schedule_meeting, []) :- client_feedback.\nrule(r2, plan_meals, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []).\ncomplement(plan_meals, schedule_meeting).\ncomplement(schedule_meeting, plan_meals)."
+    },
+    {
+        "Example Number": 27,
+        "Gorgias Code": ":- dynamic subscription_due/0, financial_aid/0, discount_on_flight/0.\nrule(r1, meditate, []) :- subscription_due.\nrule(r2, schedule_meeting, []) :- financial_aid.\nrule(p1, prefer(r1, r2), []) :- subscription_due, financial_aid.\nrule(p2, prefer(r2, r1), []) :- subscription_due, financial_aid, good_investment.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- discount_on_flight.\nrule(c3, prefer(c2, c1), []).\ncomplement(schedule_meeting, meditate).\ncomplement(meditate, schedule_meeting).\ncomplement(subscription_due, financial_aid).\ncomplement(financial_aid, subscription_due)."
+    },
+    {
+        "Example Number": 28,
+        "Gorgias Code": ":- dynamic holiday_season/0, good_investment/0.\nrule(r1, join_fitness_class, []) :- holiday_season.\nrule(r2, organize_workspace, []) :- good_investment.\nrule(p1, prefer(r1, r2), []) :- holiday_season, good_investment.\nrule(p2, prefer(r2, r1), []) :- holiday_season, good_investment, tax_refund.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, join_fitness_class).\ncomplement(join_fitness_class, organize_workspace).\ncomplement(holiday_season, good_investment).\ncomplement(good_investment, holiday_season)."
+    },
+    {
+        "Example Number": 29,
+        "Gorgias Code": ":- dynamic hail_storm/0, discount_on_flight/0\nrule(r1, update_project_plan, []) :- hail_storm.\nrule(r2, go_to(theater), []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- discount_on_flight.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_to(theater), update_project_plan).\ncomplement(update_project_plan, go_to(theater))."
+    },
+    {
+        "Example Number": 30,
+        "Gorgias Code": ":- dynamic project_extension/0, relationship_break/0\nrule(r1, update_project_plan, []) :- project_extension.\nrule(r2, call_client, []) :- project_extension.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- relationship_break.\nrule(c1, prefer(p2, p1), []).\ncomplement(call_client, update_project_plan).\ncomplement(update_project_plan, call_client)."
+    },
+    {
+        "Example Number": 31,
+        "Gorgias Code": ":- dynamic snowstorm/0, financial_aid/0, low_budget/0\nrule(r1, go_to(cinema), []) :- snowstorm.\nrule(r2, order_taxi, []) :- snowstorm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- financial_aid.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- low_budget.\nrule(c3, prefer(c2, c1), []).\ncomplement(order_taxi, go_to(cinema)).\ncomplement(go_to(cinema), order_taxi)."
+    },
+    {
+        "Example Number": 32,
+        "Gorgias Code": ":- dynamic deadline_missed/0.\nrule(r1, make_coffee, []) :- deadline_missed.\nrule(r2, finish_report, []) :- deadline_missed.\nrule(p1, prefer(r1, r2), []).\ncomplement(finish_report, make_coffee).\ncomplement(make_coffee, finish_report)."
+    },
+    {
+        "Example Number": 33,
+        "Gorgias Code": ":- dynamic morning_rush/0, concert_nearby/0, relationship_break/0, hail_storm/0, invitation_from_friend/0.\nrule(r1, clean_house, []) :- morning_rush.\nrule(r2, swim_session, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []) :- morning_rush, concert_nearby.\nrule(p2, prefer(r2, r1), []) :- morning_rush, concert_nearby, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- relationship_break.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- hail_storm.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- invitation_from_friend.\nrule(c5, prefer(c4, c3), []).\ncomplement(swim_session, clean_house).\ncomplement(clean_house, swim_session).\ncomplement(morning_rush, concert_nearby).\ncomplement(concert_nearby, morning_rush)."
+    },
+    {
+        "Example Number": 34,
+        "Gorgias Code": ":- dynamic job_interview/0, good_weather/0, deadline_missed/0.\nrule(r1, go_shopping, []) :- job_interview.\nrule(r2, give_presentation, []) :- good_weather.\nrule(p1, prefer(r1, r2), []) :- job_interview, good_weather.\nrule(p2, prefer(r2, r1), []) :- job_interview, good_weather, rainy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- deadline_missed.\nrule(c3, prefer(c2, c1), []).\ncomplement(give_presentation, go_shopping).\ncomplement(go_shopping, give_presentation).\ncomplement(job_interview, good_weather).\ncomplement(good_weather, job_interview)."
+    },
+    {
+        "Example Number": 35,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, community_event/0.\nrule(r1, go_to(cinema), []) :- urgent_deadline.\nrule(r2, cycle_to_work, []) :- community_event.\nrule(p1, prefer(r1, r2), []) :- urgent_deadline, community_event.\nrule(p2, prefer(r2, r1), []) :- urgent_deadline, community_event, afternoon.\nrule(c1, prefer(p2, p1), []).\ncomplement(cycle_to_work, go_to(cinema)).\ncomplement(go_to(cinema), cycle_to_work).\ncomplement(urgent_deadline, community_event).\ncomplement(community_event, urgent_deadline)."
+    },
+    {
+        "Example Number": 36,
+        "Gorgias Code": ":- dynamic community_event/0, school_reunion/0, hail_storm/0\nrule(r1, buy_groceries, []) :- community_event.\nrule(r2, drive_car, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- school_reunion.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hail_storm.\nrule(c3, prefer(c2, c1), []).\ncomplement(drive_car, buy_groceries).\ncomplement(buy_groceries, drive_car)."
+    },
+    {
+        "Example Number": 37,
+        "Gorgias Code": ":- dynamic expensive_event/0, project_extension/0.\nrule(r1, drive_car, []) :- expensive_event.\nrule(r2, rent_car, []) :- project_extension.\nrule(p1, prefer(r1, r2), []) :- expensive_event, project_extension.\nrule(p2, prefer(r2, r1), []) :- expensive_event, project_extension, humid_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(rent_car, drive_car).\ncomplement(drive_car, rent_car).\ncomplement(expensive_event, project_extension).\ncomplement(project_extension, expensive_event)."
+    },
+    {
+        "Example Number": 38,
+        "Gorgias Code": ":- dynamic got_bonus/0, unexpected_guest/0.\nrule(r1, cycle_to_work, []) :- got_bonus.\nrule(r2, dispose_trash, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []) :- got_bonus, unexpected_guest.\nrule(p2, prefer(r2, r1), []) :- got_bonus, unexpected_guest, good_investment.\nrule(c1, prefer(p2, p1), []).\ncomplement(dispose_trash, cycle_to_work).\ncomplement(cycle_to_work, dispose_trash).\ncomplement(got_bonus, unexpected_guest).\ncomplement(unexpected_guest, got_bonus)."
+    },
+    {
+        "Example Number": 39,
+        "Gorgias Code": ":- dynamic networking_event/0.\nrule(r1, swim_session, []) :- networking_event.\nrule(r2, morning_run, []) :- networking_event.\nrule(p1, prefer(r1, r2), []).\ncomplement(morning_run, swim_session).\ncomplement(swim_session, morning_run)."
+    },
+    {
+        "Example Number": 40,
+        "Gorgias Code": ":- dynamic vacation_planned/0.\nrule(r1, submit_timesheet, []) :- vacation_planned.\nrule(r2, morning_run, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []).\ncomplement(morning_run, submit_timesheet).\ncomplement(submit_timesheet, morning_run)."
+    },
+    {
+        "Example Number": 41,
+        "Gorgias Code": ":- dynamic moving_house/0, windy_day/0.\nrule(r1, use_subway, []) :- moving_house.\nrule(r2, take_bus, []) :- windy_day.\nrule(p1, prefer(r1, r2), []) :- moving_house, windy_day.\nrule(p2, prefer(r2, r1), []) :- moving_house, windy_day, low_budget.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_bus, use_subway).\ncomplement(use_subway, take_bus).\ncomplement(moving_house, windy_day).\ncomplement(windy_day, moving_house)."
+    },
+    {
+        "Example Number": 42,
+        "Gorgias Code": ":- dynamic feeling_sick/0, snowstorm/0\nrule(r1, call_client, []) :- feeling_sick.\nrule(r2, pay_bills, []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- snowstorm.\nrule(c1, prefer(p2, p1), []).\ncomplement(pay_bills, call_client).\ncomplement(call_client, pay_bills)."
+    },
+    {
+        "Example Number": 43,
+        "Gorgias Code": ":- dynamic hot_day/0, unexpected_guest/0.\nrule(r1, reply_emails, []) :- hot_day.\nrule(r2, yoga_session, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []) :- hot_day, unexpected_guest.\nrule(p2, prefer(r2, r1), []) :- hot_day, unexpected_guest, vacation_planned.\nrule(c1, prefer(p2, p1), []).\ncomplement(yoga_session, reply_emails).\ncomplement(reply_emails, yoga_session).\ncomplement(hot_day, unexpected_guest).\ncomplement(unexpected_guest, hot_day)."
+    },
+    {
+        "Example Number": 44,
+        "Gorgias Code": ":- dynamic weekend/0, project_extension/0, important_meeting/0\nrule(r1, attend_workshop, []) :- weekend.\nrule(r2, go_gym, []) :- weekend.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- project_extension.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- important_meeting.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_gym, attend_workshop).\ncomplement(attend_workshop, go_gym)."
+    },
+    {
+        "Example Number": 45,
+        "Gorgias Code": ":- dynamic party_invitation/0, school_reunion/0\nrule(r1, cycling_session, []) :- party_invitation.\nrule(r2, visit_museum, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- school_reunion.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_museum, cycling_session).\ncomplement(cycling_session, visit_museum)."
+    },
+    {
+        "Example Number": 46,
+        "Gorgias Code": ":- dynamic birthday_today/0, windy_day/0, invitation_from_friend/0.\nrule(r1, rent_car, []) :- birthday_today.\nrule(r2, plan_meals, []) :- windy_day.\nrule(p1, prefer(r1, r2), []) :- birthday_today, windy_day.\nrule(p2, prefer(r2, r1), []) :- birthday_today, windy_day, rainy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- invitation_from_friend.\nrule(c3, prefer(c2, c1), []).\ncomplement(plan_meals, rent_car).\ncomplement(rent_car, plan_meals).\ncomplement(birthday_today, windy_day).\ncomplement(windy_day, birthday_today)."
+    },
+    {
+        "Example Number": 47,
+        "Gorgias Code": ":- dynamic wedding_anniversary/0, job_interview/0, friend_in_town/0\nrule(r1, organize_workspace, []) :- wedding_anniversary.\nrule(r2, go_to(theater), []) :- wedding_anniversary.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- job_interview.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to(theater), organize_workspace).\ncomplement(organize_workspace, go_to(theater))."
+    },
+    {
+        "Example Number": 48,
+        "Gorgias Code": ":- dynamic boss_in_office/0, hail_storm/0.\nrule(r1, organize_workspace, []) :- boss_in_office.\nrule(r2, go_to(restaurant), []) :- hail_storm.\nrule(p1, prefer(r1, r2), []) :- boss_in_office, hail_storm.\nrule(p2, prefer(r2, r1), []) :- boss_in_office, hail_storm, rainy_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_to(restaurant), organize_workspace).\ncomplement(organize_workspace, go_to(restaurant)).\ncomplement(boss_in_office, hail_storm).\ncomplement(hail_storm, boss_in_office)."
+    },
+    {
+        "Example Number": 49,
+        "Gorgias Code": ":- dynamic weekend/0, subscription_due/0, family_emergency/0.\nrule(r1, visit_doctor, []) :- weekend.\nrule(r2, attend_concert, []) :- subscription_due.\nrule(p1, prefer(r1, r2), []) :- weekend, subscription_due.\nrule(p2, prefer(r2, r1), []) :- weekend, subscription_due, morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_emergency.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_concert, visit_doctor).\ncomplement(visit_doctor, attend_concert).\ncomplement(weekend, subscription_due).\ncomplement(subscription_due, weekend)."
+    },
+    {
+        "Example Number": 50,
+        "Gorgias Code": ":- dynamic unexpected_expense/0, birthday_today/0, dusk/0.\nrule(r1, do_laundry, []) :- unexpected_expense.\nrule(r2, pay_bills, []) :- birthday_today.\nrule(p1, prefer(r1, r2), []) :- unexpected_expense, birthday_today.\nrule(p2, prefer(r2, r1), []) :- unexpected_expense, birthday_today, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- dusk.\nrule(c3, prefer(c2, c1), []).\ncomplement(pay_bills, do_laundry).\ncomplement(do_laundry, pay_bills).\ncomplement(unexpected_expense, birthday_today).\ncomplement(birthday_today, unexpected_expense)."
+    },
+    {
+        "Example Number": 51,
+        "Gorgias Code": ":- dynamic job_interview/0, vacation_planned/0\nrule(r1, attend_concert, []) :- job_interview.\nrule(r2, attend_workshop, []) :- job_interview.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- vacation_planned.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, attend_concert).\ncomplement(attend_concert, attend_workshop)."
+    },
+    {
+        "Example Number": 52,
+        "Gorgias Code": ":- dynamic extended_work_hours/0, dusk/0, moving_house/0\nrule(r1, give_presentation, []) :- extended_work_hours.\nrule(r2, water_plants, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- dusk.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\ncomplement(water_plants, give_presentation).\ncomplement(give_presentation, water_plants)."
+    },
+    {
+        "Example Number": 53,
+        "Gorgias Code": ":- dynamic wedding_anniversary/0.\nrule(r1, book_ride_share, []) :- wedding_anniversary.\nrule(r2, cook_dinner, []) :- wedding_anniversary.\nrule(p1, prefer(r1, r2), []).\ncomplement(cook_dinner, book_ride_share).\ncomplement(book_ride_share, cook_dinner)."
+    },
+    {
+        "Example Number": 54,
+        "Gorgias Code": ":- dynamic hot_day/0, early_morning/0\nrule(r1, clean_house, []) :- hot_day.\nrule(r2, join_fitness_class, []) :- hot_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- early_morning.\nrule(c1, prefer(p2, p1), []).\ncomplement(join_fitness_class, clean_house).\ncomplement(clean_house, join_fitness_class)."
+    },
+    {
+        "Example Number": 55,
+        "Gorgias Code": ":- dynamic humid_day/0.\nrule(r1, use_subway, []) :- humid_day.\nrule(r2, visit_museum, []) :- humid_day.\nrule(p1, prefer(r1, r2), []).\ncomplement(visit_museum, use_subway).\ncomplement(use_subway, visit_museum)."
+    },
+    {
+        "Example Number": 56,
+        "Gorgias Code": ":- dynamic medical_appointment/0, family_emergency/0, job_interview/0, boss_in_office/0, humid_day/0.\nrule(r1, travel_abroad, []) :- medical_appointment.\nrule(r2, book_ride_share, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []) :- medical_appointment, family_emergency.\nrule(p2, prefer(r2, r1), []) :- medical_appointment, family_emergency, snowstorm.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- job_interview.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- boss_in_office.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- humid_day.\nrule(c5, prefer(c4, c3), []).\ncomplement(book_ride_share, travel_abroad).\ncomplement(travel_abroad, book_ride_share).\ncomplement(medical_appointment, family_emergency).\ncomplement(family_emergency, medical_appointment)."
+    },
+    {
+        "Example Number": 57,
+        "Gorgias Code": ":- dynamic hot_day/0, hail_storm/0, moving_house/0, school_reunion/0, birthday_today/0.\nrule(r1, morning_run, []) :- hot_day.\nrule(r2, read_book, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []) :- hot_day, hail_storm.\nrule(p2, prefer(r2, r1), []) :- hot_day, hail_storm, unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- birthday_today.\nrule(c5, prefer(c4, c3), []).\ncomplement(read_book, morning_run).\ncomplement(morning_run, read_book).\ncomplement(hot_day, hail_storm).\ncomplement(hail_storm, hot_day)."
+    },
+    {
+        "Example Number": 58,
+        "Gorgias Code": ":- dynamic tax_refund/0.\nrule(r1, go_to(cinema), []) :- tax_refund.\nrule(r2, give_presentation, []) :- tax_refund.\nrule(p1, prefer(r1, r2), []).\ncomplement(give_presentation, go_to(cinema)).\ncomplement(go_to(cinema), give_presentation)."
+    },
+    {
+        "Example Number": 59,
+        "Gorgias Code": ":- dynamic deadline_missed/0, medical_appointment/0\nrule(r1, book_flight, []) :- deadline_missed.\nrule(r2, visit_family, []) :- deadline_missed.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- medical_appointment.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_family, book_flight).\ncomplement(book_flight, visit_family)."
+    },
+    {
+        "Example Number": 60,
+        "Gorgias Code": ":- dynamic job_interview/0.\nrule(r1, ride_bike, []) :- job_interview.\nrule(r2, go_to(restaurant), []) :- job_interview.\nrule(p1, prefer(r1, r2), []).\ncomplement(go_to(restaurant), ride_bike).\ncomplement(ride_bike, go_to(restaurant))."
+    },
+    {
+        "Example Number": 61,
+        "Gorgias Code": ":- dynamic vacation_planned/0, got_bonus/0.\nrule(r1, attend_meeting, []) :- vacation_planned.\nrule(r2, buy_groceries, []) :- got_bonus.\nrule(p1, prefer(r1, r2), []) :- vacation_planned, got_bonus.\nrule(p2, prefer(r2, r1), []) :- vacation_planned, got_bonus, dusk.\nrule(c1, prefer(p2, p1), []).\ncomplement(buy_groceries, attend_meeting).\ncomplement(attend_meeting, buy_groceries).\ncomplement(vacation_planned, got_bonus).\ncomplement(got_bonus, vacation_planned)."
+    },
+    {
+        "Example Number": 62,
+        "Gorgias Code": ":- dynamic new_neighbor/0.\nrule(r1, take_picnic, []) :- new_neighbor.\nrule(r2, finish_report, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []).\ncomplement(finish_report, take_picnic).\ncomplement(take_picnic, finish_report)."
+    },
+    {
+        "Example Number": 63,
+        "Gorgias Code": ":- dynamic tax_refund/0, dusk/0, subscription_due/0.\nrule(r1, visit_family, []) :- tax_refund.\nrule(r2, attend_concert, []) :- dusk.\nrule(p1, prefer(r1, r2), []) :- tax_refund, dusk.\nrule(p2, prefer(r2, r1), []) :- tax_refund, dusk, important_meeting.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- subscription_due.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_concert, visit_family).\ncomplement(visit_family, attend_concert).\ncomplement(tax_refund, dusk).\ncomplement(dusk, tax_refund)."
+    },
+    {
+        "Example Number": 64,
+        "Gorgias Code": ":- dynamic hot_day/0, relationship_break/0, networking_event/0.\nrule(r1, go_gym, []) :- hot_day.\nrule(r2, call_client, []) :- relationship_break.\nrule(p1, prefer(r1, r2), []) :- hot_day, relationship_break.\nrule(p2, prefer(r2, r1), []) :- hot_day, relationship_break, wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(call_client, go_gym).\ncomplement(go_gym, call_client).\ncomplement(hot_day, relationship_break).\ncomplement(relationship_break, hot_day)."
+    },
+    {
+        "Example Number": 65,
+        "Gorgias Code": ":- dynamic afternoon/0, good_investment/0, early_morning/0.\nrule(r1, book_flight, []) :- afternoon.\nrule(r2, schedule_meeting, []) :- good_investment.\nrule(p1, prefer(r1, r2), []) :- afternoon, good_investment.\nrule(p2, prefer(r2, r1), []) :- afternoon, good_investment, unexpected_expense.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- early_morning.\nrule(c3, prefer(c2, c1), []).\ncomplement(schedule_meeting, book_flight).\ncomplement(book_flight, schedule_meeting).\ncomplement(afternoon, good_investment).\ncomplement(good_investment, afternoon)."
+    },
+    {
+        "Example Number": 66,
+        "Gorgias Code": ":- dynamic holiday_season/0, networking_event/0.\nrule(r1, plan_meals, []) :- holiday_season.\nrule(r2, review_documents, []) :- networking_event.\nrule(p1, prefer(r1, r2), []) :- holiday_season, networking_event.\nrule(p2, prefer(r2, r1), []) :- holiday_season, networking_event, medical_appointment.\nrule(c1, prefer(p2, p1), []).\ncomplement(review_documents, plan_meals).\ncomplement(plan_meals, review_documents).\ncomplement(holiday_season, networking_event).\ncomplement(networking_event, holiday_season)."
+    },
+    {
+        "Example Number": 67,
+        "Gorgias Code": ":- dynamic snowstorm/0.\nrule(r1, visit_museum, []) :- snowstorm.\nrule(r2, yoga_session, []) :- snowstorm.\nrule(p1, prefer(r1, r2), []).\ncomplement(yoga_session, visit_museum).\ncomplement(visit_museum, yoga_session)."
+    },
+    {
+        "Example Number": 68,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, discount_on_flight/0, low_budget/0.\nrule(r1, review_documents, []) :- unexpected_guest.\nrule(r2, take_bus, []) :- discount_on_flight.\nrule(p1, prefer(r1, r2), []) :- unexpected_guest, discount_on_flight.\nrule(p2, prefer(r2, r1), []) :- unexpected_guest, discount_on_flight, important_meeting.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- low_budget.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_bus, review_documents).\ncomplement(review_documents, take_bus).\ncomplement(unexpected_guest, discount_on_flight).\ncomplement(discount_on_flight, unexpected_guest)."
+    },
+    {
+        "Example Number": 69,
+        "Gorgias Code": ":- dynamic hot_day/0.\nrule(r1, ride_bike, []) :- hot_day.\nrule(r2, attend_meeting, []) :- hot_day.\nrule(p1, prefer(r1, r2), []).\ncomplement(attend_meeting, ride_bike).\ncomplement(ride_bike, attend_meeting)."
+    },
+    {
+        "Example Number": 70,
+        "Gorgias Code": ":- dynamic tax_refund/0, got_bonus/0\nrule(r1, cycling_session, []) :- tax_refund.\nrule(r2, travel_abroad, []) :- tax_refund.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- got_bonus.\nrule(c1, prefer(p2, p1), []).\ncomplement(travel_abroad, cycling_session).\ncomplement(cycling_session, travel_abroad)."
+    },
+    {
+        "Example Number": 71,
+        "Gorgias Code": ":- dynamic afternoon/0.\nrule(r1, plan_meals, []) :- afternoon.\nrule(r2, visit_family, []) :- afternoon.\nrule(p1, prefer(r1, r2), []).\ncomplement(visit_family, plan_meals).\ncomplement(plan_meals, visit_family)."
+    },
+    {
+        "Example Number": 72,
+        "Gorgias Code": ":- dynamic family_gathering/0, vacation_planned/0, boss_in_office/0.\nrule(r1, finish_report, []) :- family_gathering.\nrule(r2, book_ride_share, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []) :- family_gathering, vacation_planned.\nrule(p2, prefer(r2, r1), []) :- family_gathering, vacation_planned, friend_in_town.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- boss_in_office.\nrule(c3, prefer(c2, c1), []).\ncomplement(book_ride_share, finish_report).\ncomplement(finish_report, book_ride_share).\ncomplement(family_gathering, vacation_planned).\ncomplement(vacation_planned, family_gathering)."
+    },
+    {
+        "Example Number": 73,
+        "Gorgias Code": ":- dynamic feeling_sick/0, humid_day/0.\nrule(r1, cycling_session, []) :- feeling_sick.\nrule(r2, schedule_meeting, []) :- humid_day.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, humid_day.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, humid_day, relationship_break.\nrule(c1, prefer(p2, p1), []).\ncomplement(schedule_meeting, cycling_session).\ncomplement(cycling_session, schedule_meeting).\ncomplement(feeling_sick, humid_day).\ncomplement(humid_day, feeling_sick)."
+    },
+    {
+        "Example Number": 74,
+        "Gorgias Code": ":- dynamic tax_refund/0, team_project_due/0, cloudy_day/0.\nrule(r1, visit_doctor, []) :- tax_refund.\nrule(r2, ride_bike, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- tax_refund, team_project_due.\nrule(p2, prefer(r2, r1), []) :- tax_refund, team_project_due, party_invitation.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- cloudy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(ride_bike, visit_doctor).\ncomplement(visit_doctor, ride_bike).\ncomplement(tax_refund, team_project_due).\ncomplement(team_project_due, tax_refund)."
+    },
+    {
+        "Example Number": 75,
+        "Gorgias Code": ":- dynamic new_neighbor/0.\nrule(r1, meditate, []) :- new_neighbor.\nrule(r2, yoga_session, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []).\ncomplement(yoga_session, meditate).\ncomplement(meditate, yoga_session)."
+    },
+    {
+        "Example Number": 76,
+        "Gorgias Code": ":- dynamic concert_nearby/0, weekend/0, job_interview/0, friend_in_town/0, snowstorm/0.\nrule(r1, do_laundry, []) :- concert_nearby.\nrule(r2, travel_abroad, []) :- weekend.\nrule(p1, prefer(r1, r2), []) :- concert_nearby, weekend.\nrule(p2, prefer(r2, r1), []) :- concert_nearby, weekend, community_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- job_interview.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- snowstorm.\nrule(c5, prefer(c4, c3), []).\ncomplement(travel_abroad, do_laundry).\ncomplement(do_laundry, travel_abroad).\ncomplement(concert_nearby, weekend).\ncomplement(weekend, concert_nearby)."
+    },
+    {
+        "Example Number": 77,
+        "Gorgias Code": ":- dynamic wedding_anniversary/0, team_project_due/0, humid_day/0\nrule(r1, read_book, []) :- wedding_anniversary.\nrule(r2, morning_run, []) :- wedding_anniversary.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- humid_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(morning_run, read_book).\ncomplement(read_book, morning_run)."
+    },
+    {
+        "Example Number": 78,
+        "Gorgias Code": ":- dynamic cloudy_day/0, team_project_due/0.\nrule(r1, reply_emails, []) :- cloudy_day.\nrule(r2, attend_workshop, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- cloudy_day, team_project_due.\nrule(p2, prefer(r2, r1), []) :- cloudy_day, team_project_due, deadline_missed.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, reply_emails).\ncomplement(reply_emails, attend_workshop).\ncomplement(cloudy_day, team_project_due).\ncomplement(team_project_due, cloudy_day)."
+    },
+    {
+        "Example Number": 79,
+        "Gorgias Code": ":- dynamic moving_house/0, humid_day/0\nrule(r1, take_picnic, []) :- moving_house.\nrule(r2, go_gym, []) :- moving_house.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- humid_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_gym, take_picnic).\ncomplement(take_picnic, go_gym)."
+    },
+    {
+        "Example Number": 80,
+        "Gorgias Code": ":- dynamic holiday_season/0, morning_rush/0, school_reunion/0.\nrule(r1, order_taxi, []) :- holiday_season.\nrule(r2, water_plants, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []) :- holiday_season, morning_rush.\nrule(p2, prefer(r2, r1), []) :- holiday_season, morning_rush, good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\ncomplement(water_plants, order_taxi).\ncomplement(order_taxi, water_plants).\ncomplement(holiday_season, morning_rush).\ncomplement(morning_rush, holiday_season)."
+    },
+    {
+        "Example Number": 81,
+        "Gorgias Code": ":- dynamic networking_event/0, holiday_season/0, good_investment/0.\nrule(r1, read_book, []) :- networking_event.\nrule(r2, swim_session, []) :- holiday_season.\nrule(p1, prefer(r1, r2), []) :- networking_event, holiday_season.\nrule(p2, prefer(r2, r1), []) :- networking_event, holiday_season, unexpected_expense.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_investment.\nrule(c3, prefer(c2, c1), []).\ncomplement(swim_session, read_book).\ncomplement(read_book, swim_session).\ncomplement(networking_event, holiday_season).\ncomplement(holiday_season, networking_event)."
+    },
+    {
+        "Example Number": 82,
+        "Gorgias Code": ":- dynamic extended_work_hours/0, job_interview/0, birthday_today/0, unexpected_expense/0, family_emergency/0.\nrule(r1, make_coffee, []) :- extended_work_hours.\nrule(r2, attend_workshop, []) :- job_interview.\nrule(p1, prefer(r1, r2), []) :- extended_work_hours, job_interview.\nrule(p2, prefer(r2, r1), []) :- extended_work_hours, job_interview, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- birthday_today.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- unexpected_expense.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- family_emergency.\nrule(c5, prefer(c4, c3), []).\ncomplement(attend_workshop, make_coffee).\ncomplement(make_coffee, attend_workshop).\ncomplement(extended_work_hours, job_interview).\ncomplement(job_interview, extended_work_hours)."
+    },
+    {
+        "Example Number": 83,
+        "Gorgias Code": ":- dynamic moving_house/0, invitation_from_friend/0, friend_in_town/0, medical_appointment/0, important_meeting/0.\nrule(r1, water_plants, []) :- moving_house.\nrule(r2, call_client, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- moving_house, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- moving_house, invitation_from_friend, hot_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- medical_appointment.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- important_meeting.\nrule(c5, prefer(c4, c3), []).\ncomplement(call_client, water_plants).\ncomplement(water_plants, call_client).\ncomplement(moving_house, invitation_from_friend).\ncomplement(invitation_from_friend, moving_house)."
+    },
+    {
+        "Example Number": 84,
+        "Gorgias Code": ":- dynamic subscription_due/0.\nrule(r1, go_to(restaurant), []) :- subscription_due.\nrule(r2, organize_workspace, []) :- subscription_due.\nrule(p1, prefer(r1, r2), []).\ncomplement(organize_workspace, go_to(restaurant)).\ncomplement(go_to(restaurant), organize_workspace)."
+    },
+    {
+        "Example Number": 85,
+        "Gorgias Code": ":- dynamic networking_event/0, lunch_time/0\nrule(r1, prepare_report, []) :- networking_event.\nrule(r2, visit_doctor, []) :- networking_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- lunch_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_doctor, prepare_report).\ncomplement(prepare_report, visit_doctor)."
+    },
+    {
+        "Example Number": 86,
+        "Gorgias Code": ":- dynamic school_reunion/0.\nrule(r1, evening_walk, []) :- school_reunion.\nrule(r2, submit_timesheet, []) :- school_reunion.\nrule(p1, prefer(r1, r2), []).\ncomplement(submit_timesheet, evening_walk).\ncomplement(evening_walk, submit_timesheet)."
+    },
+    {
+        "Example Number": 87,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, afternoon/0\nrule(r1, make_coffee, []) :- urgent_deadline.\nrule(r2, update_project_plan, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- afternoon.\nrule(c1, prefer(p2, p1), []).\ncomplement(update_project_plan, make_coffee).\ncomplement(make_coffee, update_project_plan)."
+    },
+    {
+        "Example Number": 88,
+        "Gorgias Code": ":- dynamic party_invitation/0, windy_day/0, moving_house/0\nrule(r1, travel_abroad, []) :- party_invitation.\nrule(r2, host_dinner_party, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- windy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\ncomplement(host_dinner_party, travel_abroad).\ncomplement(travel_abroad, host_dinner_party)."
+    },
+    {
+        "Example Number": 89,
+        "Gorgias Code": ":- dynamic important_meeting/0.\nrule(r1, attend_workshop, []) :- important_meeting.\nrule(r2, cycling_session, []) :- important_meeting.\nrule(p1, prefer(r1, r2), []).\ncomplement(cycling_session, attend_workshop).\ncomplement(attend_workshop, cycling_session)."
+    },
+    {
+        "Example Number": 90,
+        "Gorgias Code": ":- dynamic good_investment/0, morning_rush/0\nrule(r1, reply_emails, []) :- good_investment.\nrule(r2, explore_city, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- morning_rush.\nrule(c1, prefer(p2, p1), []).\ncomplement(explore_city, reply_emails).\ncomplement(reply_emails, explore_city)."
+    },
+    {
+        "Example Number": 91,
+        "Gorgias Code": ":- dynamic community_event/0, vacation_planned/0, urgent_deadline/0, subscription_due/0, deadline_missed/0.\nrule(r1, do_laundry, []) :- community_event.\nrule(r2, host_dinner_party, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []) :- community_event, vacation_planned.\nrule(p2, prefer(r2, r1), []) :- community_event, vacation_planned, family_emergency.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- subscription_due.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- deadline_missed.\nrule(c5, prefer(c4, c3), []).\ncomplement(host_dinner_party, do_laundry).\ncomplement(do_laundry, host_dinner_party).\ncomplement(community_event, vacation_planned).\ncomplement(vacation_planned, community_event)."
+    },
+    {
+        "Example Number": 92,
+        "Gorgias Code": ":- dynamic humid_day/0, family_emergency/0.\nrule(r1, plan_meals, []) :- humid_day.\nrule(r2, submit_timesheet, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []) :- humid_day, family_emergency.\nrule(p2, prefer(r2, r1), []) :- humid_day, family_emergency, hail_storm.\nrule(c1, prefer(p2, p1), []).\ncomplement(submit_timesheet, plan_meals).\ncomplement(plan_meals, submit_timesheet).\ncomplement(humid_day, family_emergency).\ncomplement(family_emergency, humid_day)."
+    },
+    {
+        "Example Number": 93,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0.\nrule(r1, review_documents, []) :- invitation_from_friend.\nrule(r2, yoga_session, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []).\ncomplement(yoga_session, review_documents).\ncomplement(review_documents, yoga_session)."
+    },
+    {
+        "Example Number": 94,
+        "Gorgias Code": ":- dynamic dusk/0, urgent_deadline/0, family_emergency/0, low_budget/0, team_project_due/0.\nrule(r1, order_taxi, []) :- dusk.\nrule(r2, book_ride_share, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []) :- dusk, urgent_deadline.\nrule(p2, prefer(r2, r1), []) :- dusk, urgent_deadline, new_neighbor.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_emergency.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- low_budget.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- team_project_due.\nrule(c5, prefer(c4, c3), []).\ncomplement(book_ride_share, order_taxi).\ncomplement(order_taxi, book_ride_share).\ncomplement(dusk, urgent_deadline).\ncomplement(urgent_deadline, dusk)."
+    },
+    {
+        "Example Number": 95,
+        "Gorgias Code": ":- dynamic subscription_due/0, discount_on_flight/0\nrule(r1, read_book, []) :- subscription_due.\nrule(r2, attend_workshop, []) :- subscription_due.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- discount_on_flight.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, read_book).\ncomplement(read_book, attend_workshop)."
+    },
+    {
+        "Example Number": 96,
+        "Gorgias Code": ":- dynamic concert_nearby/0, windy_day/0\nrule(r1, pay_bills, []) :- concert_nearby.\nrule(r2, cook_dinner, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- windy_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(cook_dinner, pay_bills).\ncomplement(pay_bills, cook_dinner)."
+    },
+    {
+        "Example Number": 97,
+        "Gorgias Code": ":- dynamic morning_rush/0, expensive_event/0, birthday_today/0\nrule(r1, host_dinner_party, []) :- morning_rush.\nrule(r2, give_presentation, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- expensive_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- birthday_today.\nrule(c3, prefer(c2, c1), []).\ncomplement(give_presentation, host_dinner_party).\ncomplement(host_dinner_party, give_presentation)."
+    },
+    {
+        "Example Number": 98,
+        "Gorgias Code": ":- dynamic cloudy_day/0, windy_day/0.\nrule(r1, review_documents, []) :- cloudy_day.\nrule(r2, organize_workspace, []) :- windy_day.\nrule(p1, prefer(r1, r2), []) :- cloudy_day, windy_day.\nrule(p2, prefer(r2, r1), []) :- cloudy_day, windy_day, holiday_season.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, review_documents).\ncomplement(review_documents, organize_workspace).\ncomplement(cloudy_day, windy_day).\ncomplement(windy_day, cloudy_day)."
+    },
+    {
+        "Example Number": 99,
+        "Gorgias Code": ":- dynamic client_feedback/0, extended_work_hours/0\nrule(r1, go_to(restaurant), []) :- client_feedback.\nrule(r2, go_to(theater), []) :- client_feedback.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- extended_work_hours.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_to(theater), go_to(restaurant)).\ncomplement(go_to(restaurant), go_to(theater))."
+    },
+    {
+        "Example Number": 100,
+        "Gorgias Code": ":- dynamic tax_refund/0, client_feedback/0, friend_in_town/0.\nrule(r1, attend_meeting, []) :- tax_refund.\nrule(r2, read_book, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []) :- tax_refund, client_feedback.\nrule(p2, prefer(r2, r1), []) :- tax_refund, client_feedback, cloudy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\ncomplement(read_book, attend_meeting).\ncomplement(attend_meeting, read_book).\ncomplement(tax_refund, client_feedback).\ncomplement(client_feedback, tax_refund)."
+    },
+    {
+        "Example Number": 101,
+        "Gorgias Code": ":- dynamic hot_day/0, new_neighbor/0\nrule(r1, prepare_report, []) :- hot_day.\nrule(r2, pay_bills, []) :- hot_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_neighbor.\nrule(c1, prefer(p2, p1), []).\ncomplement(pay_bills, prepare_report).\ncomplement(prepare_report, pay_bills)."
+    },
+    {
+        "Example Number": 102,
+        "Gorgias Code": ":- dynamic night_time/0, new_neighbor/0, important_meeting/0\nrule(r1, review_documents, []) :- night_time.\nrule(r2, visit_doctor, []) :- night_time.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_neighbor.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- important_meeting.\nrule(c3, prefer(c2, c1), []).\ncomplement(visit_doctor, review_documents).\ncomplement(review_documents, visit_doctor)."
+    },
+    {
+        "Example Number": 103,
+        "Gorgias Code": ":- dynamic good_weather/0, extended_work_hours/0, financial_aid/0\nrule(r1, pay_bills, []) :- good_weather.\nrule(r2, prepare_report, []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- extended_work_hours.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\ncomplement(prepare_report, pay_bills).\ncomplement(pay_bills, prepare_report)."
+    },
+    {
+        "Example Number": 104,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, hail_storm/0\nrule(r1, attend_concert, []) :- unexpected_guest.\nrule(r2, rent_car, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- hail_storm.\nrule(c1, prefer(p2, p1), []).\ncomplement(rent_car, attend_concert).\ncomplement(attend_concert, rent_car)."
+    },
+    {
+        "Example Number": 105,
+        "Gorgias Code": ":- dynamic vacation_planned/0, weekend/0, good_weather/0\nrule(r1, visit_doctor, []) :- vacation_planned.\nrule(r2, go_to(restaurant), []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- weekend.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_weather.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to(restaurant), visit_doctor).\ncomplement(visit_doctor, go_to(restaurant))."
+    },
+    {
+        "Example Number": 106,
+        "Gorgias Code": ":- dynamic hot_day/0, afternoon/0, morning_rush/0, holiday_season/0, expensive_event/0.\nrule(r1, take_picnic, []) :- hot_day.\nrule(r2, book_flight, []) :- afternoon.\nrule(p1, prefer(r1, r2), []) :- hot_day, afternoon.\nrule(p2, prefer(r2, r1), []) :- hot_day, afternoon, birthday_today.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- morning_rush.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- holiday_season.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- expensive_event.\nrule(c5, prefer(c4, c3), []).\ncomplement(book_flight, take_picnic).\ncomplement(take_picnic, book_flight).\ncomplement(hot_day, afternoon).\ncomplement(afternoon, hot_day)."
+    },
+    {
+        "Example Number": 107,
+        "Gorgias Code": ":- dynamic relationship_break/0, humid_day/0, new_neighbor/0\nrule(r1, go_to(theater), []) :- relationship_break.\nrule(r2, plan_meals, []) :- relationship_break.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- humid_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- new_neighbor.\nrule(c3, prefer(c2, c1), []).\ncomplement(plan_meals, go_to(theater)).\ncomplement(go_to(theater), plan_meals)."
+    },
+    {
+        "Example Number": 108,
+        "Gorgias Code": ":- dynamic lunch_time/0, wedding_anniversary/0\nrule(r1, pay_bills, []) :- lunch_time.\nrule(r2, prepare_report, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\ncomplement(prepare_report, pay_bills).\ncomplement(pay_bills, prepare_report)."
+    },
+    {
+        "Example Number": 109,
+        "Gorgias Code": ":- dynamic windy_day/0, wedding_anniversary/0, dusk/0\nrule(r1, yoga_session, []) :- windy_day.\nrule(r2, buy_groceries, []) :- windy_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- dusk.\nrule(c3, prefer(c2, c1), []).\ncomplement(buy_groceries, yoga_session).\ncomplement(yoga_session, buy_groceries)."
+    },
+    {
+        "Example Number": 110,
+        "Gorgias Code": ":- dynamic night_time/0, community_event/0.\nrule(r1, schedule_meeting, []) :- night_time.\nrule(r2, rent_car, []) :- community_event.\nrule(p1, prefer(r1, r2), []) :- night_time, community_event.\nrule(p2, prefer(r2, r1), []) :- night_time, community_event, new_neighbor.\nrule(c1, prefer(p2, p1), []).\ncomplement(rent_car, schedule_meeting).\ncomplement(schedule_meeting, rent_car).\ncomplement(night_time, community_event).\ncomplement(community_event, night_time)."
+    },
+    {
+        "Example Number": 111,
+        "Gorgias Code": ":- dynamic relationship_break/0.\nrule(r1, clean_house, []) :- relationship_break.\nrule(r2, go_to(park), []) :- relationship_break.\nrule(p1, prefer(r1, r2), []).\ncomplement(go_to(park), clean_house).\ncomplement(clean_house, go_to(park))."
+    },
+    {
+        "Example Number": 112,
+        "Gorgias Code": ":- dynamic project_extension/0, concert_nearby/0\nrule(r1, morning_run, []) :- project_extension.\nrule(r2, join_fitness_class, []) :- project_extension.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- concert_nearby.\nrule(c1, prefer(p2, p1), []).\ncomplement(join_fitness_class, morning_run).\ncomplement(morning_run, join_fitness_class)."
+    },
+    {
+        "Example Number": 113,
+        "Gorgias Code": ":- dynamic feeling_sick/0, expensive_event/0.\nrule(r1, prepare_report, []) :- feeling_sick.\nrule(r2, give_presentation, []) :- expensive_event.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, expensive_event.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, expensive_event, discount_on_flight.\nrule(c1, prefer(p2, p1), []).\ncomplement(give_presentation, prepare_report).\ncomplement(prepare_report, give_presentation).\ncomplement(feeling_sick, expensive_event).\ncomplement(expensive_event, feeling_sick)."
+    },
+    {
+        "Example Number": 114,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, extended_work_hours/0.\nrule(r1, take_train, []) :- urgent_deadline.\nrule(r2, ride_bike, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []) :- urgent_deadline, extended_work_hours.\nrule(p2, prefer(r2, r1), []) :- urgent_deadline, extended_work_hours, holiday_season.\nrule(c1, prefer(p2, p1), []).\ncomplement(ride_bike, take_train).\ncomplement(take_train, ride_bike).\ncomplement(urgent_deadline, extended_work_hours).\ncomplement(extended_work_hours, urgent_deadline)."
+    },
+    {
+        "Example Number": 115,
+        "Gorgias Code": ":- dynamic good_investment/0.\nrule(r1, plan_meals, []) :- good_investment.\nrule(r2, travel_abroad, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\ncomplement(travel_abroad, plan_meals).\ncomplement(plan_meals, travel_abroad)."
+    },
+    {
+        "Example Number": 116,
+        "Gorgias Code": ":- dynamic subscription_due/0, holiday_season/0, urgent_deadline/0, hail_storm/0, medical_appointment/0.\nrule(r1, join_fitness_class, []) :- subscription_due.\nrule(r2, go_to_bar, []) :- holiday_season.\nrule(p1, prefer(r1, r2), []) :- subscription_due, holiday_season.\nrule(p2, prefer(r2, r1), []) :- subscription_due, holiday_season, project_extension.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- hail_storm.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- medical_appointment.\nrule(c5, prefer(c4, c3), []).\ncomplement(go_to_bar, join_fitness_class).\ncomplement(join_fitness_class, go_to_bar).\ncomplement(subscription_due, holiday_season).\ncomplement(holiday_season, subscription_due)."
+    },
+    {
+        "Example Number": 117,
+        "Gorgias Code": ":- dynamic hot_day/0, moving_house/0, team_project_due/0.\nrule(r1, plan_meals, []) :- hot_day.\nrule(r2, go_gym, []) :- moving_house.\nrule(p1, prefer(r1, r2), []) :- hot_day, moving_house.\nrule(p2, prefer(r2, r1), []) :- hot_day, moving_house, unexpected_expense.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- team_project_due.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_gym, plan_meals).\ncomplement(plan_meals, go_gym).\ncomplement(hot_day, moving_house).\ncomplement(moving_house, hot_day)."
+    },
+    {
+        "Example Number": 118,
+        "Gorgias Code": ":- dynamic lunch_time/0.\nrule(r1, swim_session, []) :- lunch_time.\nrule(r2, rent_car, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []).\ncomplement(rent_car, swim_session).\ncomplement(swim_session, rent_car)."
+    },
+    {
+        "Example Number": 119,
+        "Gorgias Code": ":- dynamic subscription_due/0, team_project_due/0, networking_event/0\nrule(r1, go_to(theater), []) :- subscription_due.\nrule(r2, attend_concert, []) :- subscription_due.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_concert, go_to(theater)).\ncomplement(go_to(theater), attend_concert)."
+    },
+    {
+        "Example Number": 120,
+        "Gorgias Code": ":- dynamic cloudy_day/0, feeling_sick/0\nrule(r1, take_picnic, []) :- cloudy_day.\nrule(r2, attend_concert, []) :- cloudy_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- feeling_sick.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_concert, take_picnic).\ncomplement(take_picnic, attend_concert)."
+    },
+    {
+        "Example Number": 121,
+        "Gorgias Code": ":- dynamic good_investment/0, unexpected_guest/0, cloudy_day/0.\nrule(r1, join_fitness_class, []) :- good_investment.\nrule(r2, go_shopping, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []) :- good_investment, unexpected_guest.\nrule(p2, prefer(r2, r1), []) :- good_investment, unexpected_guest, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- cloudy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_shopping, join_fitness_class).\ncomplement(join_fitness_class, go_shopping).\ncomplement(good_investment, unexpected_guest).\ncomplement(unexpected_guest, good_investment)."
+    },
+    {
+        "Example Number": 122,
+        "Gorgias Code": ":- dynamic hail_storm/0.\nrule(r1, visit_family, []) :- hail_storm.\nrule(r2, rent_car, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\ncomplement(rent_car, visit_family).\ncomplement(visit_family, rent_car)."
+    },
+    {
+        "Example Number": 123,
+        "Gorgias Code": ":- dynamic discount_on_flight/0, lunch_time/0, windy_day/0, snowstorm/0, invitation_from_friend/0.\nrule(r1, order_taxi, []) :- discount_on_flight.\nrule(r2, give_presentation, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []) :- discount_on_flight, lunch_time.\nrule(p2, prefer(r2, r1), []) :- discount_on_flight, lunch_time, birthday_today.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- windy_day.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- snowstorm.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- invitation_from_friend.\nrule(c5, prefer(c4, c3), []).\ncomplement(give_presentation, order_taxi).\ncomplement(order_taxi, give_presentation).\ncomplement(discount_on_flight, lunch_time).\ncomplement(lunch_time, discount_on_flight)."
+    },
+    {
+        "Example Number": 124,
+        "Gorgias Code": ":- dynamic subscription_due/0, unexpected_guest/0, client_feedback/0.\nrule(r1, meditate, []) :- subscription_due.\nrule(r2, join_fitness_class, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []) :- subscription_due, unexpected_guest.\nrule(p2, prefer(r2, r1), []) :- subscription_due, unexpected_guest, deadline_missed.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- client_feedback.\nrule(c3, prefer(c2, c1), []).\ncomplement(join_fitness_class, meditate).\ncomplement(meditate, join_fitness_class).\ncomplement(subscription_due, unexpected_guest).\ncomplement(unexpected_guest, subscription_due)."
+    },
+    {
+        "Example Number": 125,
+        "Gorgias Code": ":- dynamic community_event/0, moving_house/0\nrule(r1, review_documents, []) :- community_event.\nrule(r2, take_train, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- moving_house.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_train, review_documents).\ncomplement(review_documents, take_train)."
+    },
+    {
+        "Example Number": 126,
+        "Gorgias Code": ":- dynamic humid_day/0, weekend/0, important_meeting/0.\nrule(r1, attend_workshop, []) :- humid_day.\nrule(r2, cook_dinner, []) :- weekend.\nrule(p1, prefer(r1, r2), []) :- humid_day, weekend.\nrule(p2, prefer(r2, r1), []) :- humid_day, weekend, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- important_meeting.\nrule(c3, prefer(c2, c1), []).\ncomplement(cook_dinner, attend_workshop).\ncomplement(attend_workshop, cook_dinner).\ncomplement(humid_day, weekend).\ncomplement(weekend, humid_day)."
+    },
+    {
+        "Example Number": 127,
+        "Gorgias Code": ":- dynamic lunch_time/0.\nrule(r1, rent_car, []) :- lunch_time.\nrule(r2, attend_workshop, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []).\ncomplement(attend_workshop, rent_car).\ncomplement(rent_car, attend_workshop)."
+    },
+    {
+        "Example Number": 128,
+        "Gorgias Code": ":- dynamic feeling_sick/0, networking_event/0, hot_day/0.\nrule(r1, go_to(theater), []) :- feeling_sick.\nrule(r2, organize_workspace, []) :- networking_event.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, networking_event.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, networking_event, family_emergency.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hot_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(organize_workspace, go_to(theater)).\ncomplement(go_to(theater), organize_workspace).\ncomplement(feeling_sick, networking_event).\ncomplement(networking_event, feeling_sick)."
+    },
+    {
+        "Example Number": 129,
+        "Gorgias Code": ":- dynamic good_weather/0, school_reunion/0\nrule(r1, call_client, []) :- good_weather.\nrule(r2, host_dinner_party, []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- school_reunion.\nrule(c1, prefer(p2, p1), []).\ncomplement(host_dinner_party, call_client).\ncomplement(call_client, host_dinner_party)."
+    },
+    {
+        "Example Number": 130,
+        "Gorgias Code": ":- dynamic client_feedback/0, cloudy_day/0, night_time/0.\nrule(r1, visit_family, []) :- client_feedback.\nrule(r2, take_picnic, []) :- cloudy_day.\nrule(p1, prefer(r1, r2), []) :- client_feedback, cloudy_day.\nrule(p2, prefer(r2, r1), []) :- client_feedback, cloudy_day, low_budget.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- night_time.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_picnic, visit_family).\ncomplement(visit_family, take_picnic).\ncomplement(client_feedback, cloudy_day).\ncomplement(cloudy_day, client_feedback)."
+    },
+    {
+        "Example Number": 131,
+        "Gorgias Code": ":- dynamic relationship_break/0, lunch_time/0, good_weather/0.\nrule(r1, prepare_report, []) :- relationship_break.\nrule(r2, cycle_to_work, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []) :- relationship_break, lunch_time.\nrule(p2, prefer(r2, r1), []) :- relationship_break, lunch_time, good_investment.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_weather.\nrule(c3, prefer(c2, c1), []).\ncomplement(cycle_to_work, prepare_report).\ncomplement(prepare_report, cycle_to_work).\ncomplement(relationship_break, lunch_time).\ncomplement(lunch_time, relationship_break)."
+    },
+    {
+        "Example Number": 132,
+        "Gorgias Code": ":- dynamic tax_refund/0, expensive_event/0, urgent_deadline/0, project_extension/0, important_meeting/0.\nrule(r1, take_train, []) :- tax_refund.\nrule(r2, finish_report, []) :- expensive_event.\nrule(p1, prefer(r1, r2), []) :- tax_refund, expensive_event.\nrule(p2, prefer(r2, r1), []) :- tax_refund, expensive_event, night_time.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- project_extension.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- important_meeting.\nrule(c5, prefer(c4, c3), []).\ncomplement(finish_report, take_train).\ncomplement(take_train, finish_report).\ncomplement(tax_refund, expensive_event).\ncomplement(expensive_event, tax_refund)."
+    },
+    {
+        "Example Number": 133,
+        "Gorgias Code": ":- dynamic birthday_today/0, early_morning/0, new_neighbor/0, urgent_deadline/0, wedding_anniversary/0.\nrule(r1, attend_meeting, []) :- birthday_today.\nrule(r2, order_taxi, []) :- early_morning.\nrule(p1, prefer(r1, r2), []) :- birthday_today, early_morning.\nrule(p2, prefer(r2, r1), []) :- birthday_today, early_morning, moving_house.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- new_neighbor.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- wedding_anniversary.\nrule(c5, prefer(c4, c3), []).\ncomplement(order_taxi, attend_meeting).\ncomplement(attend_meeting, order_taxi).\ncomplement(birthday_today, early_morning).\ncomplement(early_morning, birthday_today)."
+    },
+    {
+        "Example Number": 134,
+        "Gorgias Code": ":- dynamic expensive_event/0, unexpected_guest/0\nrule(r1, finish_report, []) :- expensive_event.\nrule(r2, morning_run, []) :- expensive_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- unexpected_guest.\nrule(c1, prefer(p2, p1), []).\ncomplement(morning_run, finish_report).\ncomplement(finish_report, morning_run)."
+    },
+    {
+        "Example Number": 135,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, school_reunion/0, party_invitation/0.\nrule(r1, reply_emails, []) :- urgent_deadline.\nrule(r2, call_client, []) :- school_reunion.\nrule(p1, prefer(r1, r2), []) :- urgent_deadline, school_reunion.\nrule(p2, prefer(r2, r1), []) :- urgent_deadline, school_reunion, wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- party_invitation.\nrule(c3, prefer(c2, c1), []).\ncomplement(call_client, reply_emails).\ncomplement(reply_emails, call_client).\ncomplement(urgent_deadline, school_reunion).\ncomplement(school_reunion, urgent_deadline)."
+    },
+    {
+        "Example Number": 136,
+        "Gorgias Code": ":- dynamic client_feedback/0, afternoon/0, networking_event/0\nrule(r1, read_book, []) :- client_feedback.\nrule(r2, ride_bike, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- afternoon.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(ride_bike, read_book).\ncomplement(read_book, ride_bike)."
+    },
+    {
+        "Example Number": 137,
+        "Gorgias Code": ":- dynamic community_event/0.\nrule(r1, visit_museum, []) :- community_event.\nrule(r2, attend_meeting, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\ncomplement(attend_meeting, visit_museum).\ncomplement(visit_museum, attend_meeting)."
+    },
+    {
+        "Example Number": 138,
+        "Gorgias Code": ":- dynamic rainy_day/0, family_emergency/0\nrule(r1, organize_workspace, []) :- rainy_day.\nrule(r2, drive_car, []) :- rainy_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- family_emergency.\nrule(c1, prefer(p2, p1), []).\ncomplement(drive_car, organize_workspace).\ncomplement(organize_workspace, drive_car)."
+    },
+    {
+        "Example Number": 139,
+        "Gorgias Code": ":- dynamic deadline_missed/0, networking_event/0, night_time/0\nrule(r1, schedule_meeting, []) :- deadline_missed.\nrule(r2, go_to(cinema), []) :- deadline_missed.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- networking_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- night_time.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to(cinema), schedule_meeting).\ncomplement(schedule_meeting, go_to(cinema))."
+    },
+    {
+        "Example Number": 140,
+        "Gorgias Code": ":- dynamic hail_storm/0, extended_work_hours/0, discount_on_flight/0, networking_event/0, wedding_anniversary/0.\nrule(r1, attend_meeting, []) :- hail_storm.\nrule(r2, attend_workshop, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []) :- hail_storm, extended_work_hours.\nrule(p2, prefer(r2, r1), []) :- hail_storm, extended_work_hours, cloudy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- discount_on_flight.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- wedding_anniversary.\nrule(c5, prefer(c4, c3), []).\ncomplement(attend_workshop, attend_meeting).\ncomplement(attend_meeting, attend_workshop).\ncomplement(hail_storm, extended_work_hours).\ncomplement(extended_work_hours, hail_storm)."
+    },
+    {
+        "Example Number": 141,
+        "Gorgias Code": ":- dynamic deadline_missed/0, cloudy_day/0, medical_appointment/0.\nrule(r1, drive_car, []) :- deadline_missed.\nrule(r2, take_bus, []) :- cloudy_day.\nrule(p1, prefer(r1, r2), []) :- deadline_missed, cloudy_day.\nrule(p2, prefer(r2, r1), []) :- deadline_missed, cloudy_day, urgent_deadline.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- medical_appointment.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_bus, drive_car).\ncomplement(drive_car, take_bus).\ncomplement(deadline_missed, cloudy_day).\ncomplement(cloudy_day, deadline_missed)."
+    },
+    {
+        "Example Number": 142,
+        "Gorgias Code": ":- dynamic feeling_sick/0, unexpected_guest/0\nrule(r1, morning_run, []) :- feeling_sick.\nrule(r2, join_fitness_class, []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- unexpected_guest.\nrule(c1, prefer(p2, p1), []).\ncomplement(join_fitness_class, morning_run).\ncomplement(morning_run, join_fitness_class)."
+    },
+    {
+        "Example Number": 143,
+        "Gorgias Code": ":- dynamic tax_refund/0, discount_on_flight/0, expensive_event/0\nrule(r1, submit_timesheet, []) :- tax_refund.\nrule(r2, cycling_session, []) :- tax_refund.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- discount_on_flight.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- expensive_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(cycling_session, submit_timesheet).\ncomplement(submit_timesheet, cycling_session)."
+    },
+    {
+        "Example Number": 144,
+        "Gorgias Code": ":- dynamic community_event/0, unexpected_guest/0, afternoon/0, concert_nearby/0, moving_house/0.\nrule(r1, prepare_report, []) :- community_event.\nrule(r2, organize_workspace, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []) :- community_event, unexpected_guest.\nrule(p2, prefer(r2, r1), []) :- community_event, unexpected_guest, new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- afternoon.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- concert_nearby.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- moving_house.\nrule(c5, prefer(c4, c3), []).\ncomplement(organize_workspace, prepare_report).\ncomplement(prepare_report, organize_workspace).\ncomplement(community_event, unexpected_guest).\ncomplement(unexpected_guest, community_event)."
+    },
+    {
+        "Example Number": 145,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, weekend/0\nrule(r1, book_ride_share, []) :- unexpected_guest.\nrule(r2, yoga_session, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- weekend.\nrule(c1, prefer(p2, p1), []).\ncomplement(yoga_session, book_ride_share).\ncomplement(book_ride_share, yoga_session)."
+    },
+    {
+        "Example Number": 146,
+        "Gorgias Code": ":- dynamic project_extension/0, medical_appointment/0\nrule(r1, take_train, []) :- project_extension.\nrule(r2, go_shopping, []) :- project_extension.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- medical_appointment.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_shopping, take_train).\ncomplement(take_train, go_shopping)."
+    },
+    {
+        "Example Number": 147,
+        "Gorgias Code": ":- dynamic job_interview/0, weekend/0, financial_aid/0\nrule(r1, go_to_bar, []) :- job_interview.\nrule(r2, reply_emails, []) :- job_interview.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- weekend.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\ncomplement(reply_emails, go_to_bar).\ncomplement(go_to_bar, reply_emails)."
+    },
+    {
+        "Example Number": 148,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, family_emergency/0, moving_house/0\nrule(r1, go_to(restaurant), []) :- urgent_deadline.\nrule(r2, explore_city, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- family_emergency.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\ncomplement(explore_city, go_to(restaurant)).\ncomplement(go_to(restaurant), explore_city)."
+    },
+    {
+        "Example Number": 149,
+        "Gorgias Code": ":- dynamic vacation_planned/0, snowstorm/0\nrule(r1, evening_walk, []) :- vacation_planned.\nrule(r2, rent_car, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- snowstorm.\nrule(c1, prefer(p2, p1), []).\ncomplement(rent_car, evening_walk).\ncomplement(evening_walk, rent_car)."
+    },
+    {
+        "Example Number": 150,
+        "Gorgias Code": ":- dynamic got_bonus/0, party_invitation/0, friend_in_town/0.\nrule(r1, evening_walk, []) :- got_bonus.\nrule(r2, schedule_meeting, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []) :- got_bonus, party_invitation.\nrule(p2, prefer(r2, r1), []) :- got_bonus, party_invitation, vacation_planned.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\ncomplement(schedule_meeting, evening_walk).\ncomplement(evening_walk, schedule_meeting).\ncomplement(got_bonus, party_invitation).\ncomplement(party_invitation, got_bonus)."
+    },
+    {
+        "Example Number": 151,
+        "Gorgias Code": ":- dynamic humid_day/0, new_neighbor/0, night_time/0, birthday_today/0, medical_appointment/0.\nrule(r1, go_to(theater), []) :- humid_day.\nrule(r2, do_laundry, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []) :- humid_day, new_neighbor.\nrule(p2, prefer(r2, r1), []) :- humid_day, new_neighbor, rainy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- night_time.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- birthday_today.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- medical_appointment.\nrule(c5, prefer(c4, c3), []).\ncomplement(do_laundry, go_to(theater)).\ncomplement(go_to(theater), do_laundry).\ncomplement(humid_day, new_neighbor).\ncomplement(new_neighbor, humid_day)."
+    },
+    {
+        "Example Number": 152,
+        "Gorgias Code": ":- dynamic hail_storm/0, low_budget/0.\nrule(r1, go_to(theater), []) :- hail_storm.\nrule(r2, take_picnic, []) :- low_budget.\nrule(p1, prefer(r1, r2), []) :- hail_storm, low_budget.\nrule(p2, prefer(r2, r1), []) :- hail_storm, low_budget, unexpected_guest.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_picnic, go_to(theater)).\ncomplement(go_to(theater), take_picnic).\ncomplement(hail_storm, low_budget).\ncomplement(low_budget, hail_storm)."
+    },
+    {
+        "Example Number": 153,
+        "Gorgias Code": ":- dynamic party_invitation/0, discount_on_flight/0\nrule(r1, visit_museum, []) :- party_invitation.\nrule(r2, clean_house, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- discount_on_flight.\nrule(c1, prefer(p2, p1), []).\ncomplement(clean_house, visit_museum).\ncomplement(visit_museum, clean_house)."
+    },
+    {
+        "Example Number": 154,
+        "Gorgias Code": ":- dynamic deadline_missed/0, feeling_sick/0\nrule(r1, join_fitness_class, []) :- deadline_missed.\nrule(r2, attend_workshop, []) :- deadline_missed.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- feeling_sick.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, join_fitness_class).\ncomplement(join_fitness_class, attend_workshop)."
+    },
+    {
+        "Example Number": 155,
+        "Gorgias Code": ":- dynamic snowstorm/0, financial_aid/0.\nrule(r1, plan_meals, []) :- snowstorm.\nrule(r2, reply_emails, []) :- financial_aid.\nrule(p1, prefer(r1, r2), []) :- snowstorm, financial_aid.\nrule(p2, prefer(r2, r1), []) :- snowstorm, financial_aid, client_feedback.\nrule(c1, prefer(p2, p1), []).\ncomplement(reply_emails, plan_meals).\ncomplement(plan_meals, reply_emails).\ncomplement(snowstorm, financial_aid).\ncomplement(financial_aid, snowstorm)."
+    },
+    {
+        "Example Number": 156,
+        "Gorgias Code": ":- dynamic team_project_due/0, new_neighbor/0, afternoon/0, cloudy_day/0, urgent_deadline/0.\nrule(r1, go_to(theater), []) :- team_project_due.\nrule(r2, join_fitness_class, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []) :- team_project_due, new_neighbor.\nrule(p2, prefer(r2, r1), []) :- team_project_due, new_neighbor, party_invitation.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- afternoon.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- cloudy_day.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- urgent_deadline.\nrule(c5, prefer(c4, c3), []).\ncomplement(join_fitness_class, go_to(theater)).\ncomplement(go_to(theater), join_fitness_class).\ncomplement(team_project_due, new_neighbor).\ncomplement(new_neighbor, team_project_due)."
+    },
+    {
+        "Example Number": 157,
+        "Gorgias Code": ":- dynamic weekend/0, low_budget/0\nrule(r1, go_gym, []) :- weekend.\nrule(r2, meditate, []) :- weekend.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- low_budget.\nrule(c1, prefer(p2, p1), []).\ncomplement(meditate, go_gym).\ncomplement(go_gym, meditate)."
+    },
+    {
+        "Example Number": 158,
+        "Gorgias Code": ":- dynamic project_extension/0, cloudy_day/0.\nrule(r1, evening_walk, []) :- project_extension.\nrule(r2, book_ride_share, []) :- cloudy_day.\nrule(p1, prefer(r1, r2), []) :- project_extension, cloudy_day.\nrule(p2, prefer(r2, r1), []) :- project_extension, cloudy_day, family_emergency.\nrule(c1, prefer(p2, p1), []).\ncomplement(book_ride_share, evening_walk).\ncomplement(evening_walk, book_ride_share).\ncomplement(project_extension, cloudy_day).\ncomplement(cloudy_day, project_extension)."
+    },
+    {
+        "Example Number": 159,
+        "Gorgias Code": ":- dynamic extended_work_hours/0, urgent_deadline/0\nrule(r1, give_presentation, []) :- extended_work_hours.\nrule(r2, organize_workspace, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- urgent_deadline.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, give_presentation).\ncomplement(give_presentation, organize_workspace)."
+    },
+    {
+        "Example Number": 160,
+        "Gorgias Code": ":- dynamic new_neighbor/0.\nrule(r1, make_coffee, []) :- new_neighbor.\nrule(r2, join_fitness_class, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []).\ncomplement(join_fitness_class, make_coffee).\ncomplement(make_coffee, join_fitness_class)."
+    },
+    {
+        "Example Number": 161,
+        "Gorgias Code": ":- dynamic important_meeting/0, new_restaurant_to_try/0, weekend/0\nrule(r1, attend_meeting, []) :- important_meeting.\nrule(r2, order_taxi, []) :- important_meeting.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- weekend.\nrule(c3, prefer(c2, c1), []).\ncomplement(order_taxi, attend_meeting).\ncomplement(attend_meeting, order_taxi)."
+    },
+    {
+        "Example Number": 162,
+        "Gorgias Code": ":- dynamic party_invitation/0, snowstorm/0.\nrule(r1, clean_house, []) :- party_invitation.\nrule(r2, cycle_to_work, []) :- snowstorm.\nrule(p1, prefer(r1, r2), []) :- party_invitation, snowstorm.\nrule(p2, prefer(r2, r1), []) :- party_invitation, snowstorm, community_event.\nrule(c1, prefer(p2, p1), []).\ncomplement(cycle_to_work, clean_house).\ncomplement(clean_house, cycle_to_work).\ncomplement(party_invitation, snowstorm).\ncomplement(snowstorm, party_invitation)."
+    },
+    {
+        "Example Number": 163,
+        "Gorgias Code": ":- dynamic got_bonus/0.\nrule(r1, host_dinner_party, []) :- got_bonus.\nrule(r2, attend_workshop, []) :- got_bonus.\nrule(p1, prefer(r1, r2), []).\ncomplement(attend_workshop, host_dinner_party).\ncomplement(host_dinner_party, attend_workshop)."
+    },
+    {
+        "Example Number": 164,
+        "Gorgias Code": ":- dynamic medical_appointment/0, early_morning/0, morning_rush/0, party_invitation/0, concert_nearby/0.\nrule(r1, call_client, []) :- medical_appointment.\nrule(r2, book_flight, []) :- early_morning.\nrule(p1, prefer(r1, r2), []) :- medical_appointment, early_morning.\nrule(p2, prefer(r2, r1), []) :- medical_appointment, early_morning, wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- morning_rush.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- party_invitation.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- concert_nearby.\nrule(c5, prefer(c4, c3), []).\ncomplement(book_flight, call_client).\ncomplement(call_client, book_flight).\ncomplement(medical_appointment, early_morning).\ncomplement(early_morning, medical_appointment)."
+    },
+    {
+        "Example Number": 165,
+        "Gorgias Code": ":- dynamic good_weather/0, networking_event/0\nrule(r1, go_gym, []) :- good_weather.\nrule(r2, prepare_report, []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- networking_event.\nrule(c1, prefer(p2, p1), []).\ncomplement(prepare_report, go_gym).\ncomplement(go_gym, prepare_report)."
+    },
+    {
+        "Example Number": 166,
+        "Gorgias Code": ":- dynamic good_investment/0, team_project_due/0, new_restaurant_to_try/0\nrule(r1, rent_car, []) :- good_investment.\nrule(r2, update_project_plan, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.\nrule(c3, prefer(c2, c1), []).\ncomplement(update_project_plan, rent_car).\ncomplement(rent_car, update_project_plan)."
+    },
+    {
+        "Example Number": 167,
+        "Gorgias Code": ":- dynamic rainy_day/0, project_extension/0.\nrule(r1, update_project_plan, []) :- rainy_day.\nrule(r2, attend_workshop, []) :- project_extension.\nrule(p1, prefer(r1, r2), []) :- rainy_day, project_extension.\nrule(p2, prefer(r2, r1), []) :- rainy_day, project_extension, moving_house.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, update_project_plan).\ncomplement(update_project_plan, attend_workshop).\ncomplement(rainy_day, project_extension).\ncomplement(project_extension, rainy_day)."
+    },
+    {
+        "Example Number": 168,
+        "Gorgias Code": ":- dynamic moving_house/0.\nrule(r1, join_fitness_class, []) :- moving_house.\nrule(r2, meditate, []) :- moving_house.\nrule(p1, prefer(r1, r2), []).\ncomplement(meditate, join_fitness_class).\ncomplement(join_fitness_class, meditate)."
+    },
+    {
+        "Example Number": 169,
+        "Gorgias Code": ":- dynamic good_investment/0.\nrule(r1, go_shopping, []) :- good_investment.\nrule(r2, clean_house, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\ncomplement(clean_house, go_shopping).\ncomplement(go_shopping, clean_house)."
+    },
+    {
+        "Example Number": 170,
+        "Gorgias Code": ":- dynamic family_emergency/0, project_extension/0, afternoon/0\nrule(r1, cycle_to_work, []) :- family_emergency.\nrule(r2, order_taxi, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- project_extension.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- afternoon.\nrule(c3, prefer(c2, c1), []).\ncomplement(order_taxi, cycle_to_work).\ncomplement(cycle_to_work, order_taxi)."
+    },
+    {
+        "Example Number": 171,
+        "Gorgias Code": ":- dynamic windy_day/0.\nrule(r1, do_laundry, []) :- windy_day.\nrule(r2, prepare_report, []) :- windy_day.\nrule(p1, prefer(r1, r2), []).\ncomplement(prepare_report, do_laundry).\ncomplement(do_laundry, prepare_report)."
+    },
+    {
+        "Example Number": 172,
+        "Gorgias Code": ":- dynamic good_investment/0, early_morning/0.\nrule(r1, ride_bike, []) :- good_investment.\nrule(r2, take_picnic, []) :- early_morning.\nrule(p1, prefer(r1, r2), []) :- good_investment, early_morning.\nrule(p2, prefer(r2, r1), []) :- good_investment, early_morning, lunch_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_picnic, ride_bike).\ncomplement(ride_bike, take_picnic).\ncomplement(good_investment, early_morning).\ncomplement(early_morning, good_investment)."
+    },
+    {
+        "Example Number": 173,
+        "Gorgias Code": ":- dynamic project_extension/0, team_project_due/0.\nrule(r1, book_flight, []) :- project_extension.\nrule(r2, go_to(park), []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- project_extension, team_project_due.\nrule(p2, prefer(r2, r1), []) :- project_extension, team_project_due, weekend.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_to(park), book_flight).\ncomplement(book_flight, go_to(park)).\ncomplement(project_extension, team_project_due).\ncomplement(team_project_due, project_extension)."
+    },
+    {
+        "Example Number": 174,
+        "Gorgias Code": ":- dynamic extended_work_hours/0.\nrule(r1, morning_run, []) :- extended_work_hours.\nrule(r2, attend_meeting, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []).\ncomplement(attend_meeting, morning_run).\ncomplement(morning_run, attend_meeting)."
+    },
+    {
+        "Example Number": 175,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, early_morning/0\nrule(r1, explore_city, []) :- unexpected_guest.\nrule(r2, go_gym, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- early_morning.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_gym, explore_city).\ncomplement(explore_city, go_gym)."
+    },
+    {
+        "Example Number": 176,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, relationship_break/0, tax_refund/0\nrule(r1, swim_session, []) :- unexpected_guest.\nrule(r2, order_taxi, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- relationship_break.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- tax_refund.\nrule(c3, prefer(c2, c1), []).\ncomplement(order_taxi, swim_session).\ncomplement(swim_session, order_taxi)."
+    },
+    {
+        "Example Number": 177,
+        "Gorgias Code": ":- dynamic new_restaurant_to_try/0, school_reunion/0, financial_aid/0.\nrule(r1, visit_doctor, []) :- new_restaurant_to_try.\nrule(r2, give_presentation, []) :- school_reunion.\nrule(p1, prefer(r1, r2), []) :- new_restaurant_to_try, school_reunion.\nrule(p2, prefer(r2, r1), []) :- new_restaurant_to_try, school_reunion, morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\ncomplement(give_presentation, visit_doctor).\ncomplement(visit_doctor, give_presentation).\ncomplement(new_restaurant_to_try, school_reunion).\ncomplement(school_reunion, new_restaurant_to_try)."
+    },
+    {
+        "Example Number": 178,
+        "Gorgias Code": ":- dynamic cloudy_day/0, rainy_day/0, good_weather/0, medical_appointment/0, windy_day/0.\nrule(r1, buy_groceries, []) :- cloudy_day.\nrule(r2, clean_house, []) :- rainy_day.\nrule(p1, prefer(r1, r2), []) :- cloudy_day, rainy_day.\nrule(p2, prefer(r2, r1), []) :- cloudy_day, rainy_day, financial_aid.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_weather.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- medical_appointment.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- windy_day.\nrule(c5, prefer(c4, c3), []).\ncomplement(clean_house, buy_groceries).\ncomplement(buy_groceries, clean_house).\ncomplement(cloudy_day, rainy_day).\ncomplement(rainy_day, cloudy_day)."
+    },
+    {
+        "Example Number": 179,
+        "Gorgias Code": ":- dynamic feeling_sick/0, unexpected_expense/0, boss_in_office/0, tax_refund/0, friend_in_town/0.\nrule(r1, pay_bills, []) :- feeling_sick.\nrule(r2, update_project_plan, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, unexpected_expense, relationship_break.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- boss_in_office.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- tax_refund.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- friend_in_town.\nrule(c5, prefer(c4, c3), []).\ncomplement(update_project_plan, pay_bills).\ncomplement(pay_bills, update_project_plan).\ncomplement(feeling_sick, unexpected_expense).\ncomplement(unexpected_expense, feeling_sick)."
+    },
+    {
+        "Example Number": 180,
+        "Gorgias Code": ":- dynamic good_weather/0, important_meeting/0\nrule(r1, buy_groceries, []) :- good_weather.\nrule(r2, order_taxi, []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- important_meeting.\nrule(c1, prefer(p2, p1), []).\ncomplement(order_taxi, buy_groceries).\ncomplement(buy_groceries, order_taxi)."
+    },
+    {
+        "Example Number": 181,
+        "Gorgias Code": ":- dynamic early_morning/0.\nrule(r1, take_train, []) :- early_morning.\nrule(r2, cycle_to_work, []) :- early_morning.\nrule(p1, prefer(r1, r2), []).\ncomplement(cycle_to_work, take_train).\ncomplement(take_train, cycle_to_work)."
+    },
+    {
+        "Example Number": 182,
+        "Gorgias Code": ":- dynamic new_neighbor/0, humid_day/0\nrule(r1, swim_session, []) :- new_neighbor.\nrule(r2, take_train, []) :- new_neighbor.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- humid_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_train, swim_session).\ncomplement(swim_session, take_train)."
+    },
+    {
+        "Example Number": 183,
+        "Gorgias Code": ":- dynamic early_morning/0, invitation_from_friend/0, tax_refund/0, feeling_sick/0, discount_on_flight/0.\nrule(r1, visit_family, []) :- early_morning.\nrule(r2, take_bus, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- early_morning, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- early_morning, invitation_from_friend, snowstorm.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- tax_refund.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- feeling_sick.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- discount_on_flight.\nrule(c5, prefer(c4, c3), []).\ncomplement(take_bus, visit_family).\ncomplement(visit_family, take_bus).\ncomplement(early_morning, invitation_from_friend).\ncomplement(invitation_from_friend, early_morning)."
+    },
+    {
+        "Example Number": 184,
+        "Gorgias Code": ":- dynamic boss_in_office/0, unexpected_expense/0, expensive_event/0.\nrule(r1, attend_concert, []) :- boss_in_office.\nrule(r2, finish_report, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- boss_in_office, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- boss_in_office, unexpected_expense, subscription_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- expensive_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(finish_report, attend_concert).\ncomplement(attend_concert, finish_report).\ncomplement(boss_in_office, unexpected_expense).\ncomplement(unexpected_expense, boss_in_office)."
+    },
+    {
+        "Example Number": 185,
+        "Gorgias Code": ":- dynamic feeling_sick/0, community_event/0, financial_aid/0\nrule(r1, reply_emails, []) :- feeling_sick.\nrule(r2, review_documents, []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- community_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\ncomplement(review_documents, reply_emails).\ncomplement(reply_emails, review_documents)."
+    },
+    {
+        "Example Number": 186,
+        "Gorgias Code": ":- dynamic boss_in_office/0, lunch_time/0.\nrule(r1, read_book, []) :- boss_in_office.\nrule(r2, dispose_trash, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []) :- boss_in_office, lunch_time.\nrule(p2, prefer(r2, r1), []) :- boss_in_office, lunch_time, afternoon.\nrule(c1, prefer(p2, p1), []).\ncomplement(dispose_trash, read_book).\ncomplement(read_book, dispose_trash).\ncomplement(boss_in_office, lunch_time).\ncomplement(lunch_time, boss_in_office)."
+    },
+    {
+        "Example Number": 187,
+        "Gorgias Code": ":- dynamic got_bonus/0, early_morning/0.\nrule(r1, rent_car, []) :- got_bonus.\nrule(r2, attend_workshop, []) :- early_morning.\nrule(p1, prefer(r1, r2), []) :- got_bonus, early_morning.\nrule(p2, prefer(r2, r1), []) :- got_bonus, early_morning, rainy_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, rent_car).\ncomplement(rent_car, attend_workshop).\ncomplement(got_bonus, early_morning).\ncomplement(early_morning, got_bonus)."
+    },
+    {
+        "Example Number": 188,
+        "Gorgias Code": ":- dynamic job_interview/0, party_invitation/0, hail_storm/0\nrule(r1, make_coffee, []) :- job_interview.\nrule(r2, buy_groceries, []) :- job_interview.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- party_invitation.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hail_storm.\nrule(c3, prefer(c2, c1), []).\ncomplement(buy_groceries, make_coffee).\ncomplement(make_coffee, buy_groceries)."
+    },
+    {
+        "Example Number": 189,
+        "Gorgias Code": ":- dynamic good_weather/0, night_time/0, subscription_due/0\nrule(r1, read_book, []) :- good_weather.\nrule(r2, make_coffee, []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- night_time.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- subscription_due.\nrule(c3, prefer(c2, c1), []).\ncomplement(make_coffee, read_book).\ncomplement(read_book, make_coffee)."
+    },
+    {
+        "Example Number": 190,
+        "Gorgias Code": ":- dynamic hail_storm/0, boss_in_office/0, humid_day/0\nrule(r1, plan_meals, []) :- hail_storm.\nrule(r2, schedule_meeting, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- boss_in_office.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- humid_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(schedule_meeting, plan_meals).\ncomplement(plan_meals, schedule_meeting)."
+    },
+    {
+        "Example Number": 191,
+        "Gorgias Code": ":- dynamic networking_event/0.\nrule(r1, schedule_meeting, []) :- networking_event.\nrule(r2, go_to(cinema), []) :- networking_event.\nrule(p1, prefer(r1, r2), []).\ncomplement(go_to(cinema), schedule_meeting).\ncomplement(schedule_meeting, go_to(cinema))."
+    },
+    {
+        "Example Number": 192,
+        "Gorgias Code": ":- dynamic new_neighbor/0, discount_on_flight/0, family_gathering/0.\nrule(r1, swim_session, []) :- new_neighbor.\nrule(r2, book_ride_share, []) :- discount_on_flight.\nrule(p1, prefer(r1, r2), []) :- new_neighbor, discount_on_flight.\nrule(p2, prefer(r2, r1), []) :- new_neighbor, discount_on_flight, holiday_season.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_gathering.\nrule(c3, prefer(c2, c1), []).\ncomplement(book_ride_share, swim_session).\ncomplement(swim_session, book_ride_share).\ncomplement(new_neighbor, discount_on_flight).\ncomplement(discount_on_flight, new_neighbor)."
+    },
+    {
+        "Example Number": 193,
+        "Gorgias Code": ":- dynamic hot_day/0, extended_work_hours/0, family_emergency/0, deadline_missed/0, wedding_anniversary/0.\nrule(r1, host_dinner_party, []) :- hot_day.\nrule(r2, use_subway, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []) :- hot_day, extended_work_hours.\nrule(p2, prefer(r2, r1), []) :- hot_day, extended_work_hours, weekend.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_emergency.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- deadline_missed.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- wedding_anniversary.\nrule(c5, prefer(c4, c3), []).\ncomplement(use_subway, host_dinner_party).\ncomplement(host_dinner_party, use_subway).\ncomplement(hot_day, extended_work_hours).\ncomplement(extended_work_hours, hot_day)."
+    },
+    {
+        "Example Number": 194,
+        "Gorgias Code": ":- dynamic party_invitation/0, birthday_today/0, important_meeting/0.\nrule(r1, visit_doctor, []) :- party_invitation.\nrule(r2, finish_report, []) :- birthday_today.\nrule(p1, prefer(r1, r2), []) :- party_invitation, birthday_today.\nrule(p2, prefer(r2, r1), []) :- party_invitation, birthday_today, unexpected_expense.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- important_meeting.\nrule(c3, prefer(c2, c1), []).\ncomplement(finish_report, visit_doctor).\ncomplement(visit_doctor, finish_report).\ncomplement(party_invitation, birthday_today).\ncomplement(birthday_today, party_invitation)."
+    },
+    {
+        "Example Number": 195,
+        "Gorgias Code": ":- dynamic concert_nearby/0, morning_rush/0, community_event/0.\nrule(r1, visit_doctor, []) :- concert_nearby.\nrule(r2, submit_timesheet, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []) :- concert_nearby, morning_rush.\nrule(p2, prefer(r2, r1), []) :- concert_nearby, morning_rush, birthday_today.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- community_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(submit_timesheet, visit_doctor).\ncomplement(visit_doctor, submit_timesheet).\ncomplement(concert_nearby, morning_rush).\ncomplement(morning_rush, concert_nearby)."
+    },
+    {
+        "Example Number": 196,
+        "Gorgias Code": ":- dynamic project_extension/0, team_project_due/0, windy_day/0\nrule(r1, submit_timesheet, []) :- project_extension.\nrule(r2, take_train, []) :- project_extension.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- windy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_train, submit_timesheet).\ncomplement(submit_timesheet, take_train)."
+    },
+    {
+        "Example Number": 197,
+        "Gorgias Code": ":- dynamic feeling_sick/0, job_interview/0, windy_day/0.\nrule(r1, take_picnic, []) :- feeling_sick.\nrule(r2, pay_bills, []) :- job_interview.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, job_interview.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, job_interview, good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- windy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(pay_bills, take_picnic).\ncomplement(take_picnic, pay_bills).\ncomplement(feeling_sick, job_interview).\ncomplement(job_interview, feeling_sick)."
+    },
+    {
+        "Example Number": 198,
+        "Gorgias Code": ":- dynamic morning_rush/0, low_budget/0.\nrule(r1, join_fitness_class, []) :- morning_rush.\nrule(r2, book_ride_share, []) :- low_budget.\nrule(p1, prefer(r1, r2), []) :- morning_rush, low_budget.\nrule(p2, prefer(r2, r1), []) :- morning_rush, low_budget, good_weather.\nrule(c1, prefer(p2, p1), []).\ncomplement(book_ride_share, join_fitness_class).\ncomplement(join_fitness_class, book_ride_share).\ncomplement(morning_rush, low_budget).\ncomplement(low_budget, morning_rush)."
+    },
+    {
+        "Example Number": 199,
+        "Gorgias Code": ":- dynamic windy_day/0, discount_on_flight/0\nrule(r1, yoga_session, []) :- windy_day.\nrule(r2, clean_house, []) :- windy_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- discount_on_flight.\nrule(c1, prefer(p2, p1), []).\ncomplement(clean_house, yoga_session).\ncomplement(yoga_session, clean_house)."
+    },
+    {
+        "Example Number": 200,
+        "Gorgias Code": ":- dynamic financial_aid/0, friend_in_town/0, night_time/0\nrule(r1, buy_groceries, []) :- financial_aid.\nrule(r2, swim_session, []) :- financial_aid.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- friend_in_town.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- night_time.\nrule(c3, prefer(c2, c1), []).\ncomplement(swim_session, buy_groceries).\ncomplement(buy_groceries, swim_session)."
+    },
+    {
+        "Example Number": 201,
+        "Gorgias Code": ":- dynamic new_restaurant_to_try/0, good_weather/0.\nrule(r1, use_subway, []) :- new_restaurant_to_try.\nrule(r2, book_ride_share, []) :- good_weather.\nrule(p1, prefer(r1, r2), []) :- new_restaurant_to_try, good_weather.\nrule(p2, prefer(r2, r1), []) :- new_restaurant_to_try, good_weather, hail_storm.\nrule(c1, prefer(p2, p1), []).\ncomplement(book_ride_share, use_subway).\ncomplement(use_subway, book_ride_share).\ncomplement(new_restaurant_to_try, good_weather).\ncomplement(good_weather, new_restaurant_to_try)."
+    },
+    {
+        "Example Number": 202,
+        "Gorgias Code": ":- dynamic rainy_day/0, urgent_deadline/0, vacation_planned/0.\nrule(r1, go_to(cinema), []) :- rainy_day.\nrule(r2, attend_workshop, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []) :- rainy_day, urgent_deadline.\nrule(p2, prefer(r2, r1), []) :- rainy_day, urgent_deadline, early_morning.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- vacation_planned.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_workshop, go_to(cinema)).\ncomplement(go_to(cinema), attend_workshop).\ncomplement(rainy_day, urgent_deadline).\ncomplement(urgent_deadline, rainy_day)."
+    },
+    {
+        "Example Number": 203,
+        "Gorgias Code": ":- dynamic financial_aid/0, unexpected_expense/0, hail_storm/0, team_project_due/0, birthday_today/0.\nrule(r1, cycle_to_work, []) :- financial_aid.\nrule(r2, travel_abroad, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- financial_aid, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- financial_aid, unexpected_expense, new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hail_storm.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- team_project_due.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- birthday_today.\nrule(c5, prefer(c4, c3), []).\ncomplement(travel_abroad, cycle_to_work).\ncomplement(cycle_to_work, travel_abroad).\ncomplement(financial_aid, unexpected_expense).\ncomplement(unexpected_expense, financial_aid)."
+    },
+    {
+        "Example Number": 204,
+        "Gorgias Code": ":- dynamic friend_in_town/0, party_invitation/0, snowstorm/0.\nrule(r1, take_train, []) :- friend_in_town.\nrule(r2, order_taxi, []) :- party_invitation.\nrule(p1, prefer(r1, r2), []) :- friend_in_town, party_invitation.\nrule(p2, prefer(r2, r1), []) :- friend_in_town, party_invitation, financial_aid.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- snowstorm.\nrule(c3, prefer(c2, c1), []).\ncomplement(order_taxi, take_train).\ncomplement(take_train, order_taxi).\ncomplement(friend_in_town, party_invitation).\ncomplement(party_invitation, friend_in_town)."
+    },
+    {
+        "Example Number": 205,
+        "Gorgias Code": ":- dynamic feeling_sick/0, early_morning/0.\nrule(r1, swim_session, []) :- feeling_sick.\nrule(r2, take_picnic, []) :- early_morning.\nrule(p1, prefer(r1, r2), []) :- feeling_sick, early_morning.\nrule(p2, prefer(r2, r1), []) :- feeling_sick, early_morning, subscription_due.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_picnic, swim_session).\ncomplement(swim_session, take_picnic).\ncomplement(feeling_sick, early_morning).\ncomplement(early_morning, feeling_sick)."
+    },
+    {
+        "Example Number": 206,
+        "Gorgias Code": ":- dynamic family_emergency/0, concert_nearby/0.\nrule(r1, attend_meeting, []) :- family_emergency.\nrule(r2, use_subway, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []) :- family_emergency, concert_nearby.\nrule(p2, prefer(r2, r1), []) :- family_emergency, concert_nearby, lunch_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(use_subway, attend_meeting).\ncomplement(attend_meeting, use_subway).\ncomplement(family_emergency, concert_nearby).\ncomplement(concert_nearby, family_emergency)."
+    },
+    {
+        "Example Number": 207,
+        "Gorgias Code": ":- dynamic urgent_deadline/0.\nrule(r1, make_coffee, []) :- urgent_deadline.\nrule(r2, review_documents, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []).\ncomplement(review_documents, make_coffee).\ncomplement(make_coffee, review_documents)."
+    },
+    {
+        "Example Number": 208,
+        "Gorgias Code": ":- dynamic hail_storm/0, extended_work_hours/0, discount_on_flight/0\nrule(r1, read_book, []) :- hail_storm.\nrule(r2, clean_house, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- extended_work_hours.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- discount_on_flight.\nrule(c3, prefer(c2, c1), []).\ncomplement(clean_house, read_book).\ncomplement(read_book, clean_house)."
+    },
+    {
+        "Example Number": 209,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, family_emergency/0.\nrule(r1, take_bus, []) :- unexpected_guest.\nrule(r2, pay_bills, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []) :- unexpected_guest, family_emergency.\nrule(p2, prefer(r2, r1), []) :- unexpected_guest, family_emergency, lunch_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(pay_bills, take_bus).\ncomplement(take_bus, pay_bills).\ncomplement(unexpected_guest, family_emergency).\ncomplement(family_emergency, unexpected_guest)."
+    },
+    {
+        "Example Number": 210,
+        "Gorgias Code": ":- dynamic unexpected_guest/0, low_budget/0, moving_house/0\nrule(r1, attend_meeting, []) :- unexpected_guest.\nrule(r2, use_subway, []) :- unexpected_guest.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- low_budget.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\ncomplement(use_subway, attend_meeting).\ncomplement(attend_meeting, use_subway)."
+    },
+    {
+        "Example Number": 211,
+        "Gorgias Code": ":- dynamic family_emergency/0, invitation_from_friend/0, school_reunion/0.\nrule(r1, schedule_meeting, []) :- family_emergency.\nrule(r2, call_client, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- family_emergency, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- family_emergency, invitation_from_friend, new_neighbor.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\ncomplement(call_client, schedule_meeting).\ncomplement(schedule_meeting, call_client).\ncomplement(family_emergency, invitation_from_friend).\ncomplement(invitation_from_friend, family_emergency)."
+    },
+    {
+        "Example Number": 212,
+        "Gorgias Code": ":- dynamic party_invitation/0, subscription_due/0.\nrule(r1, take_train, []) :- party_invitation.\nrule(r2, attend_meeting, []) :- subscription_due.\nrule(p1, prefer(r1, r2), []) :- party_invitation, subscription_due.\nrule(p2, prefer(r2, r1), []) :- party_invitation, subscription_due, early_morning.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_meeting, take_train).\ncomplement(take_train, attend_meeting).\ncomplement(party_invitation, subscription_due).\ncomplement(subscription_due, party_invitation)."
+    },
+    {
+        "Example Number": 213,
+        "Gorgias Code": ":- dynamic party_invitation/0, birthday_today/0, got_bonus/0\nrule(r1, do_laundry, []) :- party_invitation.\nrule(r2, go_to(theater), []) :- party_invitation.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- birthday_today.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- got_bonus.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to(theater), do_laundry).\ncomplement(do_laundry, go_to(theater))."
+    },
+    {
+        "Example Number": 214,
+        "Gorgias Code": ":- dynamic low_budget/0, night_time/0, networking_event/0\nrule(r1, water_plants, []) :- low_budget.\nrule(r2, explore_city, []) :- low_budget.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- night_time.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(explore_city, water_plants).\ncomplement(water_plants, explore_city)."
+    },
+    {
+        "Example Number": 215,
+        "Gorgias Code": ":- dynamic night_time/0.\nrule(r1, cook_dinner, []) :- night_time.\nrule(r2, clean_house, []) :- night_time.\nrule(p1, prefer(r1, r2), []).\ncomplement(clean_house, cook_dinner).\ncomplement(cook_dinner, clean_house)."
+    },
+    {
+        "Example Number": 216,
+        "Gorgias Code": ":- dynamic dusk/0, moving_house/0, discount_on_flight/0.\nrule(r1, swim_session, []) :- dusk.\nrule(r2, call_client, []) :- moving_house.\nrule(p1, prefer(r1, r2), []) :- dusk, moving_house.\nrule(p2, prefer(r2, r1), []) :- dusk, moving_house, early_morning.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- discount_on_flight.\nrule(c3, prefer(c2, c1), []).\ncomplement(call_client, swim_session).\ncomplement(swim_session, call_client).\ncomplement(dusk, moving_house).\ncomplement(moving_house, dusk)."
+    },
+    {
+        "Example Number": 217,
+        "Gorgias Code": ":- dynamic moving_house/0, night_time/0, good_investment/0\nrule(r1, book_flight, []) :- moving_house.\nrule(r2, book_ride_share, []) :- moving_house.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- night_time.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_investment.\nrule(c3, prefer(c2, c1), []).\ncomplement(book_ride_share, book_flight).\ncomplement(book_flight, book_ride_share)."
+    },
+    {
+        "Example Number": 218,
+        "Gorgias Code": ":- dynamic project_extension/0, weekend/0.\nrule(r1, update_project_plan, []) :- project_extension.\nrule(r2, organize_workspace, []) :- weekend.\nrule(p1, prefer(r1, r2), []) :- project_extension, weekend.\nrule(p2, prefer(r2, r1), []) :- project_extension, weekend, new_restaurant_to_try.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, update_project_plan).\ncomplement(update_project_plan, organize_workspace).\ncomplement(project_extension, weekend).\ncomplement(weekend, project_extension)."
+    },
+    {
+        "Example Number": 219,
+        "Gorgias Code": ":- dynamic community_event/0.\nrule(r1, cycle_to_work, []) :- community_event.\nrule(r2, meditate, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\ncomplement(meditate, cycle_to_work).\ncomplement(cycle_to_work, meditate)."
+    },
+    {
+        "Example Number": 220,
+        "Gorgias Code": ":- dynamic birthday_today/0, snowstorm/0, got_bonus/0.\nrule(r1, make_coffee, []) :- birthday_today.\nrule(r2, buy_groceries, []) :- snowstorm.\nrule(p1, prefer(r1, r2), []) :- birthday_today, snowstorm.\nrule(p2, prefer(r2, r1), []) :- birthday_today, snowstorm, school_reunion.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- got_bonus.\nrule(c3, prefer(c2, c1), []).\ncomplement(buy_groceries, make_coffee).\ncomplement(make_coffee, buy_groceries).\ncomplement(birthday_today, snowstorm).\ncomplement(snowstorm, birthday_today)."
+    },
+    {
+        "Example Number": 221,
+        "Gorgias Code": ":- dynamic medical_appointment/0.\nrule(r1, attend_workshop, []) :- medical_appointment.\nrule(r2, swim_session, []) :- medical_appointment.\nrule(p1, prefer(r1, r2), []).\ncomplement(swim_session, attend_workshop).\ncomplement(attend_workshop, swim_session)."
+    },
+    {
+        "Example Number": 222,
+        "Gorgias Code": ":- dynamic good_investment/0.\nrule(r1, make_coffee, []) :- good_investment.\nrule(r2, drive_car, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\ncomplement(drive_car, make_coffee).\ncomplement(make_coffee, drive_car)."
+    },
+    {
+        "Example Number": 223,
+        "Gorgias Code": ":- dynamic deadline_missed/0, feeling_sick/0\nrule(r1, make_coffee, []) :- deadline_missed.\nrule(r2, call_client, []) :- deadline_missed.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- feeling_sick.\nrule(c1, prefer(p2, p1), []).\ncomplement(call_client, make_coffee).\ncomplement(make_coffee, call_client)."
+    },
+    {
+        "Example Number": 224,
+        "Gorgias Code": ":- dynamic tax_refund/0, invitation_from_friend/0, community_event/0, family_gathering/0, dusk/0.\nrule(r1, attend_workshop, []) :- tax_refund.\nrule(r2, go_gym, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- tax_refund, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- tax_refund, invitation_from_friend, windy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- community_event.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- family_gathering.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- dusk.\nrule(c5, prefer(c4, c3), []).\ncomplement(go_gym, attend_workshop).\ncomplement(attend_workshop, go_gym).\ncomplement(tax_refund, invitation_from_friend).\ncomplement(invitation_from_friend, tax_refund)."
+    },
+    {
+        "Example Number": 225,
+        "Gorgias Code": ":- dynamic family_emergency/0, networking_event/0, got_bonus/0\nrule(r1, schedule_meeting, []) :- family_emergency.\nrule(r2, explore_city, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- networking_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- got_bonus.\nrule(c3, prefer(c2, c1), []).\ncomplement(explore_city, schedule_meeting).\ncomplement(schedule_meeting, explore_city)."
+    },
+    {
+        "Example Number": 226,
+        "Gorgias Code": ":- dynamic extended_work_hours/0, dusk/0.\nrule(r1, explore_city, []) :- extended_work_hours.\nrule(r2, join_fitness_class, []) :- dusk.\nrule(p1, prefer(r1, r2), []) :- extended_work_hours, dusk.\nrule(p2, prefer(r2, r1), []) :- extended_work_hours, dusk, good_weather.\nrule(c1, prefer(p2, p1), []).\ncomplement(join_fitness_class, explore_city).\ncomplement(explore_city, join_fitness_class).\ncomplement(extended_work_hours, dusk).\ncomplement(dusk, extended_work_hours)."
+    },
+    {
+        "Example Number": 227,
+        "Gorgias Code": ":- dynamic afternoon/0, client_feedback/0, good_investment/0, windy_day/0, snowstorm/0.\nrule(r1, book_flight, []) :- afternoon.\nrule(r2, reply_emails, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []) :- afternoon, client_feedback.\nrule(p2, prefer(r2, r1), []) :- afternoon, client_feedback, dusk.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- good_investment.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- windy_day.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- snowstorm.\nrule(c5, prefer(c4, c3), []).\ncomplement(reply_emails, book_flight).\ncomplement(book_flight, reply_emails).\ncomplement(afternoon, client_feedback).\ncomplement(client_feedback, afternoon)."
+    },
+    {
+        "Example Number": 228,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, unexpected_expense/0, feeling_sick/0, lunch_time/0, wedding_anniversary/0.\nrule(r1, go_to(cinema), []) :- invitation_from_friend.\nrule(r2, finish_report, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- invitation_from_friend, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend, unexpected_expense, humid_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- feeling_sick.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- lunch_time.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- wedding_anniversary.\nrule(c5, prefer(c4, c3), []).\ncomplement(finish_report, go_to(cinema)).\ncomplement(go_to(cinema), finish_report).\ncomplement(invitation_from_friend, unexpected_expense).\ncomplement(unexpected_expense, invitation_from_friend)."
+    },
+    {
+        "Example Number": 229,
+        "Gorgias Code": ":- dynamic birthday_today/0, humid_day/0.\nrule(r1, water_plants, []) :- birthday_today.\nrule(r2, attend_workshop, []) :- humid_day.\nrule(p1, prefer(r1, r2), []) :- birthday_today, humid_day.\nrule(p2, prefer(r2, r1), []) :- birthday_today, humid_day, afternoon.\nrule(c1, prefer(p2, p1), []).\ncomplement(attend_workshop, water_plants).\ncomplement(water_plants, attend_workshop).\ncomplement(birthday_today, humid_day).\ncomplement(humid_day, birthday_today)."
+    },
+    {
+        "Example Number": 230,
+        "Gorgias Code": ":- dynamic discount_on_flight/0, family_gathering/0\nrule(r1, visit_family, []) :- discount_on_flight.\nrule(r2, order_taxi, []) :- discount_on_flight.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- family_gathering.\nrule(c1, prefer(p2, p1), []).\ncomplement(order_taxi, visit_family).\ncomplement(visit_family, order_taxi)."
+    },
+    {
+        "Example Number": 231,
+        "Gorgias Code": ":- dynamic early_morning/0, relationship_break/0\nrule(r1, visit_family, []) :- early_morning.\nrule(r2, order_taxi, []) :- early_morning.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- relationship_break.\nrule(c1, prefer(p2, p1), []).\ncomplement(order_taxi, visit_family).\ncomplement(visit_family, order_taxi)."
+    },
+    {
+        "Example Number": 232,
+        "Gorgias Code": ":- dynamic expensive_event/0, extended_work_hours/0.\nrule(r1, order_taxi, []) :- expensive_event.\nrule(r2, water_plants, []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []) :- expensive_event, extended_work_hours.\nrule(p2, prefer(r2, r1), []) :- expensive_event, extended_work_hours, cloudy_day.\nrule(c1, prefer(p2, p1), []).\ncomplement(water_plants, order_taxi).\ncomplement(order_taxi, water_plants).\ncomplement(expensive_event, extended_work_hours).\ncomplement(extended_work_hours, expensive_event)."
+    },
+    {
+        "Example Number": 233,
+        "Gorgias Code": ":- dynamic feeling_sick/0, afternoon/0, cloudy_day/0\nrule(r1, yoga_session, []) :- feeling_sick.\nrule(r2, join_fitness_class, []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- afternoon.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- cloudy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(join_fitness_class, yoga_session).\ncomplement(yoga_session, join_fitness_class)."
+    },
+    {
+        "Example Number": 234,
+        "Gorgias Code": ":- dynamic deadline_missed/0, vacation_planned/0, early_morning/0, unexpected_guest/0, job_interview/0.\nrule(r1, cycling_session, []) :- deadline_missed.\nrule(r2, call_client, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []) :- deadline_missed, vacation_planned.\nrule(p2, prefer(r2, r1), []) :- deadline_missed, vacation_planned, snowstorm.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- early_morning.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- unexpected_guest.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- job_interview.\nrule(c5, prefer(c4, c3), []).\ncomplement(call_client, cycling_session).\ncomplement(cycling_session, call_client).\ncomplement(deadline_missed, vacation_planned).\ncomplement(vacation_planned, deadline_missed)."
+    },
+    {
+        "Example Number": 235,
+        "Gorgias Code": ":- dynamic family_gathering/0, got_bonus/0, low_budget/0\nrule(r1, explore_city, []) :- family_gathering.\nrule(r2, go_to(park), []) :- family_gathering.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- got_bonus.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- low_budget.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to(park), explore_city).\ncomplement(explore_city, go_to(park))."
+    },
+    {
+        "Example Number": 236,
+        "Gorgias Code": ":- dynamic holiday_season/0, good_investment/0.\nrule(r1, drive_car, []) :- holiday_season.\nrule(r2, cycling_session, []) :- good_investment.\nrule(p1, prefer(r1, r2), []) :- holiday_season, good_investment.\nrule(p2, prefer(r2, r1), []) :- holiday_season, good_investment, client_feedback.\nrule(c1, prefer(p2, p1), []).\ncomplement(cycling_session, drive_car).\ncomplement(drive_car, cycling_session).\ncomplement(holiday_season, good_investment).\ncomplement(good_investment, holiday_season)."
+    },
+    {
+        "Example Number": 237,
+        "Gorgias Code": ":- dynamic team_project_due/0, extended_work_hours/0\nrule(r1, go_to(park), []) :- team_project_due.\nrule(r2, do_laundry, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- extended_work_hours.\nrule(c1, prefer(p2, p1), []).\ncomplement(do_laundry, go_to(park)).\ncomplement(go_to(park), do_laundry)."
+    },
+    {
+        "Example Number": 238,
+        "Gorgias Code": ":- dynamic community_event/0, night_time/0\nrule(r1, cook_dinner, []) :- community_event.\nrule(r2, dispose_trash, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- night_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(dispose_trash, cook_dinner).\ncomplement(cook_dinner, dispose_trash)."
+    },
+    {
+        "Example Number": 239,
+        "Gorgias Code": ":- dynamic good_investment/0, morning_rush/0.\nrule(r1, read_book, []) :- good_investment.\nrule(r2, organize_workspace, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []) :- good_investment, morning_rush.\nrule(p2, prefer(r2, r1), []) :- good_investment, morning_rush, afternoon.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, read_book).\ncomplement(read_book, organize_workspace).\ncomplement(good_investment, morning_rush).\ncomplement(morning_rush, good_investment)."
+    },
+    {
+        "Example Number": 240,
+        "Gorgias Code": ":- dynamic dusk/0, urgent_deadline/0\nrule(r1, order_taxi, []) :- dusk.\nrule(r2, take_bus, []) :- dusk.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- urgent_deadline.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_bus, order_taxi).\ncomplement(order_taxi, take_bus)."
+    },
+    {
+        "Example Number": 241,
+        "Gorgias Code": ":- dynamic birthday_today/0, windy_day/0, lunch_time/0\nrule(r1, plan_meals, []) :- birthday_today.\nrule(r2, clean_house, []) :- birthday_today.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- windy_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- lunch_time.\nrule(c3, prefer(c2, c1), []).\ncomplement(clean_house, plan_meals).\ncomplement(plan_meals, clean_house)."
+    },
+    {
+        "Example Number": 242,
+        "Gorgias Code": ":- dynamic low_budget/0, client_feedback/0, early_morning/0\nrule(r1, finish_report, []) :- low_budget.\nrule(r2, update_project_plan, []) :- low_budget.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- client_feedback.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- early_morning.\nrule(c3, prefer(c2, c1), []).\ncomplement(update_project_plan, finish_report).\ncomplement(finish_report, update_project_plan)."
+    },
+    {
+        "Example Number": 243,
+        "Gorgias Code": ":- dynamic moving_house/0, lunch_time/0, subscription_due/0.\nrule(r1, water_plants, []) :- moving_house.\nrule(r2, cook_dinner, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []) :- moving_house, lunch_time.\nrule(p2, prefer(r2, r1), []) :- moving_house, lunch_time, extended_work_hours.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- subscription_due.\nrule(c3, prefer(c2, c1), []).\ncomplement(cook_dinner, water_plants).\ncomplement(water_plants, cook_dinner).\ncomplement(moving_house, lunch_time).\ncomplement(lunch_time, moving_house)."
+    },
+    {
+        "Example Number": 244,
+        "Gorgias Code": ":- dynamic important_meeting/0, weekend/0, job_interview/0.\nrule(r1, schedule_meeting, []) :- important_meeting.\nrule(r2, attend_concert, []) :- weekend.\nrule(p1, prefer(r1, r2), []) :- important_meeting, weekend.\nrule(p2, prefer(r2, r1), []) :- important_meeting, weekend, hot_day.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- job_interview.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_concert, schedule_meeting).\ncomplement(schedule_meeting, attend_concert).\ncomplement(important_meeting, weekend).\ncomplement(weekend, important_meeting)."
+    },
+    {
+        "Example Number": 245,
+        "Gorgias Code": ":- dynamic new_restaurant_to_try/0, night_time/0\nrule(r1, explore_city, []) :- new_restaurant_to_try.\nrule(r2, join_fitness_class, []) :- new_restaurant_to_try.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- night_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(join_fitness_class, explore_city).\ncomplement(explore_city, join_fitness_class)."
+    },
+    {
+        "Example Number": 246,
+        "Gorgias Code": ":- dynamic concert_nearby/0, afternoon/0.\nrule(r1, give_presentation, []) :- concert_nearby.\nrule(r2, drive_car, []) :- afternoon.\nrule(p1, prefer(r1, r2), []) :- concert_nearby, afternoon.\nrule(p2, prefer(r2, r1), []) :- concert_nearby, afternoon, lunch_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(drive_car, give_presentation).\ncomplement(give_presentation, drive_car).\ncomplement(concert_nearby, afternoon).\ncomplement(afternoon, concert_nearby)."
+    },
+    {
+        "Example Number": 247,
+        "Gorgias Code": ":- dynamic rainy_day/0, extended_work_hours/0, networking_event/0, school_reunion/0, vacation_planned/0.\nrule(r1, update_project_plan, []) :- rainy_day.\nrule(r2, go_to(park), []) :- extended_work_hours.\nrule(p1, prefer(r1, r2), []) :- rainy_day, extended_work_hours.\nrule(p2, prefer(r2, r1), []) :- rainy_day, extended_work_hours, good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- vacation_planned.\nrule(c5, prefer(c4, c3), []).\ncomplement(go_to(park), update_project_plan).\ncomplement(update_project_plan, go_to(park)).\ncomplement(rainy_day, extended_work_hours).\ncomplement(extended_work_hours, rainy_day)."
+    },
+    {
+        "Example Number": 248,
+        "Gorgias Code": ":- dynamic important_meeting/0, family_emergency/0\nrule(r1, give_presentation, []) :- important_meeting.\nrule(r2, yoga_session, []) :- important_meeting.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- family_emergency.\nrule(c1, prefer(p2, p1), []).\ncomplement(yoga_session, give_presentation).\ncomplement(give_presentation, yoga_session)."
+    },
+    {
+        "Example Number": 249,
+        "Gorgias Code": ":- dynamic early_morning/0, got_bonus/0, family_gathering/0, unexpected_guest/0, good_weather/0.\nrule(r1, go_gym, []) :- early_morning.\nrule(r2, prepare_report, []) :- got_bonus.\nrule(p1, prefer(r1, r2), []) :- early_morning, got_bonus.\nrule(p2, prefer(r2, r1), []) :- early_morning, got_bonus, vacation_planned.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_gathering.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- unexpected_guest.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- good_weather.\nrule(c5, prefer(c4, c3), []).\ncomplement(prepare_report, go_gym).\ncomplement(go_gym, prepare_report).\ncomplement(early_morning, got_bonus).\ncomplement(got_bonus, early_morning)."
+    },
+    {
+        "Example Number": 250,
+        "Gorgias Code": ":- dynamic hail_storm/0, project_extension/0, community_event/0\nrule(r1, go_to(cinema), []) :- hail_storm.\nrule(r2, attend_workshop, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- project_extension.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- community_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_workshop, go_to(cinema)).\ncomplement(go_to(cinema), attend_workshop)."
+    },
+    {
+        "Example Number": 251,
+        "Gorgias Code": ":- dynamic networking_event/0.\nrule(r1, go_to(park), []) :- networking_event.\nrule(r2, go_to(theater), []) :- networking_event.\nrule(p1, prefer(r1, r2), []).\ncomplement(go_to(theater), go_to(park)).\ncomplement(go_to(park), go_to(theater))."
+    },
+    {
+        "Example Number": 252,
+        "Gorgias Code": ":- dynamic low_budget/0, feeling_sick/0, school_reunion/0, hot_day/0, afternoon/0.\nrule(r1, use_subway, []) :- low_budget.\nrule(r2, water_plants, []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []) :- low_budget, feeling_sick.\nrule(p2, prefer(r2, r1), []) :- low_budget, feeling_sick, good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- hot_day.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- afternoon.\nrule(c5, prefer(c4, c3), []).\ncomplement(water_plants, use_subway).\ncomplement(use_subway, water_plants).\ncomplement(low_budget, feeling_sick).\ncomplement(feeling_sick, low_budget)."
+    },
+    {
+        "Example Number": 253,
+        "Gorgias Code": ":- dynamic low_budget/0, school_reunion/0.\nrule(r1, order_taxi, []) :- low_budget.\nrule(r2, go_shopping, []) :- school_reunion.\nrule(p1, prefer(r1, r2), []) :- low_budget, school_reunion.\nrule(p2, prefer(r2, r1), []) :- low_budget, school_reunion, networking_event.\nrule(c1, prefer(p2, p1), []).\ncomplement(go_shopping, order_taxi).\ncomplement(order_taxi, go_shopping).\ncomplement(low_budget, school_reunion).\ncomplement(school_reunion, low_budget)."
+    },
+    {
+        "Example Number": 254,
+        "Gorgias Code": ":- dynamic vacation_planned/0.\nrule(r1, go_to_bar, []) :- vacation_planned.\nrule(r2, meditate, []) :- vacation_planned.\nrule(p1, prefer(r1, r2), []).\ncomplement(meditate, go_to_bar).\ncomplement(go_to_bar, meditate)."
+    },
+    {
+        "Example Number": 255,
+        "Gorgias Code": ":- dynamic concert_nearby/0, party_invitation/0\nrule(r1, explore_city, []) :- concert_nearby.\nrule(r2, prepare_report, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- party_invitation.\nrule(c1, prefer(p2, p1), []).\ncomplement(prepare_report, explore_city).\ncomplement(explore_city, prepare_report)."
+    },
+    {
+        "Example Number": 256,
+        "Gorgias Code": ":- dynamic expensive_event/0, wedding_anniversary/0, family_emergency/0\nrule(r1, read_book, []) :- expensive_event.\nrule(r2, book_ride_share, []) :- expensive_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- wedding_anniversary.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_emergency.\nrule(c3, prefer(c2, c1), []).\ncomplement(book_ride_share, read_book).\ncomplement(read_book, book_ride_share)."
+    },
+    {
+        "Example Number": 257,
+        "Gorgias Code": ":- dynamic good_weather/0.\nrule(r1, travel_abroad, []) :- good_weather.\nrule(r2, go_to(cinema), []) :- good_weather.\nrule(p1, prefer(r1, r2), []).\ncomplement(go_to(cinema), travel_abroad).\ncomplement(travel_abroad, go_to(cinema))."
+    },
+    {
+        "Example Number": 258,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, hail_storm/0, networking_event/0\nrule(r1, visit_family, []) :- invitation_from_friend.\nrule(r2, attend_meeting, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- hail_storm.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- networking_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_meeting, visit_family).\ncomplement(visit_family, attend_meeting)."
+    },
+    {
+        "Example Number": 259,
+        "Gorgias Code": ":- dynamic unexpected_expense/0.\nrule(r1, buy_groceries, []) :- unexpected_expense.\nrule(r2, join_fitness_class, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []).\ncomplement(join_fitness_class, buy_groceries).\ncomplement(buy_groceries, join_fitness_class)."
+    },
+    {
+        "Example Number": 260,
+        "Gorgias Code": ":- dynamic good_investment/0, got_bonus/0, financial_aid/0, party_invitation/0, snowstorm/0.\nrule(r1, prepare_report, []) :- good_investment.\nrule(r2, go_to(restaurant), []) :- got_bonus.\nrule(p1, prefer(r1, r2), []) :- good_investment, got_bonus.\nrule(p2, prefer(r2, r1), []) :- good_investment, got_bonus, family_gathering.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- financial_aid.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- party_invitation.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- snowstorm.\nrule(c5, prefer(c4, c3), []).\ncomplement(go_to(restaurant), prepare_report).\ncomplement(prepare_report, go_to(restaurant)).\ncomplement(good_investment, got_bonus).\ncomplement(got_bonus, good_investment)."
+    },
+    {
+        "Example Number": 261,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, lunch_time/0, new_restaurant_to_try/0.\nrule(r1, finish_report, []) :- invitation_from_friend.\nrule(r2, evening_walk, []) :- lunch_time.\nrule(p1, prefer(r1, r2), []) :- invitation_from_friend, lunch_time.\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend, lunch_time, unexpected_expense.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- new_restaurant_to_try.\nrule(c3, prefer(c2, c1), []).\ncomplement(evening_walk, finish_report).\ncomplement(finish_report, evening_walk).\ncomplement(invitation_from_friend, lunch_time).\ncomplement(lunch_time, invitation_from_friend)."
+    },
+    {
+        "Example Number": 262,
+        "Gorgias Code": ":- dynamic weekend/0, good_weather/0, moving_house/0\nrule(r1, host_dinner_party, []) :- weekend.\nrule(r2, pay_bills, []) :- weekend.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- moving_house.\nrule(c3, prefer(c2, c1), []).\ncomplement(pay_bills, host_dinner_party).\ncomplement(host_dinner_party, pay_bills)."
+    },
+    {
+        "Example Number": 263,
+        "Gorgias Code": ":- dynamic concert_nearby/0.\nrule(r1, reply_emails, []) :- concert_nearby.\nrule(r2, finish_report, []) :- concert_nearby.\nrule(p1, prefer(r1, r2), []).\ncomplement(finish_report, reply_emails).\ncomplement(reply_emails, finish_report)."
+    },
+    {
+        "Example Number": 264,
+        "Gorgias Code": ":- dynamic vacation_planned/0, client_feedback/0.\nrule(r1, yoga_session, []) :- vacation_planned.\nrule(r2, cycling_session, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []) :- vacation_planned, client_feedback.\nrule(p2, prefer(r2, r1), []) :- vacation_planned, client_feedback, job_interview.\nrule(c1, prefer(p2, p1), []).\ncomplement(cycling_session, yoga_session).\ncomplement(yoga_session, cycling_session).\ncomplement(vacation_planned, client_feedback).\ncomplement(client_feedback, vacation_planned)."
+    },
+    {
+        "Example Number": 265,
+        "Gorgias Code": ":- dynamic extended_work_hours/0, friend_in_town/0.\nrule(r1, cycling_session, []) :- extended_work_hours.\nrule(r2, swim_session, []) :- friend_in_town.\nrule(p1, prefer(r1, r2), []) :- extended_work_hours, friend_in_town.\nrule(p2, prefer(r2, r1), []) :- extended_work_hours, friend_in_town, important_meeting.\nrule(c1, prefer(p2, p1), []).\ncomplement(swim_session, cycling_session).\ncomplement(cycling_session, swim_session).\ncomplement(extended_work_hours, friend_in_town).\ncomplement(friend_in_town, extended_work_hours)."
+    },
+    {
+        "Example Number": 266,
+        "Gorgias Code": ":- dynamic expensive_event/0, boss_in_office/0, subscription_due/0.\nrule(r1, take_bus, []) :- expensive_event.\nrule(r2, morning_run, []) :- boss_in_office.\nrule(p1, prefer(r1, r2), []) :- expensive_event, boss_in_office.\nrule(p2, prefer(r2, r1), []) :- expensive_event, boss_in_office, got_bonus.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- subscription_due.\nrule(c3, prefer(c2, c1), []).\ncomplement(morning_run, take_bus).\ncomplement(take_bus, morning_run).\ncomplement(expensive_event, boss_in_office).\ncomplement(boss_in_office, expensive_event)."
+    },
+    {
+        "Example Number": 267,
+        "Gorgias Code": ":- dynamic friend_in_town/0, client_feedback/0.\nrule(r1, update_project_plan, []) :- friend_in_town.\nrule(r2, visit_doctor, []) :- client_feedback.\nrule(p1, prefer(r1, r2), []) :- friend_in_town, client_feedback.\nrule(p2, prefer(r2, r1), []) :- friend_in_town, client_feedback, feeling_sick.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_doctor, update_project_plan).\ncomplement(update_project_plan, visit_doctor).\ncomplement(friend_in_town, client_feedback).\ncomplement(client_feedback, friend_in_town)."
+    },
+    {
+        "Example Number": 268,
+        "Gorgias Code": ":- dynamic good_investment/0, morning_rush/0, hot_day/0\nrule(r1, take_picnic, []) :- good_investment.\nrule(r2, travel_abroad, []) :- good_investment.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hot_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(travel_abroad, take_picnic).\ncomplement(take_picnic, travel_abroad)."
+    },
+    {
+        "Example Number": 269,
+        "Gorgias Code": ":- dynamic new_neighbor/0, hot_day/0, urgent_deadline/0.\nrule(r1, join_fitness_class, []) :- new_neighbor.\nrule(r2, rent_car, []) :- hot_day.\nrule(p1, prefer(r1, r2), []) :- new_neighbor, hot_day.\nrule(p2, prefer(r2, r1), []) :- new_neighbor, hot_day, extended_work_hours.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\ncomplement(rent_car, join_fitness_class).\ncomplement(join_fitness_class, rent_car).\ncomplement(new_neighbor, hot_day).\ncomplement(hot_day, new_neighbor)."
+    },
+    {
+        "Example Number": 270,
+        "Gorgias Code": ":- dynamic community_event/0, team_project_due/0, tax_refund/0\nrule(r1, go_to(restaurant), []) :- community_event.\nrule(r2, explore_city, []) :- community_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- tax_refund.\nrule(c3, prefer(c2, c1), []).\ncomplement(explore_city, go_to(restaurant)).\ncomplement(go_to(restaurant), explore_city)."
+    },
+    {
+        "Example Number": 271,
+        "Gorgias Code": ":- dynamic snowstorm/0, low_budget/0\nrule(r1, book_flight, []) :- snowstorm.\nrule(r2, clean_house, []) :- snowstorm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- low_budget.\nrule(c1, prefer(p2, p1), []).\ncomplement(clean_house, book_flight).\ncomplement(book_flight, clean_house)."
+    },
+    {
+        "Example Number": 272,
+        "Gorgias Code": ":- dynamic urgent_deadline/0, new_restaurant_to_try/0, hot_day/0, wedding_anniversary/0, discount_on_flight/0.\nrule(r1, ride_bike, []) :- urgent_deadline.\nrule(r2, call_client, []) :- new_restaurant_to_try.\nrule(p1, prefer(r1, r2), []) :- urgent_deadline, new_restaurant_to_try.\nrule(p2, prefer(r2, r1), []) :- urgent_deadline, new_restaurant_to_try, expensive_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hot_day.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- wedding_anniversary.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- discount_on_flight.\nrule(c5, prefer(c4, c3), []).\ncomplement(call_client, ride_bike).\ncomplement(ride_bike, call_client).\ncomplement(urgent_deadline, new_restaurant_to_try).\ncomplement(new_restaurant_to_try, urgent_deadline)."
+    },
+    {
+        "Example Number": 273,
+        "Gorgias Code": ":- dynamic job_interview/0.\nrule(r1, travel_abroad, []) :- job_interview.\nrule(r2, water_plants, []) :- job_interview.\nrule(p1, prefer(r1, r2), []).\ncomplement(water_plants, travel_abroad).\ncomplement(travel_abroad, water_plants)."
+    },
+    {
+        "Example Number": 274,
+        "Gorgias Code": ":- dynamic unexpected_expense/0, invitation_from_friend/0.\nrule(r1, book_ride_share, []) :- unexpected_expense.\nrule(r2, organize_workspace, []) :- invitation_from_friend.\nrule(p1, prefer(r1, r2), []) :- unexpected_expense, invitation_from_friend.\nrule(p2, prefer(r2, r1), []) :- unexpected_expense, invitation_from_friend, friend_in_town.\nrule(c1, prefer(p2, p1), []).\ncomplement(organize_workspace, book_ride_share).\ncomplement(book_ride_share, organize_workspace).\ncomplement(unexpected_expense, invitation_from_friend).\ncomplement(invitation_from_friend, unexpected_expense)."
+    },
+    {
+        "Example Number": 275,
+        "Gorgias Code": ":- dynamic morning_rush/0, unexpected_guest/0, friend_in_town/0\nrule(r1, meditate, []) :- morning_rush.\nrule(r2, travel_abroad, []) :- morning_rush.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\ncomplement(travel_abroad, meditate).\ncomplement(meditate, travel_abroad)."
+    },
+    {
+        "Example Number": 276,
+        "Gorgias Code": ":- dynamic early_morning/0, concert_nearby/0, deadline_missed/0\nrule(r1, drive_car, []) :- early_morning.\nrule(r2, go_to_bar, []) :- early_morning.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- concert_nearby.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- deadline_missed.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_to_bar, drive_car).\ncomplement(drive_car, go_to_bar)."
+    },
+    {
+        "Example Number": 277,
+        "Gorgias Code": ":- dynamic unexpected_expense/0, feeling_sick/0, friend_in_town/0, urgent_deadline/0, party_invitation/0.\nrule(r1, schedule_meeting, []) :- unexpected_expense.\nrule(r2, go_to(cinema), []) :- feeling_sick.\nrule(p1, prefer(r1, r2), []) :- unexpected_expense, feeling_sick.\nrule(p2, prefer(r2, r1), []) :- unexpected_expense, feeling_sick, good_weather.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- friend_in_town.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- party_invitation.\nrule(c5, prefer(c4, c3), []).\ncomplement(go_to(cinema), schedule_meeting).\ncomplement(schedule_meeting, go_to(cinema)).\ncomplement(unexpected_expense, feeling_sick).\ncomplement(feeling_sick, unexpected_expense)."
+    },
+    {
+        "Example Number": 278,
+        "Gorgias Code": ":- dynamic team_project_due/0.\nrule(r1, prepare_report, []) :- team_project_due.\nrule(r2, organize_workspace, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []).\ncomplement(organize_workspace, prepare_report).\ncomplement(prepare_report, organize_workspace)."
+    },
+    {
+        "Example Number": 279,
+        "Gorgias Code": ":- dynamic afternoon/0, snowstorm/0, rainy_day/0\nrule(r1, go_shopping, []) :- afternoon.\nrule(r2, do_laundry, []) :- afternoon.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- snowstorm.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- rainy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(do_laundry, go_shopping).\ncomplement(go_shopping, do_laundry)."
+    },
+    {
+        "Example Number": 280,
+        "Gorgias Code": ":- dynamic family_emergency/0.\nrule(r1, go_to(cinema), []) :- family_emergency.\nrule(r2, book_flight, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []).\ncomplement(book_flight, go_to(cinema)).\ncomplement(go_to(cinema), book_flight)."
+    },
+    {
+        "Example Number": 281,
+        "Gorgias Code": ":- dynamic moving_house/0.\nrule(r1, pay_bills, []) :- moving_house.\nrule(r2, submit_timesheet, []) :- moving_house.\nrule(p1, prefer(r1, r2), []).\ncomplement(submit_timesheet, pay_bills).\ncomplement(pay_bills, submit_timesheet)."
+    },
+    {
+        "Example Number": 282,
+        "Gorgias Code": ":- dynamic moving_house/0, project_extension/0, medical_appointment/0\nrule(r1, go_to(restaurant), []) :- moving_house.\nrule(r2, explore_city, []) :- moving_house.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- project_extension.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- medical_appointment.\nrule(c3, prefer(c2, c1), []).\ncomplement(explore_city, go_to(restaurant)).\ncomplement(go_to(restaurant), explore_city)."
+    },
+    {
+        "Example Number": 283,
+        "Gorgias Code": ":- dynamic team_project_due/0, boss_in_office/0, night_time/0.\nrule(r1, explore_city, []) :- team_project_due.\nrule(r2, use_subway, []) :- boss_in_office.\nrule(p1, prefer(r1, r2), []) :- team_project_due, boss_in_office.\nrule(p2, prefer(r2, r1), []) :- team_project_due, boss_in_office, good_investment.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- night_time.\nrule(c3, prefer(c2, c1), []).\ncomplement(use_subway, explore_city).\ncomplement(explore_city, use_subway).\ncomplement(team_project_due, boss_in_office).\ncomplement(boss_in_office, team_project_due)."
+    },
+    {
+        "Example Number": 284,
+        "Gorgias Code": ":- dynamic afternoon/0, unexpected_expense/0, client_feedback/0.\nrule(r1, read_book, []) :- afternoon.\nrule(r2, morning_run, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- afternoon, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- afternoon, unexpected_expense, morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- client_feedback.\nrule(c3, prefer(c2, c1), []).\ncomplement(morning_run, read_book).\ncomplement(read_book, morning_run).\ncomplement(afternoon, unexpected_expense).\ncomplement(unexpected_expense, afternoon)."
+    },
+    {
+        "Example Number": 285,
+        "Gorgias Code": ":- dynamic discount_on_flight/0, team_project_due/0, school_reunion/0, birthday_today/0, medical_appointment/0.\nrule(r1, host_dinner_party, []) :- discount_on_flight.\nrule(r2, take_bus, []) :- team_project_due.\nrule(p1, prefer(r1, r2), []) :- discount_on_flight, team_project_due.\nrule(p2, prefer(r2, r1), []) :- discount_on_flight, team_project_due, unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- school_reunion.\nrule(c3, prefer(c2, c1), []).\nrule(c2, prefer(p1, p2), []) :- birthday_today.\nrule(c3, prefer(c2, c1), []).\nrule(c4, prefer(c1, c2), []) :- medical_appointment.\nrule(c5, prefer(c4, c3), []).\ncomplement(take_bus, host_dinner_party).\ncomplement(host_dinner_party, take_bus).\ncomplement(discount_on_flight, team_project_due).\ncomplement(team_project_due, discount_on_flight)."
+    },
+    {
+        "Example Number": 286,
+        "Gorgias Code": ":- dynamic expensive_event/0, invitation_from_friend/0, concert_nearby/0\nrule(r1, travel_abroad, []) :- expensive_event.\nrule(r2, go_gym, []) :- expensive_event.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- concert_nearby.\nrule(c3, prefer(c2, c1), []).\ncomplement(go_gym, travel_abroad).\ncomplement(travel_abroad, go_gym)."
+    },
+    {
+        "Example Number": 287,
+        "Gorgias Code": ":- dynamic hot_day/0, financial_aid/0, dusk/0.\nrule(r1, book_flight, []) :- hot_day.\nrule(r2, reply_emails, []) :- financial_aid.\nrule(p1, prefer(r1, r2), []) :- hot_day, financial_aid.\nrule(p2, prefer(r2, r1), []) :- hot_day, financial_aid, school_reunion.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- dusk.\nrule(c3, prefer(c2, c1), []).\ncomplement(reply_emails, book_flight).\ncomplement(book_flight, reply_emails).\ncomplement(hot_day, financial_aid).\ncomplement(financial_aid, hot_day)."
+    },
+    {
+        "Example Number": 288,
+        "Gorgias Code": ":- dynamic client_feedback/0, school_reunion/0, party_invitation/0.\nrule(r1, book_ride_share, []) :- client_feedback.\nrule(r2, cycling_session, []) :- school_reunion.\nrule(p1, prefer(r1, r2), []) :- client_feedback, school_reunion.\nrule(p2, prefer(r2, r1), []) :- client_feedback, school_reunion, unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- party_invitation.\nrule(c3, prefer(c2, c1), []).\ncomplement(cycling_session, book_ride_share).\ncomplement(book_ride_share, cycling_session).\ncomplement(client_feedback, school_reunion).\ncomplement(school_reunion, client_feedback)."
+    },
+    {
+        "Example Number": 289,
+        "Gorgias Code": ":- dynamic holiday_season/0, unexpected_expense/0, afternoon/0.\nrule(r1, give_presentation, []) :- holiday_season.\nrule(r2, do_laundry, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []) :- holiday_season, unexpected_expense.\nrule(p2, prefer(r2, r1), []) :- holiday_season, unexpected_expense, networking_event.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- afternoon.\nrule(c3, prefer(c2, c1), []).\ncomplement(do_laundry, give_presentation).\ncomplement(give_presentation, do_laundry).\ncomplement(holiday_season, unexpected_expense).\ncomplement(unexpected_expense, holiday_season)."
+    },
+    {
+        "Example Number": 290,
+        "Gorgias Code": ":- dynamic early_morning/0, new_restaurant_to_try/0.\nrule(r1, do_laundry, []) :- early_morning.\nrule(r2, cook_dinner, []) :- new_restaurant_to_try.\nrule(p1, prefer(r1, r2), []) :- early_morning, new_restaurant_to_try.\nrule(p2, prefer(r2, r1), []) :- early_morning, new_restaurant_to_try, night_time.\nrule(c1, prefer(p2, p1), []).\ncomplement(cook_dinner, do_laundry).\ncomplement(do_laundry, cook_dinner).\ncomplement(early_morning, new_restaurant_to_try).\ncomplement(new_restaurant_to_try, early_morning)."
+    },
+    {
+        "Example Number": 291,
+        "Gorgias Code": ":- dynamic dusk/0, early_morning/0\nrule(r1, clean_house, []) :- dusk.\nrule(r2, buy_groceries, []) :- dusk.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- early_morning.\nrule(c1, prefer(p2, p1), []).\ncomplement(buy_groceries, clean_house).\ncomplement(clean_house, buy_groceries)."
+    },
+    {
+        "Example Number": 292,
+        "Gorgias Code": ":- dynamic hail_storm/0, project_extension/0\nrule(r1, swim_session, []) :- hail_storm.\nrule(r2, take_train, []) :- hail_storm.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- project_extension.\nrule(c1, prefer(p2, p1), []).\ncomplement(take_train, swim_session).\ncomplement(swim_session, take_train)."
+    },
+    {
+        "Example Number": 293,
+        "Gorgias Code": ":- dynamic windy_day/0, party_invitation/0, urgent_deadline/0\nrule(r1, yoga_session, []) :- windy_day.\nrule(r2, cycle_to_work, []) :- windy_day.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- party_invitation.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- urgent_deadline.\nrule(c3, prefer(c2, c1), []).\ncomplement(cycle_to_work, yoga_session).\ncomplement(yoga_session, cycle_to_work)."
+    },
+    {
+        "Example Number": 294,
+        "Gorgias Code": ":- dynamic family_emergency/0, unexpected_guest/0, windy_day/0\nrule(r1, go_to_bar, []) :- family_emergency.\nrule(r2, visit_family, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- windy_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(visit_family, go_to_bar).\ncomplement(go_to_bar, visit_family)."
+    },
+    {
+        "Example Number": 295,
+        "Gorgias Code": ":- dynamic deadline_missed/0, new_restaurant_to_try/0.\nrule(r1, drive_car, []) :- deadline_missed.\nrule(r2, visit_family, []) :- new_restaurant_to_try.\nrule(p1, prefer(r1, r2), []) :- deadline_missed, new_restaurant_to_try.\nrule(p2, prefer(r2, r1), []) :- deadline_missed, new_restaurant_to_try, dusk.\nrule(c1, prefer(p2, p1), []).\ncomplement(visit_family, drive_car).\ncomplement(drive_car, visit_family).\ncomplement(deadline_missed, new_restaurant_to_try).\ncomplement(new_restaurant_to_try, deadline_missed)."
+    },
+    {
+        "Example Number": 296,
+        "Gorgias Code": ":- dynamic unexpected_expense/0, unexpected_guest/0, hot_day/0\nrule(r1, reply_emails, []) :- unexpected_expense.\nrule(r2, plan_meals, []) :- unexpected_expense.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- unexpected_guest.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- hot_day.\nrule(c3, prefer(c2, c1), []).\ncomplement(plan_meals, reply_emails).\ncomplement(reply_emails, plan_meals)."
+    },
+    {
+        "Example Number": 297,
+        "Gorgias Code": ":- dynamic important_meeting/0, urgent_deadline/0, expensive_event/0.\nrule(r1, go_shopping, []) :- important_meeting.\nrule(r2, take_picnic, []) :- urgent_deadline.\nrule(p1, prefer(r1, r2), []) :- important_meeting, urgent_deadline.\nrule(p2, prefer(r2, r1), []) :- important_meeting, urgent_deadline, morning_rush.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- expensive_event.\nrule(c3, prefer(c2, c1), []).\ncomplement(take_picnic, go_shopping).\ncomplement(go_shopping, take_picnic).\ncomplement(important_meeting, urgent_deadline).\ncomplement(urgent_deadline, important_meeting)."
+    },
+    {
+        "Example Number": 298,
+        "Gorgias Code": ":- dynamic invitation_from_friend/0, family_emergency/0.\nrule(r1, visit_family, []) :- invitation_from_friend.\nrule(r2, water_plants, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []) :- invitation_from_friend, family_emergency.\nrule(p2, prefer(r2, r1), []) :- invitation_from_friend, family_emergency, medical_appointment.\nrule(c1, prefer(p2, p1), []).\ncomplement(water_plants, visit_family).\ncomplement(visit_family, water_plants).\ncomplement(invitation_from_friend, family_emergency).\ncomplement(family_emergency, invitation_from_friend)."
+    },
+    {
+        "Example Number": 299,
+        "Gorgias Code": ":- dynamic discount_on_flight/0, low_budget/0, family_gathering/0\nrule(r1, water_plants, []) :- discount_on_flight.\nrule(r2, attend_workshop, []) :- discount_on_flight.\nrule(p1, prefer(r1, r2), []).\nrule(p2, prefer(r2, r1), []) :- low_budget.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- family_gathering.\nrule(c3, prefer(c2, c1), []).\ncomplement(attend_workshop, water_plants).\ncomplement(water_plants, attend_workshop)."
+    },
+    {
+        "Example Number": 300,
+        "Gorgias Code": ":- dynamic wedding_anniversary/0, family_emergency/0, invitation_from_friend/0.\nrule(r1, finish_report, []) :- wedding_anniversary.\nrule(r2, visit_doctor, []) :- family_emergency.\nrule(p1, prefer(r1, r2), []) :- wedding_anniversary, family_emergency.\nrule(p2, prefer(r2, r1), []) :- wedding_anniversary, family_emergency, team_project_due.\nrule(c1, prefer(p2, p1), []).\nrule(c2, prefer(p1, p2), []) :- invitation_from_friend.\nrule(c3, prefer(c2, c1), []).\ncomplement(visit_doctor, finish_report).\ncomplement(finish_report, visit_doctor).\ncomplement(wedding_anniversary, family_emergency).\ncomplement(family_emergency, wedding_anniversary)."
+    }
+]
