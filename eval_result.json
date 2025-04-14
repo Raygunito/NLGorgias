@@ -1,0 +1,152 @@
+[
+    {
+      "pred_answer": "If there is a family gathering, I finish the report. If I have a vacation planned, I book a ride share. But if there is a family gathering and I have a vacation planned, I prefer to finish the report. However, if my friend is in town, I prefer to book a ride share. I can't at the same time finish the report and book a ride share. Family gathering and vacation planned aren't compatible. If my boss is in the office, I prefer to finish the report over booking a ride share.",
+      "answer": "If there is a family gathering, I finish the report. If a vacation is planned, I book a ride share. However, if there is both a family gathering and a vacation planned, I prefer to finish the report. But if a friend is in town during that time, I prefer to book a ride share. I can't at the same time finish the report and book a ride share. Family gathering and vacation planned aren't compatible. If my boss is in the office, I prefer to finish the report over booking a ride share.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I have an unexpected expense, I book a ride share. If I have an invitation from a friend, I organize my workspace. However, if I have both an unexpected expense and an invitation from a friend, I prefer to book a ride share. If my friend is in town, I prefer to organize my workspace. I can't at the same time book a ride share and organize my workspace. Unexpected expense and invitation from a friend aren't compatible.",
+      "answer": "I can either book a ride share or organize my workspace. If there is an unexpected expense, I prefer to book a ride share. If I have an invitation from a friend, I prefer to organize my workspace. However, if there is both an unexpected expense and an invitation from a friend, I prefer to book a ride share. If there is also a friend in town, I prefer to organize my workspace. I can't at the same time book a ride share and organize my workspace. Unexpected expense and invitation from a friend aren't compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I have a new neighbor, I can either meditate or have a yoga session. Generally, I prefer to meditate. I can't at the same time meditate and have a yoga session.",
+      "answer": "If I have a new neighbor, I can either meditate or have a yoga session. Generally, I prefer to meditate. I can't at the same time meditate and have a yoga session.",
+      "correct": true
+    },
+    {
+      "pred_answer": "If I have a party invitation, I can either visit the museum or clean the house. Generally, I prefer to visit the museum, but if there is a discount on a flight, I prefer to clean the house. I can't at the same time visit the museum and clean the house.",
+      "answer": "I can either visit the museum or clean the house if I have a party invitation. Generally, I prefer to visit the museum, but if there is a discount on a flight, I prefer to clean the house. I can't at the same time visit the museum and clean the house.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I can either go shopping or give a presentation. If I have a job interview, I can go shopping. If the weather is good, I can give a presentation. But if I have a job interview and the weather is good, I prefer to go shopping. However, if it is also a rainy day, I prefer to give the presentation. I can't at the same time go shopping and give a presentation. Job interview and good weather aren't compatible. If I have missed a deadline, I prefer to give the presentation over going shopping.",
+      "answer": "If I have a job interview, I go shopping. If the weather is good, I give a presentation. But if I have a job interview and the weather is good, I prefer to go shopping. However, if it's also a rainy day, I prefer to give a presentation. I can't at the same time go shopping and give a presentation. Job interview and good weather aren't compatible. If I missed a deadline, I prefer to give a presentation over going shopping.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is an expensive event, I drive my car. If there is a project extension, I rent a car. But if there is an expensive event and a project extension, I prefer to drive my car. However, if it is also a humid day, I prefer to rent a car. I can't at the same time drive my car and rent a car. An expensive event and a project extension aren't compatible.",
+      "answer": "If there is an expensive event, I drive my car. If there is a project extension, I rent a car. But if there is both an expensive event and a project extension, I prefer to drive my car. However, if it is also a humid day, I prefer to rent a car. I can't at the same time drive my car and rent a car. Expensive event and project extension aren't compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is an unexpected expense, I can either buy groceries or join a fitness class. I generally prefer to buy groceries. I can't at the same time buy groceries and join a fitness class.",
+      "answer": "If there is an unexpected expense, I can either buy groceries or join a fitness class. Generally, I prefer to buy groceries. I can't at the same time buy groceries and join a fitness class.",
+      "correct": false
+    },
+    {
+      "pred_answer": "On a cloudy day, I review documents. On a windy day, I organize my workspace. However, if it's both a cloudy day and a windy day, I prefer to review documents. If it's also the holiday season, I prefer to organize my workspace. I can't at the same time review documents and organize my workspace. Cloudy day and windy day aren't compatible.",
+      "answer": "If it is a cloudy day, I review documents. If it is a windy day, I organize my workspace. However, if it is both a cloudy day and a windy day, I prefer to review documents. But if it is also the holiday season, I prefer to organize my workspace. I can't at the same time organize my workspace and review documents. Cloudy day and windy day aren't compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "On a hot day, I can either host a dinner party or use the subway. If I have extended work hours, I can also use the subway. If it is a hot day and I have extended work hours, I prefer to host a dinner party. However, if it is also a weekend, I prefer to use the subway. If there is a family emergency, I prefer to host a dinner party. If I have missed a deadline, I also prefer to host a dinner party. If it is my wedding anniversary, I prefer to use the subway. I can't at the same time host a dinner party",
+      "answer": "If it is a hot day, I can host a dinner party. If I have extended work hours, I can use the subway. If it is a hot day and I have extended work hours, I prefer to host a dinner party. However, if it is a hot day, I have extended work hours, and it is the weekend, I prefer to use the subway. I can't at the same time host a dinner party and use the subway. A hot day and extended work hours aren't compatible. If there is a family emergency, I prefer to host a dinner party over using the subway. If I missed a deadline, I prefer to host a dinner party over using the subway. If it is my wedding anniversary, I prefer to host a dinner party over using the subway. If I prefer to host a dinner party, I prefer that over using the subway.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If it is holiday season, I give a presentation. If there is an unexpected expense, I do laundry. However, if it is holiday season and there is an unexpected expense, I prefer to give a presentation. If there is also a networking event, I prefer to do laundry. I can't at the same time give a presentation and do laundry. Holiday season and unexpected expense are not compatible. If it is afternoon, I prefer to do laundry over giving a presentation.",
+      "answer": "During the holiday season, I can either give a presentation or do laundry. If there is an unexpected expense, I can also do laundry. However, if it is both the holiday season and there is an unexpected expense, I prefer to give a presentation. If there is also a networking event, I prefer to do laundry instead. In the afternoon, I prefer to give a presentation over doing laundry. I can't at the same time give a presentation and do laundry. The holiday season and unexpected expense are not compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is a hail storm, I can either go to the cinema or attend a workshop. Generally, I prefer to go to the cinema but if there is a project extension, I prefer to attend the workshop. If there is a community event, I prefer to go to the cinema. I can't at the same time go to the cinema and attend a workshop.",
+      "answer": "If there is a hail storm, I can either go to the cinema or attend a workshop. Generally, I prefer to go to the cinema, but if there is a project extension, I prefer to attend the workshop. However, if there is a community event, I prefer to go to the cinema. I can't at the same time go to the cinema and attend a workshop.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I have a job interview, I can either attend a concert or attend a workshop. Generally, I prefer to attend the concert. However, if I have a vacation planned, I prefer to attend the workshop. I can't at the same time attend a concert and attend a workshop.",
+      "answer": "If I have a job interview, I can either attend a concert or attend a workshop. Generally, I prefer to attend the concert, but if I have a vacation planned, I prefer to attend the workshop. I can't at the same time attend a concert and attend a workshop.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I can either make coffee or attend a workshop. If I have extended work hours, I make coffee. If I have a job interview, I attend the workshop. However, if I have extended work hours and a job interview, I prefer to make coffee. If it is also the holiday season, I prefer to attend the workshop. If it is my birthday today, I prefer to make coffee. If I have an unexpected expense, I prefer to make coffee. If there is a family emergency, I prefer to attend the workshop. I can't at the same time make coffee and attend a workshop. Extended work hours",
+      "answer": "I can either make coffee or attend a workshop. If I have extended work hours, I make coffee. If I have a job interview, I attend a workshop. However, if I have both extended work hours and a job interview, I prefer to make coffee. If it's the holiday season and I have both extended work hours and a job interview, I prefer to attend the workshop. I cannot make coffee and attend a workshop at the same time. If today is my birthday, I prefer to make coffee over attending the workshop. If there is an unexpected expense, I prefer to make coffee over attending the workshop. If there is a family emergency, I prefer to make coffee over attending the workshop. I can't have both extended work hours and a job interview at the same time.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I have extended work hours, I can either go for a morning run or attend a meeting. Generally, I prefer to go for a morning run. I can't at the same time go for a morning run and attend a meeting.",
+      "answer": "If I have extended work hours, I can either go for a morning run or attend a meeting. Generally, I prefer to go for a morning run. I can't at the same time go for a morning run and attend a meeting.",
+      "correct": true
+    },
+    {
+      "pred_answer": "If I have a good investment, I can either plan meals or travel abroad. Generally, I prefer to plan meals. I can't at the same time plan meals and travel abroad.",
+      "answer": "When I have a good investment, I can either plan meals or travel abroad. Generally, I prefer to plan meals over traveling abroad. I can't at the same time plan meals and travel abroad.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I have a new neighbor, I join a fitness class. If it's a hot day, I rent a car. But if I have a new neighbor and it's a hot day, I prefer to join the fitness class. However, if I also have extended work hours, I prefer to rent a car. I can't at the same time join a fitness class and rent a car. New neighbor and hot day aren't compatible. If I have an urgent deadline, I prefer to join the fitness class over renting a car.",
+      "answer": "If I have a new neighbor, I join a fitness class. If it's a hot day, I rent a car. But if I have a new neighbor and it's a hot day, I prefer to join the fitness class. However, if I also have extended work hours, I prefer to rent the car. I can't at the same time join the fitness class and rent a car. New neighbor and hot day aren't compatible. If I have an urgent deadline, I prefer to join the fitness class over renting the car.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If it is the holiday season, I order a taxi. If it is morning rush, I water the plants. But if it is the holiday season and morning rush, I prefer to order a taxi. However, if it is also good weather, I prefer to water the plants. I can't at the same time order a taxi and water the plants. Holiday season and morning rush aren't compatible. If there is a school reunion, I prefer to order a taxi over watering the plants.",
+      "answer": "During the holiday season, I can either order a taxi or water the plants. If it is the holiday season and there is a morning rush, I prefer to order a taxi. However, if it is also a good weather day, I prefer to water the plants. If there is a school reunion, I prefer to order a taxi over watering the plants. I can't at the same time order a taxi and water the plants. The holiday season and morning rush are not compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If it is my birthday today, I can either clean the house or call the client. Generally, I prefer to clean the house, but if there is a concert nearby, I prefer to call the client. I can't at the same time clean the house and call the client.",
+      "answer": "If today is my birthday, I can either clean the house or call a client. Generally, I prefer to clean the house, but if there is a concert nearby, I prefer to call the client. I can't at the same time clean the house and call the client.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is a concert nearby, I visit the doctor. If it is during the morning rush, I submit my timesheet. However, if there is a concert nearby and it is during the morning rush, I prefer to visit the doctor. If it is also my birthday today, I prefer to submit my timesheet. I can't at the same time visit the doctor and submit my timesheet. A concert nearby and morning rush aren't compatible. If there is a community event, I prefer to visit the doctor over submitting my timesheet.",
+      "answer": "If there is a concert nearby, I visit the doctor. If it is morning rush, I submit the timesheet. But if there is a concert nearby and it is morning rush, I prefer to visit the doctor. However, if it is also my birthday today, I prefer to submit the timesheet. I can't at the same time submit the timesheet and visit the doctor. Concert nearby and morning rush aren't compatible. If there is a community event, I prefer to visit the doctor over submitting the timesheet.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If I am moving house, I can either book a flight or a ride share. Generally, I prefer to book a flight. However, if it is night time, I prefer to book a ride share. If it is a good investment, I prefer to book a flight. I can't at the same time book a flight and a ride share.",
+      "answer": "If I am moving house, I can either book a flight or book a ride share. Generally, I prefer to book a flight but if it is night time, I prefer to book a ride share. However, if I have a good investment, I prefer to book a flight. I can't at the same time book a flight and book a ride share.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If it is a cloudy day, I can either take a picnic or attend a concert. Generally, I prefer to take a picnic. However, if I am feeling sick, I prefer to attend the concert. I can't at the same time take a picnic and attend a concert.",
+      "answer": "If it is a cloudy day, I can either take a picnic or attend a concert. Generally, I prefer to take a picnic but if I am feeling sick, I prefer to attend the concert. I can't at the same time take a picnic and attend a concert.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I have an invitation from a friend, so I go to the gym. I have a team project due, so I reply to emails. However, if I have an invitation from a friend and a team project due, I prefer to go to the gym. But if it is also good weather, I prefer to reply to emails. I can't at the same time go to the gym and reply to emails. An invitation from a friend and a team project due are incompatible.",
+      "answer": "If I have an invitation from a friend, I go to the gym. If I have a team project due, I reply to emails. But if I have an invitation from a friend and a team project due, I prefer to go to the gym. However, if I also have good weather, I prefer to reply to emails. I can't at the same time go to the gym and reply to emails. Invitation from a friend and team project due aren't compatible.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is an unexpected guest, I review the documents. If there is a discount on the flight, I take the bus. However, if there is an unexpected guest and a discount on the flight, I prefer to review the documents. If there is also an important meeting, I prefer to take the bus. I can't at the same time review the documents and take the bus. Unexpected guest and discount on flight aren't compatible. If my budget is low, I prefer to review the documents over taking the bus.",
+      "answer": "If I have an unexpected guest, I review documents. If there is a discount on a flight, I take the bus. But if I have an unexpected guest and a discount on a flight, I prefer to review documents. However, if I also have an important meeting, I prefer to take the bus. I can't at the same time review documents and take the bus. Unexpected guest and discount on flight aren't compatible. If I have a low budget, I prefer to take the bus.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If the weather is good, I can either call a client or host a dinner party. Generally, I prefer to call a client, but if there is a school reunion, I prefer to host a dinner party. I can't at the same time call a client and host a dinner party.",
+      "answer": "If the weather is good, I can either call a client or host a dinner party. Generally, I prefer to call a client, but if there is a school reunion, I prefer to host a dinner party. I can't at the same time call a client and host a dinner party.",
+      "correct": true
+    },
+    {
+      "pred_answer": "If I have a vacation planned, I can either take an evening walk or rent a car. Generally, I prefer to take an evening walk, but if there is a snowstorm, I prefer to rent a car. I can't at the same time take an evening walk and rent a car.",
+      "answer": "If I have a vacation planned, I can either go for an evening walk or rent a car. Generally, I prefer to go for an evening walk, but if there is a snowstorm, I prefer to rent a car. I can't at the same time go for an evening walk and rent a car.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I can either rent a car or update the project plan. Generally, I prefer to rent a car. However, if I have a team project due, I prefer to update the project plan. I can't at the same time rent a car and update the project plan. If there is a new restaurant to try, I prefer to update the project plan.",
+      "answer": "I can either rent a car or update the project plan. Generally, I prefer to rent a car. However, if there is a team project due, I prefer to update the project plan. If there is a new restaurant to try, I prefer to rent a car. I can't at the same time rent a car and update the project plan.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If there is a hail storm, I can either update the project plan or go to the theater. Generally, I prefer to update the project plan. However, if there is a discount on a flight, I prefer to go to the theater. I can't at the same time update the project plan and go to the theater.",
+      "answer": "If there is a hail storm, I can either update the project plan or go to the theater. Generally, I prefer to update the project plan, but if there is a discount on a flight, I prefer to go to the theater. I can't at the same time update the project plan and go to the theater.",
+      "correct": false
+    },
+    {
+      "pred_answer": "If my subscription is due, I meditate. If I have financial aid, I schedule a meeting. But if my subscription is due and I have financial aid, I prefer to meditate. However, if I also have a good investment, I prefer to schedule a meeting. I can't at the same time meditate and schedule a meeting. My subscription being due and having financial aid aren't compatible. If there is a discount on a flight, I prefer to meditate over scheduling a meeting.",
+      "answer": "If my subscription is due, I meditate. If I have financial aid, I schedule a meeting. But if I have both a subscription due and financial aid, I prefer to meditate. However, if I have a good investment along with a subscription due and financial aid, I prefer to schedule a meeting. I can't at the same time meditate and schedule a meeting. Subscription due and financial aid aren't compatible. If I have a discount on a flight, I prefer to meditate over scheduling a meeting.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I can either finish the report or take an evening walk. If I receive an invitation from a friend, I prefer to finish the report. If it's lunchtime, I prefer to take an evening walk. However, if I receive an invitation from a friend and it's lunchtime, I prefer to finish the report. If it's lunchtime and I have an unexpected expense, I prefer to take an evening walk. If there's a new restaurant to try, I prefer to finish the report. I can't at the same time finish the report and take an evening walk. Additionally, I can't",
+      "answer": "If I have an invitation from a friend, I finish the report. If it's lunch time, I go for an evening walk. But if I have an invitation from a friend and it's lunch time, I prefer to finish the report. However, if there's also an unexpected expense, I prefer to go for an evening walk. I can't at the same time finish the report and go for an evening walk. Invitation from a friend and lunch time aren't compatible. If there's a new restaurant to try, I prefer to finish the report over going for an evening walk.",
+      "correct": false
+    },
+    {
+      "pred_answer": "I can either visit family or order a taxi if there is a discount on flights. Generally, I prefer to visit family. If there is a family gathering, I prefer to order a taxi. I can't at the same time visit family and order a taxi.",
+      "answer": "I can either visit family or order a taxi. If there is a discount on the flight, I can choose either option. Generally, I prefer to visit family, but if there is a family gathering, I prefer to order a taxi. I can't at the same time visit family and order a taxi.",
+      "correct": false
+    }
+  ]
