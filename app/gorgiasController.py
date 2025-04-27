@@ -5,7 +5,8 @@ from io import StringIO
 from dotenv import load_dotenv
 
 # par défaut c'est ".env" mais on peut le changer
-load_dotenv(dotenv_path="./.env.local", override=True)
+# load_dotenv(dotenv_path="./.env.local", override=True)
+load_dotenv()
 
 BASE_GORGIAS_URL = "http://aiasvm1.amcl.tuc.gr:8085"
 
