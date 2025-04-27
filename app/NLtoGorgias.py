@@ -107,7 +107,6 @@ class NLtoGorgias:
 
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
 
-        # Generate the Gorgias code using the model
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
@@ -118,10 +117,8 @@ class NLtoGorgias:
                 eos_token_id=self.tokenizer.eos_token_id
             )
 
-        # Decode the generated text
         response = self.tokenizer.decode(outputs[0])
 
-        # Extract the Gorgias code
         if "<start_of_turn>assistant" in response:
             _, model_output = response.split("<start_of_turn>assistant", 1)
         else:
