@@ -102,8 +102,32 @@ if __name__ == "__main__":
     gorgias.deleteProject()
 
 
+def createQueryGorgias(content: str):
+    # retrieve first row of content
+    dynamic = content.split(".")[0]
+    # retrieve all facts
+    facts = []
+    dynamic = dynamic.split("dynamic")[1]
+    dynamic = dynamic.split(",")
+    facts = [fact.split("/")[0].strip() for fact in dynamic]
+    # retrieve output possible :row 2 and 3
+    output_lines = content.split("rule")[1:3]
+    output = output_lines[1].split(",")[1].strip()
+    compare = []
+    for line in output_lines:
+        parts = line.split(",")
+        part = parts[2].strip()
+        compare.append(part)
+    if compare[0] == compare[1]:
+        selected_facts = facts[:2]
+    else:
+        selected_facts = facts[:3]
+    return selected_facts, output
+
 # unused functions
 # Exemple of a function using the prolog API to add a file
+
+
 def addFile(file="", project="", type=""):
     files = {'file': open(f'{file}', 'rb')}
 

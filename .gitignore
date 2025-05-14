@@ -4,3 +4,4 @@ zebra/
 torch_learn.ipynb
 *.zip
 .env
+**/__pycache__/
