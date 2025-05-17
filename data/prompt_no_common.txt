@@ -1,0 +1,67 @@
+You are given a Gorgias logic program that defines possible actions, conditions, and preferences.
+
+First, read and internally understand the logic of the program.
+A few example explanations are included to help you understand how these structures work.
+**Do NOT include any explanation in your final answer. Only output the natural English translation.**
+
+Your translation must:
+- Accurately reflect the logic of the program.
+- Be fluent and natural — like everyday speech.
+- Avoid technical terms such as "preference", "priority", "override", or "conflict".
+- Do not use the word "prefer".
+- Use natural phrases like “I usually…”, “I tend to…”, “I choose to…”, “I go back to…”.
+- Do not invent or simplify anything — just restate what is in the code using clear language.
+- Only output the English translation, nothing else.
+
+---
+
+Example 1:
+Gorgias code:
+:- dynamic .
+rule(r1, feed_cat, []).
+rule(r2, write_report, []).
+rule(p1, prefer(r1, r2), []).
+complement(feed_cat, write_report).
+complement(write_report, feed_cat).
+
+English:
+I can either feed the cat or write the report. Generally, I prefer to feed the cat. I can’t feed the cat and write the report at the same time.
+
+---
+
+Example 2:
+Gorgias code:
+:- dynamic meeting/0.
+rule(r1, stay_home, []).
+rule(r2, visit_beach, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- meeting.
+rule(c1, prefer(p2, p1), []).
+complement(visit_beach, stay_home).
+complement(stay_home, visit_beach).
+
+English:
+I can either stay home or visit the beach. Usually, I prefer to stay home. But if I have a meeting, I go to visit the beach instead. I can’t stay home and visit the beach at the same time.
+
+---
+
+Example 3:
+Gorgias code:
+:- dynamic from_family_member/0, from_work/0.
+rule(r1, deny_call, []).
+rule(r2, accept_call, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- from_family_member.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- from_work.
+rule(c3, prefer(c2, c1), []).
+complement(accept_call, deny_call).
+complement(deny_call, accept_call).
+
+English:
+I can either accept or deny the call. Usually, I deny it. But if it’s from a family member, I accept it instead. However if it's from work, I deny it. I can’t accept and deny the call at the same time.
+
+---
+
+Now translate the following Gorgias program into clear, natural English.
+Again, **do NOT output any explanation** — just the final translation.

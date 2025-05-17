@@ -1,0 +1,73 @@
+You are given a Gorgias logic program that defines possible actions, conditions, and preferences.
+
+First, read and internally understand the logic of the program.
+A few example explanations are included to help you understand how these structures work.
+**Do NOT include any explanation in your final answer. Only output the natural English translation.**
+
+Your translation must:
+- Accurately reflect the logic of the program.
+- Be fluent and natural — like everyday speech.
+- Avoid technical terms such as "preference", "priority", "override", or "conflict".
+- Do not use the word "prefer".
+- Use natural phrases like “I usually…”, “I tend to…”, “I choose to…”, “I go back to…”.
+- Do not invent or simplify anything — just restate what is in the code using clear language.
+- Only output the English translation, nothing else.
+
+---
+
+Example 1:
+Gorgias code:
+:- dynamic cloudy_day/0, afternoon/0, important_meeting/0.
+rule(r1, finish_work, []) :- cloudy_day.
+rule(r2, watch_movie, []) :- afternoon.
+rule(p1, prefer(r1, r2), []) :- cloud_day, afternoon.
+rule(p2, prefer(r2, r1), []) :- cloud_day, afternoon, important_meeting.
+rule(c1, prefer(p2, p1), []).
+complement(finish_work, watch_movie).
+complement(watch_movie, finish_work).
+
+English:
+If it's a cloudy day, I finish my work. If it’s afternoon, I watch a movie. But if it’s both a cloudy day and it's afternoon, I usually prefer to finish my work. But if I also have an important meeting, I watch a movie instead. I can’t finish my work and watch a movie at the same time.
+
+---
+
+Example 2:
+Gorgias code:
+:- dynamic exam_week/0, power_outage/0, moving_house/0, sale_event/0.
+rule(r1, play_video_games, []) :- exam_week.
+rule(r2, visit_library, []) :- power_outage.
+rule(p1, prefer(r1, r2), []) :- exam_week, power_outage.
+rule(p2, prefer(r2, r1), []) :- exam_week, power_outage, moving_house.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- sale_event.
+rule(c3, prefer(c2, c1), []).
+complement(play_video_games, visit_library).
+complement(visit_library, play_video_games).
+
+English:
+If it's an exam week, I play video games. If there is a power outage, I visit the library. But if it’s both an exam week and there is a power outage, I usually play video games. But if I am also moving house, I prefer to visit the library instead. However if there is a sale event, I rather play video games. I can’t play video games and visit the library at the same time.
+
+---
+
+Example 3:
+Gorgias code:
+:- dynamic team_project_due/0, night_time/0, rainy_day/0, important_meeting/0, new_restaurant_to_try/0.
+rule(r1, go_shopping, []) :- team_project_due.
+rule(r2, visit_doctor, []) :- night_time.
+rule(p1, prefer(r1, r2), []) :- team_project_due, night_time.
+rule(p2, prefer(r2, r1), []) :- team_project_due, night_time, rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- important_meeting.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- new_restaurant_to_try.
+rule(c5, prefer(c4, c3), []).
+complement(visit_doctor, go_shopping).
+complement(go_shopping, visit_doctor).
+
+English:
+If I have a team project due, I go shopping. If it’s nighttime, I visit the doctor. But if it’s both nighttime and I have a project due, I usually go shopping. If it’s also a rainy day, I visit the doctor instead. However if I have an important meeting, I prefer to shopping. But If I have a new restaurant to try, I prefer to visit the doctor. I can’t go shopping and visit the doctor at the same time.
+
+---
+
+Now translate the following Gorgias program into clear, natural English.
+Again, **do NOT output any explanation** — just the final translation.

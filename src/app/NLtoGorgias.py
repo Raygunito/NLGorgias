@@ -9,13 +9,14 @@ class NLtoGorgias:
     This class is responsible for converting natural language queries into Gorgias queries.
     """
 
-    def __init__(self, adapter_path="./model_v0", base_model_name=None):
+    def __init__(self, adapter_path="./model_v0", base_model_name=None, with_gpu=False):
         self.adapter_path = adapter_path
         self.base_model_name = base_model_name
         self.model = None
         self.tokenizer = None
-        self.device = None
-
+        self.device = torch.device(
+            "cuda" if with_gpu and torch.cuda.is_available() else "cpu")
+        self.with_gpu = with_gpu and torch.cuda.is_available()
         self._load_model()
 
     def _load_model(self):
@@ -23,19 +24,27 @@ class NLtoGorgias:
         Loads the PEFT model and tokenizer using the adapter path and base model name.
         """
         peft_config = PeftConfig.from_pretrained(self.adapter_path)
-        bnb_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_compute_dtype=torch.bfloat16,
-            bnb_4bit_quant_type="nf4"
-        )
-
         self.tokenizer = AutoTokenizer.from_pretrained(
             peft_config.base_model_name_or_path)
-        base_model = AutoModelForCausalLM.from_pretrained(
-            peft_config.base_model_name_or_path,
-            quantization_config=bnb_config,
-            device_map="auto"
-        )
+        
+        if self.with_gpu:
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype=torch.bfloat16,
+                bnb_4bit_quant_type="nf4"
+            )
+
+            base_model = AutoModelForCausalLM.from_pretrained(
+                peft_config.base_model_name_or_path,
+                quantization_config=bnb_config,
+                device_map="auto"
+            )
+        else:
+            base_model = AutoModelForCausalLM.from_pretrained(
+                peft_config.base_model_name_or_path
+            )
+            base_model.to(self.device)
+
 
         self.model = PeftModel.from_pretrained(base_model, self.adapter_path)
         self.model.eval()
@@ -131,7 +140,7 @@ class NLtoGorgias:
 
 
 if __name__ == "__main__":
-    gorgias_generator = NLtoGorgias(adapter_path="./model_v1.pt_ft")
+    gorgias_generator = NLtoGorgias(adapter_path="./model_v1.pt_ft", with_gpu=False)
     english_text = "If there is a family emergency, I can either attend a workshop or finish my report. Generally, I choose to attend the workshop. I can't attend the workshop and finish my report at the same time."
 
     gorgias_code = gorgias_generator.generate_gorgias_code(english_text)
