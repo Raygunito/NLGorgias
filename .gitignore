@@ -6,3 +6,4 @@ torch_learn.ipynb
 .env
 **/__pycache__/
 venv/
+.venv/
