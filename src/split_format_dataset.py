@@ -16,16 +16,18 @@ def split_dataset(input_file, train_ratio=0.8, test_ratio=0.1, val_ratio=0.1):
     val_size = int(total_size * val_ratio)
     # Ensure the sizes add up to total_size
     if train_size + test_size + val_size != total_size:
-        raise ValueError("The sum of train, test and validation sizes does not equal the total size of the dataset.")
+        raise ValueError(
+            "The sum of train, test and validation sizes does not equal the total size of the dataset.")
     # Shuffle the data
     data = data[:train_size + test_size + val_size]
     random.shuffle(data)
     # Split the data
     train_data = data[:train_size]
     test_data = data[train_size:train_size + test_size]
-    val_data = data[val_size:]
-    
+    val_data = data[train_size + test_size:]
+
     return train_data, test_data, val_data
+
 
 def format_data_gemma(jsonElement, prompt):
     """
@@ -33,11 +35,11 @@ def format_data_gemma(jsonElement, prompt):
     """
     user_prompt = prompt + jsonElement["english_translation"]
     user_prompt = textwrap.dedent(user_prompt)
-    
+
     messages = [
         {
             "role": "user",
-            "content": user_prompt 
+            "content": user_prompt
         },
         {
             "role": "assistant",
@@ -45,7 +47,7 @@ def format_data_gemma(jsonElement, prompt):
         }
     ]
     return {"messages": messages}
-    
+
 
 def save_split_data(train_data, test_data, val_data, output_dir):
     """
@@ -64,7 +66,7 @@ def save_split_data(train_data, test_data, val_data, output_dir):
 if __name__ == "__main__":
     # set seed
     random.seed(42)
-    
+
     input_file = "data/dataset_10k.json"
     output_dir = "data/split_formatted_10k"
     train_data, test_data, val_data = split_dataset(input_file)
@@ -78,4 +80,3 @@ if __name__ == "__main__":
             val_data[i] = format_data_gemma(val_data[i], prompt)
     save_split_data(train_data, test_data, val_data, output_dir)
     print(f"Data split and saved to {output_dir}")
-    
