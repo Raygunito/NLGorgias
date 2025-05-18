@@ -312,7 +312,7 @@ def convert_gorgias_to_english(gorgias_code, prompt: str):
 if __name__ == "__main__":
     start_time = time.time()
 
-    jsonToDump = createDatasetJSON(50)
+    jsonToDump = createDatasetJSON(3)
 
     with open("dataset.json", "w", encoding="utf-8") as f:
         json.dump(jsonToDump, f, indent=4)

@@ -1,7 +1,7 @@
 import os
 import torch
 from datasets import load_dataset
-from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
+from peft import LoraConfig, PeftModel, TaskType, get_peft_model, prepare_model_for_kbit_training
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from trl import SFTConfig, SFTTrainer
 
@@ -157,10 +157,11 @@ if __name__ == "__main__":
 
     trainer.train()
     # Save if needed
-    # trainer.save_model(args.output_dir + "_finetuned")
+    trainer.model.save_pretrained(args.output_dir + "_peft_weight")
+    base_model = AutoModelForCausalLM.from_pretrained(model_id)
+    merged_model = PeftModel.from_pretrained(model, model)
+    merged_model = merged_model.merge_and_unload()
 
-    model = model.merge_and_unload()
-
-    # Save the final merged model and tokenizer
-    model.save_pretrained(args.output_dir + "_merged")
+    # Save the final merged merged_model and tokenizer
+    merged_model.save_pretrained(args.output_dir + "_merged", safe_serialization=True)
     tokenizer.save_pretrained(args.output_dir + "_merged")
