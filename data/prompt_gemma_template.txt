@@ -1,0 +1,75 @@
+Your task is to translate natural English descriptions of decision-making behavior into Gorgias code.
+
+First, read and internally understand the logic of the program.
+A few example explanations are included to help you understand how these structures work.
+
+Your output must:
+- Be written **only in valid Gorgias code**.
+- Define all necessary rules, preferences, and complements.
+- Include any required dynamic facts (use `:- dynamic ...` where needed).
+- Capture all conditional preferences and logic accurately.
+- **Avoid adding any explanations, comments, or natural language just output the code**.
+
+When there is a condition on the right side of the rule, it should be added to the dynamic facts with the correct name and arity.
+When there is a complement of 2 actions, it should be added to the end of the code and it should be symmetric : complement(A,B) and complement(B,A) appear in the code.
+
+---
+
+Example 1:
+Gorgias code:
+:- dynamic nice_weather/0, nice_movie_tv/0, invitation_from_friend/0.
+rule(r1, go_out, []) :- nice_weather.
+rule(r2, stay_home, []) :- nice_weather.
+rule(p1, prefer(r1,r2), []).
+rule(p2, prefer(r2,r1), []) :- nice_movie_tv.
+rule(c1, prefer(p2,p1), []).
+rule(c2, prefer(p1,p2), []) :- invitation_from_friend.
+rule(c3, prefer(c2,c1), []).
+complement(go_out, stay_home).
+complement(stay_home, go_out).
+
+English:
+If the weather is nice, I can either go out or stay home. Usually, I go out. But if there's a nice movie on TV, I stay home instead. However, if a friend invites me, I go out again. I can't go out and stay home at the same time.
+
+---
+
+Example 2:
+Gorgias code:
+:- dynamic from_family_member/0, from_work/0.
+rule(r1, deny_call, []).
+rule(r2, accept_call, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- from_family_member.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- from_work.
+rule(c3, prefer(c2, c1), []).
+complement(accept_call, deny_call).
+complement(deny_call, accept_call).
+
+English:
+I can either accept or deny the call. Usually, I deny it. But if it's from a family member, I accept it instead. But if it's from work, I deny it. I can't accept and deny the call at the same time.
+
+---
+
+Example 3:
+Gorgias code:
+:- dynamic team_project_due/0, night_time/0, rainy_day/0, important_meeting/0, new_restaurant_to_try/0.
+rule(r1, go_shopping, []) :- team_project_due.
+rule(r2, visit_doctor, []) :- night_time.
+rule(p1, prefer(r1, r2), []) :- team_project_due, night_time.
+rule(p2, prefer(r2, r1), []) :- team_project_due, night_time, rainy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- important_meeting.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- new_restaurant_to_try.
+rule(c5, prefer(c4, c3), []).
+complement(visit_doctor, go_shopping).
+complement(go_shopping, visit_doctor).
+
+English:
+If I have a team project due, I go shopping. If it's nighttime, I visit the doctor. But if it's both nighttime and I have a project due, I usually go shopping. If it's also a rainy day, I visit the doctor instead. However if I have an important meeting, I prefer to shopping. But If I have a new restaurant to try, I prefer to visit the doctor. I can't go shopping and visit the doctor at the same time.
+
+---
+
+Now translate the following English text into Gorgias code.
+Again, only output the final code — no explanations, comments, or extra text.
