@@ -46,7 +46,6 @@ def prepare_model(model_id):
     Prepare the model for training.
     """
     if torch.cuda.is_available():
-        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_compute_dtype=torch.bfloat16,
@@ -57,7 +56,7 @@ def prepare_model(model_id):
             model_id,
             torch_dtype=torch.bfloat16,
             quantization_config=bnb_config,
-            device_map={"": 0},
+            device_map="auto",
             attn_implementation='eager'
         )
     else:
@@ -82,9 +81,9 @@ def prepare_sft_config():
         warmup_steps=100,
         gradient_accumulation_steps=2,
         eval_strategy="steps",
-        eval_steps=200,
+        eval_steps=500,
         save_strategy="steps",
-        save_steps=200,
+        save_steps=500,
         logging_steps=10,
         learning_rate=1e-4,
         optim="paged_adamw_8bit",
@@ -99,9 +98,9 @@ def prepare_lora_config():
     Prepare the LoRA configuration.
     """
     lora_config = LoraConfig(
-        r=32,  # the rank (power of 2)
-        lora_alpha=32,  # Scaling factor: balances adapter output vs. original model output
-        target_modules=["q_proj", "v_proj"],
+        r=64,  # the rank (power of 2)
+        lora_alpha=64,  # Scaling factor: balances adapter output vs. original model output
+        target_modules="all-linear",
         bias="all",
         task_type=TaskType.CAUSAL_LM
     )
@@ -112,7 +111,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Fine-tune a language model for GORGIAS <> English task.")
+        description="Fine-tune a language model for GORGIAS <> English task.",
+        epilog="Example: python finetune_llm.py --device 1 -tr_p data/split_formatted_10k/train.json -v_p data/split_formatted_10k/val.json -te_p data/split_formatted_10k/test.json --max_seq_length 2048 gemma_10k")
     parser.add_argument("output_dir", type=str,
                         help="Directory to save the fine-tuned model weights.")
     parser.add_argument("-tr_p", "--train_path", type=str,
@@ -127,7 +127,10 @@ if __name__ == "__main__":
                         default=2, help="Batch size for training.")
     parser.add_argument('--train_steps', type=int,
                         default=800, help="Train steps for the model")
+    parser.add_argument("--device", type=int, default=0,
+                        choices=[0, 1], help="GPU id to use (0 or 1)", required=False)
     args = parser.parse_args()
+    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
 
     model_id = "google/gemma-2-2b-it"
 
@@ -159,9 +162,12 @@ if __name__ == "__main__":
     # Save if needed
     trainer.model.save_pretrained(args.output_dir + "_peft_weight")
     base_model = AutoModelForCausalLM.from_pretrained(model_id)
-    merged_model = PeftModel.from_pretrained(model, model)
+
+    merged_model = PeftModel.from_pretrained(base_model,
+                                             args.output_dir + "_peft_weight")
     merged_model = merged_model.merge_and_unload()
 
     # Save the final merged merged_model and tokenizer
-    merged_model.save_pretrained(args.output_dir + "_merged", safe_serialization=True)
+    merged_model.save_pretrained(
+        args.output_dir + "_merged", safe_serialization=True)
     tokenizer.save_pretrained(args.output_dir + "_merged")
