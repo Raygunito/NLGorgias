@@ -1,0 +1,158 @@
+Example Number,Gorgias Code,Manual NL Translation,Translation with specific prompt,Translation with general prompt,Translation with naive prompt
+1,":- dynamic loan_ok/0, election/0, need_update/0, new_feature/0, new_course/0.
+rule(r1, save_files, []) :- loan_ok.
+rule(r2, got_survey, []) :- election.
+rule(p1, prefer(r1, r2), []) :- loan_ok, election.
+rule(p2, prefer(r2, r1), []) :- loan_ok, election, need_update.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_feature.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- new_course.
+rule(c5, prefer(c4, c3), []).
+complement(got_survey, save_files).
+complement(save_files, got_survey).","If my loan is approved, I save my files. If there is an election, I fill out a survey. But if both my loan is approved and there is an election, I usually save my files. However, if I also need an update, I fill out the survey instead. If there is a new feature, I tend to save my files. But if there is a new course to take, I choose to fill out the survey. I can’t save my files and fill out the survey at the same time.","If my loan is approved, I save my files. If there is an election, I fill out a survey. But if both my loan is approved and there is an election, I usually save my files. However, if I also need an update, I fill out the survey instead. If there is a new feature, I tend to save my files. But if there is a new course to take, I choose to fill out the survey. I can’t save my files and fill out the survey at the same time.","If I can take out a loan, I save my files. If there’s an election, I fill out a survey. But if I can take out a loan and there’s an election, I usually save my files. If I also need an update, I fill out the survey instead. However, if there’s a new feature, I choose to save my files. If there’s a new course, I prefer to fill out the survey. I can’t save my files and fill out the survey at the same time.","If the loan is okay, then save files. If there is an election, then a survey has been taken. If the loan is okay and there is an election, then prefer to save files over taking a survey. If the loan is okay, there is an election, and an update is needed, then prefer to take a survey over saving files. Prefer to take a survey over saving files. Prefer to save files over taking a survey if there is a new feature. Prefer to take a survey over saving files if there is a new course. Prefer to save files over taking a survey if there is a new feature."
+2,":- dynamic found_bug/0, festival/0, security_issue/0, high_rate/0.
+rule(r1, meditate, []) :- found_bug.
+rule(r2, update_cv, []) :- festival.
+rule(p1, prefer(r1, r2), []) :- found_bug, festival.
+rule(p2, prefer(r2, r1), []) :- found_bug, festival, security_issue.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- high_rate.
+rule(c3, prefer(c2, c1), []).
+complement(update_cv, meditate).
+complement(meditate, update_cv).","If I find a bug, I meditate. If there is a festival, I update my CV. But if I find a bug and there is a festival, I usually meditate. However, if there is also a security issue, I prefer to update my CV instead. If there is a high rate, I rather meditate. I can’t meditate and update my CV at the same time.","If I find a bug, I meditate. If there is a festival, I update my CV. But if I find a bug and there is a festival, I usually meditate. However, if there is also a security issue, I choose to update my CV instead. If there is a high rate, I tend to meditate. I can’t meditate and update my CV at the same time.","If I find a bug, I meditate. If there’s a festival, I update my CV. But if I find a bug and there’s also a festival, I usually meditate. If there’s a security issue as well, I update my CV instead. However, if there’s a high rate, I prefer to meditate. I can’t meditate and update my CV at the same time.","If a bug has been found, meditate.
+If there is a festival happening, update your CV.
+If a bug has been found and there is a festival, prefer to meditate over updating your CV.
+If a bug has been found, there is a festival, and there is a security issue, prefer to update your CV over meditating.
+Prefer to update your CV over meditating if there is a high rate.
+Prefer to update your CV over meditating if there is a high rate and a bug has been found.
+Prefer to update your CV over meditating if there is a high rate and a bug has been found and there is a security issue.
+You cannot both update your CV and meditate at the same time."
+3,":- dynamic stock_split/0, strike/0, election/0, eclipse/0, computer_busy/0.
+rule(r1, relax, []) :- stock_split.
+rule(r2, plant_flowers, []) :- strike.
+rule(p1, prefer(r1, r2), []) :- stock_split, strike.
+rule(p2, prefer(r2, r1), []) :- stock_split, strike, election.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- eclipse.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- computer_busy.
+rule(c5, prefer(c4, c3), []).
+complement(plant_flowers, relax).
+complement(relax, plant_flowers).","If there’s a stock split, I relax. If there’s a strike, I plant flowers. But if there’s both a stock split and a strike, I usually relax. If there’s also an election, I choose to plant flowers instead. However, if there’s an eclipse, I rather relax. If my computer is busy, I prefer to plant flowers. I can’t relax and plant flowers at the same time.","If there is a stock split, I relax. If there is a strike, I plant flowers. But if both a stock split and a strike are happening, I usually relax. If there is also an election, I choose to plant flowers instead. However, if there is an eclipse, I tend to relax. If my computer is busy, I usually plant flowers. If I have a choice between relaxing and planting flowers, I can’t do both at the same time.","If there’s a stock split, I relax. If there’s a strike, I plant flowers. But if there’s both a stock split and a strike, I usually relax. If there’s also an election, I choose to plant flowers instead. However, if there’s an eclipse, I tend to relax. If my computer is busy, I go back to planting flowers. I can’t relax and plant flowers at the same time.","If there is a stock split, then relax.
+If there is a strike, then plant flowers.
+If there is a stock split and a strike, then prefer to relax over plant flowers.
+If there is a stock split, strike, and an election, then prefer to plant flowers over relax.
+Prefer to choose the preference of preferring plant flowers over relax.
+If there is an eclipse, then prefer to relax over plant flowers.
+If the computer is busy, then prefer to plant flowers over relax.
+Prefer to choose the preference of preferring the preference of preferring relax over plant flowers over the preference of preferring plant flowers over relax.
+If plant flowers is chosen, then relax is not chosen, and vice versa."
+4,":- dynamic low_rate/0, eclipse/0, computer_busy/0, need_update/0, charity/0.
+rule(r1, meditate, []) :- low_rate.
+rule(r2, write_diary, []) :- eclipse.
+rule(p1, prefer(r1, r2), []) :- low_rate, eclipse.
+rule(p2, prefer(r2, r1), []) :- low_rate, eclipse, computer_busy.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- need_update.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- charity.
+rule(c5, prefer(c4, c3), []).
+complement(write_diary, meditate).
+complement(meditate, write_diary).","If I have a low rate, I meditate. If there is an eclipse, I write in my diary. But if it’s both low rate and there is an eclipse, I usually choose to meditate. However, if my computer is busy, I write in my diary instead. If I need to update something, I tend to meditate. But if I’m involved in charity, I prefer to write in my diary. I can’t meditate and write in my diary at the same time.","If I have a low energy level, I meditate. If there is an eclipse, I write in my diary. But if it’s both a low energy day and there is an eclipse, I usually choose to meditate. However, if my computer is busy, I write in my diary instead. If I need to update something, I tend to write in my diary. But if I’m involved in charity, I prefer to meditate. I can’t meditate and write in my diary at the same time.","If I'm feeling low, I can either meditate or write in my diary when there's an eclipse. Usually, I choose to meditate. However, if my computer is busy during that time, I write in my diary instead. If I need to update something, I tend to meditate. But if I'm involved in charity, I prefer to write in my diary. I can’t meditate and write in my diary at the same time.","If the interest rate is low, meditate.
+If there is an eclipse, write in your diary.
+If the interest rate is low and there is an eclipse, prefer to meditate over writing in your diary.
+If the interest rate is low, there is an eclipse, and the computer is busy, prefer to write in your diary over meditating.
+If an update is needed, prefer to meditate over writing in your diary.
+If preferring to write in your diary is preferred over meditating, prefer this over preferring to meditate.
+If charity is involved, prefer to meditate over writing in your diary.
+If preferring to meditate is preferred over preferring to write in your diary when charity is involved, prefer this over the other way around.
+Meditating and writing in your diary are complementary activities."
+5,":- dynamic warning/0, new_course/0, new_book_out/0, new_investment/0, strike/0.
+rule(r1, save_files, []) :- warning.
+rule(r2, got_survey, []) :- new_course.
+rule(p1, prefer(r1, r2), []) :- warning, new_course.
+rule(p2, prefer(r2, r1), []) :- warning, new_course, new_book_out.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_investment.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- strike.
+rule(c5, prefer(c4, c3), []).
+complement(got_survey, save_files).
+complement(save_files, got_survey).","If I receive a warning, I save my files. If I have a new course, I fill out a survey. But if I have both a warning and a new course, I usually save my files. However, if there is also a new book out, I choose to fill out the survey instead. If I have a new investment, I tend to save my files. If there is a strike, I usually fill out the survey. I can’t save my files and fill out a survey at the same time.
+","If I receive a warning, I save my files. If I have a new course, I fill out a survey. But if I have both a warning and a new course, I usually save my files. However, if there is also a new book out, I choose to fill out the survey instead. If I have a new investment, I tend to save my files. If there is a strike, I usually fill out the survey. I can’t save my files and fill out a survey at the same time.","If I receive a warning, I save my files. If there’s a new course, I complete a survey. If I have both a warning and a new course, I usually save my files. However, if there’s also a new book out, I complete the survey instead. If I have a new investment, I choose to save my files. But if there's a strike, I go back to completing the survey. I can’t save my files and complete the survey at the same time.","If there is a warning, then saving files is preferred.
+If a new course is available, then having completed a survey is preferred.
+If there is a warning and a new course is available, then saving files is preferred.
+If there is a warning, a new course is available, and a book is checked out, then having completed a survey is preferred.
+If there is a warning, a new course is available, and there is a new investment, then having completed a survey is preferred.
+Having completed a survey is preferred over saving files if there is a new investment.
+Having completed a survey with a new investment is preferred over saving files with a new course and a book checked out.
+If there is a strike, then having completed a survey with a new course and a book checked out is preferred.
+Having completed a survey with a new investment is preferred over having completed a survey with a new course and a book checked out.
+Having completed a survey is complementary to saving files.
+Saving files is complementary to having completed a survey."
+6,":- dynamic strike/0, new_feature/0, found_bug/0.
+rule(r1, write_post, []) :- strike.
+rule(r2, paint, []) :- new_feature.
+rule(p1, prefer(r1, r2), []) :- strike, new_feature.
+rule(p2, prefer(r2, r1), []) :- strike, new_feature, found_bug.
+rule(c1, prefer(p2, p1), []).
+complement(paint, write_post).
+complement(write_post, paint).","If there is a strike, I write a post. If there is a new feature, I paint. But if there is both a strike and a new feature, I usually write a post. However, if I also found a bug, I choose to paint instead. I can’t write a post and paint at the same time.","If there is a strike, I write a post. If there is a new feature, I paint. But if there is both a strike and a new feature, I usually write a post. However, if I also found a bug, I choose to paint instead. I can’t write a post and paint at the same time.","If there’s a strike, I write a post. If there’s a new feature, I paint. But if there’s both a strike and a new feature, I usually write a post. However, if I also find a bug, I paint instead. I can’t write a post and paint at the same time.","If there is a strike, write a post.
+If there is a new feature, paint.
+If there is a strike and a new feature, prefer writing a post.
+If there is a strike, a new feature, and a found bug, prefer painting.
+Prefer painting over writing a post.
+Writing a post and painting are complements of each other."
+7,":- dynamic new_course/0, need_update/0, strike/0.
+rule(r1, host_online_meeting, []) :- new_course.
+rule(r2, prep_meals, []) :- need_update.
+rule(p1, prefer(r1, r2), []) :- new_course, need_update.
+rule(p2, prefer(r2, r1), []) :- new_course, need_update, strike.
+rule(c1, prefer(p2, p1), []).
+complement(prep_meals, host_online_meeting).
+complement(host_online_meeting, prep_meals).","If I have a new course, I host an online meeting. If I need to update something, I prepare meals. But if I have both a new course and need to update something, I usually host the online meeting. However, if there is also a strike, I prefer to prepare meals instead. I can’t host an online meeting and prepare meals at the same time.
+","If I have a new course, I host an online meeting. If I need to update something, I prepare meals. But if I have both a new course and need to update something, I usually host the online meeting. However, if there is also a strike, I prefer to prepare meals instead. I can’t host an online meeting and prepare meals at the same time.","If I have a new course, I host an online meeting. If I need to update something, I prepare meals. But if I have both a new course and need an update, I usually host the online meeting. However, if there's a strike as well, I prepare meals instead. I can’t host an online meeting and prepare meals at the same time.","If there is a new course, then you should host an online meeting.
+If an update is needed, then you should prepare meals.
+If there is a new course and an update is needed, it is preferred to host an online meeting over preparing meals.
+If there is a new course, an update is needed, and there is a strike, it is preferred to prepare meals over hosting an online meeting.
+It is preferred to prepare meals over hosting an online meeting.
+Preparing meals and hosting an online meeting are complementary actions."
+8,":- dynamic charity/0, flight_late/0, refund/0, stock_split/0, security_issue/0.
+rule(r1, reflect, []) :- charity.
+rule(r2, help_someone, []) :- flight_late.
+rule(p1, prefer(r1, r2), []) :- charity, flight_late.
+rule(p2, prefer(r2, r1), []) :- charity, flight_late, refund.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- stock_split.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(c1, c2), []) :- security_issue.
+rule(c5, prefer(c4, c3), []).
+complement(help_someone, reflect).
+complement(reflect, help_someone).","If I am doing charity, I take time to reflect. If my flight is late, I help someone. But if I am doing charity and the flight is late, I usually take time to reflect. However, if I can get a refund, I help someone instead. If there is a stock split, I tend to reflect. But if there is a security issue, I choose to help someone. I can’t help someone and take time to reflect at the same time.
+","If I am involved in charity, I take time to reflect. If my flight is late, I help someone. But if both charity and a late flight are happening, I usually take time to reflect. However, if I can get a refund, I help someone instead. If there is a stock split, I tend to reflect. But if there is a security issue, I choose to help someone. I can’t help someone and take time to reflect at the same time.","If I’m involved in a charity, I can either reflect or help someone if my flight is late. Usually, if both charity and a late flight are present, I choose to reflect. However, if I can get a refund, I help someone instead. If there’s a stock split, I tend to reflect. But if there’s a security issue, I choose to help someone. I can’t reflect and help someone at the same time.","If there is a charity, then it reflects.
+If a flight is late, then someone is helped.
+If there is both charity and a late flight, then it is preferred to help someone.
+If there is charity, a late flight, and a refund, then it is preferred to help someone.
+If there is a stock split, then it is preferred to help someone.
+If there is a security issue, then it is preferred to have a stock split.
+If there is a security issue, then it is preferred to help someone over having a stock split.
+If there is a charity, a late flight, and a refund, then it is preferred to have a stock split over helping someone."
+9,":- dynamic low_rate/0, no_connection/0, server_down/0, found_bug/0.
+rule(r1, drink_water, []) :- low_rate.
+rule(r2, read_book, []) :- no_connection.
+rule(p1, prefer(r1, r2), []) :- low_rate, no_connection.
+rule(p2, prefer(r2, r1), []) :- low_rate, no_connection, server_down.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- found_bug.
+rule(c3, prefer(c2, c1), []).
+complement(read_book, drink_water).
+complement(drink_water, read_book).","If my rate is low, I drink water. If I have no connection, I read a book. But if both my rate is low and I have no connection, I usually choose to drink water. However, if the server is also down, I read a book instead. If I find a bug, I tend to drink water. I can’t drink water and read a book at the same time.","If my rate is low, I drink water. If I have no connection, I read a book. But if both my rate is low and I have no connection, I usually choose to drink water. However, if the server is also down, I read a book instead. If I find a bug, I tend to drink water. If I have a choice between reading a book and drinking water, I can't do both at the same time.","If my battery is low, I drink water. If I have no internet connection, I read a book. If both my battery is low and there's no connection, I usually drink water. However, if the server is also down, I read a book instead. If I find a bug, I choose to drink water. I can’t drink water and read a book at the same time.","If the internet connection is slow, you should drink water. If there is no internet connection, you should read a book. If both the internet connection is slow and there is no connection, you should prefer drinking water over reading a book. If the internet connection is slow, there is no connection, and the server is down, you should prefer reading a book over drinking water. It is preferred to prefer reading a book over drinking water. If a bug is found, you should prefer drinking water over reading a book. It is preferred to prefer drinking water over reading a book."
+10,":- dynamic charity/0, computer_busy/0, warning/0.
+rule(r1, clean_email, []) :- charity.
+rule(r2, paint, []) :- computer_busy.
+rule(p1, prefer(r1, r2), []) :- charity, computer_busy.
+rule(p2, prefer(r2, r1), []) :- charity, computer_busy, warning.
+rule(c1, prefer(p2, p1), []).
+complement(paint, clean_email).
+complement(clean_email, paint).","If I am doing charity, I clean my email. If my computer is busy, I paint. But if I'm doing charity and my computer is busy, I usually clean my email. However, if there's also a warning, I prefer to paint instead. I can’t clean my email and paint at the same time.","If I'm involved in charity, I clean my email. If my computer is busy, I paint. But if I'm doing charity and my computer is busy, I usually clean my email. However, if there's also a warning, I prefer to paint instead. I can’t clean my email and paint at the same time.","If I’m involved in charity, I clean my email. If my computer is busy, I paint. When I’m doing charity and my computer is busy, I usually clean my email. However, if there’s a warning while I’m doing charity and my computer is busy, I paint instead. I can’t clean my email and paint at the same time.","If there is a charity event, we should clean the email. If the computer is busy, we should paint. If there is a charity event and the computer is busy, we should prefer cleaning the email over painting. If there is a charity event, the computer is busy, and there is a warning, we should prefer painting over cleaning the email. Finally, we prefer the second preference over the first preference. Painting and cleaning the email are complementary actions."

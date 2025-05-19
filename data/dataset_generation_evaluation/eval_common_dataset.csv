@@ -1,0 +1,91 @@
+Example Number,Gorgias Code,Manual NL Translation,Translation with specific prompt,Translation with general prompt,Translation with naive prompt
+1,":- dynamic flight_late/0, no_connection/0, power_cut/0
+rule(r1, stretch, []) :- flight_late.
+rule(r2, prep_meals, []) :- flight_late.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- no_connection.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- power_cut.
+rule(c3, prefer(c2, c1), []).
+complement(prep_meals, stretch).
+complement(stretch, prep_meals).","If my flight is late, I can either stretch or prepare meals. Usually, I prefer to stretch. However, if there’s no connexion, I prefer to prepare meals. But if there’s a power cut, I rather stretch. I can’t stretch and prepare meals at the same time.","If my flight is late, I can either stretch or prepare meals. Generally, I prefer to stretch. However, if there’s no connection, I prepare meals instead. If there’s a power cut, I go back to stretching. I can’t stretch and prepare meals at the same time.","If my flight is late, I can either stretch or prepare meals. Usually, I choose to stretch. But if there’s no connection, I prepare meals instead. If there’s a power cut, I go back to stretching. I can’t stretch and prepare meals at the same time.","If the flight is late, then you should stretch and prepare meals. If there is no connection, then you should prefer preparing meals over stretching. If there is a power cut, then you should prefer stretching over preparing meals."
+2,":- dynamic new_investment/0.
+rule(r1, relax, []) :- new_investment.
+rule(r2, save_files, []) :- new_investment.
+rule(p1, prefer(r1, r2), []).
+complement(save_files, relax).
+complement(relax, save_files).","If there is a new investment, I can either relax or save my files. Generally, I choose to relax. I can’t relax and save my files at the same time.","If there is a new investment opportunity, I can either relax or save my files. Generally, I choose to relax. I can’t relax and save my files at the same time.","If I have a new investment, I can either relax or save my files. Usually, I choose to relax. I can’t relax and save my files at the same time.","If there is a new investment, then relax.
+If there is a new investment, then save files.
+Prefer to relax over saving files.
+Relax and save files are complementary to each other."
+3,":- dynamic sold_out/0, computer_busy/0
+rule(r1, install_app, []) :- sold_out.
+rule(r2, read_book, []) :- sold_out.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- computer_busy.
+rule(c1, prefer(p2, p1), []).
+complement(read_book, install_app).
+complement(install_app, read_book).","If it's sold out, I can either install an app or read a book. Generally, I choose to install the app. However, if my computer is busy, I read a book instead. I can’t install the app and read a book at the same time.
+","If something is sold out, I can either install an app or read a book. Usually, I choose to install the app. However, if my computer is busy, I read a book instead. I can’t install the app and read a book at the same time.","If something is sold out, I can either install an app or read a book. Usually, I choose to install the app. However, if my computer is busy, I read a book instead. I can’t install the app and read a book at the same time.","If the item is sold out, then the preferred action is to install an app. If the item is sold out and the computer is busy, then the preferred action is to read a book. The final preference is to read a book over installing an app. Reading a book and installing an app are complementary actions."
+4,":- dynamic server_down/0, power_cut/0
+rule(r1, clean_email, []) :- server_down.
+rule(r2, paint, []) :- server_down.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- power_cut.
+rule(c1, prefer(p2, p1), []).
+complement(paint, clean_email).
+complement(clean_email, paint).","If the server is down, I can either clean my email or paint. Generally, I choose to clean my email. However, if there’s a power cut, I paint instead. I can’t clean my email and paint at the same time.
+","If the server is down, I can either clean my email or paint. Usually, I clean my email. However, if there is a power cut, I choose to paint instead. I can’t clean my email and paint at the same time.","If the server is down, I can either clean my email or paint. Usually, I choose to clean my email. However, if there’s a power cut, I paint instead. I can’t clean my email and paint at the same time.","If the server is down, clean the email and paint. If there is a power cut, paint is preferred over cleaning the email. Paint and clean email are complementary tasks. If there is a conflict between preferring to clean the email and preferring to paint, prefer to paint."
+5,":- dynamic new_course/0.
+rule(r1, sort_photos, []) :- new_course.
+rule(r2, drink_water, []) :- new_course.
+rule(p1, prefer(r1, r2), []).
+complement(drink_water, sort_photos).
+complement(sort_photos, drink_water).","If I have a new course, I can either sort photos or drink water. Usually, I choose to sort photos. I can’t sort photos and drink water at the same time.
+","If I have a new course, I can either sort photos or drink water. Usually, I choose to sort photos. I can’t sort photos and drink water at the same time.","If I have a new course, I can either sort photos or drink water. Usually, I choose to sort photos. I can’t sort photos and drink water at the same time.","If a new course is available, then you should sort photos. If a new course is available, then you should drink water. You should prefer sorting photos over drinking water. Sorting photos and drinking water are complementary activities."
+6,":- dynamic found_bug/0.
+rule(r1, drink_water, []) :- found_bug.
+rule(r2, install_app, []) :- found_bug.
+rule(p1, prefer(r1, r2), []).
+complement(install_app, drink_water).
+complement(drink_water, install_app).","If I find a bug, I can either drink water or install an app. Generally, I choose to drink water. I can’t drink water and install the app at the same time.","If I find a bug, I can either drink water or install an app. Generally, I choose to drink water. I can’t drink water and install the app at the same time.","If I find a bug, I can either drink water or install an app. Usually, I choose to drink water. I can’t drink water and install the app at the same time.","If a bug is found, drink water. If a bug is found, install an app. If given the choice, prefer drinking water over installing an app. Drinking water and installing an app are complementary actions."
+7,":- dynamic grant_granted/0.
+rule(r1, watch_stars, []) :- grant_granted.
+rule(r2, host_online_meeting, []) :- grant_granted.
+rule(p1, prefer(r1, r2), []).
+complement(host_online_meeting, watch_stars).
+complement(watch_stars, host_online_meeting).","If I receive a grant, I can either watch the stars or host an online meeting. Usually, I prefer to watch the stars. I can’t watch the stars and host an online meeting at the same time.","If I receive a grant, I can either watch the stars or host an online meeting. Generally, I choose to watch the stars. I can’t watch the stars and host an online meeting at the same time.","If I have a grant granted, I can either watch the stars or host an online meeting. Usually, I choose to watch the stars. I can’t host an online meeting and watch the stars at the same time.","If permission is granted, you can watch stars or host an online meeting. If you prefer to watch stars, you cannot host an online meeting, and vice versa."
+8,":- dynamic need_update/0, stock_split/0, strike/0
+rule(r1, drink_water, []) :- need_update.
+rule(r2, take_photos, []) :- need_update.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- stock_split.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- strike.
+rule(c3, prefer(c2, c1), []).
+complement(take_photos, drink_water).
+complement(drink_water, take_photos).","If I need to update, I can either drink water or take photos. Usually, I prefer to drink water. However, if there's a stock split, I take photos instead. On the other hand, if there's a strike, I rather drink water. I can’t drink water and take photos at the same time.
+","If I need to update, I can either drink water or take photos. Usually, I choose to drink water. However, if there's a stock split, I take photos instead. On the other hand, if there's a strike, I go back to drinking water. I can’t drink water and take photos at the same time.","If I need to update, I can either drink water or take photos. Usually, I drink water. However, if there’s a stock split, I take photos instead. If there’s a strike, I go back to drinking water. I can’t drink water and take photos at the same time.","If we need an update, we should drink water.
+If we need an update, we should take photos.
+Preference: Prefer drinking water over taking photos.
+If there is a stock split, prefer taking photos over drinking water.
+Preference: Prefer taking photos over drinking water if there is a stock split.
+If there is a strike, prefer taking photos over drinking water.
+Preference: Prefer taking photos over drinking water if there is a strike.
+Complement: Taking photos and drinking water are complementary activities."
+9,":- dynamic new_patch/0, new_feature/0, computer_busy/0
+rule(r1, play_guitar, []) :- new_patch.
+rule(r2, write_post, []) :- new_patch.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_feature.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- computer_busy.
+rule(c3, prefer(c2, c1), []).
+complement(write_post, play_guitar).
+complement(play_guitar, write_post).","If there is a new patch, I can either play guitar or write a post. Generally, I prefer to play guitar. However, if there is a new feature, I write a post instead. If my computer is busy, I rather play guitar. I can’t play guitar and write a post at the same time.","If there is a new patch, I can either play guitar or write a post. Usually, I choose to play guitar. However, if there is a new feature, I write a post instead. If my computer is busy, I go back to playing guitar. I can’t play guitar and write a post at the same time.","If there’s a new patch, I can either play guitar or write a post. Usually, I choose to play guitar. But if there’s a new feature, I write a post instead. However, if my computer is busy, I go back to playing guitar. I can’t write a post and play guitar at the same time.","If there is a new patch, you should play the guitar. If there is a new patch, you should also write a post. If you prefer playing the guitar over writing a post, and there is a new feature, you should prefer writing a post over playing the guitar. If you prefer writing a post over playing the guitar, and the computer is busy, you should prefer playing the guitar over writing a post. If you prefer the computer being busy over it not being busy, you should prefer writing a post over playing the guitar."
+10,":- dynamic eclipse/0.
+rule(r1, plant_flowers, []) :- eclipse.
+rule(r2, install_app, []) :- eclipse.
+rule(p1, prefer(r1, r2), []).
+complement(install_app, plant_flowers).
+complement(plant_flowers, install_app).","If there is an eclipse, I can either plant flowers or install an app. Generally, I prefer to plant flowers. I can’t plant flowers and install the app at the same time.","If there is an eclipse, I can either plant flowers or install an app. Generally, I choose to plant flowers. I can’t plant flowers and install the app at the same time.","If there’s an eclipse, I can either plant flowers or install an app. Usually, I choose to plant flowers. I can’t plant flowers and install the app at the same time.","If there is an eclipse, then you should plant flowers or install an app. You prefer planting flowers over installing the app. Planting flowers and installing the app are complementary actions."

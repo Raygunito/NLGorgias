@@ -1,0 +1,114 @@
+Example Number,Gorgias Code,Manual NL Translation,Translation with specific prompt,Translation with general prompt,Translation with naive prompt
+1,":- dynamic power_cut/0
+rule(r1, start_project, []).
+rule(r2, join_webinar, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- power_cut.
+rule(c1, prefer(p2, p1), []).
+complement(join_webinar, start_project).
+complement(start_project, join_webinar).","I can either start the project or join the webinar. Usually, I prefer to start the project. However, if there’s a power cut, I rather join the webinar. I can’t start the project and join the webinar at the same time.","I can either start the project or join the webinar. Usually, I prefer to start the project. However, if there’s a power cut, I choose to join the webinar instead. I can’t start the project and join the webinar at the same time.","If there’s a power cut, I can either start a project or join a webinar. Usually, I choose to start a project. But if there’s a power cut, I join the webinar instead. I can’t start a project and join a webinar at the same time.","If there is a power cut, prefer joining the webinar over starting the project. Otherwise, prefer starting the project over joining the webinar. Additionally, prefer the preference of joining the webinar over starting the project. The actions of starting the project and joining the webinar are complementary to each other."
+2,":- dynamic loan_ok/0, new_course/0
+rule(r1, help_someone, []).
+rule(r2, install_app, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- loan_ok.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_course.
+rule(c3, prefer(c2, c1), []).
+complement(install_app, help_someone).
+complement(help_someone, install_app).","I can either help someone or install an app. Usually, I prefer to help someone. However, if I get a loan, I rather install the app instead. If I’m taking a new course, I usually choose to help someone. I can’t help someone and install the app at the same time.","I can either help someone or install an app. Usually, I choose to help someone. However, if I can get a loan, I tend to install the app instead. If I’m taking a new course, I usually go back to helping someone. I can’t help someone and install the app at the same time.","I can either help someone or install an app. Usually, I choose to help someone. But if I can get a loan, I install the app instead. However, if I have a new course, I go back to helping someone. I can’t help someone and install an app at the same time.","If someone needs help, you should prefer to help them rather than install an app. However, if it's okay to take out a loan, then you should prefer to install an app instead. If there is a new course available, then you should prefer to help someone over installing an app."
+3,":- dynamic sold_out/0, tax_time/0
+rule(r1, bike_ride, []).
+rule(r2, plan_spending, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- sold_out.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- tax_time.
+rule(c3, prefer(c2, c1), []).
+complement(plan_spending, bike_ride).
+complement(bike_ride, plan_spending).","I can either go for a bike ride or plan my spending. Usually, I choose to go for a bike ride. However, if the bike is sold out, I plan my spending instead. If it’s tax time, I prefer to go for a bike ride. I can’t go for a bike ride and plan my spending at the same time.","I can either go for a bike ride or plan my spending. Usually, I choose to go for a bike ride. However, if the bike is sold out, I plan my spending instead. If it’s tax time, I go back to planning my spending. I can’t go for a bike ride and plan my spending at the same time.","If I want to do something, I can either go for a bike ride or plan my spending. Usually, I choose to go for a bike ride. However, if the bike is sold out, I plan my spending instead. If it's tax time, I tend to go for a bike ride. But if I have to plan my spending, I prefer to go for a bike ride again. I can’t go for a bike ride and plan my spending at the same time.","If there is a bike ride, then plan spending.
+If there is a plan spending, then bike ride.
+If prefer bike ride over plan spending, and plan spending is sold out, then prefer plan spending over bike ride.
+If prefer plan spending over bike ride, and it is tax time, then prefer bike ride over plan spending.
+If prefer the second preference over the first preference, then prefer the first preference over the second preference."
+4,":- dynamic new_course/0
+rule(r1, give_away_clothes, []).
+rule(r2, drink_water, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_course.
+rule(c1, prefer(p2, p1), []).
+complement(drink_water, give_away_clothes).
+complement(give_away_clothes, drink_water).","I can either give away clothes or drink water. Usually, I choose to give away clothes. However, if I have a new course, I rather drink water instead. I can’t give away clothes and drink water at the same time.
+","I can either give away clothes or drink water. Usually, I choose to give away clothes. However, if I have a new course, I tend to drink water instead. I can’t give away clothes and drink water at the same time.","I can either give away clothes or drink water. Usually, I give away clothes. But if I have a new course, I drink water instead. I can’t give away clothes and drink water at the same time.","If you have a new course, then you should prefer drinking water over giving away clothes. Otherwise, you should prefer giving away clothes over drinking water. Additionally, preferring to drink water and preferring to give away clothes are complementary actions."
+5,":- dynamic warning/0, new_investment/0
+rule(r1, drink_water, []).
+rule(r2, update_cv, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- warning.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_investment.
+rule(c3, prefer(c2, c1), []).
+complement(update_cv, drink_water).
+complement(drink_water, update_cv).","I can either drink water or update my CV. Usually, I choose to drink water. However, if I receive a warning, I prefer to update my CV instead. If I'm making a new investment, I rather drink water. I can’t drink water and update my CV at the same time.","I can either drink water or update my CV. Usually, I choose to drink water. However, if I receive a warning, I go back to updating my CV instead. If I'm making a new investment, I typically drink water. I can’t drink water and update my CV at the same time.","I can either drink water or update my CV. Usually, I choose to drink water. However, if I receive a warning, I update my CV instead. If I have a new investment opportunity, I go back to drinking water. I can’t drink water and update my CV at the same time.","- If you prefer to drink water, then update your CV.
+- If you prefer to update your CV, then drink water if there is a warning.
+- If you prefer to update your CV, then drink water.
+- If there is a new investment, then prefer to update your CV over drinking water.
+- If you prefer to update your CV over drinking water, then prefer to drink water over updating your CV.
+- If you prefer to drink water over updating your CV, then prefer to update your CV over drinking water.
+- If you need to update your CV, you should drink water.
+- If you need to drink water, you should update your CV."
+6,":- dynamic eclipse/0, refund/0
+rule(r1, read_book, []).
+rule(r2, start_project, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- eclipse.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- refund.
+rule(c3, prefer(c2, c1), []).
+complement(start_project, read_book).
+complement(read_book, start_project).","I can either read a book or start a project. Usually, I choose to read a book. However, if there’s an eclipse, I rather start the project instead. If I can get a refund, I usually go back to reading the book. I can’t read the book and start the project at the same time.","I can either read a book or start a project. Usually, I choose to read a book. However, if there’s an eclipse, I tend to start the project instead. If I can get a refund, I usually go back to reading the book. I can’t read the book and start the project at the same time.","If I have some free time, I can either read a book or start a project. Usually, I choose to read a book. However, if there’s an eclipse, I start the project instead. If I can get a refund, I go back to reading the book. I can’t read a book and start a project at the same time.","If you read a book, you will start a project.
+If you start a project, you will prefer it over reading a book.
+If you prefer starting a project over reading a book, you will prefer reading a book over starting a project if there is a refund.
+If there is an eclipse, you will prefer starting a project over reading a book.
+If there is a refund, you will prefer reading a book over starting a project.
+If you prefer reading a book over starting a project with a refund, you will prefer starting a project over reading a book without a refund.
+Reading a book and starting a project are complementary activities."
+7,":- dynamic grant_granted/0
+rule(r1, install_app, []).
+rule(r2, apply_for_job, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- grant_granted.
+rule(c1, prefer(p2, p1), []).
+complement(apply_for_job, install_app).
+complement(install_app, apply_for_job).","I can either install the app or apply for a job. Usually, I choose to install the app. However, if I have a grant granted, I prefer to apply for the job instead. I can’t install the app and apply for the job at the same time.
+","I can either install the app or apply for a job. Usually, I choose to install the app. However, if I have a grant granted, I go ahead and apply for the job instead. I can’t install the app and apply for the job at the same time.","I can either install the app or apply for a job. Usually, I choose to install the app. However, if I have been granted a grant, I apply for the job instead. I can’t install the app and apply for a job at the same time.","If the grant is granted, then prefer applying for a job over installing an app. Otherwise, prefer installing an app over applying for a job."
+8,":- dynamic .
+rule(r1, reflect, []).
+rule(r2, read_book, []).
+rule(p1, prefer(r1, r2), []).
+complement(read_book, reflect).
+complement(reflect, read_book).","I can either reflect or read a book. Generally, I prefer to reflect. I can’t reflect and read a book at the same time.","I can either reflect or read a book. Generally, I tend to reflect. I can’t reflect and read a book at the same time.","I can either reflect or read a book. Usually, I choose to reflect. However, I can’t do both at the same time.","Rule 1 states that ""reflect"" is true.
+Rule 2 states that ""read_book"" is true.
+Preference 1 states that ""reflect"" is preferred over ""read_book"".
+""read_book"" and ""reflect"" are complementary to each other."
+9,":- dynamic .
+rule(r1, save_files, []).
+rule(r2, bike_ride, []).
+rule(p1, prefer(r1, r2), []).
+complement(bike_ride, save_files).
+complement(save_files, bike_ride).","I can either save my files or go for a bike ride. Usually, I choose to save my files. I can’t save my files and go for a bike ride at the same time.","I can either save my files or go for a bike ride. Usually, I choose to save my files. I can’t save my files and go for a bike ride at the same time.","I can either save my files or go for a bike ride. Usually, I choose to save my files. I can’t save my files and go for a bike ride at the same time.","There are two rules: one for saving files and one for going on a bike ride. The person prefers saving files over going on a bike ride. Going on a bike ride is the opposite of saving files, and saving files is the opposite of going on a bike ride."
+10,":- dynamic new_patch/0, strike/0
+rule(r1, got_survey, []).
+rule(r2, read_book, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_patch.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- strike.
+rule(c3, prefer(c2, c1), []).
+complement(read_book, got_survey).
+complement(got_survey, read_book).","I can either get a survey or read a book. Usually, I choose to get a survey. However, if there's a new patch, I tend to read the book instead. If there's a strike, I generally get a survey. I can’t complete the survey and read the book at the same time.","I can either complete the survey or read a book. Usually, I choose to complete the survey. However, if there's a new patch, I tend to read the book instead. If there's a strike, I generally complete the survey. I can’t complete the survey and read the book at the same time.","If I have a survey to complete, I can either work on it or read a book. Usually, I choose to work on the survey. However, if there’s a new patch available, I read a book instead. If there’s a strike, I go back to working on the survey. I can’t work on the survey and read a book at the same time.","If there is a new patch, then prefer reading a book over taking a survey.
+If there is a strike, then prefer taking a survey over reading a book.
+Prefer taking a survey over reading a book.
+If you prefer taking a survey over reading a book, then prefer reading a book over taking a survey.
+If you prefer reading a book over taking a survey, then prefer taking a survey over reading a book.
+If you prefer taking a survey over reading a book, then prefer reading a book over taking a survey."
