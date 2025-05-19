@@ -197,7 +197,7 @@ class GorgiasDataset:
             complement1 = f"complement({action2}, {action1})."
             complement2 = f"complement({action1}, {action2})."
             lists.extend([complement1, complement2])
-            dynamic += f", {GorgiasDataset.convert_to_dynamic(p2_condition)}, {GorgiasDataset.convert_to_dynamic(c2_condition)}"
+            dynamic += f"{GorgiasDataset.convert_to_dynamic(p2_condition)}, {GorgiasDataset.convert_to_dynamic(c2_condition)}"
         lists.insert(0, dynamic)
         return "\n".join(lists)
 
