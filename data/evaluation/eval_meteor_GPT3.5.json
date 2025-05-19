@@ -1,0 +1,1502 @@
+[
+    {
+        "answer": "If it's a hot day, I can either go for an evening walk or cycle to work. Generally, I choose to go for an evening walk. I can’t go for an evening walk and cycle to work at the same time.",
+        "pred_answer": "On a hot day, I usually take an evening walk. But I tend to cycle to work instead. I can't cycle to work and take an evening walk at the same time.",
+        "meteor_score": 0.5407442788831013
+    },
+    {
+        "answer": "I can either go to a cycling session or to the theater. Usually, I prefer to go to the cycling session. However, if there’s a team project due, I choose to go to the theater instead. If I have a new neighbor, I usually go to the cycling session. I can’t go to the theater and the cycling session at the same time.",
+        "pred_answer": "If there is a team project due, I usually have a cycling session. Otherwise, I tend to go to the theater. But if there is a new neighbor, I opt for going to the theater instead of cycling. I can't have a cycling session and go to the theater simultaneously.",
+        "meteor_score": 0.46379488203387564
+    },
+    {
+        "answer": "If there is a family emergency, I can either attend a workshop or finish my report. Generally, I choose to attend the workshop. I can’t attend the workshop and finish my report at the same time.",
+        "pred_answer": "If there is a family emergency, I either attend a workshop or finish a report. I tend to attend the workshop. I can't attend the workshop and finish the report at the same time.",
+        "meteor_score": 0.7482394366197183
+    },
+    {
+        "answer": "I can either reply to emails or book a ride share. Usually, I prefer to reply to emails. However, if there’s a community event, I choose to book the ride share instead. I can’t reply to emails and book a ride share at the same time.",
+        "pred_answer": "If there is a community event, I tend to book a ride share. Otherwise, I usually reply to emails. I can't book a ride share and reply to emails simultaneously.",
+        "meteor_score": 0.46549281521959124
+    },
+    {
+        "answer": "I can either give a presentation or ride my bike. Usually, I choose to give the presentation. I can’t give the presentation and ride my bike at the same time.",
+        "pred_answer": "I usually give a presentation. But I tend to ride a bike instead.",
+        "meteor_score": 0.16224188790560473
+    },
+    {
+        "answer": "If I am moving house, I can either attend a yoga session or use the subway. Generally, I choose to attend the yoga session. However, if I get a party invitation, I use the subway instead. I can’t attend the yoga session and use the subway at the same time.",
+        "pred_answer": "If I am moving house, I tend to have a yoga session. Otherwise, I usually use the subway. But if there's a party invitation, I opt for the subway instead of the yoga session. I can't have a yoga session and use the subway at the same time.",
+        "meteor_score": 0.6909547738693468
+    },
+    {
+        "answer": "If it's lunchtime, I can either go to the gym or visit family. Usually, I choose to go to the gym. However, if there’s an urgent deadline, I visit family instead. If it’s a rainy day, I go to the gym again. I can’t go to the gym and visit family at the same time.",
+        "pred_answer": "If it's lunchtime, I usually go to the gym. Otherwise, I visit family. But if there's an urgent deadline, I visit family instead. However, if it's a rainy day, I go to the gym. I can't go to the gym and visit family at the same time.",
+        "meteor_score": 0.759750084509669
+    },
+    {
+        "answer": "I can either go for an evening walk or water the plants. Usually, I prefer to go for an evening walk. However, if a team project is due, I water the plants instead. I can’t go for an evening walk and water the plants at the same time.",
+        "pred_answer": "If I have a team project due, I tend to water the plants in the evening. Otherwise, I usually go for an evening walk. I can't water the plants and go for an evening walk at the same time.",
+        "meteor_score": 0.6443659731500924
+    },
+    {
+        "answer": "If there's a new restaurant to try, I can either go for an evening walk or read a book. Generally, I choose to go for an evening walk. However, if there's a snowstorm, I read a book instead. If it's lunchtime, I go for an evening walk again. I can’t go for an evening walk and read a book at the same time.",
+        "pred_answer": "If there's a new restaurant to try, I usually go for an evening walk. But if there's a snowstorm, I opt to read a book instead. However, during lunchtime, I tend to choose going for an evening walk. I can't read a book and go for an evening walk at the same time.",
+        "meteor_score": 0.6803061057974104
+    },
+    {
+        "answer": "I can either give a presentation or call a client. Usually, I choose to give the presentation. However, if it’s my birthday today, I go ahead and call the client instead. I can’t give a presentation and call a client at the same time.",
+        "pred_answer": "If it's someone's birthday today, I usually give a presentation. Otherwise, I tend to call the client. I can't give a presentation and call the client at the same time.",
+        "meteor_score": 0.514658940714117
+    },
+    {
+        "answer": "I can either schedule a meeting or take the train. Usually, I choose to schedule a meeting. I can’t schedule a meeting and take the train at the same time.",
+        "pred_answer": "I tend to schedule a meeting. If I don't schedule a meeting, then I usually take the train.",
+        "meteor_score": 0.4247754865291918
+    },
+    {
+        "answer": "I can either drive my car or dispose of the trash. Usually, I choose to drive my car. However, if I get an invitation from a friend, I decide to dispose of the trash instead. On hot days, I tend to drive my car. I can’t drive my car and dispose of the trash at the same time.",
+        "pred_answer": "If there is an invitation from a friend, I tend to drive the car. Otherwise, on a hot day, I usually dispose of the trash. I can't drive the car and dispose of the trash at the same time.",
+        "meteor_score": 0.5452796284303607
+    },
+    {
+        "answer": "If it's a hot day, I order a taxi. If I'm on a low budget, I go for a cycling session. But if it's both a hot day and I'm on a low budget, I usually order a taxi. However, if it's lunchtime as well, I prefer to go cycling instead. If I have a job interview, I tend to order a taxi. On a humid day, I usually prefer to go cycling. I can't go cycling and order a taxi at the same time.",
+        "pred_answer": "On a hot day, I usually order a taxi. If I'm on a low budget, I tend to have a cycling session instead. But if it's both a hot day and I'm on a low budget during lunchtime, I go for ordering a taxi. However, if there's a job interview, I opt for a cycling session. If it's a humid day, I go back to ordering a taxi. I can't order a taxi and have a cycling session at the same time.",
+        "meteor_score": 0.7047007359326619
+    },
+    {
+        "answer": "If I have extended work hours, I go shopping. If I have a new neighbor, I go to the bar. But if I have both extended work hours and a new neighbor, I usually go shopping. However, if there is also a snowstorm, I go to the bar instead. If it’s a rainy day, I usually prefer to go shopping. But if I receive an invitation from a friend, I go to the bar. I can’t go shopping and go to the bar at the same time.",
+        "pred_answer": "If I have extended work hours, I go shopping. If I have a new neighbor, I go to the bar. But if I have both extended work hours and a new neighbor, I tend to go shopping. If there's also a snowstorm, I go to the bar instead. However, if it's a rainy day, I go shopping again. But if a friend invites me, I go to the bar. I can't go shopping and go to the bar at the same time.",
+        "meteor_score": 0.8626845997291208
+    },
+    {
+        "answer": "If it's the afternoon, I can either go to a restaurant or rent a car. Usually, I choose to go to the restaurant. However, if I get a party invitation, I rent a car instead. If there's a networking event, I go back to going to the restaurant. I can’t go to the restaurant and rent a car at the same time.",
+        "pred_answer": "In the afternoon, I tend to either go to a restaurant or rent a car. Usually, I go to a restaurant. But if there's a party invitation, I rent a car instead. However, if there's a networking event, I go to the restaurant again. I can't go to a restaurant and rent a car at the same time.",
+        "meteor_score": 0.7592791035827745
+    },
+    {
+        "answer": "I can either join a fitness class or take a picnic. Usually, I choose to join the fitness class. However, if it’s the weekend, I tend to take the picnic instead. I can’t join the fitness class and take a picnic at the same time.",
+        "pred_answer": "On weekends, I usually join a fitness class. But if it's not the weekend, I tend to take a picnic instead. I can't join the fitness class and take a picnic at the same time.",
+        "meteor_score": 0.6281079464752934
+    },
+    {
+        "answer": "If I have a project extension, I schedule a meeting. If there is a family gathering, I do laundry. But if I have both a project extension and a family gathering, I usually schedule a meeting. However, if there is also an expensive event, I do laundry instead. I can’t do laundry and schedule a meeting at the same time.",
+        "pred_answer": "If there is a project extension, I schedule a meeting. If there is a family gathering, I do the laundry. But if there is both a project extension and a family gathering, I tend to schedule a meeting. If there is also an expensive event, I do the laundry instead. I can't schedule a meeting and do the laundry at the same time.",
+        "meteor_score": 0.8432093678423855
+    },
+    {
+        "answer": "If I receive a tax refund, I can either attend a meeting or cook dinner. Generally, I choose to attend the meeting. I can’t attend the meeting and cook dinner at the same time.",
+        "pred_answer": "If I receive a tax refund, I tend to attend a meeting. Otherwise, I choose to cook dinner.",
+        "meteor_score": 0.4081090463404439
+    },
+    {
+        "answer": "I can either use the subway or reply to emails. Usually, I prefer to use the subway. But if I have a new neighbor, I choose to reply to emails instead. If I get a tax refund, I tend to use the subway. I can’t use the subway and reply to emails at the same time.",
+        "pred_answer": "If I have a new neighbor, I tend to use the subway. Otherwise, I reply to emails. But if there's a tax refund, I choose to reply to emails. I can't use the subway and reply to emails at the same time.",
+        "meteor_score": 0.6686046511627908
+    },
+    {
+        "answer": "I can either take the train or attend the concert. Usually, I choose to take the train. However, if I have a vacation planned, I go to the concert instead. I can’t take the train and attend the concert at the same time.",
+        "pred_answer": "If I have a vacation planned, I usually take the train. Otherwise, I attend the concert. I can't take the train and attend the concert at the same time.",
+        "meteor_score": 0.6194085487077535
+    },
+    {
+        "answer": "If it's night time, I can either ride my bike or cycle to work. Usually, I choose to ride my bike. I can’t ride my bike and cycle to work at the same time.",
+        "pred_answer": "During nighttime, I tend to ride a bike. I also tend to cycle to work during that time. I prefer riding a bike over cycling to work. I cannot ride a bike and cycle to work simultaneously.",
+        "meteor_score": 0.4543597250223386
+    },
+    {
+        "answer": "If I am moving house, I can either plan meals or book a flight. Generally, I choose to plan meals. However, if it’s a cloudy day, I book a flight instead. If it’s lunch time, I go back to planning meals. I can’t plan meals and book a flight at the same time.",
+        "pred_answer": "If I am moving house, I usually plan meals. However, if it's a cloudy day, I book a flight instead. But during lunchtime, I tend to plan meals. I can't plan meals and book a flight at the same time.",
+        "meteor_score": 0.6166507835126103
+    },
+    {
+        "answer": "I can either go shopping or cook dinner. Usually, I prefer to go shopping. However, if there's a discount on a flight, I choose to cook dinner instead. I can’t go shopping and cook dinner at the same time.",
+        "pred_answer": "If there is a discount on the flight, I tend to go shopping. Otherwise, I usually cook dinner. I can’t go shopping and cook dinner at the same time.",
+        "meteor_score": 0.653170859538784
+    },
+    {
+        "answer": "If the weather is good, I can either go to the park or dispose of the trash. Generally, I choose to go to the park. However, during the holiday season, I tend to dispose of the trash instead. I can’t go to the park and dispose of the trash at the same time.",
+        "pred_answer": "When the weather is good, I tend to either go to the park or dispose of the trash. However, during the holiday season, I choose to dispose of the trash instead of going to the park. I can't go to the park and dispose of the trash at the same time.",
+        "meteor_score": 0.8211330589849108
+    },
+    {
+        "answer": "I can either book a flight or visit the doctor. Usually, I prefer to book a flight. However, if it's dusk, I go to visit the doctor instead. I can’t book a flight and visit the doctor at the same time.",
+        "pred_answer": "If it's dusk, I tend to book a flight. Otherwise, I usually visit the doctor. I can't book a flight and visit the doctor at the same time.",
+        "meteor_score": 0.6169981505432516
+    },
+    {
+        "answer": "If I have a good investment, I update my project plan. If there is an expensive event, I go to the park. But if I have both a good investment and an expensive event, I usually update my project plan. However, if it’s also nighttime, I prefer to go to the park instead. If I have a team project due, I tend to update my project plan. I can’t go to the park and update my project plan at the same time.",
+        "pred_answer": "If it's a good investment, I update the project plan. If there's an expensive event, I go to the park instead. But if it's both a good investment and an expensive event, I tend to update the project plan. If it's also nighttime, I go to the park. However, if there's a team project due, I update the project plan. I can't update the project plan and go to the park at the same time.",
+        "meteor_score": 0.7576678622344382
+    },
+    {
+        "answer": "If it’s the weekend, I call a client. If it’s a windy day, I schedule a meeting. But if it’s both the weekend and a windy day, I usually call the client. However, if I also have an unexpected guest, I schedule the meeting instead. If there’s a hail storm, I tend to prefer calling the client. But if I have a vacation planned, I would rather schedule the meeting. I can’t call a client and schedule a meeting at the same time.",
+        "pred_answer": "If it's the weekend, I usually call the client. If it's a windy day, I schedule a meeting. But if it's both the weekend and a windy day, I call the client instead. If there's an unexpected guest, I schedule a meeting. However, if there's a hail storm, I call the client. If I have a vacation planned, I schedule a meeting. I can't call the client and schedule a meeting at the same time.",
+        "meteor_score": 0.7615320275894035
+    },
+    {
+        "answer": "If today is my birthday, I can either attend a meeting or visit the doctor. Generally, I choose to attend the meeting. However, if an unexpected guest arrives, I visit the doctor instead. If I miss a deadline, I go back to attending the meeting. I can’t attend the meeting and visit the doctor at the same time.",
+        "pred_answer": "If it's my birthday today, I either attend a meeting or visit the doctor. I tend to attend the meeting. But if there's an unexpected guest, I visit the doctor instead. However, if I missed a deadline, I attend the meeting. I can't attend the meeting and visit the doctor at the same time.",
+        "meteor_score": 0.8105942569737723
+    },
+    {
+        "answer": "If it's the holiday season, I can either drive my car or prepare a report. Generally, I choose to drive my car. I can’t drive my car and prepare a report at the same time.",
+        "pred_answer": "During the holiday season, I tend to drive the car. However, I choose to prepare a report instead.",
+        "meteor_score": 0.3593455216114922
+    },
+    {
+        "answer": "I can either visit the museum or take a picnic. Generally, I choose to visit the museum. I can’t visit the museum and take a picnic at the same time.",
+        "pred_answer": "I tend to visit the museum. But I also tend to take a picnic. I usually choose to visit the museum over taking a picnic. I can't visit the museum and take a picnic at the same time.",
+        "meteor_score": 0.7502745648668188
+    },
+    {
+        "answer": "If I have a good investment opportunity, I can either explore the city or go to the gym. Usually, I choose to explore the city. However, if I'm feeling sick, I go to the gym instead. I can’t go to the gym and explore the city at the same time.",
+        "pred_answer": "If it's a good investment, I usually explore the city. But if I'm feeling sick, I go to the gym instead. I can't explore the city and go to the gym at the same time.",
+        "meteor_score": 0.6221515403908063
+    },
+    {
+        "answer": "If there is a school reunion, I can either submit my timesheet or visit the doctor. Usually, I choose to submit my timesheet. However, if I get a party invitation, I visit the doctor instead. If I experience a relationship break, I go back to submitting my timesheet. I can’t visit the doctor and submit my timesheet at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to submit my timesheet. Otherwise, I usually visit the doctor. But if there's a party invitation, I submit my timesheet instead. However, if there's a relationship break, I visit the doctor. I can't submit my timesheet and visit the doctor at the same time.",
+        "meteor_score": 0.7159993498784555
+    },
+    {
+        "answer": "I can either finish the report or plan meals. Generally, I choose to finish the report. I can’t finish the report and plan meals at the same time.",
+        "pred_answer": "I tend to finish the report. If needed, I plan meals instead. I can't finish the report and plan meals simultaneously.",
+        "meteor_score": 0.5002002469712645
+    },
+    {
+        "answer": "I can either drive the car or water the plants. Usually, I choose to drive the car. However, if my boss is in the office, I go to water the plants instead. I can’t drive the car and water the plants at the same time.",
+        "pred_answer": "If the boss is in the office, I tend to water the plants. Otherwise, I usually drive the car. I can’t water the plants and drive the car at the same time.",
+        "meteor_score": 0.5960624717381475
+    },
+    {
+        "answer": "I can either book a ride share or book a flight. Usually, I prefer to book a ride share. However, if my subscription is due, I choose to book a flight instead. I can’t book both a ride share and a flight at the same time.",
+        "pred_answer": "If I have a subscription due, I tend to book a ride share. Otherwise, I usually book a flight. I can't book both a ride share and a flight at the same time.",
+        "meteor_score": 0.6144784417402123
+    },
+    {
+        "answer": "If there is a school reunion, I can either visit the doctor or update the project plan. Usually, I choose to visit the doctor. However, if I have a new neighbor, I update the project plan instead. If it’s dusk, I go back to visiting the doctor. I can’t visit the doctor and update the project plan at the same time.",
+        "pred_answer": "If there's a school reunion, I tend to visit the doctor. Otherwise, I choose to update the project plan. But if there's a new neighbor, I update the project plan instead. If it's dusk, I usually visit the doctor. I can't update the project plan and visit the doctor at the same time.",
+        "meteor_score": 0.7073597648025407
+    },
+    {
+        "answer": "I can either cycle to work or make coffee. Generally, I choose to cycle to work. I can’t cycle to work and make coffee at the same time.",
+        "pred_answer": "I usually cycle to work, but I tend to make coffee instead.",
+        "meteor_score": 0.19859374999999999
+    },
+    {
+        "answer": "If it's a hot day, I can either attend a meeting or use the subway. Generally, I choose to attend the meeting. However, if there's a hail storm, I use the subway instead. If a friend is in town, I go back to attending the meeting. I can’t attend the meeting and use the subway at the same time.",
+        "pred_answer": "On a hot day, I usually attend the meeting. Otherwise, I tend to use the subway. But if there's a hail storm, I choose to use the subway instead. However, if a friend is in town, I attend the meeting. I can't use the subway and attend the meeting at the same time.",
+        "meteor_score": 0.7419956620696242
+    },
+    {
+        "answer": "I can either do the laundry or review documents. Usually, I choose to do the laundry. I can’t do the laundry and review documents at the same time.",
+        "pred_answer": "I tend to do the laundry. However, I choose to review documents instead.",
+        "meteor_score": 0.26483781918564525
+    },
+    {
+        "answer": "If it’s a hot day, I can either pay the bills or attend a meeting. Generally, I choose to pay the bills. However, if I miss a deadline, I attend the meeting instead. If it’s the holiday season, I go back to paying the bills. I can’t attend the meeting and pay the bills at the same time.",
+        "pred_answer": "On a hot day, I usually pay bills. But if I missed a deadline, I tend to attend a meeting instead. However, during the holiday season, I go back to paying bills. I can't pay bills and attend a meeting simultaneously.",
+        "meteor_score": 0.4996111652082592
+    },
+    {
+        "answer": "I can either do laundry or finish the report. Usually, I prefer to do laundry. However, if there is a community event, I choose to finish the report instead. If I have a networking event, I tend to do laundry. I can’t do laundry and finish the report at the same time.",
+        "pred_answer": "I tend to do laundry. But if there's a community event, I finish the report instead. However, if there's a networking event, I do laundry again. I can't do laundry and finish the report at the same time.",
+        "meteor_score": 0.6468565459003788
+    },
+    {
+        "answer": "If there is a family gathering, I attend the concert. If it’s a windy day, I schedule a meeting. But if it’s both a family gathering and a windy day, I usually prefer to attend the concert. However, if I also have a project extension, I would rather schedule the meeting instead. If it’s early morning, I tend to attend the concert. If it’s my wedding anniversary, I prefer to schedule the meeting. If I have a wedding anniversary and it's early morning, I usually choose to schedule the meeting. I can’t attend the concert and schedule a meeting at the same time.",
+        "pred_answer": "If there's a family gathering, I attend a concert. If it's a windy day, I schedule a meeting. But if there's both a family gathering and it's windy, I tend to attend the concert. If there's also a project extension, I schedule a meeting instead. However, if it's early morning, I attend the concert again. But if it's my wedding anniversary, I schedule a meeting. I can't attend a concert and schedule a meeting at the same time.",
+        "meteor_score": 0.550299587348769
+    },
+    {
+        "answer": "If there is a school reunion, I can either order a taxi or rent a car. Generally, I choose to order a taxi. However, if I have client feedback, I rent a car instead. I can’t order a taxi and rent a car at the same time.",
+        "pred_answer": "If there is a school reunion, I usually order a taxi. But if there is client feedback, I tend to rent a car instead. I can't order a taxi and rent a car at the same time.",
+        "meteor_score": 0.6354916067146283
+    },
+    {
+        "answer": "I can either update the project plan or go for a cycling session. Usually, I choose to update the project plan. I can’t update the project plan and go for a cycling session at the same time.",
+        "pred_answer": "I tend to update the project plan. Alternatively, I go for a cycling session.",
+        "meteor_score": 0.3162816281628163
+    },
+    {
+        "answer": "If there is a concert nearby, I can either cook dinner or buy groceries. Usually, I choose to cook dinner. However, if there’s a discount on a flight, I buy groceries instead. I can’t buy groceries and cook dinner at the same time.",
+        "pred_answer": "If there's a concert nearby, I tend to either cook dinner or buy groceries. However, if there's a discount on a flight, I choose to buy groceries instead of cooking dinner. I can't cook dinner and buy groceries at the same time.",
+        "meteor_score": 0.7826217343262799
+    },
+    {
+        "answer": "If I have a project extension, I cook dinner. If there is a family gathering, I take a picnic. But if I have both a project extension and a family gathering, I usually cook dinner. However, if there is also a concert nearby, I prefer to take a picnic instead. If I have a vacation planned, I usually choose to cook dinner. I can’t take a picnic and cook dinner at the same time.",
+        "pred_answer": "If I have a project extension, I usually cook dinner. If there's a family gathering, I tend to take a picnic instead. But if there's both a project extension and a family gathering, I cook dinner. If there's also a concert nearby, I opt for a picnic. However, if there's a vacation planned, I cook dinner again. I can't cook dinner and take a picnic at the same time.",
+        "meteor_score": 0.8069794988610478
+    },
+    {
+        "answer": "I can either dispose of the trash or have a yoga session. Usually, I choose to dispose of the trash. I can’t dispose of the trash and have a yoga session at the same time.",
+        "pred_answer": "I tend to dispose of the trash. However, I also have a yoga session as an option.",
+        "meteor_score": 0.30956869465866893
+    },
+    {
+        "answer": "If I have a vacation planned, I dispose of the trash. If there is an expensive event, I ride my bike. But if I have both a vacation planned and an expensive event, I usually dispose of the trash. If I also have a friend in town, I ride my bike instead. However, if there is a family gathering, I prefer to dispose of the trash. I can’t dispose of the trash and ride my bike at the same time.",
+        "pred_answer": "If I have a vacation planned, I dispose the trash. If there's an expensive event, I ride a bike. But if I have both a vacation planned and an expensive event, I tend to dispose the trash. If there's also a friend in town, I ride a bike instead. However, if there's a family gathering, I dispose the trash again. I can't dispose the trash and ride a bike at the same time.",
+        "meteor_score": 0.799677948999216
+    },
+    {
+        "answer": "If there is a school reunion, I attend a workshop. If there is a family gathering, I cycle to work. But if there is both a school reunion and a family gathering, I usually attend the workshop. If I also have a project extension, I cycle to work instead. However, if I have a vacation planned, I tend to attend the workshop. If there is an unexpected expense, I choose to cycle to work. I can’t attend a workshop and cycle to work at the same time.",
+        "pred_answer": "If there is a school reunion, I attend a workshop. If there is a family gathering, I cycle to work. But if both the school reunion and family gathering are happening, I tend to attend the workshop. If there is also a project extension, I cycle to work instead. However, if I have a vacation planned, I attend the workshop. But if there is an unexpected expense, I cycle to work. I cannot attend the workshop and cycle to work at the same time.",
+        "meteor_score": 0.8730093530739786
+    },
+    {
+        "answer": "If I have a job interview, I can either go to the park or pay the bills. Generally, I choose to go to the park. However, if there’s a discount on a flight, I pay the bills instead. On weekends, I usually go to the park again. I can’t go to the park and pay the bills at the same time.",
+        "pred_answer": "If I have a job interview, I tend to either go to the park or pay bills. I usually choose to go to the park. But if there's a discount on a flight, I pay bills instead. However, if it's the weekend, I go to the park. I can't go to the park and pay bills at the same time.",
+        "meteor_score": 0.7827682612536314
+    },
+    {
+        "answer": "If I receive client feedback, I book a flight. If I miss a deadline, I go for a morning run. But if I have both client feedback and missed a deadline, I usually book a flight. If my boss is also in the office, I prefer to go for a morning run instead. However, if it’s a hot day, I usually choose to book a flight. I can’t go for a morning run and book a flight at the same time.",
+        "pred_answer": "If there is client feedback, I usually book a flight. If a deadline is missed, I tend to go for a morning run instead. However, if there is both client feedback and a missed deadline, I book a flight. If the boss is in the office as well, I opt for a morning run. On a hot day, I prefer going for a morning run. I can't book a flight and go for a morning run at the same time.",
+        "meteor_score": 0.6518570160983647
+    },
+    {
+        "answer": "If I receive client feedback, I can either visit family or water the plants. Generally, I choose to visit family. However, if it’s early in the morning, I water the plants instead. I can’t visit family and water the plants at the same time.",
+        "pred_answer": "If there is client feedback, I usually visit family. But if it's early morning, I tend to water plants instead. I can't visit family and water plants simultaneously.",
+        "meteor_score": 0.4447201150497855
+    },
+    {
+        "answer": "If there is a school reunion, I can either attend a workshop or buy groceries. Usually, I choose to attend the workshop. However, if I receive feedback from a client, I buy groceries instead. I can’t attend the workshop and buy groceries at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to attend a workshop. Otherwise, I usually buy groceries. But if there is client feedback, I buy groceries instead of attending the workshop. I can't attend the workshop and buy groceries at the same time.",
+        "meteor_score": 0.722893796987902
+    },
+    {
+        "answer": "If it's early morning, I join a fitness class. If I receive an invitation from a friend, I buy groceries. But if it's both early morning and I have an invitation from a friend, I usually choose to join the fitness class. However, if there is also a snowstorm, I buy groceries instead. I can’t join a fitness class and buy groceries at the same time.",
+        "pred_answer": "If it's early in the morning, I tend to join a fitness class. If a friend invites me, I usually buy groceries instead. But if it's both early in the morning and I have an invitation from a friend, I choose to join the fitness class. However, if there's a snowstorm as well, I opt to buy groceries. I can't join the fitness class and buy groceries at the same time.",
+        "meteor_score": 0.8335598403649084
+    },
+    {
+        "answer": "If there is a family gathering, I can either finish my report or attend the meeting. Usually, I choose to finish my report. However, if it’s a hot day, I attend the meeting instead. I can’t finish my report and attend the meeting at the same time.",
+        "pred_answer": "If there's a family gathering, I usually finish the report. But if it's a hot day, I tend to attend the meeting instead. I can't finish the report and attend the meeting at the same time.",
+        "meteor_score": 0.6174611744529488
+    },
+    {
+        "answer": "If I receive an invitation from a friend, I pay my bills. If it’s a rainy day, I meditate. But if it’s both a rainy day and I have an invitation from a friend, I usually choose to pay my bills. However, if there is also a family emergency, I prefer to meditate instead. If I have an urgent deadline, I tend to pay my bills. But if it’s a humid day, I usually go back to meditating. I can’t pay my bills and meditate at the same time.",
+        "pred_answer": "If a friend invites me, I tend to pay bills. On a rainy day, I usually meditate. But if it's both a rainy day and I have a family emergency, I choose to pay bills instead. However, if there's an urgent deadline, I meditate. On a humid day, I usually pay bills. I can't pay bills and meditate at the same time.",
+        "meteor_score": 0.5697746756695243
+    },
+    {
+        "answer": "I can either water the plants or join a fitness class. Usually, I choose to water the plants. However, if it’s the weekend, I go to join the fitness class instead. I can’t water the plants and join the fitness class at the same time.",
+        "pred_answer": "On weekends, I tend to water plants. Otherwise, I usually join a fitness class. I can't water plants and join a fitness class at the same time.",
+        "meteor_score": 0.45968687495689364
+    },
+    {
+        "answer": "If there is a school reunion, I can either use the subway or drive my car. Generally, I choose to use the subway. However, if there’s a family emergency, I drive my car instead. I can’t use the subway and drive my car at the same time.",
+        "pred_answer": "If there is a school reunion, I usually use the subway to get there. Otherwise, I tend to drive my car. But if there is a family emergency, I choose to drive the car instead of taking the subway. I can't use the subway and drive the car at the same time.",
+        "meteor_score": 0.6697081740510956
+    },
+    {
+        "answer": "If my subscription is due, I clean the house. If I have an important meeting, I visit the doctor. But if I have both a subscription due and an important meeting, I usually clean the house. If I also have a new restaurant to try, I visit the doctor instead. However, if it's my wedding anniversary, I would rather visit the doctor. If the weather is nice, I prefer to clean the house. If I have a new restaurant to try, I would rather visit the doctor. I can’t clean the house and visit the doctor at the same time.",
+        "pred_answer": "If I have a subscription due, I clean the house. If there's an important meeting, I visit the doctor. But if I have both a subscription due and an important meeting, I tend to clean the house. If there's also a new restaurant to try, I visit the doctor instead. However, if it's our wedding anniversary, I clean the house again. But if the weather is good, I visit the doctor. I can't clean the house and visit the doctor at the same time.",
+        "meteor_score": 0.6700714759791233
+    },
+    {
+        "answer": "If there is a school reunion, I can either make coffee or submit my timesheet. Usually, I choose to make coffee. I can’t make coffee and submit my timesheet at the same time.",
+        "pred_answer": "If there's a school reunion, I make coffee. Otherwise, I submit the timesheet. I tend to make coffee over submitting the timesheet.",
+        "meteor_score": 0.5259388459064953
+    },
+    {
+        "answer": "If I have an urgent deadline, I visit the doctor. If I’m dealing with a relationship break, I reply to emails. But if I have both an urgent deadline and a relationship break, I usually choose to visit the doctor. However, if my boss is in the office as well, I tend to reply to emails instead. I can’t reply to emails and visit the doctor at the same time.",
+        "pred_answer": "If there's an urgent deadline, I visit the doctor. If there's a relationship break, I reply to emails. But if both the deadline is urgent and there's a relationship break, I tend to visit the doctor. If there's also the boss in the office, I reply to emails instead.",
+        "meteor_score": 0.4687918709668074
+    },
+    {
+        "answer": "I can either plan meals or take a picnic. Usually, I prefer to plan meals. However, if it’s during the morning rush, I choose to take a picnic instead. If a friend is in town, I usually plan meals. I can’t plan meals and take a picnic at the same time.",
+        "pred_answer": "If there's a morning rush, I tend to take a picnic. Usually, I plan meals. But if a friend is in town, I take a picnic instead. I can't plan meals and take a picnic at the same time.",
+        "meteor_score": 0.6243564956756509
+    },
+    {
+        "answer": "If I have a vacation planned, I can either reply to emails or explore the city. Generally, I choose to reply to emails. I can’t explore the city and reply to emails at the same time.",
+        "pred_answer": "If I have a vacation planned, I reply to emails. Otherwise, I explore the city. I tend to reply to emails over exploring the city. I can't reply to emails and explore the city simultaneously.",
+        "meteor_score": 0.6678526551573426
+    },
+    {
+        "answer": "If I have to work extended hours, I can either go to the park or plan meals. Usually, I choose to go to the park. However, if there’s an important meeting, I plan meals instead. If I have a vacation planned, I go back to choosing to go to the park. I can’t go to the park and plan meals at the same time.",
+        "pred_answer": "If I have extended work hours, I tend to go to the park. But if I have important meetings, I usually plan meals instead. However, if I have a vacation planned, I go to the park again. I can't go to the park and plan meals at the same time.",
+        "meteor_score": 0.6641174486550411
+    },
+    {
+        "answer": "If it's a hot day, I attend a workshop. If I receive a tax refund, I join a fitness class. But if it's both a hot day and I have a tax refund, I usually attend the workshop. However, if I also have a discount on a flight, I prefer to join the fitness class instead. I can’t attend the workshop and join the fitness class at the same time.",
+        "pred_answer": "On a hot day, I tend to attend a workshop. If I receive a tax refund, I opt to join a fitness class. However, if it's both a hot day and I have a tax refund, I usually attend the workshop. If there's also a discount on a flight, I choose to join the fitness class.",
+        "meteor_score": 0.6366969774845276
+    },
+    {
+        "answer": "If it's a rainy day, I reply to emails. If I have a medical appointment, I visit family. But if it’s both a rainy day and I have a medical appointment, I usually reply to emails. However, if I also receive financial aid, I visit family instead. If it’s dusk, I tend to reply to emails. But if I missed a deadline, I prefer to visit family. If I missed a deadline, I usually choose to reply to emails instead. I can’t reply to emails and visit family at the same time.",
+        "pred_answer": "On a rainy day, I usually reply to emails. If I have a medical appointment, I tend to visit family instead. However, if it's both a rainy day and I have a medical appointment, I reply to emails. If there's also financial aid involved, I visit family instead. But if it's dusk, I reply to emails again. If I've missed a deadline, I visit family. I can't reply to emails and visit family at the same time.",
+        "meteor_score": 0.6871050993401232
+    },
+    {
+        "answer": "If it’s afternoon, I reply to emails. If my boss is in the office, I go for an evening walk. But if it’s both afternoon and my boss is in the office, I usually reply to emails. However, if I also have a subscription due, I prefer to go for an evening walk instead. If I am moving house, I tend to prefer replying to emails. But if it’s early morning, I usually choose to go for an evening walk. I can’t reply to emails and go for an evening walk at the same time.",
+        "pred_answer": "In the afternoon, I tend to reply to emails. If my boss is in the office, I usually go for an evening walk. But if it's the afternoon and my boss is in the office, and there's a subscription due, I reply to emails instead. If I'm moving house, I go for an evening walk. However, if it's early morning, I reply to emails. I can't reply to emails and go for an evening walk at the same time.",
+        "meteor_score": 0.7010869565217392
+    },
+    {
+        "answer": "If there is a morning rush, I can either take the train or finish my report. Generally, I choose to take the train. However, if I have missed a deadline, I finish my report instead. I can’t take the train and finish my report at the same time.",
+        "pred_answer": "If there's a morning rush, I usually take the train. Otherwise, I tend to finish the report. But if I've missed the deadline, I choose to take the train. I can't take the train and finish the report at the same time.",
+        "meteor_score": 0.6117976916376306
+    },
+    {
+        "answer": "I can either plan meals or prepare the report. Usually, I choose to plan meals. I can’t plan meals and prepare the report at the same time.",
+        "pred_answer": "I usually plan meals. If not, I tend to prepare a report.",
+        "meteor_score": 0.22012078830260645
+    },
+    {
+        "answer": "I can either go to the cinema or rent a car. Usually, I prefer to go to the cinema. However, if there’s a community event, I choose to rent a car instead. I can’t go to the cinema and rent a car at the same time.",
+        "pred_answer": "If there is a community event, I tend to go to the cinema. Otherwise, I choose to rent a car. If there's a community event, I rent a car instead of going to the cinema.",
+        "meteor_score": 0.4939402212129485
+    },
+    {
+        "answer": "If I have a team project due, I review documents. If it’s the weekend, I reply to emails. But if it’s both the weekend and I have a project due, I usually review documents. If it’s also dusk, I prefer to reply to emails instead. I can’t review documents and reply to emails at the same time.",
+        "pred_answer": "If I have a team project due, I review documents. On weekends, I reply to emails. But if it's both a weekend and dusk, I tend to reply to emails instead of reviewing documents. I can't reply to emails and review documents at the same time.",
+        "meteor_score": 0.6162076481077868
+    },
+    {
+        "answer": "If I got a bonus, I can either plan meals or ride my bike. Generally, I choose to plan meals. I can’t plan meals and ride my bike at the same time.",
+        "pred_answer": "If I got a bonus, I plan meals. Otherwise, I ride a bike. I tend to plan meals over riding a bike.",
+        "meteor_score": 0.5070182342909616
+    },
+    {
+        "answer": "If I have a new neighbor, I reply to emails. If it's dusk, I update the project plan. But if it's both dusk and I have a new neighbor, I usually reply to emails. However, if it's also the holiday season, I prefer to update the project plan instead. If it's early morning, I tend to reply to emails. If I have a new neighbor and it's dusk, I can’t reply to emails and update the project plan at the same time.",
+        "pred_answer": "If I have a new neighbor, I reply to emails. If it's dusk, I update the project plan. But if I have a new neighbor and it's dusk, I tend to reply to emails. If it's also the holiday season, I update the project plan instead. However, if it's early morning, I reply to emails. I can't update the project plan and reply to emails at the same time.",
+        "meteor_score": 0.7880093853610501
+    },
+    {
+        "answer": "I can either visit the museum or go to the cinema. Usually, I prefer to visit the museum. However, if it's lunchtime, I choose to go to the cinema instead. I can’t go to the cinema and visit the museum at the same time.",
+        "pred_answer": "If it's lunchtime, I tend to go to the cinema. Otherwise, I usually visit the museum. I can't go to the cinema and visit the museum at the same time.",
+        "meteor_score": 0.6068858232946535
+    },
+    {
+        "answer": "If I have an unexpected expense, I meditate. If there is a hail storm, I prepare a report. But if it's both an unexpected expense and there is a hail storm, I usually prefer to meditate. However, if I also have a team project due, I choose to prepare the report instead. If I have extended work hours, I tend to prefer to meditate. I can’t meditate and prepare a report at the same time.",
+        "pred_answer": "If there is an unexpected expense, I tend to meditate. If there is a hail storm, I choose to prepare a report. However, if both an unexpected expense and a hail storm occur, I usually meditate. But if there is also a team project due, I prepare a report instead. If I have extended work hours, I go back to meditating. I can't meditate and prepare a report at the same time.",
+        "meteor_score": 0.8086321282287326
+    },
+    {
+        "answer": "I can either cycle to work or use the subway. Usually, I choose to cycle to work. However, if I have a low budget, I go with the subway instead. I can’t cycle to work and use the subway at the same time.",
+        "pred_answer": "If I have a low budget, I tend to use the subway. Otherwise, I usually cycle to work. I can't cycle to work and use the subway at the same time.",
+        "meteor_score": 0.6285173971942649
+    },
+    {
+        "answer": "If I have an unexpected guest, I do laundry. If there is a snowstorm, I go to the gym. But if I have both an unexpected guest and a snowstorm, I usually do laundry. If I also have a project extension, I go to the gym instead. However, if the weather is good, I tend to do laundry. If I have a new neighbor, I prefer to go to the gym. I can’t do laundry and go to the gym at the same time.",
+        "pred_answer": "If I have an unexpected guest, I do the laundry. If there's a snowstorm, I go to the gym. But if both happen, I tend to do the laundry. If there's also a project extension, I go to the gym instead. However, if the weather is good, I do the laundry again. But if there's a new neighbor, I go to the gym. I can't do the laundry and go to the gym at the same time.",
+        "meteor_score": 0.7488272026187944
+    },
+    {
+        "answer": "I can either go for a morning run or join a fitness class. Usually, I choose to go for a morning run. I can’t go for a morning run and join a fitness class at the same time.",
+        "pred_answer": "I usually go for a morning run. But I tend to join a fitness class instead. I can’t do both a morning run and join a fitness class at the same time.",
+        "meteor_score": 0.7330283731711402
+    },
+    {
+        "answer": "I can either go to the gym or submit my timesheet. Generally, I choose to go to the gym. I can’t go to the gym and submit my timesheet at the same time.",
+        "pred_answer": "I tend to go to the gym. However, I choose to submit the timesheet instead.",
+        "meteor_score": 0.24125263474856976
+    },
+    {
+        "answer": "If I am moving house, I can either organize my workspace or attend a concert. Usually, I choose to organize my workspace. However, if my boss is in the office, I attend the concert instead. I can’t attend the concert and organize my workspace at the same time.",
+        "pred_answer": "If I am moving house, I usually organize my workspace. However, if my boss is in the office, I tend to attend a concert instead. I can't organize my workspace and attend a concert at the same time.",
+        "meteor_score": 0.6973309957644679
+    },
+    {
+        "answer": "If today is my birthday, I can either drive my car or visit a museum. Generally, I choose to drive my car. I can’t drive my car and visit the museum at the same time.",
+        "pred_answer": "If it's my birthday today, I tend to drive the car. Otherwise, I usually visit the museum. I can't drive the car and visit the museum at the same time.",
+        "meteor_score": 0.6052522848596031
+    },
+    {
+        "answer": "If there is a team project due, I can either attend a concert or finish a report. Usually, I choose to attend the concert. However, if it’s a cloudy day, I finish the report instead. If there’s a hail storm, I go back to attending the concert. I can’t attend the concert and finish the report at the same time.",
+        "pred_answer": "If I have a team project due, I attend a concert. Otherwise, I tend to finish the report. But if it's a cloudy day, I choose to finish the report. However, if there's a hail storm, I attend the concert instead. I can't attend the concert and finish the report at the same time.",
+        "meteor_score": 0.7188671149525564
+    },
+    {
+        "answer": "If I missed a deadline, I cycle to work. If I got a bonus, I go to a restaurant. But if I both missed a deadline and got a bonus, I usually choose to cycle to work. However, if it’s also a hot day, I prefer to go to the restaurant instead. If my boss is in the office, I usually choose to cycle to work. But if I have extended work hours, I prefer to go to the restaurant. I can’t go to the restaurant and cycle to work at the same time.",
+        "pred_answer": "If I missed the deadline, I usually cycle to work. If I received a bonus, I go to a restaurant instead. But if I missed the deadline, got a bonus, and it's a hot day, I tend to go to a restaurant. If the boss is in the office, I cycle to work again. But if I have extended work hours, I go to a restaurant. I can't cycle to work and go to a restaurant at the same time.",
+        "meteor_score": 0.658314476671437
+    },
+    {
+        "answer": "If I am moving house, I attend a concert. If it’s a rainy day, I go for a swim. But if it’s both a rainy day and I am moving house, I usually attend the concert. However, if I also have a new neighbor, I choose to go swimming instead. If I have a subscription due, I tend to attend the concert. If I have a new restaurant to try, I prefer to go swimming. I can’t attend a concert and go swimming at the same time.",
+        "pred_answer": "If I am moving house, I tend to attend a concert. If it's a rainy day, I usually go for a swim. But if it's both a rainy day and I'm moving house, I attend a concert instead. If there's also a new neighbor, I go for a swim. However, if there's a subscription due, I attend a concert. I can't attend a concert and go for a swim at the same time.",
+        "meteor_score": 0.5577272231206533
+    },
+    {
+        "answer": "If it's the morning rush, I can either water the plants or rent a car. Usually, I choose to water the plants. However, if I have a new neighbor, I rent a car instead. If I have financial aid, I go back to watering the plants. I can’t water the plants and rent a car at the same time.",
+        "pred_answer": "If there's a morning rush, I usually water the plants. However, if there's a new neighbor, I tend to rent a car instead. But if there's financial aid available, I go back to watering the plants. I can't water the plants and rent a car at the same time.",
+        "meteor_score": 0.7082173559155126
+    },
+    {
+        "answer": "I can either plan meals or go to the bar. Usually, I choose to plan meals. I can’t plan meals and go to the bar at the same time.",
+        "pred_answer": "I usually plan meals, but I tend to go to the bar instead.",
+        "meteor_score": 0.25841750841750843
+    },
+    {
+        "answer": "If I receive a bonus, I can either ride my bike or call a client. Usually, I choose to ride my bike. However, if there is a school reunion, I call the client instead. I can’t ride my bike and call the client at the same time.",
+        "pred_answer": "If I received a bonus, I tend to ride my bike. Otherwise, I usually call the client. But if there's a school reunion, I choose to call the client instead of riding my bike. I can't ride my bike and call the client at the same time.",
+        "meteor_score": 0.7836530696837749
+    },
+    {
+        "answer": "If a friend invites me, I can either call a client or visit family. Generally, I choose to call the client. However, if there’s a snowstorm, I visit family instead. I can’t call a client and visit family at the same time.",
+        "pred_answer": "If a friend invites me, I usually call the client. But if there's a snowstorm, I visit family instead. I can't call the client and visit family at the same time.",
+        "meteor_score": 0.5902146201097328
+    },
+    {
+        "answer": "If I miss a deadline, I can either meditate or go shopping. Generally, I choose to meditate. However, if I'm feeling sick, I go shopping instead. I can’t meditate and go shopping at the same time.",
+        "pred_answer": "If I miss a deadline, I tend to meditate. However, if I'm feeling sick, I go shopping instead. I can't meditate and go shopping at the same time.",
+        "meteor_score": 0.7167936044941393
+    },
+    {
+        "answer": "If I have a school reunion, I ride my bike. If there is a networking event, I plan meals. But if it’s both a school reunion and a networking event, I usually ride my bike. However, if I am also experiencing a relationship break, I prefer to plan meals instead. If I am moving house, I tend to ride my bike. I can’t ride my bike and plan meals at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to ride a bike. If there is a networking event, I usually plan meals. But if both the school reunion and networking event are happening, I ride a bike instead. If there's also a relationship break, I plan meals. However, if I am moving house, I ride a bike. I can't plan meals and ride a bike at the same time.",
+        "meteor_score": 0.7336444193061841
+    },
+    {
+        "answer": "I can either give a presentation or host a dinner party. Usually, I prefer to give a presentation. However, if I have a job interview, I choose to host the dinner party instead. On the other hand, if I’m expecting a tax refund, I tend to give the presentation. I can’t give a presentation and host a dinner party at the same time.",
+        "pred_answer": "If I have a job interview, I give a presentation. Otherwise, I host a dinner party. Usually, I give a presentation, but if there's a tax refund, I host a dinner party instead. I can't give a presentation and host a dinner party simultaneously.",
+        "meteor_score": 0.5545404918624103
+    },
+    {
+        "answer": "If I have extended work hours, I visit my family. If it’s a windy day, I go for an evening walk. But if it’s both a windy day and I have extended work hours, I usually visit my family. However, if there is also a community event, I choose to go for an evening walk instead. If it’s my wedding anniversary, I tend to visit my family. I can’t go for an evening walk and visit my family at the same time.",
+        "pred_answer": "If I have extended work hours, I tend to visit family. On a windy day, I usually go for an evening walk. But if it's both extended work hours and a windy day, I choose to visit family instead. If there's also a community event, I opt for an evening walk. However, if it's our wedding anniversary, I visit family. I can't visit family and go for an evening walk at the same time.",
+        "meteor_score": 0.7588370962106833
+    },
+    {
+        "answer": "I can either visit family or have a cycling session. Usually, I choose to visit family. However, if I receive feedback from a client, I go for the cycling session instead. I can’t visit family and have a cycling session at the same time.",
+        "pred_answer": "If there is client feedback, I usually visit family. Otherwise, I tend to have a cycling session. If there is client feedback, I choose to visit family. I can't visit family and have a cycling session at the same time.",
+        "meteor_score": 0.6496105232216344
+    },
+    {
+        "answer": "If I have a good investment, I host a dinner party. If I have extended work hours, I rent a car. But if I have both a good investment and extended work hours, I usually host a dinner party. However, if it’s also a humid day, I rent a car instead. I can’t host a dinner party and rent a car at the same time.",
+        "pred_answer": "If it's a good investment, I tend to host a dinner party. If I have extended work hours, I usually rent a car. But if it's both a good investment and I have extended work hours, I prefer hosting a dinner party. However, if it's also a humid day, I rent a car instead. I can't host a dinner party and rent a car at the same time.",
+        "meteor_score": 0.905272358055828
+    },
+    {
+        "answer": "If there is a family emergency, I can either attend the concert or book a ride share. Usually, I choose to attend the concert. However, if there’s a new restaurant to try, I book a ride share instead. I can’t attend the concert and book a ride share at the same time.",
+        "pred_answer": "If there is a family emergency, I attend the concert. Otherwise, I book a ride share. But if there's a new restaurant to try, I book a ride share instead. I can't attend the concert and book a ride share at the same time.",
+        "meteor_score": 0.757154213036566
+    },
+    {
+        "answer": "If there is a family gathering, I can either meditate or have a yoga session. Usually, I choose to meditate. However, if it's lunchtime, I go for the yoga session instead. If I need financial aid, I tend to meditate again. I can’t meditate and have a yoga session at the same time.",
+        "pred_answer": "If there is a family gathering, I tend to meditate. Alternatively, I do a yoga session. But if it's lunchtime, I choose to do a yoga session instead. However, if there is financial aid involved, I go back to meditating. I can't meditate and do a yoga session simultaneously.",
+        "meteor_score": 0.6242540059921418
+    },
+    {
+        "answer": "I can either have a swim session or visit the doctor. Usually, I choose to have a swim session. However, if there’s a snowstorm, I go to visit the doctor instead. I can’t have a swim session and visit the doctor at the same time.",
+        "pred_answer": "If there is a snowstorm, I usually visit the doctor. Otherwise, I have a swim session. I can’t visit the doctor and have a swim session at the same time.",
+        "meteor_score": 0.6098834358142519
+    },
+    {
+        "answer": "If I have an important meeting, I water the plants. If a friend is in town, I join a fitness class. But if I have both an important meeting and a friend in town, I usually water the plants. If I also have a job interview, I choose to join the fitness class instead. However, if it's a hot day, I tend to water the plants. If I find a good investment opportunity, I prefer to join the fitness class. I can’t water the plants and join the fitness class at the same time.",
+        "pred_answer": "If I have an important meeting, I water the plants. If a friend is in town, I join a fitness class. But if I have both an important meeting and a friend in town, I tend to water the plants. If there's also a job interview, I join the fitness class instead. However, if it's a hot day, I water the plants again. But if it's a good investment opportunity, I join the fitness class. I can't water the plants and join the fitness class at the same time.",
+        "meteor_score": 0.8826635581526261
+    },
+    {
+        "answer": "If I have a project extension, I can either meditate or plan meals. Generally, I choose to meditate. However, if it’s a windy day, I plan meals instead. I can’t meditate and plan meals at the same time.",
+        "pred_answer": "If there is a project extension, I tend to meditate. Otherwise, I usually plan meals. But if it's a windy day, I opt for meditating instead of planning meals.",
+        "meteor_score": 0.43059208123310705
+    },
+    {
+        "answer": "If it's lunchtime, I go to the cinema. If there's an urgent deadline, I schedule a meeting. But if it’s both lunchtime and I have an urgent deadline, I usually go to the cinema. If there’s also a community event, I choose to schedule a meeting instead. However, if it’s a cloudy day, I tend to go to the cinema. I can’t go to the cinema and schedule a meeting at the same time.",
+        "pred_answer": "During lunchtime, I tend to go to the cinema. If I have an urgent deadline, I usually schedule a meeting instead. But if it's both lunchtime and I have an urgent deadline, I go to the cinema. If there's also a community event, I schedule a meeting. However, if it's a cloudy day, I go to the cinema. I can't go to the cinema and schedule a meeting at the same time.",
+        "meteor_score": 0.8505466434045361
+    },
+    {
+        "answer": "If there is a team project due, I can either call the client or attend a concert. Usually, I choose to call the client. However, if it's nighttime, I attend the concert instead. I can’t call the client and attend the concert at the same time.",
+        "pred_answer": "If I have a team project due, I call the client. But if it's nighttime, I attend a concert instead. I tend to call the client over attending a concert. I can't call the client and attend a concert at the same time.",
+        "meteor_score": 0.6457609639600519
+    },
+    {
+        "answer": "If I have a team project due, I go to a restaurant. If there is an expensive event, I visit the doctor. But if it’s both a team project due and there is an expensive event, I usually go to the restaurant. However, if I also have a low budget, I visit the doctor instead. I can’t go to the restaurant and visit the doctor at the same time.",
+        "pred_answer": "If I have a team project due, I go to the restaurant. If there's an expensive event, I visit the doctor instead. But if I have both a team project due and an expensive event, I tend to go to the restaurant. If I also have a low budget, I visit the doctor. I can't go to the restaurant and visit the doctor at the same time.",
+        "meteor_score": 0.8291589363017936
+    },
+    {
+        "answer": "If my boss is in the office, I review documents. If it’s a humid day, I book a flight. But if it’s both a humid day and my boss is in the office, I usually review documents. However, if it’s early morning as well, I choose to book a flight instead. If I have a friend in town, I usually prefer to review documents. But if there’s a hail storm, I go back to booking a flight. I can’t review documents and book a flight at the same time.",
+        "pred_answer": "If my boss is in the office, I review documents. On a humid day, I book a flight. But if my boss is in the office and it's a humid day, I tend to review documents. If it's also early in the morning, I book a flight instead. However, if a friend is in town, I review documents again. But if there's a hail storm, I book a flight. I can't review documents and book a flight at the same time.",
+        "meteor_score": 0.7444574431360516
+    },
+    {
+        "answer": "If it's a hot day, I plan my meals. If I'm moving house, I reply to emails. But if it's both a hot day and I'm moving house, I usually plan my meals. If the weather is also good, I reply to emails instead. However, if there is a networking event, I tend to plan my meals. I can’t plan my meals and reply to emails at the same time.",
+        "pred_answer": "On a hot day, I usually plan meals. If I'm moving house, I tend to reply to emails. But if it's both a hot day and I'm moving house, I choose to plan meals. If the weather is good as well, I reply to emails instead. However, if there's a networking event, I go back to planning meals. I can't plan meals and reply to emails at the same time.",
+        "meteor_score": 0.867110446694685
+    },
+    {
+        "answer": "I can either have a swim session or attend a meeting. Usually, I choose to have a swim session. I can’t have a swim session and attend the meeting at the same time.",
+        "pred_answer": "I tend to have a swim session. However, I choose to attend a meeting instead. I can't have a swim session and attend the meeting at the same time.",
+        "meteor_score": 0.705224622316459
+    },
+    {
+        "answer": "If there is a snowstorm, I can either take a picnic or go to the bar. Usually, I choose to take a picnic. However, if it's a humid day, I go to the bar instead. I can’t take a picnic and go to the bar at the same time.",
+        "pred_answer": "If there is a snowstorm, I tend to take a picnic. Otherwise, on a humid day, I usually go to the bar. I can't take a picnic and go to the bar at the same time.",
+        "meteor_score": 0.6415379425362177
+    },
+    {
+        "answer": "If it's the weekend, I attend a meeting. If it's a humid day, I update the project plan. But if it’s both the weekend and a humid day, I usually attend the meeting. If I also receive client feedback, I prefer to update the project plan instead. However, if there is a family gathering, I usually attend the meeting. If today is my birthday, I prefer to update the project plan. I can’t attend a meeting and update the project plan at the same time.",
+        "pred_answer": "On weekends, I usually attend a meeting. But on a humid day, I tend to update the project plan instead. However, if it's both a weekend and humid, with client feedback, I attend the meeting. If there's a family gathering, I update the project plan. But if it's someone's birthday today, I attend the meeting. I can't attend the meeting and update the project plan simultaneously.",
+        "meteor_score": 0.5315196877346225
+    },
+    {
+        "answer": "If it's a cloudy day, I schedule a meeting. If I have financial aid, I rent a car. But if it's both a cloudy day and I have financial aid, I usually schedule a meeting. If I also receive client feedback, I rent a car instead. However, if it's the morning rush, I tend to schedule a meeting. If I have a new restaurant to try, I choose to rent a car. I can’t schedule a meeting and rent a car at the same time.",
+        "pred_answer": "If it's a cloudy day, I usually schedule a meeting. But if I have financial aid, I rent a car instead. However, if there's also client feedback, I schedule a meeting. If there's a morning rush, I rent a car. I can't schedule a meeting and rent a car at the same time.",
+        "meteor_score": 0.6033938999328544
+    },
+    {
+        "answer": "If it's the morning rush, I can either go shopping or use the subway. Generally, I choose to go shopping. I can’t go shopping and use the subway at the same time.",
+        "pred_answer": "When there's a morning rush, I tend to go shopping. Otherwise, I choose to use the subway. I can't go shopping and use the subway at the same time.",
+        "meteor_score": 0.6988249845392702
+    },
+    {
+        "answer": "I can either go to the gym or explore the city. Usually, I choose to go to the gym. However, if it’s my birthday, I tend to explore the city instead. I can’t go to the gym and explore the city at the same time.",
+        "pred_answer": "If it's your birthday today, you tend to explore the city. Otherwise, you usually go to the gym. You can't go to the gym and explore the city at the same time.",
+        "meteor_score": 0.502220175977082
+    },
+    {
+        "answer": "I can either explore the city or reply to emails. Usually, I choose to explore the city. However, if I have an unexpected guest, I go back to replying to emails instead. I can’t explore the city and reply to emails at the same time.",
+        "pred_answer": "If there is an unexpected guest, I tend to reply to emails. Otherwise, I usually explore the city. I can't reply to emails and explore the city simultaneously.",
+        "meteor_score": 0.41371214519362676
+    },
+    {
+        "answer": "If there is a team project due, I can either go to the park or order a taxi. Usually, I choose to go to the park. However, if I have extended work hours, I order a taxi instead. I can’t go to the park and order a taxi at the same time.",
+        "pred_answer": "If I have a team project due, I tend to go to the park. Otherwise, I usually order a taxi. But if I have extended work hours, I go to the park instead of ordering a taxi. I can't go to the park and order a taxi at the same time.",
+        "meteor_score": 0.7934051047564924
+    },
+    {
+        "answer": "I can either visit family or pay bills. Usually, I prefer to visit family. However, if my subscription is due, I choose to pay the bills instead. I can’t visit family and pay bills at the same time.",
+        "pred_answer": "If there is a subscription due, I usually pay bills. Otherwise, I tend to visit family. I can't pay bills and visit family at the same time.",
+        "meteor_score": 0.5043859649122807
+    },
+    {
+        "answer": "If I get a tax refund, I go shopping. If I have a vacation planned, I explore the city. But if I have both a tax refund and a vacation planned, I usually go shopping. However, if it’s also the holiday season, I prefer to explore the city instead. I can’t go shopping and explore the city at the same time.",
+        "pred_answer": "If I receive a tax refund, I go shopping. If I have a vacation planned, I explore the city. But if I have both a tax refund and a planned vacation, I tend to go shopping. If it's also the holiday season, I explore the city instead.",
+        "meteor_score": 0.611426336784393
+    },
+    {
+        "answer": "If I have a job interview, I go shopping. If I have a new neighbor, I attend a concert. But if I have both a job interview and a new neighbor, I usually go shopping. However, if I also receive client feedback, I attend the concert instead. If I have an important meeting, I tend to go shopping. If I have a concert to attend, I prefer to go shopping. I can’t go shopping and attend the concert at the same time.",
+        "pred_answer": "If I have a job interview, I go shopping. If I have a new neighbor, I attend a concert. But if it’s both a job interview and I have a new neighbor, I tend to go shopping. If there’s also client feedback, I attend the concert instead. However, if there’s an important meeting, I go shopping again. I can’t go shopping and attend a concert at the same time.",
+        "meteor_score": 0.743310531944579
+    },
+    {
+        "answer": "If I got a bonus, I attend a workshop. If there is a concert nearby, I go to the gym. But if I have both a bonus and a concert nearby, I usually choose to attend the workshop. However, if I also have a low budget, I go to the gym instead. I can’t go to the gym and attend the workshop at the same time.",
+        "pred_answer": "If I receive a bonus, I attend a workshop. If there's a concert nearby, I go to the gym. But if I got a bonus and there's a concert nearby, I tend to attend the workshop. If there's also a low budget, I go to the gym instead. However, if there's a concert nearby and a low budget, I still prefer attending the workshop. I can't go to the gym and attend the workshop at the same time.",
+        "meteor_score": 0.7934422220272038
+    },
+    {
+        "answer": "If there is a discount on flights, I can either go for an evening walk or book a ride share. Generally, I choose to go for an evening walk. I can’t go for an evening walk and book a ride share at the same time.",
+        "pred_answer": "If there is a discount on the flight, I usually take an evening walk. Otherwise, I choose to book a ride share. I can't book a ride share and take an evening walk at the same time.",
+        "meteor_score": 0.6944519943949167
+    },
+    {
+        "answer": "If I have a good investment, I take an evening walk. If it's a cloudy day, I explore the city. But if it's both a cloudy day and I have a good investment, I usually take an evening walk. However, if it's also a humid day, I prefer to explore the city instead. I can’t take an evening walk and explore the city at the same time.",
+        "pred_answer": "If it's a good investment, I usually go for an evening walk. On a cloudy day, I tend to explore the city instead. However, if it's both a good investment and a cloudy day, I opt for an evening walk. If it's also a humid day, I explore the city. I can't explore the city and go for an evening walk at the same time.",
+        "meteor_score": 0.8263320260784853
+    },
+    {
+        "answer": "If it's a humid day, I meditate. If it's the holiday season, I plan meals. But if it's both a humid day and the holiday season, I usually prefer to meditate. However, if I am also going through a relationship break, I choose to plan meals instead. If there is a family gathering, I tend to meditate. But if there is a community event, I go back to planning meals. I can’t meditate and plan meals at the same time.",
+        "pred_answer": "On a humid day, I tend to meditate. During the holiday season, I usually plan meals. If it's both humid and the holiday season, I choose to meditate. However, if there's also a relationship break, I opt for planning meals. But if there's a family gathering, I go back to meditating. If there's a community event, I prefer planning meals. I can't meditate and plan meals at the same time.",
+        "meteor_score": 0.7767621909303274
+    },
+    {
+        "answer": "If my friend is in town, I can either buy groceries or submit my timesheet. Usually, I choose to buy groceries. However, if there’s a hail storm, I submit my timesheet instead. If my boss is in the office, I tend to buy groceries again. I can’t submit my timesheet and buy groceries at the same time.",
+        "pred_answer": "If a friend is in town, I tend to buy groceries. Otherwise, if there's a hail storm, I submit my timesheet. But if my boss is in the office, I buy groceries instead. I can't buy groceries and submit my timesheet at the same time.",
+        "meteor_score": 0.6937611249875473
+    },
+    {
+        "answer": "I can either reply to emails or cook dinner. Usually, I prefer to reply to emails. However, if it’s during the morning rush, I choose to cook dinner instead. I can’t reply to emails and cook dinner at the same time.",
+        "pred_answer": "If there's a morning rush, I tend to reply to emails. Otherwise, I usually cook dinner. I can't reply to emails and cook dinner at the same time.",
+        "meteor_score": 0.5288042155231873
+    },
+    {
+        "answer": "I can either give a presentation or take the bus. Usually, I choose to give the presentation. I can’t give the presentation and take the bus at the same time.",
+        "pred_answer": "I usually give a presentation. But if I don’t, I take the bus instead.",
+        "meteor_score": 0.259540006478782
+    },
+    {
+        "answer": "If I have a medical appointment, I submit my timesheet. If a friend is in town, I travel abroad. But if I have both a medical appointment and a friend in town, I usually submit my timesheet. If there is also a hail storm, I prefer to travel abroad instead. However, if I got a bonus, I tend to submit my timesheet. If I'm feeling sick, I usually choose to travel abroad. I can’t submit my timesheet and travel abroad at the same time.",
+        "pred_answer": "If I have a medical appointment, I submit my timesheet. If a friend is in town, I travel abroad. But if I have a medical appointment and a friend in town, I tend to submit my timesheet. If there's also a hail storm, I travel abroad instead. However, if I receive a bonus, I submit my timesheet. But if I'm feeling sick, I travel abroad. I can't submit my timesheet and travel abroad at the same time.",
+        "meteor_score": 0.8847601873082935
+    },
+    {
+        "answer": "If it's lunchtime, I can either cycle to work or visit family. Generally, I choose to cycle to work. However, if there's a networking event, I visit family instead. If I have financial aid, I go back to cycling to work. I can’t visit family and cycle to work at the same time.",
+        "pred_answer": "If it's lunchtime, I usually cycle to work. But if there's a networking event, I visit family instead. However, if there's financial aid available, I choose to cycle to work. I can't cycle to work and visit family at the same time.",
+        "meteor_score": 0.6548208415414181
+    },
+    {
+        "answer": "If my friend is in town, I go to the theater. If my boss is in the office, I go to the restaurant. But if both my friend is in town and my boss is in the office, I usually prefer to go to the theater. However, if there is also a community event, I choose to go to the restaurant instead. If it’s nighttime, I tend to go to the restaurant. I can’t go to the theater and the restaurant at the same time.",
+        "pred_answer": "If my friend is in town, I go to the theater. If my boss is in the office, I go to the restaurant. But if both my friend is in town and my boss is in the office, I tend to go to the theater. If there's also a community event, I go to the restaurant instead. However, if it's nighttime, I go to the theater. I can't go to the theater and the restaurant at the same time.",
+        "meteor_score": 0.8470598808296737
+    },
+    {
+        "answer": "I can either clean the house or have a swim session. Usually, I choose to clean the house. However, if it’s a rainy day, I tend to go for the swim session instead. I can’t clean the house and have a swim session at the same time.",
+        "pred_answer": "If it's a rainy day, I tend to swim. Otherwise, I usually clean the house. I can't swim and clean the house at the same time.",
+        "meteor_score": 0.4600486336514875
+    },
+    {
+        "answer": "If I have a medical appointment, I schedule a meeting. If I have an unexpected guest, I go for a swim. But if I have both a medical appointment and an unexpected guest, I usually schedule a meeting. However, if there is also a networking event, I prefer to go for a swim instead. If there is a concert nearby, I tend to schedule a meeting. I can’t go for a swim and schedule a meeting at the same time.",
+        "pred_answer": "If I have a medical appointment, I schedule a meeting. If there's an unexpected guest, I have a swim session instead. But if I have both a medical appointment and an unexpected guest, I tend to schedule a meeting. If there's also a networking event, I have a swim session. However, if there's a concert nearby, I schedule a meeting. I can't have a swim session and schedule a meeting at the same time.",
+        "meteor_score": 0.8252276440467435
+    },
+    {
+        "answer": "If it’s my wedding anniversary, I can either go to the theater or attend a workshop. Usually, I choose to go to the theater. However, if the event is expensive, I attend the workshop instead. I can’t go to the theater and attend the workshop at the same time.",
+        "pred_answer": "If it's our wedding anniversary, I usually go to the theater. However, if it's an expensive event, I attend a workshop instead.",
+        "meteor_score": 0.2950788158400615
+    },
+    {
+        "answer": "I can either go shopping or meditate. Usually, I choose to go shopping. But if I get an invitation from a friend, I tend to meditate instead. I can’t go shopping and meditate at the same time.",
+        "pred_answer": "If I tend to go shopping, I usually do that. But if a friend invites me, I choose to meditate instead. I can’t go shopping and meditate at the same time.",
+        "meteor_score": 0.750622915478766
+    },
+    {
+        "answer": "If it’s early morning, I dispose of the trash. If I have a team project due, I reply to emails. But if it’s both early morning and I have a project due, I usually dispose of the trash. However, if I also have a school reunion, I prefer to reply to emails instead. I can’t dispose of the trash and reply to emails at the same time.",
+        "pred_answer": "In the early morning, I usually dispose of the trash. If there's a team project due, I reply to emails instead. But if it's early morning and there's a team project due, I tend to dispose of the trash. However, if there's also a school reunion, I reply to emails. I can't dispose of the trash and reply to emails at the same time.",
+        "meteor_score": 0.7842345977939199
+    },
+    {
+        "answer": "If it’s a cloudy day, I can either call a client or take the bus. Usually, I choose to call the client. However, if I have a medical appointment, I take the bus instead. I can’t call a client and take the bus at the same time.",
+        "pred_answer": "If it's a cloudy day, I usually call the client. Otherwise, I tend to take the bus. However, if I have a medical appointment, I choose to take the bus instead of calling the client.",
+        "meteor_score": 0.5786288571235533
+    },
+    {
+        "answer": "If it's a hot day, I attend a concert. If I get client feedback, I buy groceries. But if it's both a hot day and I receive client feedback, I usually prefer to attend the concert. However, if I also missed a deadline, I choose to buy groceries instead. I can’t attend a concert and buy groceries at the same time.",
+        "pred_answer": "On a hot day, I tend to attend a concert. If there is client feedback, I choose to buy groceries. However, if it's both a hot day and there is client feedback, I usually attend a concert. If there's also a missed deadline, I buy groceries instead.",
+        "meteor_score": 0.5926936486281643
+    },
+    {
+        "answer": "I can either submit my timesheet or finish my report. Usually, I choose to submit my timesheet. However, if I’m feeling sick, I tend to finish my report instead. If it’s early in the morning, I usually submit my timesheet. I can’t submit my timesheet and finish my report at the same time.",
+        "pred_answer": "If I'm feeling sick, I usually submit my timesheet. Otherwise, I tend to finish the report. But if it's early in the morning, I submit the timesheet instead. I can't submit the timesheet and finish the report simultaneously.",
+        "meteor_score": 0.4937830521279274
+    },
+    {
+        "answer": "I can either travel abroad or go for a morning run. Generally, I prefer to travel abroad. However, if I have received a bonus, I choose to go for a morning run instead. If it's dusk, I usually prefer to travel abroad. I can’t travel abroad and go for a morning run at the same time.",
+        "pred_answer": "If I received a bonus, I usually travel abroad. Otherwise, if it's dusk, I tend to go for a morning run. I can't travel abroad and go for a morning run at the same time.",
+        "meteor_score": 0.5975954198473281
+    },
+    {
+        "answer": "If I have an unexpected expense, I can either cook dinner or drive the car. Generally, I choose to cook dinner. However, if I got a bonus, I drive the car instead. If there's a family emergency, I go back to cooking dinner. I can’t cook dinner and drive the car at the same time.",
+        "pred_answer": "If there's an unexpected expense, I usually cook dinner. Otherwise, I tend to drive the car. But if I receive a bonus, I cook dinner instead. However, if there's a family emergency, I drive the car. I can't cook dinner and drive the car at the same time.",
+        "meteor_score": 0.7434036417348795
+    },
+    {
+        "answer": "If it's a rainy day, I go to the gym. If it's the weekend, I read a book. But if it's both a rainy day and the weekend, I usually go to the gym. If there is also a community event, I prefer to read a book instead. However, if there is a concert nearby, I tend to go to the gym. If it's my birthday today, I would rather read a book. I can’t go to the gym and read a book at the same time.",
+        "pred_answer": "If it's a rainy day, I tend to go to the gym. On weekends, I usually read a book. But if it's both a rainy day and a weekend, I go to the gym instead. If there's also a community event, I read a book. However, if there's a concert nearby, I go to the gym. If it's someone's birthday today, I read a book. I can't go to the gym and read a book at the same time.",
+        "meteor_score": 0.8515652846287973
+    },
+    {
+        "answer": "If there is a community event, I can either take the train or rent a car. Usually, I choose to take the train. However, if a friend is in town, I rent a car instead. If my subscription is due, I tend to take the train again. I can’t take the train and rent a car at the same time.",
+        "pred_answer": "If there is a community event happening, I tend to take the train. However, if a friend is in town, I choose to rent a car instead. But if my subscription is due, I go back to taking the train. I can't take the train and rent a car at the same time.",
+        "meteor_score": 0.7667908276102898
+    },
+    {
+        "answer": "I can either pay my bills or book a ride share. Usually, I choose to pay my bills. I can’t pay my bills and book a ride share at the same time.",
+        "pred_answer": "I tend to pay bills. If I don't pay bills, I book a ride share instead.",
+        "meteor_score": 0.35297728667894407
+    },
+    {
+        "answer": "If it's the holiday season, I attend meetings. If it's lunchtime, I drive my car. But if it's both the holiday season and lunchtime, I usually attend meetings. However, if it's also the weekend, I prefer to drive my car instead. If I receive client feedback, I tend to attend meetings. If I have extended work hours, I choose to drive my car. I can’t attend meetings and drive my car at the same time.",
+        "pred_answer": "During the holiday season, I usually attend a meeting. If it's lunchtime, I tend to drive the car instead. However, if it's both the holiday season and lunchtime, I choose to attend a meeting. If it's also the weekend, I drive the car. But if there's client feedback, I attend the meeting again. I can't drive the car and attend the meeting at the same time.",
+        "meteor_score": 0.5995030515233508
+    },
+    {
+        "answer": "If it’s night time, I can either use the subway or meditate. Usually, I choose to use the subway. However, if I have an unexpected expense, I meditate instead. I can’t meditate and use the subway at the same time.",
+        "pred_answer": "At night, I usually use the subway. But if there's an unexpected expense, I tend to meditate instead. I can't use the subway and meditate at the same time.",
+        "meteor_score": 0.5494804937432761
+    },
+    {
+        "answer": "I can either reply to emails or organize my workspace. Usually, I choose to reply to emails. However, if it’s a windy day, I go back to organizing my workspace instead. If it’s the morning rush, I tend to reply to emails. I can’t reply to emails and organize my workspace at the same time.",
+        "pred_answer": "On a windy day, I tend to organize my workspace. But during the morning rush, I usually reply to emails. If it's windy, I prefer organizing my workspace over replying to emails. However, during the morning rush, I choose to reply to emails instead of organizing my workspace.",
+        "meteor_score": 0.5083637402734426
+    },
+    {
+        "answer": "I can either give a presentation or reply to emails. Usually, I choose to give the presentation. However, if it's a humid day, I tend to reply to emails instead. I can’t give a presentation and reply to emails at the same time.",
+        "pred_answer": "If it's a humid day, I tend to give a presentation. Otherwise, I reply to emails. I can't give a presentation and reply to emails simultaneously.",
+        "meteor_score": 0.5366393882166421
+    },
+    {
+        "answer": "If I have an unexpected guest, I can either make coffee or order a taxi. Generally, I prefer to make coffee. However, if there’s a snowstorm, I choose to order a taxi instead. On a hot day, I usually go back to making coffee. I can’t make coffee and order a taxi at the same time.",
+        "pred_answer": "If there's an unexpected guest, I usually make coffee. But if there's a snowstorm, I order a taxi instead. However, if it's a hot day, I make coffee. I can't make coffee and order a taxi at the same time.",
+        "meteor_score": 0.6073743594460983
+    },
+    {
+        "answer": "If I have financial aid, I can either use the subway or make coffee. Generally, I choose to use the subway. I can’t use the subway and make coffee at the same time.",
+        "pred_answer": "If I have financial aid, I tend to use the subway. Otherwise, I make coffee. I usually choose to use the subway over making coffee.",
+        "meteor_score": 0.5570051282051282
+    },
+    {
+        "answer": "I can either dispose of the trash or reply to emails. Generally, I choose to dispose of the trash. However, if there’s a team project due, I go back to replying to emails instead. If there’s a networking event, I usually dispose of the trash. I can’t dispose of the trash and reply to emails at the same time.",
+        "pred_answer": "If there is a team project due, I tend to dispose of trash. Otherwise, I usually reply to emails. But if there is a team project due, I opt to dispose of trash. If there is a networking event, I reply to emails instead. I can't dispose of trash and reply to emails simultaneously.",
+        "meteor_score": 0.6052844368340944
+    },
+    {
+        "answer": "If it's a hot day, I host a dinner party. If it's during the morning rush, I take an evening walk. But if it's both a hot day and during the morning rush, I usually host a dinner party. However, if I also have a job interview, I choose to take an evening walk instead. If it's a windy day, I tend to host a dinner party. But if it's early morning, I usually prefer to take an evening walk. I can’t host a dinner party and take an evening walk at the same time.",
+        "pred_answer": "On a hot day, I usually host a dinner party. If it's during the morning rush, I tend to go for an evening walk instead. However, if it's both a hot day and during the morning rush, I host a dinner party. If there's also a job interview, I opt for an evening walk. But if it's windy, I host a dinner party again. If it's early in the morning, I go for an evening walk. I can't host a dinner party and go for an evening walk at the same time.",
+        "meteor_score": 0.7768353439815302
+    },
+    {
+        "answer": "If I have an unexpected expense, I can either take the bus or prepare a report. Generally, I choose to take the bus. I can’t take the bus and prepare a report at the same time.",
+        "pred_answer": "If there is an unexpected expense, I tend to take the bus. Otherwise, I choose to prepare a report. I can't take the bus and prepare a report at the same time.",
+        "meteor_score": 0.7231437840484789
+    },
+    {
+        "answer": "If I have an unexpected expense, I can either take the train or do laundry. Generally, I choose to take the train. I can’t do laundry and take the train at the same time.",
+        "pred_answer": "If there is an unexpected expense, I tend to take the train. Otherwise, I choose to do the laundry. I can't take the train and do the laundry at the same time.",
+        "meteor_score": 0.6574938574938575
+    },
+    {
+        "answer": "I can either go shopping or book a flight. Usually, I choose to go shopping. But if it's the weekend, I book the flight instead. I can’t go shopping and book the flight at the same time.",
+        "pred_answer": "If it's the weekend, I usually go shopping. Otherwise, I tend to book a flight. I can't go shopping and book a flight at the same time.",
+        "meteor_score": 0.6109064464073383
+    },
+    {
+        "answer": "If there is an expensive event, I can either order a taxi or pay the bills. Usually, I choose to order a taxi. However, if I get a party invitation, I pay the bills instead. If there's a new restaurant to try, I go back to ordering a taxi. I can’t order a taxi and pay the bills at the same time.",
+        "pred_answer": "If there's an expensive event, I usually order a taxi. But if there's a party invitation, I pay bills instead. However, if there's a new restaurant to try, I order a taxi. I can't order a taxi and pay bills at the same time.",
+        "meteor_score": 0.6548618331053351
+    },
+    {
+        "answer": "I can either attend the workshop or buy groceries. Usually, I prefer to attend the workshop. However, if I have extended work hours, I choose to buy groceries instead. If I'm going through a relationship break, I tend to attend the workshop. I can’t attend the workshop and buy groceries at the same time.",
+        "pred_answer": "If there are extended work hours, I tend to buy groceries. Otherwise, I usually attend a workshop. However, if there is a relationship break, I buy groceries instead of attending the workshop.",
+        "meteor_score": 0.4116758614731437
+    },
+    {
+        "answer": "I can either meditate or travel abroad. Usually, I choose to meditate. I can’t meditate and travel abroad at the same time.",
+        "pred_answer": "I tend to meditate. If I don't meditate, I choose to travel abroad instead.",
+        "meteor_score": 0.3506944444444445
+    },
+    {
+        "answer": "If it’s nighttime, I visit the museum. If there’s a discount on a flight, I meditate. But if it’s both nighttime and there’s a discount on a flight, I usually visit the museum. However, if I also have a party invitation, I prefer to meditate instead. If today is my birthday, I usually visit the museum. But if I have a job interview, I prefer to meditate. If I have a new restaurant to try, I prefer to visit the museum. I can’t visit the museum and meditate at the same time.",
+        "pred_answer": "At night, I usually visit the museum. But if there's a discount on a flight, I tend to meditate instead. However, if there's also a party invitation, I visit the museum. If it's my birthday, I choose to meditate. But if I have a job interview, I visit the museum. I can't meditate and visit the museum at the same time.",
+        "meteor_score": 0.5362562315635339
+    },
+    {
+        "answer": "If the weather is nice, I go to the gym. If there’s an expensive event, I review documents. But if it’s both nice weather and there’s an expensive event, I usually choose to go to the gym. However, if I am also dealing with a relationship break, I prefer to review documents instead. If I have an unexpected guest, I tend to review documents. If it’s a windy day, I usually go back to choosing to review documents. If I have nice weather and it’s windy, I would rather go to the gym. I can’t go to the gym and review documents at the same time.",
+        "pred_answer": "When the weather is good, I tend to go to the gym. If there is an expensive event, I choose to review documents instead. However, if both the weather is good and there is an expensive event, I go to the gym. If there is also a relationship break, I review documents instead. But if there is an unexpected guest, I go to the gym. If it's a windy day, I review documents. I can't go to the gym and review documents at the same time.",
+        "meteor_score": 0.5906560588685015
+    },
+    {
+        "answer": "If there's a school reunion, I go to the park. If I'm moving house, I ride my bike. But if it's both a school reunion and I'm moving house, I usually go to the park. If I also went through a relationship break, I ride my bike instead. However, if there’s a hail storm, I tend to go to the park. I can’t ride my bike and go to the park at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to go to the park. If I am moving house, I usually ride a bike. But if there is both a school reunion and I am moving house, I go to the park instead. However, if there is also a relationship break, I ride a bike. If there is a hail storm, I go to the park. I can't ride a bike and go to the park at the same time.",
+        "meteor_score": 0.7669510832663449
+    },
+    {
+        "answer": "If I have a job interview, I go to the park. If I have a new restaurant to try, I read a book. But if I have both a job interview and a new restaurant to try, I usually go to the park. However, if I also have a vacation planned, I choose to read a book instead. I can’t go to the park and read a book at the same time.",
+        "pred_answer": "If I have a job interview, I go to the park. If there's a new restaurant I want to try, I read a book. But if I have both a job interview and a new restaurant to try, I tend to go to the park. If there's also a vacation planned, I read a book instead.",
+        "meteor_score": 0.543065693430657
+    },
+    {
+        "answer": "I can either reply to emails or ride my bike. Usually, I choose to reply to emails. I can’t reply to emails and ride my bike at the same time.",
+        "pred_answer": "I tend to reply to emails. If I don't reply to emails, I usually ride a bike instead.",
+        "meteor_score": 0.40597904624277453
+    },
+    {
+        "answer": "If a friend invites me, I can either attend a concert or explore the city. Usually, I choose to attend the concert. However, if I have a job interview, I explore the city instead. I can’t attend the concert and explore the city at the same time.",
+        "pred_answer": "If a friend invites me, I usually attend a concert. But if I have a job interview, I explore the city instead. I can’t attend a concert and explore the city at the same time.",
+        "meteor_score": 0.7017173423423423
+    },
+    {
+        "answer": "If I have a medical appointment, I update my project plan. If there is a snowstorm, I go for a swim. But if it's both a snowstorm and I have a medical appointment, I usually update my project plan. If it’s also my birthday, I prefer to go for a swim instead. However, if I have a new restaurant to try, I usually update my project plan. I can’t update my project plan and go for a swim at the same time.",
+        "pred_answer": "If I have a medical appointment, I update the project plan. If there's a snowstorm, I have a swim session. But if I have both a medical appointment and a snowstorm, I tend to update the project plan. If it's also my birthday, I have a swim session instead. However, if there's a new restaurant to try, I update the project plan. I can't update the project plan and have a swim session at the same time.",
+        "meteor_score": 0.7431402439024389
+    },
+    {
+        "answer": "I can either prepare a report or drive the car. Usually, I choose to prepare the report. However, if my boss is in the office, I drive the car instead. If there’s a project extension, I tend to prepare the report. I can’t prepare the report and drive the car at the same time.",
+        "pred_answer": "If I usually prepare a report. But if the boss is in the office, I tend to drive the car instead. However, if there is a project extension, I prepare the report again. I can't prepare a report and drive the car at the same time.",
+        "meteor_score": 0.6313489922573561
+    },
+    {
+        "answer": "If I have a school reunion, I go for a cycling session. If I’m on a low budget, I go to a restaurant. But if it's both a school reunion and I'm on a low budget, I usually choose to go for a cycling session. However, if I also have a medical appointment, I go to the restaurant instead. If there is an expensive event, I tend to go for a cycling session. But if I have an urgent deadline, I prefer to go to a restaurant. I can’t go for a cycling session and go to a restaurant at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to have a cycling session. If I am on a low budget, I choose to go to a restaurant instead. However, if there is a school reunion and I am on a low budget, I usually have a cycling session. If there is also a medical appointment, I go to a restaurant. But if it's an expensive event, I have a cycling session again. If there is an urgent deadline, I go to a restaurant. I can't have a cycling session and go to a restaurant at the same time.",
+        "meteor_score": 0.7404815943194534
+    },
+    {
+        "answer": "I can either visit the doctor or take the bus. Usually, I prefer to visit the doctor. However, if I miss a deadline, I choose to take the bus instead. I can’t visit the doctor and take the bus at the same time.",
+        "pred_answer": "If I miss the deadline, I visit the doctor. Otherwise, I take the bus. Usually, I visit the doctor, but if I miss the deadline, I take the bus instead.",
+        "meteor_score": 0.4912055335968379
+    },
+    {
+        "answer": "If I have a project extension, I can either go to the cinema or use the subway. Usually, I choose to go to the cinema. However, if it's night time, I tend to use the subway instead. I can’t go to the cinema and use the subway at the same time.",
+        "pred_answer": "If there is a project extension, I tend to go to the cinema. Otherwise, I usually use the subway, especially if it's nighttime. I can't go to the cinema and use the subway at the same time.",
+        "meteor_score": 0.606661980953956
+    },
+    {
+        "answer": "If there is a networking event, I can either meditate or use the subway. Generally, I choose to meditate. I can’t meditate and use the subway at the same time.",
+        "pred_answer": "When there is a networking event, I tend to meditate. Otherwise, I choose to use the subway. I can't meditate and use the subway at the same time.",
+        "meteor_score": 0.7569822888283378
+    },
+    {
+        "answer": "If I have a new neighbor, I rent a car. If I have a project extension, I make coffee. But if I have both a new neighbor and a project extension, I usually rent a car. However, if I also have a vacation planned, I prefer to make coffee instead. If there's an urgent deadline, I tend to rent a car. But if there's a hail storm, I usually make coffee. I can’t rent a car and make coffee at the same time.",
+        "pred_answer": "If I have a new neighbor, I rent a car. If there's a project extension, I make coffee. But if I have both a new neighbor and a project extension, I tend to rent a car. If there's also a vacation planned, I make coffee instead. However, if there's an urgent deadline, I rent a car again. But if there's a hail storm, I make coffee. I can't rent a car and make coffee at the same time.",
+        "meteor_score": 0.8811624082664508
+    },
+    {
+        "answer": "If my relationship is breaking, I travel abroad. If it's my wedding anniversary, I prepare a report. But if it’s both a relationship break and my wedding anniversary, I usually choose to travel abroad. However, if there is also a family gathering, I prepare the report instead. If I receive a party invitation, I tend to travel abroad. I can’t prepare a report and travel abroad at the same time.",
+        "pred_answer": "If there is a relationship break, I tend to travel abroad. If it's our wedding anniversary, I choose to prepare a report. But if both a relationship break and our anniversary happen, I usually travel abroad. If there's also a family gathering, I prepare a report instead. However, if there's a party invitation, I travel abroad. I can't travel abroad and prepare a report at the same time.",
+        "meteor_score": 0.7497982248985605
+    },
+    {
+        "answer": "If I receive client feedback, I can either buy groceries or dispose of the trash. Usually, I choose to buy groceries. However, if my subscription is due, I dispose of the trash instead. If I have a job interview, I go back to buying groceries. I can’t dispose of the trash and buy groceries at the same time.",
+        "pred_answer": "If there is client feedback, I usually buy groceries. Otherwise, I tend to dispose of the trash. However, if there is a subscription due, I dispose of the trash instead. But if there is a job interview, I buy groceries. I can't buy groceries and dispose of the trash at the same time.",
+        "meteor_score": 0.7236132726938831
+    },
+    {
+        "answer": "I can either pay the bills or take the bus. Usually, I choose to pay the bills. I can’t pay the bills and take the bus at the same time.",
+        "pred_answer": "I tend to pay bills. If I don't pay bills, I usually take the bus instead.",
+        "meteor_score": 0.29412144702842374
+    },
+    {
+        "answer": "If I have a team project due, I use the subway. If I have an unexpected expense, I pay my bills. But if I have both a team project due and an unexpected expense, I usually choose to use the subway. However, if today is my birthday, I prefer to pay my bills instead. If I'm on a low budget, I tend to use the subway. I can’t pay my bills and use the subway at the same time.",
+        "pred_answer": "If I have a team project due, I usually use the subway. If there's an unexpected expense, I pay the bills instead. But if both a project is due and there's an unexpected expense, I tend to use the subway. If it's also my birthday, I pay the bills. However, if the budget is low, I use the subway. I can't use the subway and pay the bills at the same time.",
+        "meteor_score": 0.6626120521238874
+    },
+    {
+        "answer": "I can either review documents or attend a workshop. Usually, I choose to review the documents. However, if I have financial aid, I go to the workshop instead. I can’t review documents and attend the workshop at the same time.",
+        "pred_answer": "If there is financial aid available, I tend to attend a workshop. Otherwise, I review documents. I can't attend a workshop and review documents at the same time.",
+        "meteor_score": 0.45655559015882907
+    },
+    {
+        "answer": "If I am going through a relationship break, I attend a workshop. If I have financial aid, I visit my family. But if I am experiencing both a relationship break and I have financial aid, I usually attend the workshop. However, if there is also a family emergency, I visit my family instead. I can’t attend the workshop and visit my family at the same time.",
+        "pred_answer": "If there is a relationship break, I tend to attend a workshop. If I receive financial aid, I usually visit family instead. However, if there is both a relationship break and financial aid, I attend a workshop. If there is also a family emergency, I visit family.",
+        "meteor_score": 0.510495112320434
+    },
+    {
+        "answer": "If it's the weekend, I can either go to the gym or prepare a report. Usually, I choose to go to the gym. However, if I have an important meeting, I prepare the report instead. I can’t go to the gym and prepare the report at the same time.",
+        "pred_answer": "On weekends, I usually go to the gym. But if there's an important meeting, I prepare a report instead. I can't go to the gym and prepare a report at the same time.",
+        "meteor_score": 0.5556616155590024
+    },
+    {
+        "answer": "If I get a tax refund, I can either read a book or go for a cycling session. Generally, I choose to read a book. I can’t read a book and go for a cycling session at the same time.",
+        "pred_answer": "If I receive a tax refund, I tend to read a book. Otherwise, I choose to have a cycling session. I can't read a book and have a cycling session at the same time.",
+        "meteor_score": 0.6855319343047598
+    },
+    {
+        "answer": "If there is a discount on a flight, I review documents. If there is a relationship break, I attend a workshop. But if both a discount on a flight and a relationship break are happening, I usually review documents. However, if it’s also nighttime, I prefer to attend the workshop instead. If it’s my wedding anniversary, I usually choose to review documents. I can’t attend a workshop and review documents at the same time.",
+        "pred_answer": "If there is a discount on the flight, I review documents. If there is a relationship break, I attend a workshop instead. But if there is both a discount on the flight and a relationship break, I tend to review documents. If it's also nighttime, I attend a workshop. However, if it's my wedding anniversary, I review documents. I can't review documents and attend a workshop at the same time.",
+        "meteor_score": 0.8070694898762778
+    },
+    {
+        "answer": "I can either make coffee or drive the car. Usually, I choose to make coffee. However, if I have missed a deadline, I go ahead and drive the car instead. I can’t make coffee and drive the car at the same time.",
+        "pred_answer": "If I missed the deadline, I tend to drive the car. Otherwise, I usually make coffee. I can't make coffee and drive the car at the same time.",
+        "meteor_score": 0.5704868154158215
+    },
+    {
+        "answer": "If I have an important meeting, I cook dinner. If I receive a tax refund, I go to the theater. But if I have both an important meeting and a tax refund, I usually cook dinner. However, if it’s also a hot day, I choose to go to the theater instead. If there is a morning rush, I tend to cook dinner. I can’t cook dinner and go to the theater at the same time.",
+        "pred_answer": "If I have an important meeting, I tend to cook dinner. If there's a tax refund, I choose to go to the theater. But if it's both an important meeting and a tax refund, I usually cook dinner. If it's also a hot day, I go to the theater instead. However, if it's a morning rush, I go back to cooking dinner. I can't cook dinner and go to the theater at the same time.",
+        "meteor_score": 0.8562538407189741
+    },
+    {
+        "answer": "I can either attend the concert or drive the car. Generally, I choose to attend the concert. I can’t attend the concert and drive the car at the same time.",
+        "pred_answer": "I tend to attend concerts. If I don't attend a concert, then I choose to drive a car instead. I can't attend a concert and drive a car at the same time.",
+        "meteor_score": 0.597183855125844
+    },
+    {
+        "answer": "If I have a job interview, I can either cook dinner or water the plants. Usually, I choose to cook dinner. However, if there’s a community event, I water the plants instead. I can’t water the plants and cook dinner at the same time.",
+        "pred_answer": "If I have a job interview, I usually cook dinner. Otherwise, I water the plants. But if there's a community event, I water the plants instead of cooking dinner. I can't water the plants and cook dinner at the same time.",
+        "meteor_score": 0.7713203374407017
+    },
+    {
+        "answer": "If I have a low budget, I can either go to the cinema or attend a yoga session. Usually, I choose to go to the cinema. However, if I have a good investment opportunity, I opt for the yoga session instead. I can’t go to the cinema and attend a yoga session at the same time.",
+        "pred_answer": "If I have a low budget, I tend to go to the cinema. Otherwise, I usually opt for a yoga session. However, if it's a good investment, I go to the cinema instead of doing yoga.",
+        "meteor_score": 0.4764716609209875
+    },
+    {
+        "answer": "If my boss is in the office, I can either attend a workshop or schedule a meeting. Generally, I choose to attend the workshop. I can’t attend the workshop and schedule a meeting at the same time.",
+        "pred_answer": "If the boss is in the office, I attend a workshop. Otherwise, I schedule a meeting. I tend to attend a workshop over scheduling a meeting.",
+        "meteor_score": 0.5038180690882573
+    },
+    {
+        "answer": "I can either meditate or visit family. Usually, I prefer to meditate. However, if there’s an expensive event, I choose to visit family instead. If I'm feeling sick, I tend to meditate instead of visiting family. I can’t meditate and visit family at the same time.",
+        "pred_answer": "If there is an expensive event, I tend to meditate. But if I'm feeling sick, I choose to visit family instead. I can't meditate and visit family at the same time.",
+        "meteor_score": 0.5677015361406114
+    },
+    {
+        "answer": "I can either go to the gym or review documents. Usually, I prefer to go to the gym. However, if I have a party invitation, I choose to review the documents instead. I can’t go to the gym and review documents at the same time.",
+        "pred_answer": "If there is a party invitation, I tend to review documents. Otherwise, I usually go to the gym. I can't review documents and go to the gym at the same time.",
+        "meteor_score": 0.5244994558329338
+    },
+    {
+        "answer": "If it's a humid day, I can either go to the park or have a cycling session. Usually, I choose to go to the park. I can’t go to the park and have a cycling session at the same time.",
+        "pred_answer": "On a humid day, I tend to go to the park. Alternatively, I choose to have a cycling session. I can't go to the park and have a cycling session at the same time.",
+        "meteor_score": 0.7300155655482532
+    },
+    {
+        "answer": "If I have an urgent deadline, I go for a picnic. If there is a discount on a flight, I reply to emails. But if I have both an urgent deadline and a discount on a flight, I usually choose to go for a picnic. However, if I also have a project extension, I reply to emails instead. I can’t go for a picnic and reply to emails at the same time.",
+        "pred_answer": "If there's an urgent deadline, I tend to take a picnic. If there's a discount on a flight, I choose to reply to emails. However, if there's both an urgent deadline and a flight discount, I usually take a picnic. But if there's also a project extension, I reply to emails instead.",
+        "meteor_score": 0.5743095692518901
+    },
+    {
+        "answer": "If it’s a rainy day, I can either finish my report or dispose of the trash. Usually, I choose to finish my report. However, if there’s a networking event, I dispose of the trash instead. I can’t finish my report and dispose of the trash at the same time.",
+        "pred_answer": "If it's a rainy day, I tend to finish the report. Otherwise, I usually dispose of the trash. But if there's a networking event, I choose to dispose of the trash instead of finishing the report. I can't dispose of the trash and finish the report at the same time.",
+        "meteor_score": 0.6521353889774942
+    },
+    {
+        "answer": "If it's a rainy day, I go to the theater. If there's a good investment opportunity, I go to the bar. But if it’s both a rainy day and there’s a good investment, I usually go to the theater. However, if I also have a team project due, I prefer to go to the bar instead. If I’m going through a relationship break, I choose to go to the bar. But if I prefer going to the theater, I go back to that. I can’t go to the theater and the bar at the same time.",
+        "pred_answer": "If it's a rainy day, I tend to go to the theater. If it's a good investment, I choose to go to the bar. But if it's both a rainy day and a good investment, I usually go to the theater. However, if there's also a team project due, I go to the bar instead. If there's a relationship break, I go to the theater. I can't go to the bar and the theater at the same time.",
+        "meteor_score": 0.6288770400219171
+    },
+    {
+        "answer": "If I have a project extension, I go to the gym. If I have an important meeting, I make coffee. But if I have both a project extension and an important meeting, I usually go to the gym. However, if I also have a low budget, I make coffee instead. If there is a snowstorm, I tend to go to the gym. But if I miss a deadline, I choose to make coffee. If I have missed a deadline and there is a snowstorm, I usually make coffee. I can’t go to the gym and make coffee at the same time.",
+        "pred_answer": "If I have a project extension, I go to the gym. If there's an important meeting, I make coffee. But if I have both a project extension and an important meeting, I tend to go to the gym. If there's also a low budget, I make coffee instead. However, if there's a snowstorm, I go to the gym again. But if I end up missing the deadline, I make coffee. I can't go to the gym and make coffee at the same time.",
+        "meteor_score": 0.6706432093204024
+    },
+    {
+        "answer": "If a friend invites me, I can either book a flight or call a client. Generally, I choose to book a flight. I can’t book a flight and call a client at the same time.",
+        "pred_answer": "If a friend invites me, I tend to book a flight. Otherwise, I choose to call the client. I can't book a flight and call the client at the same time.",
+        "meteor_score": 0.677710843373494
+    },
+    {
+        "answer": "If it’s a hot day, I can either organize my workspace or join a fitness class. Generally, I choose to organize my workspace. However, if it’s dusk, I join the fitness class instead. I can’t organize my workspace and join a fitness class at the same time.",
+        "pred_answer": "On a hot day, I tend to organize my workspace. If it's dusk, I choose to join a fitness class instead.",
+        "meteor_score": 0.3431369026230687
+    },
+    {
+        "answer": "If there is a hail storm, I can either visit the doctor or go for a morning run. Usually, I choose to visit the doctor. However, if I got a bonus, I go for a morning run instead. I can’t visit the doctor and go for a morning run at the same time.",
+        "pred_answer": "If there is a hail storm, I tend to visit the doctor. But if I received a bonus, I usually go for a morning run instead. I can’t visit the doctor and go for a morning run at the same time.",
+        "meteor_score": 0.742853520217622
+    },
+    {
+        "answer": "I can either read a book or buy groceries. Usually, I prefer to read a book. However, if it’s dusk, I choose to buy groceries instead. I can’t read a book and buy groceries at the same time.",
+        "pred_answer": "If it's dusk, I tend to buy groceries. Otherwise, I usually read a book. I can't buy groceries and read a book at the same time.",
+        "meteor_score": 0.5537974683544303
+    },
+    {
+        "answer": "If my boss is in the office, I take a picnic. If I have a vacation planned, I call a client. But if both my boss is in the office and I have a vacation planned, I usually take a picnic. However, if I also have a family emergency, I call the client instead. I can’t take a picnic and call a client at the same time.",
+        "pred_answer": "If my boss is in the office, I tend to take a picnic. If I have a planned vacation, I choose to call the client. However, if my boss is in the office, I have a vacation planned, and there's a family emergency, I call the client instead. I can't take a picnic and call the client at the same time.",
+        "meteor_score": 0.6997786107158784
+    },
+    {
+        "answer": "If there is a hail storm, I can either read a book or go to a restaurant. Generally, I choose to read a book. I can’t read a book and go to a restaurant at the same time.",
+        "pred_answer": "If there's a hail storm, I tend to read a book. Otherwise, I go to a restaurant. I can't read a book and go to a restaurant at the same time.",
+        "meteor_score": 0.7099416077458351
+    },
+    {
+        "answer": "If there is a community event, I can either go to the park or book a flight. Usually, I choose to go to the park. I can’t go to the park and book a flight at the same time.",
+        "pred_answer": "If there is a community event, I tend to go to the park. Otherwise, I choose to book a flight. I can't go to the park and book a flight at the same time.",
+        "meteor_score": 0.7816409011801817
+    },
+    {
+        "answer": "If there is a team project due, I can either buy groceries or go to a restaurant. Generally, I choose to buy groceries. I can’t go to a restaurant and buy groceries at the same time.",
+        "pred_answer": "If I have a team project due, I tend to buy groceries. Otherwise, I go to a restaurant. I can't buy groceries and go to a restaurant at the same time.",
+        "meteor_score": 0.6974603891386724
+    },
+    {
+        "answer": "I can either travel abroad or have a swim session. Generally, I choose to travel abroad. I can’t travel abroad and have a swim session at the same time.",
+        "pred_answer": "I tend to travel abroad. However, I go for a swim session instead. I can't travel abroad and have a swim session at the same time.",
+        "meteor_score": 0.7107052023121386
+    },
+    {
+        "answer": "If it’s dusk, I can either call a client or attend a concert. Generally, I choose to call the client. I can’t call the client and attend the concert at the same time.",
+        "pred_answer": "When it's dusk, I usually call the client. Otherwise, I tend to attend a concert. I can't call the client and attend a concert at the same time.",
+        "meteor_score": 0.6020994959727233
+    },
+    {
+        "answer": "If it's a hot day, I can either ride my bike or join a fitness class. Usually, I choose to ride my bike. I can't ride my bike and join a fitness class at the same time.",
+        "pred_answer": "On a hot day, I tend to either ride my bike or join a fitness class. Usually, I choose to ride my bike over joining the fitness class. I can't ride my bike and join the fitness class at the same time.",
+        "meteor_score": 0.8745876053568361
+    },
+    {
+        "answer": "I can either go to the gym or call a client. Usually, I prefer to go to the gym. However, if I have a new neighbor, I choose to call the client instead. I can’t go to the gym and call the client at the same time.",
+        "pred_answer": "If there is a new neighbor, I tend to go to the gym. Otherwise, I choose to call the client. I can't go to the gym and call the client at the same time.",
+        "meteor_score": 0.6209291675147567
+    },
+    {
+        "answer": "If there is a snowstorm, I can either take a picnic or review documents. Generally, I choose to take a picnic. However, if there is a family emergency, I review documents instead. On the other hand, if my boss is in the office, I tend to take a picnic again. I can’t take a picnic and review documents at the same time.",
+        "pred_answer": "If there is a snowstorm, I tend to either take a picnic or review documents. But if there's a family emergency, I choose to review documents instead. However, if the boss is in the office, I take a picnic. I can't take a picnic and review documents at the same time.",
+        "meteor_score": 0.745551306756594
+    },
+    {
+        "answer": "If I have a project extension, I pay my bills. If I have a planned vacation, I dispose of the trash. But if I have both a project extension and a planned vacation, I usually pay my bills. If it’s also dusk, I prefer to dispose of the trash instead. However, if I have a team project due, I tend to pay my bills. But if the weather is nice, I usually prefer to dispose of the trash. I can’t pay my bills and dispose of the trash at the same time.",
+        "pred_answer": "If I have a project extension, I pay bills. If I have a planned vacation, I dispose of trash. But if I have both a project extension and a planned vacation, I tend to pay bills. If it's dusk as well, I dispose of trash instead. However, if there's a team project due, I pay bills again. But if the weather is good, I dispose of trash. I can't pay bills and dispose of trash at the same time.",
+        "meteor_score": 0.7677275754282211
+    },
+    {
+        "answer": "If it's lunchtime, I go to the park. If there’s a discount on a flight, I use the subway. But if it’s both lunchtime and there’s a discount on a flight, I usually go to the park. However, if I also have an important meeting, I use the subway instead. I can’t go to the park and use the subway at the same time.",
+        "pred_answer": "During lunchtime, I tend to go to the park. But if there's a discount on flights, I choose to use the subway instead. However, if it's both lunchtime and there's a discount on flights, I go to the park. If there's also an important meeting, I opt for using the subway.",
+        "meteor_score": 0.520126636660865
+    },
+    {
+        "answer": "If there is a snowstorm, I dispose of the trash. If my boss is in the office, I buy groceries. But if it’s both a snowstorm and my boss is in the office, I usually dispose of the trash. However, if I also have an important meeting, I choose to buy groceries instead. If I have a new restaurant to try, I tend to dispose of the trash. But if it’s the holiday season, I usually buy groceries. I can’t dispose of the trash and buy groceries at the same time.",
+        "pred_answer": "If there's a snowstorm, I dispose of the trash. If my boss is in the office, I buy groceries. But if there's a snowstorm and my boss is in the office, I tend to dispose of the trash. If there's also an important meeting, I buy groceries instead. However, if there's a new restaurant to try, I dispose of the trash. But if it's the holiday season, I buy groceries. I can't dispose of the trash and buy groceries at the same time.",
+        "meteor_score": 0.8324042790843292
+    },
+    {
+        "answer": "If there is a school reunion, I can either meditate or travel abroad. Usually, I choose to meditate. However, if there’s a networking event, I travel abroad instead. I can’t meditate and travel abroad at the same time.",
+        "pred_answer": "If there is a school reunion, I tend to meditate. Otherwise, if there is a networking event, I choose to travel abroad. If there is a networking event, I usually travel abroad. I can't meditate and travel abroad at the same time.",
+        "meteor_score": 0.7462064693755159
+    },
+    {
+        "answer": "If I am moving house, I can either clean the house or go to the park. Usually, I choose to clean the house. However, if I have financial aid, I go to the park instead. I can’t go to the park and clean the house at the same time.",
+        "pred_answer": "When moving house, I usually clean the house. However, if there is financial aid available, I tend to go to the park instead. I can't clean the house and go to the park at the same time.",
+        "meteor_score": 0.6064344014990313
+    },
+    {
+        "answer": "If I have financial aid, I visit the doctor. If there is a family emergency, I meditate. But if I have both financial aid and a family emergency, I usually visit the doctor. However, if I also receive client feedback, I prefer to meditate instead. If I am moving house, I usually choose to visit the doctor. I can’t meditate and visit the doctor at the same time.",
+        "pred_answer": "If I receive financial aid, I tend to visit the doctor. In case of a family emergency, I usually meditate. However, if both financial aid and a family emergency are present, I visit the doctor. But if there's also client feedback, I meditate instead. If I am moving house, I go back to visiting the doctor. I cannot visit the doctor and meditate simultaneously.",
+        "meteor_score": 0.7573933449521488
+    },
+    {
+        "answer": "If I have an important meeting, I take a picnic. If there is an unexpected expense, I go for a morning run. But if I have both an important meeting and an unexpected expense, I usually take a picnic. However, if I also have a job interview, I prefer to go for a morning run instead. If I am moving house, I tend to take a picnic. I can’t take a picnic and go for a morning run at the same time.",
+        "pred_answer": "If I have an important meeting, I tend to take a picnic. If there's an unexpected expense, I usually go for a morning run. But if there's both an important meeting and an unexpected expense, I go for a picnic. If there's also a job interview, I opt for a morning run instead. However, if I'm moving house, I go for a picnic. I can't take a picnic and go for a morning run at the same time.",
+        "meteor_score": 0.8578910796157183
+    },
+    {
+        "answer": "If it's the afternoon, I can either finish my report or reply to emails. Generally, I choose to finish my report. I can’t finish my report and reply to emails at the same time.",
+        "pred_answer": "If it's the afternoon, I tend to finish the report. Otherwise, I reply to emails. I can't finish the report and reply to emails simultaneously.",
+        "meteor_score": 0.5602540049069128
+    },
+    {
+        "answer": "If the weather is good, I take the bus. If my boss is in the office, I plan my meals. But if it’s both good weather and my boss is in the office, I usually take the bus. If there’s also a community event, I plan my meals instead. However, if I receive a tax refund, I tend to take the bus. If I missed a deadline, I prefer to plan my meals. If I have missed a deadline and received a tax refund, I usually plan my meals. I can’t take the bus and plan my meals at the same time.",
+        "pred_answer": "If the weather is good and the boss is in the office, I usually take the bus. But if there's also a community event, I plan meals instead. However, if I expect a tax refund, I take the bus again. But if I've missed a deadline, I plan meals. I can't take the bus and plan meals at the same time.",
+        "meteor_score": 0.49367922709293116
+    },
+    {
+        "answer": "If it's the weekend, I update the project plan. If it's a windy day, I do laundry. But if it's both the weekend and a windy day, I usually prefer to update the project plan. However, if I am also going through a relationship break, I do laundry instead. If my boss is in the office, I tend to update the project plan. But if I have an unexpected guest, I usually do laundry. I can’t do laundry and update the project plan at the same time.",
+        "pred_answer": "If it's the weekend, I update the project plan. On a windy day, I do the laundry. But if it's both the weekend and a windy day, I tend to update the project plan. If there's also a relationship break, I do the laundry instead. However, if the boss is in the office, I update the project plan again. But if there's an unexpected guest, I do the laundry. I can't update the project plan and do the laundry at the same time.",
+        "meteor_score": 0.779204077815189
+    },
+    {
+        "answer": "If it’s the morning rush, I cycle to work. If I’ve missed a deadline, I review documents. But if it’s both the morning rush and I’ve missed a deadline, I usually choose to cycle to work. However, if I’m also going through a relationship break, I prefer to review documents instead. If I get a tax refund, I usually choose to cycle to work. I can’t cycle to work and review documents at the same time.",
+        "pred_answer": "If there's a morning rush, I tend to cycle to work. If a deadline is missed, I review documents instead. But if there's both a morning rush and a missed deadline, I usually cycle to work. If there's also a relationship break, I review documents. However, if there's a tax refund, I cycle to work. I can't cycle to work and review documents at the same time.",
+        "meteor_score": 0.6544798407167746
+    },
+    {
+        "answer": "If I have an important meeting, I attend the meeting. If there’s a family emergency, I reply to emails. But if it’s both an important meeting and a family emergency, I usually attend the meeting. However, if I also receive client feedback, I prefer to reply to emails instead. If it’s my wedding anniversary, I tend to attend the meeting. I can’t attend the meeting and reply to emails at the same time.",
+        "pred_answer": "If there's an important meeting, I attend it. If there's a family emergency, I reply to emails instead. But if it's both an important meeting and a family emergency, I tend to attend the meeting. If it's also about client feedback, I reply to emails. However, if it's our wedding anniversary, I attend the meeting. I can't reply to emails and attend the meeting simultaneously.",
+        "meteor_score": 0.6663886424134872
+    },
+    {
+        "answer": "If today is my birthday, I go to a restaurant. If I have a team project due, I join a fitness class. But if it’s both my birthday and I have a project due, I usually choose to go to the restaurant. If I also have extended work hours, I prefer to join the fitness class instead. However, if there’s an urgent deadline, I tend to go to the restaurant. If my boss is in the office, I usually choose to join the fitness class. If I have a new preference in that situation, I would rather go to the restaurant. I can’t go to a restaurant and join a fitness class at the same time.",
+        "pred_answer": "If it's my birthday today, I go to a restaurant. If I have a team project due, I join a fitness class. Usually, if it's my birthday and I have a project due, I go to a restaurant. But if it's my birthday, I have a project due, and I'm working extended hours, I join a fitness class instead. If there's an urgent deadline, I go to a restaurant again. But if my boss is in the office, I join a fitness class. I can't go to a restaurant and join a fitness class at the same time.",
+        "meteor_score": 0.6038256008219964
+    },
+    {
+        "answer": "If there is a morning rush, I can either go to the restaurant or visit the doctor. Usually, I choose to go to the restaurant. However, if I have a good investment opportunity, I visit the doctor instead. On the other hand, if I have a project extension, I go to the restaurant again. I can’t go to the restaurant and visit the doctor at the same time.",
+        "pred_answer": "If there's a morning rush, I either go to a restaurant or visit the doctor. Usually, I go to a restaurant. But if it's a good investment, I visit the doctor instead. However, if there's a project extension, I go to a restaurant again. I can't go to a restaurant and visit the doctor at the same time.",
+        "meteor_score": 0.7022471910112359
+    },
+    {
+        "answer": "If there is a hail storm, I schedule a meeting. If there is a snowstorm, I take the bus. But if it’s both a hail storm and a snowstorm, I usually schedule the meeting. However, if I also have a team project due, I take the bus instead. I can’t schedule a meeting and take the bus at the same time.",
+        "pred_answer": "If there is a hail storm, I schedule a meeting. If there is a snowstorm, I take the bus. But if there is both a hail storm and a snowstorm, I tend to schedule a meeting. I can’t take the bus and schedule a meeting at the same time.",
+        "meteor_score": 0.7001475605260153
+    },
+    {
+        "answer": "I can either go to the cinema or visit the doctor. Usually, I choose to go to the cinema. However, if there’s a new restaurant I want to try, I visit the doctor instead. If I have a team project due, I tend to go to the cinema. I can’t go to the cinema and visit the doctor at the same time.",
+        "pred_answer": "If there's a new restaurant to try, I tend to visit the doctor. But if there's a team project due, I go to the cinema instead. I can't visit the doctor and go to the cinema at the same time.",
+        "meteor_score": 0.5446058091286309
+    },
+    {
+        "answer": "If the weather is good, I take the bus. If I have a new neighbor, I attend the meeting. But if it’s both good weather and I have a new neighbor, I usually take the bus. If I also have a project extension, I attend the meeting instead. However, if there’s a snowstorm, I prefer to attend the meeting. If I have an urgent deadline, I choose to take the bus. If I have a new neighbor and it's good weather, I can’t take the bus and attend the meeting at the same time.",
+        "pred_answer": "When the weather is good and I have a new neighbor, I tend to take the bus. But if I also have a project extension, I choose to attend the meeting instead. However, if there's a snowstorm, I go back to taking the bus. If there's an urgent deadline, I go back to attending the meeting. I can't take the bus and attend the meeting at the same time.",
+        "meteor_score": 0.5275827382462754
+    },
+    {
+        "answer": "If it’s the weekend, I can either buy groceries or take the train. Usually, I choose to buy groceries. However, if it’s night time, I take the train instead. I can’t buy groceries and take the train at the same time.",
+        "pred_answer": "During the weekend, I tend to buy groceries. But if it's nighttime, I choose to take the train instead. I can't buy groceries and take the train at the same time.",
+        "meteor_score": 0.552428601209089
+    },
+    {
+        "answer": "If I receive a tax refund, I water the plants. If the weather is good, I meditate. But if it’s both a good day and I have a tax refund, I usually water the plants. However, if I also got a bonus, I prefer to meditate instead. If there’s an expensive event, I tend to water the plants. But if I have a subscription due, I choose to meditate. If I have a new subscription to consider, I usually prefer to water the plants. I can’t water the plants and meditate at the same time.",
+        "pred_answer": "If I receive a tax refund, I water the plants. When the weather is good, I tend to meditate. But if I have both a tax refund and good weather, I usually water the plants. If I also received a bonus, I meditate instead. However, if there's an expensive event, I water the plants again. If there's a subscription due, I meditate. I can't water the plants and meditate at the same time.",
+        "meteor_score": 0.5851866253343846
+    },
+    {
+        "answer": "If it's a humid day, I can either explore the city or cook dinner. Usually, I choose to explore the city. However, if I receive feedback from a client, I cook dinner instead. If there's a family gathering, I go back to exploring the city. I can’t explore the city and cook dinner at the same time.",
+        "pred_answer": "On a humid day, I usually explore the city. But if there is client feedback, I tend to cook dinner instead. However, if there is a family gathering, I go back to exploring the city. I can't explore the city and cook dinner at the same time.",
+        "meteor_score": 0.6724370503597121
+    },
+    {
+        "answer": "If there is a family emergency, I go to the park. If I got a bonus, I attend a meeting. But if I have both a family emergency and got a bonus, I usually go to the park. If I also have a medical appointment, I attend the meeting instead. However, if there is a school reunion, I tend to go to the park. If it’s a hot day, I prefer to attend the meeting. I can’t go to the park and attend a meeting at the same time.",
+        "pred_answer": "If there is a family emergency, I tend to go to the park. If I receive a bonus, I choose to attend a meeting instead. But if there is both a family emergency and a bonus, I usually go to the park. If there is also a medical appointment, I attend the meeting. However, if there is a school reunion, I go to the park again. But if it's a hot day, I attend the meeting. I can’t go to the park and attend the meeting at the same time.",
+        "meteor_score": 0.8239133738526346
+    },
+    {
+        "answer": "If my friend is in town, I make coffee. If I have a party invitation, I water the plants. But if both my friend is in town and I have a party invitation, I usually make coffee. However, if it’s early morning, I prefer to water the plants instead. If I am moving house, I tend to water the plants. But if it’s my wedding anniversary, I usually make coffee. I can’t make coffee and water the plants at the same time.",
+        "pred_answer": "If I have a friend in town, I make coffee. If there's a party invitation, I water plants. But if both my friend is in town and there's a party invitation, I tend to make coffee. If it's also early morning, I water plants instead. However, if I'm moving house, I make coffee again. But if it's my wedding anniversary, I water plants. I can't make coffee and water plants at the same time.",
+        "meteor_score": 0.786199161519235
+    },
+    {
+        "answer": "If it's the morning rush, I clean the house. If I receive a tax refund, I buy groceries. But if it’s both the morning rush and I have a tax refund, I usually clean the house. If I also have a good investment opportunity, I prefer to buy groceries instead. However, if it’s a hot day, I tend to clean the house. If I have a new restaurant to try, I would rather buy groceries. I can’t clean the house and buy groceries at the same time.",
+        "pred_answer": "If I'm in a morning rush, I tend to clean the house. If I have a tax refund, I usually buy groceries. But if it's a good investment as well, I clean the house instead. However, if it's a hot day, I buy groceries. I can't clean the house and buy groceries at the same time.",
+        "meteor_score": 0.5447112392784309
+    },
+    {
+        "answer": "I can either submit my timesheet or host a dinner party. Usually, I prefer to submit my timesheet. However, if it's the holiday season, I choose to host the dinner party instead. I can’t submit my timesheet and host the dinner party at the same time.",
+        "pred_answer": "If it's the holiday season, I usually host a dinner party. Otherwise, I tend to submit my timesheet. I can't host a dinner party and submit my timesheet at the same time.",
+        "meteor_score": 0.5715157366163885
+    },
+    {
+        "answer": "I can either meditate or book a ride-share. Generally, I prefer to meditate. However, if I got a bonus, I choose to book a ride-share instead. If it's during the morning rush, I usually meditate. I can’t meditate and book a ride-share at the same time.",
+        "pred_answer": "If I got a bonus, I usually book a ride-share. Otherwise, during the morning rush, I tend to meditate. I can't book a ride-share and meditate at the same time.",
+        "meteor_score": 0.5626191989828355
+    },
+    {
+        "answer": "I can either go to the restaurant or visit the museum. Usually, I prefer to go to the restaurant. However, if there is a community event, I visit the museum instead. If I've received a bonus, I tend to go to the restaurant. I can’t go to the restaurant and visit the museum at the same time.",
+        "pred_answer": "If there is a community event happening, I tend to go to a restaurant. Otherwise, I usually visit a museum. But if I receive a bonus, I go to a restaurant instead. I can't go to a restaurant and visit a museum at the same time.",
+        "meteor_score": 0.5846036118763391
+    },
+    {
+        "answer": "I can either visit the museum or attend a workshop. Usually, I prefer to visit the museum. However, during the morning rush, I choose to attend the workshop instead. If there’s a community event, I tend to visit the museum instead. I can’t visit the museum and attend the workshop at the same time.",
+        "pred_answer": "If there's a morning rush, I usually attend a workshop. Otherwise, I tend to visit a museum. But if there's a community event, I visit the museum instead. I can't attend a workshop and visit the museum at the same time.",
+        "meteor_score": 0.527637614678899
+    },
+    {
+        "answer": "If there is a family gathering, I can either explore the city or update the project plan. Usually, I choose to explore the city. However, if there is an urgent deadline, I update the project plan instead. If I have an unexpected expense, I go back to exploring the city. I can’t explore the city and update the project plan at the same time.",
+        "pred_answer": "If there's a family gathering, I tend to explore the city. Otherwise, I usually update the project plan. But if there's an urgent deadline, I update the project plan instead. If there's an unexpected expense, I explore the city. I can't explore the city and update the project plan at the same time.",
+        "meteor_score": 0.7279388529804043
+    },
+    {
+        "answer": "If there is a discount on a flight, I go to the bar. If I missed a deadline, I attend a meeting. But if I have both a discount on a flight and I missed a deadline, I usually go to the bar. However, if I also have extended work hours, I attend the meeting instead. I can’t go to the bar and attend a meeting at the same time.",
+        "pred_answer": "If there is a discount on the flight, I tend to go to the bar. If a deadline is missed, I usually attend the meeting. But if there is both a discount on the flight and a missed deadline, I go to the bar instead. However, if there are also extended work hours, I attend the meeting. I can’t go to the bar and attend the meeting at the same time.",
+        "meteor_score": 0.8125159772033504
+    },
+    {
+        "answer": "I can either explore the city or submit my timesheet. Usually, I prefer to explore the city. However, if I have a good investment opportunity, I choose to submit my timesheet instead. I can’t explore the city and submit my timesheet at the same time.",
+        "pred_answer": "If it's a good investment, I tend to submit my timesheet. Otherwise, I usually explore the city. I can't explore the city and submit my timesheet at the same time.",
+        "meteor_score": 0.5794931586162438
+    },
+    {
+        "answer": "I can either book a flight or read a book. Usually, I choose to book a flight. I can’t book a flight and read a book at the same time.",
+        "pred_answer": "I tend to book a flight. If I don't book a flight, I read a book instead.",
+        "meteor_score": 0.43478260869565216
+    },
+    {
+        "answer": "If there is a family gathering, I clean the house. If there is a concert nearby, I read a book. But if there is both a family gathering and a concert nearby, I usually clean the house. However, if I also have a medical appointment, I prefer to read a book instead. If there is a discount on a flight, I tend to clean the house. I can’t clean the house and read a book at the same time.",
+        "pred_answer": "If there's a family gathering, I tend to clean the house. If there's a concert nearby, I usually read a book. But if there's both a family gathering and a concert nearby, I clean the house. If there's also a medical appointment, I read a book instead. However, if there's a discount on a flight, I clean the house again. I can't clean the house and read a book at the same time.",
+        "meteor_score": 0.8678487315124414
+    },
+    {
+        "answer": "If it's a hot day, I can either visit the museum or book a flight. Generally, I choose to visit the museum. I can’t visit the museum and book a flight at the same time.",
+        "pred_answer": "On a hot day, I tend to visit the museum. Otherwise, I choose to book a flight. I can't visit the museum and book a flight at the same time.",
+        "meteor_score": 0.7047149986866299
+    },
+    {
+        "answer": "If there is a concert nearby, I take an evening walk. If I have a party invitation, I go to the theater. But if I have both a concert nearby and a party invitation, I usually choose to take an evening walk. However, if it’s also my wedding anniversary, I prefer to go to the theater instead. If it’s a humid day, I tend to take an evening walk. But if I have a wedding anniversary, I would rather go to the theater. I can’t go to the theater and take an evening walk at the same time.",
+        "pred_answer": "If there's a concert nearby, I usually go for an evening walk. If there's a party invitation, I tend to go to the theater instead. But if there's both a concert nearby and a party invitation, I go for an evening walk. However, if there's a wedding anniversary as well, I choose to go to the theater. If it's a humid day, I prefer going to the theater. I can't go to the theater and have an evening walk at the same time.",
+        "meteor_score": 0.6608615708688006
+    },
+    {
+        "answer": "If I have a vacation planned, I can either explore the city or go to the theater. Generally, I choose to explore the city. However, if there’s an urgent deadline, I go to the theater instead. I can’t explore the city and go to the theater at the same time.",
+        "pred_answer": "If I have a vacation planned, I usually explore the city. But if there's an urgent deadline, I go to the theater instead. I can't explore the city and go to the theater at the same time.",
+        "meteor_score": 0.6438597180994319
+    },
+    {
+        "answer": "I can either clean the house or have a yoga session. Usually, I choose to clean the house. I can’t clean the house and have a yoga session at the same time.",
+        "pred_answer": "I tend to clean the house. If not, I do a yoga session instead.",
+        "meteor_score": 0.2375425564840606
+    },
+    {
+        "answer": "I can either plan my meals or go shopping. Usually, I prefer to plan my meals. However, if I got a bonus, I choose to go shopping instead. If it's lunchtime, I tend to plan my meals. I can’t plan my meals and go shopping at the same time.",
+        "pred_answer": "If I received a bonus, I usually go shopping. Otherwise, during lunchtime, I tend to plan meals. I can't go shopping and plan meals at the same time.",
+        "meteor_score": 0.47473363774733646
+    },
+    {
+        "answer": "If there is an expensive event, I book a ride share. If my boss is in the office, I finish my report. However, if both the expensive event is happening and my boss is in the office, I usually book a ride share. But if I also have an unexpected expense, I finish my report instead. If the weather is good, I tend to book a ride share. I can’t finish my report and book a ride share at the same time.",
+        "pred_answer": "If there is an expensive event, I usually book a ride share. If the boss is in the office, I tend to finish the report instead. However, if both the event is expensive and the boss is in the office, I book a ride share. If there's also an unexpected expense, I finish the report. But if the weather is good, I go back to booking a ride share. I can't finish the report and book a ride share at the same time.",
+        "meteor_score": 0.8417781362407238
+    },
+    {
+        "answer": "I can either clean the house or pay the bills. Usually, I choose to clean the house. However, if it’s a humid day, I go ahead and pay the bills instead. I can’t clean the house and pay the bills at the same time.",
+        "pred_answer": "If it's a humid day, I tend to clean the house. Otherwise, I usually pay the bills. I can't clean the house and pay the bills at the same time.",
+        "meteor_score": 0.5923255404135338
+    },
+    {
+        "answer": "If there is a community event, I can either do laundry or attend a concert. Usually, I choose to do laundry. However, if I am moving house, I attend the concert instead. If I have a good investment opportunity, I go back to doing laundry. I can’t do laundry and attend the concert at the same time.",
+        "pred_answer": "If there is a community event, I tend to do laundry. If I have to move house, I choose to attend a concert instead. However, if it's a good investment, I go back to doing laundry. I can't do laundry and attend a concert at the same time.",
+        "meteor_score": 0.6956583210603828
+    },
+    {
+        "answer": "I can either book a ride share or plan my meals. Usually, I choose to book a ride share. However, if I have a job interview, I go ahead and plan my meals instead. If I have a discount on a flight, I tend to book a ride share. I can’t book a ride share and plan my meals at the same time.",
+        "pred_answer": "If I have a job interview, I book a ride share. Otherwise, I plan meals. Usually, I book a ride share, but if there's a discount on the flight, I plan meals instead. I can't book a ride share and plan meals at the same time.",
+        "meteor_score": 0.6074837420784217
+    },
+    {
+        "answer": "I can either go for a morning run or visit the doctor. Usually, I choose to go for a morning run. However, if I have feedback from a client, I go to visit the doctor instead. I can’t go for a morning run and visit the doctor at the same time.",
+        "pred_answer": "If there is no client feedback, I tend to go for a morning run. Otherwise, I choose to visit the doctor. I can’t go for a morning run and visit the doctor at the same time.",
+        "meteor_score": 0.6499233712586399
+    },
+    {
+        "answer": "If I have a low budget, I go for a morning run. If it’s the weekend, I travel abroad. But if it’s both a low budget and the weekend, I usually go for a morning run. However, if I also have a friend in town, I choose to travel abroad instead. I can’t go for a morning run and travel abroad at the same time.",
+        "pred_answer": "If I have a low budget, I usually go for a morning run. If it's the weekend, I tend to travel abroad. But if it's both a low-budget situation and the weekend, I go for a morning run. If a friend is in town as well, I opt for traveling abroad instead.",
+        "meteor_score": 0.49192673778353596
+    },
+    {
+        "answer": "If I have an unexpected guest, I can either host a dinner party or update the project plan. Usually, I choose to host a dinner party. However, if there’s an unexpected expense, I decide to update the project plan instead. If I have a job interview, I go back to hosting the dinner party. I can’t host a dinner party and update the project plan at the same time.",
+        "pred_answer": "If there's an unexpected guest, I usually host a dinner party. Otherwise, I tend to update the project plan. But if there's an unexpected expense, I update the project plan instead. However, if there's a job interview, I host a dinner party. I can't host a dinner party and update the project plan at the same time.",
+        "meteor_score": 0.6967837338991213
+    },
+    {
+        "answer": "If I receive an invitation from a friend, I visit family. If there is a family gathering, I go for a swim. But if I have both an invitation from a friend and a family gathering, I usually visit family. However, if the family gathering is an expensive event, I prefer to go for a swim instead. If I have a job interview, I usually visit family. I can’t go for a swim and visit family at the same time.",
+        "pred_answer": "If a friend invites me, I usually visit family. If there's a family gathering, I tend to have a swim session instead. However, if the invitation is from a friend and there's a family gathering, I choose to visit family. But if it's also an expensive event, I opt for a swim session. If there's a job interview, I go back to visiting family. I can't visit family and have a swim session at the same time.",
+        "meteor_score": 0.6724340425531915
+    },
+    {
+        "answer": "If my relationship breaks, I can either prepare a report or plan meals. Generally, I choose to prepare a report. However, if I have a job interview, I plan meals instead. I can’t plan meals and prepare a report at the same time.",
+        "pred_answer": "If there is a relationship break, I tend to prepare a report. Otherwise, I usually plan meals. But if there is a job interview, I plan meals instead of preparing a report. I can't prepare a report and plan meals simultaneously.",
+        "meteor_score": 0.6164844740177439
+    },
+    {
+        "answer": "If it’s a rainy day, I can either use the subway or take the train. Usually, I choose to use the subway. However, if a friend is in town, I take the train instead. I can’t use the subway and take the train at the same time.",
+        "pred_answer": "If it's a rainy day, I usually use the subway. But if a friend is in town, I tend to take the train instead. I can't use the subway and take the train at the same time.",
+        "meteor_score": 0.6725438069919676
+    },
+    {
+        "answer": "If I have a new neighbor, I visit the doctor. If I have a project extension, I go for an evening walk. But if I have both a new neighbor and a project extension, I usually visit the doctor. However, if I also have a job interview, I prefer to go for an evening walk instead. I can’t visit the doctor and go for an evening walk at the same time.",
+        "pred_answer": "If I have a new neighbor, I visit the doctor. If there's a project extension, I tend to take an evening walk. But if I have both a new neighbor and a project extension, I visit the doctor. If there's also a job interview, I opt for an evening walk instead.",
+        "meteor_score": 0.5931181646544755
+    },
+    {
+        "answer": "If I miss a deadline, I can either travel abroad or go for a cycling session. Usually, I choose to travel abroad. I can’t travel abroad and go for a cycling session at the same time.",
+        "pred_answer": "If I miss the deadline, I tend to travel abroad. Otherwise, I usually have a cycling session. I can’t travel abroad and have a cycling session simultaneously.",
+        "meteor_score": 0.67003990837737
+    },
+    {
+        "answer": "If it's dusk, I have a swim session. If I have financial aid, I give a presentation. But if it's both dusk and I have financial aid, I usually go for a swim. If it’s also afternoon, I prefer to give a presentation instead. However, if there is an expensive event, I tend to swim. If I receive client feedback, I usually give a presentation. I can’t have a swim session and give a presentation at the same time.",
+        "pred_answer": "If it's dusk, I usually have a swim session. If I receive financial aid, I give a presentation instead. But if it's dusk and I have financial aid, I tend to have a swim session. If it's also the afternoon, I give a presentation. However, if it's an expensive event, I have a swim session again. But if there's client feedback, I give a presentation. I can't have a swim session and give a presentation at the same time.",
+        "meteor_score": 0.7781035066730038
+    },
+    {
+        "answer": "If I’m feeling sick, I can either visit the doctor or plan my meals. Generally, I choose to visit the doctor. I can’t plan my meals and visit the doctor at the same time.",
+        "pred_answer": "If I'm feeling sick, I either visit the doctor or plan meals. I usually tend to visit the doctor. I can't visit the doctor and plan meals simultaneously.",
+        "meteor_score": 0.5611790440641814
+    },
+    {
+        "answer": "I can either explore the city or travel abroad. Usually, I choose to explore the city. However, if there’s a concert nearby, I go to travel abroad instead. If I receive feedback from a client, I tend to explore the city. I can’t explore the city and travel abroad at the same time.",
+        "pred_answer": "If there is a concert nearby, I tend to explore the city. Otherwise, I choose to travel abroad. But if there's positive feedback from a client, I explore the city instead. I can't explore the city and travel abroad at the same time.",
+        "meteor_score": 0.649131335874933
+    },
+    {
+        "answer": "If a friend invites me, I can either clean the house or go to the bar. Usually, I choose to clean the house. I can’t clean the house and go to the bar at the same time.",
+        "pred_answer": "If a friend invites me, I clean the house. If a friend invites me, I go to the bar. I tend to clean the house over going to the bar. I can't clean the house and go to the bar at the same time.",
+        "meteor_score": 0.7461695942773497
+    },
+    {
+        "answer": "If I have a team project due, I visit the museum. If there is a hail storm, I join a fitness class. But if it’s both a hail storm and I have a project due, I usually visit the museum. However, if I also have a new neighbor, I prefer to join the fitness class instead. If it’s nighttime, I usually choose to visit the museum. But if I have a new neighbor, I tend to join the fitness class. I can’t visit the museum and join a fitness class at the same time.",
+        "pred_answer": "If I have a team project due, I tend to visit the museum. If there's a hail storm, I choose to join a fitness class. But if there's both a team project due and a hail storm, I usually visit the museum. If there's also a new neighbor, I join a fitness class instead. However, if it's nighttime, I go back to visiting the museum. I can't join a fitness class and visit the museum at the same time.",
+        "meteor_score": 0.6228881247174124
+    },
+    {
+        "answer": "If I have extended work hours, I go to the bar. If I receive an invitation from a friend, I order a taxi. But if I have both extended work hours and an invitation from a friend, I usually go to the bar. However, if I am on a low budget, I order a taxi instead. If it’s the holiday season, I tend to go to the bar. But if there is a snowstorm, I prefer to order a taxi. I can’t go to the bar and order a taxi at the same time.",
+        "pred_answer": "If I have extended work hours, I tend to go to the bar. If I receive an invitation from a friend, I choose to order a taxi. But if I have extended work hours and an invitation from a friend, I usually go to the bar. If there's also a low budget, I opt for ordering a taxi instead. However, during the holiday season, I go to the bar again. But if there's a snowstorm, I order a taxi. I can't go to the bar and order a taxi at the same time.",
+        "meteor_score": 0.8636310375670841
+    },
+    {
+        "answer": "If I have to work extended hours, I can either read a book or book a ride share. Usually, I choose to read a book. I can’t read a book and book a ride share at the same time.",
+        "pred_answer": "If I have extended work hours, I tend to read a book. Otherwise, I choose to book a ride share. I can't read a book and book a ride share at the same time.",
+        "meteor_score": 0.7642712922173275
+    },
+    {
+        "answer": "I can either take the bus or host a dinner party. Usually, I choose to take the bus. However, if it’s the weekend, I go for hosting the dinner party instead. I can’t take the bus and host a dinner party at the same time.",
+        "pred_answer": "If it's the weekend, I usually take the bus. Otherwise, I host a dinner party. I can't take the bus and host a dinner party at the same time.",
+        "meteor_score": 0.5727267795138888
+    },
+    {
+        "answer": "If it's the afternoon, I can either book a flight or pay the bills. Usually, I choose to book a flight. However, if a friend invites me, I pay the bills instead. I can’t book a flight and pay the bills at the same time.",
+        "pred_answer": "If it's the afternoon, I tend to either book a flight or pay bills. But if a friend invites me, I choose to pay bills instead. I can't book a flight and pay bills at the same time.",
+        "meteor_score": 0.7052823315118397
+    },
+    {
+        "answer": "If the weather is nice, I go for a picnic. If I receive an invitation from a friend, I prepare a report. But if it’s both nice weather and I have a friend's invitation, I usually choose to go for a picnic. However, if I also have a party invitation, I prepare the report instead. If there’s a concert nearby, I tend to go for a picnic. If I have a low budget, I prefer to prepare the report. But if I have a low budget and a concert nearby, I usually go for a picnic. I can’t go for a picnic and prepare a report at the same time.",
+        "pred_answer": "If the weather is good, I tend to have a picnic. If a friend invites me, I choose to prepare a report instead. But if it's good weather and I have an invitation from a friend, I usually have a picnic. If there's also a party invitation, I prepare a report. However, if there's a concert nearby, I have a picnic again. But if I have a low budget, I prepare a report. I can't have a picnic and prepare a report at the same time.",
+        "meteor_score": 0.5624221218165203
+    },
+    {
+        "answer": "I can either cycle to work or make coffee. Usually, I choose to cycle to work. However, if I’m on a low budget, I go ahead and make coffee instead. I can’t cycle to work and make coffee at the same time.",
+        "pred_answer": "If I have a low budget, I tend to make coffee. Otherwise, I usually cycle to work. I can't make coffee and cycle to work simultaneously.",
+        "meteor_score": 0.4642498133730033
+    },
+    {
+        "answer": "If it’s afternoon, I update the project plan. If I have an important meeting, I organize my workspace. But if it’s both afternoon and I have an important meeting, I usually update the project plan. However, if it’s also lunchtime, I organize my workspace instead. If there is a concert nearby, I tend to update the project plan. But if it’s my birthday today, I prefer to organize my workspace. I can’t update the project plan and organize my workspace at the same time.",
+        "pred_answer": "If it's the afternoon, I update the project plan. If there's an important meeting, I organize my workspace. But if it's both the afternoon and there's an important meeting, I tend to update the project plan. If it's also lunchtime, I organize my workspace instead. However, if there's a concert nearby, I update the project plan. But if it's someone's birthday today, I organize my workspace. I can't update the project plan and organize my workspace at the same time.",
+        "meteor_score": 0.8007117288103017
+    },
+    {
+        "answer": "I can either dispose of the trash or cycle to work. Usually, I choose to dispose of the trash. However, if I have a new neighbor, I tend to cycle to work instead. If it’s the morning rush, I generally go back to disposing of the trash. I can’t dispose of the trash and cycle to work at the same time.",
+        "pred_answer": "If I have to dispose of trash, I usually cycle to work. But if there's a new neighbor, I dispose of trash instead. However, if it's a busy morning rush, I tend to cycle to work. I can't both cycle to work and dispose of trash at the same time.",
+        "meteor_score": 0.5675761147839129
+    },
+    {
+        "answer": "If the weather is good, I can either give a presentation or go to the gym. Generally, I choose to give a presentation. However, if it’s the weekend, I go to the gym instead. If I’m going through a relationship break, I go back to giving the presentation. I can’t go to the gym and give a presentation at the same time.",
+        "pred_answer": "If the weather is good, I tend to give a presentation. If it's the weekend, I go to the gym instead. However, if there's a relationship break, I give a presentation. I can't give a presentation and go to the gym at the same time.",
+        "meteor_score": 0.5952796833773089
+    },
+    {
+        "answer": "I can either take the bus or visit the museum. Usually, I prefer to take the bus. However, if it’s during the morning rush, I choose to visit the museum instead. If I have a vacation planned, I tend to take the bus. I can’t take the bus and visit the museum at the same time.",
+        "pred_answer": "If there's a morning rush, I usually take the bus. Otherwise, I tend to visit the museum. But if I have a vacation planned, I take the bus instead. I can't take the bus and visit the museum at the same time.",
+        "meteor_score": 0.6358801591401022
+    },
+    {
+        "answer": "If my friend is in town, I order a taxi. If I got a bonus, I meditate. But if both my friend is in town and I got a bonus, I usually order a taxi. However, if the event is expensive, I prefer to meditate instead. I can’t order a taxi and meditate at the same time.",
+        "pred_answer": "If a friend is in town and I got a bonus, I usually order a taxi. But if there's an expensive event as well, I meditate instead.",
+        "meteor_score": 0.2761880020001875
+    },
+    {
+        "answer": "I can either go to the restaurant or water the plants. Usually, I choose to go to the restaurant. I can’t go to the restaurant and water the plants at the same time.",
+        "pred_answer": "I tend to go to the restaurant. However, if I have to choose between going to the restaurant and watering plants, I choose to water plants instead.",
+        "meteor_score": 0.39042555493055253
+    },
+    {
+        "answer": "I can either submit my timesheet or attend the workshop. Usually, I choose to submit my timesheet. I can’t submit my timesheet and attend the workshop at the same time.",
+        "pred_answer": "I tend to submit my timesheet. If there's a workshop, I choose to attend it instead.",
+        "meteor_score": 0.27525436046511625
+    },
+    {
+        "answer": "If I have a project extension, I go to the bar. If there’s a family gathering, I go to the gym. But if I have both a project extension and a family gathering, I usually choose to go to the bar. If I also have a good investment opportunity, I go to the gym instead. However, if it’s a rainy day, I prefer to go to the bar. I can’t go to the gym and go to the bar at the same time.",
+        "pred_answer": "If I have a project extension, I tend to go to the bar. If there's a family gathering, I usually go to the gym. But if I have a project extension and there's a family gathering, I choose to go to the bar. However, if it's also a good investment opportunity, I go to the gym instead. If it's a rainy day, I go to the bar. I can't go to the bar and go to the gym at the same time.",
+        "meteor_score": 0.8441682588673329
+    },
+    {
+        "answer": "If it's the holiday season, I can either meditate or use the subway. Usually, I choose to meditate. However, if I have a job interview, I use the subway instead. If there's a discount on a flight, I go back to meditating. I can’t meditate and use the subway at the same time.",
+        "pred_answer": "During the holiday season, I tend to meditate. However, if there's a job interview, I choose to use the subway instead. But if there's a discount on the flight, I prefer to meditate. I can't meditate and use the subway at the same time.",
+        "meteor_score": 0.6824286113316482
+    },
+    {
+        "answer": "If there is a hail storm, I meditate. If it’s early morning, I do laundry. But if it’s both a hail storm and early morning, I usually meditate. However, if it’s also the weekend, I choose to do laundry instead. I can’t meditate and do laundry at the same time.",
+        "pred_answer": "If there is a hail storm, I tend to meditate. In the early morning, I usually do the laundry. However, if there is both a hail storm and it's early morning, I prefer to do the laundry. But if it's also the weekend, I go back to meditating. I can't meditate and do the laundry at the same time.",
+        "meteor_score": 0.7388478082257988
+    },
+    {
+        "answer": "If I have a new restaurant to try, I travel abroad. If I have a project extension, I finish my report. But if I have both a new restaurant to try and a project extension, I usually travel abroad. However, if today is my birthday, I prefer to finish my report instead. I can’t travel abroad and finish my report at the same time.",
+        "pred_answer": "If there's a new restaurant to try and a project extension, I tend to travel abroad. But if there's a new restaurant to try, a project extension, and it's my birthday today, I choose to finish the report instead.",
+        "meteor_score": 0.44439324861771273
+    },
+    {
+        "answer": "If I receive client feedback, I dispose of the trash. If there is a relationship break, I take the train. But if I have both client feedback and a relationship break, I usually choose to dispose of the trash. However, if there is also a community event, I take the train instead. I can’t dispose of the trash and take the train at the same time.",
+        "pred_answer": "If there is client feedback, I tend to dispose of the trash. If a relationship breaks, I usually take the train. However, if there is both client feedback and a relationship break, I prefer disposing of the trash. If there is also a community event, I opt for taking the train instead.",
+        "meteor_score": 0.6197675552137605
+    },
+    {
+        "answer": "If it’s a windy day, I can either go to the gym or go for a morning run. Generally, I choose to go to the gym. However, if the weather is good, I go for a morning run instead. If I receive financial aid, I go back to choosing the gym. I can’t go to the gym and go for a morning run at the same time.",
+        "pred_answer": "If it's a windy day, I usually go to the gym. Otherwise, I tend to go for a morning run. But if the weather is good, I go to the gym instead. However, if there's financial aid available, I opt for a morning run. I can't go to the gym and go for a morning run simultaneously.",
+        "meteor_score": 0.6461499139084379
+    },
+    {
+        "answer": "If it's a humid day, I can either clean the house or give a presentation. Generally, I choose to clean the house. I can’t clean the house and give a presentation at the same time.",
+        "pred_answer": "If it's a humid day, I clean the house. Otherwise, I give a presentation. I tend to clean the house on humid days. I can't clean the house and give a presentation simultaneously.",
+        "meteor_score": 0.653403289019421
+    },
+    {
+        "answer": "If there is a discount on flights, I explore the city. If I have a vacation planned, I travel abroad. But if I have both a discount on flights and a vacation planned, I usually explore the city. However, if I also received a bonus, I travel abroad instead. I can’t explore the city and travel abroad at the same time.",
+        "pred_answer": "If there's a discount on the flight, I tend to explore the city. If I have a vacation planned, I choose to travel abroad. However, if there's both a discount on the flight and a planned vacation, I usually explore the city. But if I also received a bonus, I opt to travel abroad.",
+        "meteor_score": 0.6637665886991915
+    },
+    {
+        "answer": "I can either review documents or meditate. Usually, I choose to review documents. However, if it's a hot day, I tend to meditate instead. On windy days, I usually go back to reviewing documents. I can’t meditate and review documents at the same time.",
+        "pred_answer": "On a hot day, I usually review documents. But if it's windy, I tend to meditate instead. I can't review documents and meditate at the same time.",
+        "meteor_score": 0.5286953258880736
+    },
+    {
+        "answer": "I can either attend the workshop or the concert. Usually, I prefer to attend the workshop. However, if I’ve had a relationship break, I choose to attend the concert instead. If it’s during the morning rush, I usually go to the workshop. I can’t attend both the workshop and the concert at the same time.",
+        "pred_answer": "If there is a relationship break, I usually attend a workshop. Otherwise, I tend to attend a concert. But if there is a morning rush, I choose to attend a workshop. I can't attend a workshop and a concert at the same time.",
+        "meteor_score": 0.4683109443266076
+    },
+    {
+        "answer": "If it's my wedding anniversary, I can either attend a meeting or go to the bar. Generally, I choose to attend the meeting. I can’t go to the bar and attend the meeting at the same time.",
+        "pred_answer": "If it's my wedding anniversary, I attend a meeting. Otherwise, I go to a bar. I tend to attend the meeting over going to the bar.",
+        "meteor_score": 0.5690322467659835
+    },
+    {
+        "answer": "I can either read a book or host a dinner party. Usually, I choose to read a book. I can’t read a book and host a dinner party at the same time.",
+        "pred_answer": "I tend to read a book. But I also tend to host a dinner party. I usually choose to read a book over hosting a dinner party. I can’t read a book and host a dinner party at the same time.",
+        "meteor_score": 0.8435256758079007
+    },
+    {
+        "answer": "If I receive client feedback, I can either visit the museum or update the project plan. Usually, I choose to visit the museum. However, if I got a bonus, I update the project plan instead. If it’s the afternoon, I tend to visit the museum again. I can’t visit the museum and update the project plan at the same time.",
+        "pred_answer": "If there is client feedback, I usually visit the museum. But if I received a bonus, I update the project plan instead. However, if it's in the afternoon, I visit the museum. I can't visit the museum and update the project plan at the same time.",
+        "meteor_score": 0.6644997871385538
+    },
+    {
+        "answer": "If it's the holiday season, I can either book a ride share or take the bus. Usually, I choose to book a ride share. However, if there's a snowstorm, I take the bus instead. On a windy day, I also tend to take the bus. I can’t take the bus and book a ride share at the same time.",
+        "pred_answer": "During the holiday season, I usually book a ride-share. But if there's a snowstorm, I take the bus instead. However, on a windy day, I go back to booking a ride-share.",
+        "meteor_score": 0.3829438586491878
+    },
+    {
+        "answer": "If I get a tax refund, I can either attend a concert or explore the city. Generally, I choose to attend the concert. I can’t attend the concert and explore the city at the same time.",
+        "pred_answer": "If I receive a tax refund, I tend to attend a concert. Otherwise, I choose to explore the city. I can't attend a concert and explore the city simultaneously.",
+        "meteor_score": 0.5599600829546415
+    },
+    {
+        "answer": "If I have a relationship break, I organize my workspace. If there’s a hail storm, I attend a meeting. But if it’s both a relationship break and there’s a hail storm, I usually organize my workspace. If I also have a friend in town, I attend the meeting instead. However, if I receive an invitation from a friend, I tend to organize my workspace. If I have a new invitation from a friend, I usually prefer to attend the meeting. I can’t organize my workspace and attend a meeting at the same time.",
+        "pred_answer": "If there is a relationship break, I organize my workspace. If there's a hail storm, I attend a meeting. But if there's both a relationship break and a hail storm, I tend to organize my workspace. If there's also a friend in town, I attend the meeting instead. However, if I receive an invitation from a friend, I organize my workspace. I can't attend a meeting and organize my workspace at the same time.",
+        "meteor_score": 0.6412089364796086
+    },
+    {
+        "answer": "If it's lunchtime, I travel abroad. If I have a new restaurant to try, I meditate. But if it’s both lunchtime and I have a new restaurant to try, I usually choose to travel abroad. However, if I also have a party invitation, I prefer to meditate instead. I can’t travel abroad and meditate at the same time.",
+        "pred_answer": "If it's lunchtime, I usually travel abroad. But if there's a new restaurant to try, I tend to meditate instead. However, if it's both lunchtime and there's a new restaurant to try, I choose to travel abroad. If there's also a party invitation, I meditate.",
+        "meteor_score": 0.6323067621177072
+    },
+    {
+        "answer": "If my boss is in the office, I go for a morning run. If it's the morning rush, I plan my meals. But if both my boss is in the office and it's the morning rush, I usually choose to go for a morning run. If I also have extended work hours, I plan my meals instead. However, if I receive a party invitation, I tend to go for a morning run. If I have a networking event, I prefer to plan my meals. I can’t go for a morning run and plan my meals at the same time.",
+        "pred_answer": "If my boss is in the office, I usually go for a morning run. If there's a morning rush, I tend to plan meals instead. But if my boss is in the office and there's a morning rush, I go for a morning run. If the work hours are extended as well, I plan meals. However, if there's a party invitation, I go for a morning run. But if there's a networking event, I plan meals. I can't go for a morning run and plan meals at the same time.",
+        "meteor_score": 0.7769420380373889
+    },
+    {
+        "answer": "If it's night time, I can either go for an evening walk or prepare a report. Generally, I choose to go for an evening walk. However, if I'm on a low budget, I prepare the report instead. But if I'm feeling sick, I go for the evening walk again. I can’t go for an evening walk and prepare a report at the same time.",
+        "pred_answer": "If it's nighttime, I usually go for an evening walk. But if I have a low budget, I tend to prepare a report instead. However, if I'm feeling sick, I go for an evening walk. I can't go for an evening walk and prepare a report at the same time.",
+        "meteor_score": 0.6896373056994819
+    },
+    {
+        "answer": "If my boss is in the office, I go for a swim. If I'm feeling sick, I go to the gym. But if my boss is in the office and I'm feeling sick, I usually prefer to go for a swim. However, if I also have a medical appointment, I choose to go to the gym instead. I can’t go to the gym and swim at the same time.",
+        "pred_answer": "If my boss is in the office, I tend to have a swim session. If I'm feeling sick, I usually go to the gym. However, if both my boss is in the office and I'm feeling sick, I choose to have a swim session. But if I also have a medical appointment, I go to the gym instead.",
+        "meteor_score": 0.6576797385620915
+    },
+    {
+        "answer": "If I'm feeling sick, I can either submit my timesheet or call a client. Generally, I choose to submit my timesheet. However, if my subscription is due, I call the client instead. I can’t submit my timesheet and call the client at the same time.",
+        "pred_answer": "When I'm feeling sick, I usually submit my timesheet. But if my subscription is due, I tend to call the client instead. I can't submit my timesheet and call the client at the same time.",
+        "meteor_score": 0.6541895604395606
+    },
+    {
+        "answer": "I can either cycle to work or take the train. Usually, I choose to cycle to work. However, if I have an unexpected guest, I take the train instead. If there’s a new restaurant I want to try, I go back to cycling to work. I can’t cycle to work and take the train at the same time.",
+        "pred_answer": "If I have an unexpected guest, I usually take the train to work. Otherwise, I tend to cycle to work. But if there's a new restaurant I want to try, I choose to take the train instead. I can't cycle and take the train at the same time.",
+        "meteor_score": 0.684214073278624
+    },
+    {
+        "answer": "If it’s a windy day, I can either organize my workspace or go to the bar. Usually, I choose to organize my workspace. However, if I have a vacation planned, I go to the bar instead. I can’t go to the bar and organize my workspace at the same time.",
+        "pred_answer": "If it's a windy day, I usually organize my workspace. But if I have a vacation planned, I go to the bar instead.",
+        "meteor_score": 0.3919865904638811
+    },
+    {
+        "answer": "If I have an unexpected expense, I take the train. If there is an urgent deadline, I go to the gym. But if I have both an unexpected expense and an urgent deadline, I usually take the train. If I also have a project extension, I prefer to go to the gym instead. However, if the weather is good, I tend to take the train. I can’t go to the gym and take the train at the same time.",
+        "pred_answer": "If there is an unexpected expense, I tend to take the train. If there is an urgent deadline, I usually go to the gym. But if there is both an unexpected expense and an urgent deadline, I take the train instead. If there is also a project extension, I go to the gym. However, if the weather is good, I take the train. I can’t take the train and go to the gym at the same time.",
+        "meteor_score": 0.8915120510678916
+    },
+    {
+        "answer": "If I have a good investment, I attend a concert. If there's a family gathering, I reply to emails. But if it’s both a good investment and a family gathering, I usually choose to attend the concert. However, if it’s also an expensive event, I reply to emails instead. If I have a new neighbor, I tend to prefer attending the concert. I can’t attend a concert and reply to emails at the same time.",
+        "pred_answer": "If it's a good investment, I tend to attend a concert. If there's a family gathering, I choose to reply to emails. But if it's both a good investment and a family gathering, I usually attend the concert. If it's also an expensive event, I reply to emails instead. However, if there's a new neighbor, I attend the concert. I can't attend a concert and reply to emails at the same time.",
+        "meteor_score": 0.8475182342114229
+    },
+    {
+        "answer": "If it's the weekend, I can either join a fitness class or travel abroad. Usually, I choose to join a fitness class. However, if I got a bonus, I travel abroad instead. On a cloudy day, I go back to joining the fitness class. I can’t join a fitness class and travel abroad at the same time.",
+        "pred_answer": "On weekends, I tend to join a fitness class. But if I got a bonus, I choose to travel abroad instead. However, if it's a cloudy day, I go back to joining the fitness class. I can't join the fitness class and travel abroad at the same time.",
+        "meteor_score": 0.7299238535603997
+    },
+    {
+        "answer": "If a team project is due, I can either buy groceries or take an evening walk. Usually, I choose to buy groceries. I can’t take an evening walk and buy groceries at the same time.",
+        "pred_answer": "If I have a team project due, I buy groceries. Otherwise, I tend to go for an evening walk. I can't buy groceries and go for an evening walk at the same time.",
+        "meteor_score": 0.682867039701572
+    },
+    {
+        "answer": "If there is a snowstorm, I can either have a cycling session or go to the gym. Usually, I choose to have a cycling session. However, if there’s a new restaurant to try, I go to the gym instead. If there’s a community event, I go back to having a cycling session. I can’t go to the gym and have a cycling session at the same time.",
+        "pred_answer": "If there is a snowstorm, I usually have a cycling session. Otherwise, I go to the gym. But if there is a new restaurant to try, I go to the gym instead. However, if there is a community event, I have a cycling session. I can't have a cycling session and go to the gym at the same time.",
+        "meteor_score": 0.7343941248470013
+    },
+    {
+        "answer": "If I have a new restaurant to try, I dispose of the trash. If I have an unexpected guest, I do the laundry. But if I have both a new restaurant to try and an unexpected guest, I usually dispose of the trash. However, if it’s also the weekend, I prefer to do the laundry instead. I can’t do the laundry and dispose of the trash at the same time.",
+        "pred_answer": "If there's a new restaurant to try, I dispose of the trash. If there's an unexpected guest, I do the laundry. But if there's both a new restaurant to try and an unexpected guest, I tend to dispose of the trash. If it's also the weekend, I do the laundry instead.",
+        "meteor_score": 0.5922279740461559
+    },
+    {
+        "answer": "I can either go to the restaurant or pay the bills. Usually, I prefer to go to the restaurant. However, if I have a project extension, I choose to pay the bills instead. I can’t go to the restaurant and pay the bills at the same time.",
+        "pred_answer": "I tend to go to the restaurant. But if there is a project extension, I choose to pay bills instead. I can't go to the restaurant and pay bills at the same time.",
+        "meteor_score": 0.5784150859086715
+    },
+    {
+        "answer": "If I have a vacation planned, I rent a car. If it’s a hot day, I visit the doctor. But if it’s both a hot day and I have a vacation planned, I usually rent a car. However, if it’s also a morning rush, I visit the doctor instead. If I have a friend in town, I usually choose to rent a car. I can’t rent a car and visit the doctor at the same time.",
+        "pred_answer": "If I have a vacation planned, I rent a car. On a hot day, I visit the doctor. But if it’s both a hot day and I have a vacation planned, I tend to rent a car. If there’s also a morning rush, I visit the doctor instead. However, if a friend is in town, I rent a car. I can’t rent a car and visit the doctor at the same time.",
+        "meteor_score": 0.8859114734804807
+    },
+    {
+        "answer": "I can either schedule a meeting or visit my family. Usually, I choose to schedule a meeting. However, if there is a family gathering, I go to visit my family instead. If I have missed a deadline, I tend to schedule the meeting. I can’t schedule a meeting and visit my family at the same time.",
+        "pred_answer": "If there is a family gathering, I tend to visit my family. Otherwise, I usually schedule a meeting. But if I miss a deadline, I prioritize visiting my family. I can't visit my family and schedule a meeting simultaneously.",
+        "meteor_score": 0.550340914290944
+    },
+    {
+        "answer": "I can either book a flight or go to the bar. Usually, I choose to book a flight. However, if it’s my birthday, I go to the bar instead. I can’t book a flight and go to the bar at the same time.",
+        "pred_answer": "If it's your birthday today, you usually go to the bar. Otherwise, you tend to book a flight. You can't book a flight and go to the bar at the same time.",
+        "meteor_score": 0.5275012739935452
+    }
+]

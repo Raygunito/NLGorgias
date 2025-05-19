@@ -82,18 +82,18 @@ class GorgiasDataset:
             return f"{predicate}/{arity}"
         return None
 
-    def generate_beginner_gorgias(self, forcedDepth: int = None) -> str:
+    def generate_beginner_gorgias(self, forcedType: int = None) -> str:
         """
         Generate a Gorgias code with a beginner level of complexity.
-        :param forcedDepth: Optional parameter to force a specific depth of the generated code. (min 1, max 3)
+        :param forcedType: Optional parameter to force a specific type of the generated code. (0, 1, 2)
         If None, a random depth between 1 and 3 will be chosen.
         :return: A string representing the Gorgias code.
         """
         functionArray = [GorgiasDataset.generate_beginner_gorgias_common,
                          GorgiasDataset.generate_beginner_gorgias_conflict, GorgiasDataset.generate_beginner_gorgias_no_common]
         depth = random.randint(1, 3)
-        if forcedDepth is not None:
-            depth = forcedDepth
+        if forcedType is not None:
+            return functionArray[forcedType](depth, self.facts, self.actions)
         return functionArray[random.randint(0, 2)](depth, self.facts, self.actions)
 
     @staticmethod

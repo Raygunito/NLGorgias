@@ -1,0 +1,494 @@
+Index,Original Prompt,Generated Gorgias Code,Query Result
+1,"I can either visit the museum or attend a workshop. Usually, I prefer to visit the museum. However, during the morning rush, I choose to attend the workshop instead. If there's a community event, I tend to visit the museum instead. I can't visit the museum and attend the workshop at the same time.",":- dynamic morning_rush/0, community_event/0.
+rule(r1, visit_museum, []).
+rule(r2, attend_workshop, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- community_event.
+rule(c3, prefer(c2, c1), []).
+complement(attend_workshop, visit_museum).
+complement(visit_museum, attend_workshop).",Fail
+2,"If I got a bonus, I attend a workshop. If there is a concert nearby, I go to the gym. But if I have both a bonus and a concert nearby, I usually choose to attend the workshop. However, if I also have a low budget, I go to the gym instead. I can't go to the gym and attend the workshop at the same time.",":- dynamic bonus/0, concert_nearby/0, low_budget/0.
+rule(r1, attend_workshop, []) :- bonus.
+rule(r2, go_to_gym, []) :- concert_nearby.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []) :- bonus, concert_nearby.
+rule(c2, prefer(p1, p2), []) :- bonus, concert_nearby.
+rule(c3, prefer(c2, c1), []).
+complement(attend_workshop, go_to_gym).
+complement(go_to_gym, attend_workshop).",Fail
+3,"If I have a medical appointment, I schedule a meeting. If I have an unexpected guest, I go for a swim. But if I have both a medical appointment and an unexpected guest, I usually schedule a meeting. However, if there is also a networking event, I prefer to go for a swim instead. If there is a concert nearby, I tend to schedule a meeting. I can't go for a swim and schedule a meeting at the same time.",":- dynamic medical_appointment/0, unexpected_guest/0, networking_event/0, concert_nearby/0.
+rule(r1, schedule_meeting, []) :- medical_appointment.
+rule(r2, go_for_swim, []) :- unexpected_guest.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- medical_appointment, unexpected_guest.
+rule(p3, prefer(r2, r1), []) :- networking_event.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- concert_nearby.
+rule(c3, prefer(c2, c1), []).
+complement(go_for_swim, schedule_meeting).
+complement(schedule_meeting, go_for_swim).",Success
+4,"I can either go for a morning run or visit the doctor. Usually, I choose to go for a morning run. However, if I have feedback from a client, I go to visit the doctor instead. I can't go for a morning run and visit the doctor at the same time.",":- dynamic feedback_from_client/0.
+rule(r1, morning_run, []).
+rule(r2, visit_doctor, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feedback_from_client.
+complement(morning_run, visit_doctor).
+complement(visit_doctor, morning_run).",Success
+5,"If my boss is in the office, I can either attend a workshop or schedule a meeting. Generally, I choose to attend the workshop. I can't attend the workshop and schedule a meeting at the same time.",":- dynamic boss_in_office/0.
+rule(r1, attend_workshop, []) :- boss_in_office.
+rule(r2, schedule_meeting, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(c1, prefer(p1, p2), []).
+complement(attend_workshop, schedule_meeting).
+complement(schedule_meeting, attend_workshop).",Fail
+6,"If I miss a deadline, I can either meditate or go shopping. Generally, I choose to meditate. However, if I'm feeling sick, I go shopping instead. I can't meditate and go shopping at the same time.",":- dynamic miss_deadline/0, feeling_sick/0.
+rule(r1, meditate, []) :- miss_deadline.
+rule(r2, go_shopping, []) :- miss_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feeling_sick.
+rule(c1, prefer(p2, p1), []).
+complement(meditate, go_shopping).
+complement(go_shopping, meditate).",Success
+7,"If it's a hot day, I can either pay the bills or attend a meeting. Generally, I choose to pay the bills. However, if I miss a deadline, I attend the meeting instead. If it's the holiday season, I go back to paying the bills. I can't attend the meeting and pay the bills at the same time.",":- dynamic hot_day/0, missed_deadline/0, holiday_season/0.
+rule(r1, pay_bills, []) :- hot_day.
+rule(r2, attend_meeting, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- missed_deadline.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- holiday_season.
+rule(c3, prefer(c2, c1), []).
+complement(pay_bills, attend_meeting).
+complement(attend_meeting, pay_bills).",Success
+8,"If there is a family emergency, I go to the park. If I got a bonus, I attend a meeting. But if I have both a family emergency and got a bonus, I usually go to the park. If I also have a medical appointment, I attend the meeting instead. However, if there is a school reunion, I tend to go to the park. If it's a hot day, I prefer to attend the meeting. I can't go to the park and attend a meeting at the same time.",":- dynamic family_emergency/0, got_bonus/0, medical_appointment/0, school_reunion/0, hot_day/0.
+rule(r1, go_to_park, []) :- family_emergency.
+rule(r2, attend_meeting, []) :- got_bonus.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_emergency, got_bonus.
+rule(p3, prefer(r1, r2), []) :- school_reunion.
+rule(p4, prefer(r2, r1), []) :- medical_appointment.
+rule(p5, prefer(p4, p3), []).
+rule(p6, prefer(p1, p5), []) :- hot_day.
+complement(go_to_park, attend_meeting).
+complement(attend_meeting, go_to_park).",Success
+9,"If my friend is in town, I make coffee. If I have a party invitation, I water the plants. But if both my friend is in town and I have a party invitation, I usually make coffee. However, if it's early morning, I prefer to water the plants instead. If I am moving house, I tend to water the plants. But if it's my wedding anniversary, I usually make coffee. I can't make coffee and water the plants at the same time.",":- dynamic friend_in_town/0, party_invitation/0, early_morning/0, moving_house/0, wedding_anniversary/0.
+rule(r1, make_coffee, []) :- friend_in_town.
+rule(r2, water_plants, []) :- party_invitation.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- early_morning.
+rule(p3, prefer(r1, r2), []) :- friend_in_town, party_invitation.
+rule(p4, prefer(r2, r1), []) :- moving_house.
+rule(p5, prefer(r1, r2), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p3), []).
+rule(c3, prefer(p4, p2), []).
+rule(c4, prefer(p5, p1), []).
+complement(make_coffee, water_plants).
+complement(water_plants, make_coffee).",Success
+10,"I can either update the project plan or go for a cycling session. Usually, I choose to update the project plan. I can't update the project plan and go for a cycling session at the same time.",":- dynamic update_project_plan/0, go_cycling/0.
+rule(r1, update_project_plan, []).
+rule(r2, go_cycling, []).
+rule(p1, prefer(r1, r2), []).
+rule(c1, prefer(p1, p2), []).
+complement(update_project_plan, go_cycling).
+complement(go_cycling, update_project_plan).",Fail
+11,"I can either pay my bills or book a ride share. Usually, I choose to pay my bills. I can't pay my bills and book a ride share at the same time.",":- dynamic pay_bills/0, book_ride_share/0.
+rule(r1, pay_bills, []).
+rule(r2, book_ride_share, []).
+rule(p1, prefer(r1, r2), []).
+rule(c1, prefer(p1, p2), []).
+complement(pay_bills, book_ride_share).
+complement(book_ride_share, pay_bills).",Fail
+12,"I can either give a presentation or ride my bike. Usually, I choose to give the presentation. I can't give the presentation and ride my bike at the same time.",":- dynamic give_presentation/0, ride_bike/0.
+rule(r1, give_presentation, []).
+rule(r2, ride_bike, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []).
+complement(give_presentation, ride_bike).
+complement(ride_bike, give_presentation).",Success
+13,"If I have extended work hours, I go shopping. If I have a new neighbor, I go to the bar. But if I have both extended work hours and a new neighbor, I usually go shopping. However, if there is also a snowstorm, I go to the bar instead. If it's a rainy day, I usually prefer to go shopping. But if I receive an invitation from a friend, I go to the bar. I can't go shopping and go to the bar at the same time.",":- dynamic extended_work_hours/0, new_neighbor/0, snowstorm/0, rainy_day/0, invitation_from_friend/0.
+rule(r1, go_shopping, []) :- extended_work_hours.
+rule(r2, go_bar, []) :- new_neighbor.
+rule(r3, go_shopping, []) :- extended_work_hours, new_neighbor.
+rule(r4, go_bar, []) :- extended_work_hours, new_neighbor, snowstorm.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+rule(p3, prefer(r1, r2), []) :- rainy_day.
+rule(p4, prefer(r2, r1), []) :- invitation_from_friend.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p3, p4), []).
+rule(c3, prefer(c2, c1), []).
+complement(go_shopping, go_bar).
+complement(go_bar, go_shopping).",Success
+14,"If I have a school reunion, I go for a cycling session. If I'm on a low budget, I go to a restaurant. But if it's both a school reunion and I'm on a low budget, I usually choose to go for a cycling session. However, if I also have a medical appointment, I go to the restaurant instead. If there is an expensive event, I tend to go for a cycling session. But if I have an urgent deadline, I prefer to go to a restaurant. I can't go for a cycling session and go to a restaurant at the same time.",":- dynamic school_reunion/0, low_budget/0, medical_appointment/0, expensive_event/0, urgent_deadline/0.
+rule(r1, cycling_session, []) :- school_reunion.
+rule(r2, restaurant, []) :- low_budget.
+rule(r3, cycling_session, []) :- school_reunion, low_budget.
+rule(r4, restaurant, []) :- medical_appointment.
+rule(r5, cycling_session, []) :- expensive_event.
+rule(r6, restaurant, []) :- urgent_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(p3, prefer(r3, r1), []).
+rule(p4, prefer(r4, r2), []).
+rule(p5, prefer(r5, r1), []).
+rule(p6, prefer(r6, r2), []).
+rule(c1, prefer(p3, p1), []).
+rule(c2, prefer(p4, p2), []).
+rule(c3, prefer(p5, p1), []).
+rule(c4, prefer(p6, p2), []).
+complement(cycling_session, restaurant).
+complement(restaurant, cycling_session).",Success
+15,"If it's night time, I can either go for an evening walk or prepare a report. Generally, I choose to go for an evening walk. However, if I'm on a low budget, I prepare the report instead. But if I'm feeling sick, I go for the evening walk again. I can't go for an evening walk and prepare a report at the same time.",":- dynamic night_time/0, low_budget/0, feeling_sick/0.
+rule(r1, go_evening_walk, []) :- night_time.
+rule(r2, prepare_report, []) :- night_time.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- feeling_sick.
+rule(c3, prefer(c2, c1), []).
+complement(go_evening_walk, prepare_report).
+complement(prepare_report, go_evening_walk).",Success
+16,"I can either take the bus or visit the museum. Usually, I prefer to take the bus. However, if it's during the morning rush, I choose to visit the museum instead. If I have a vacation planned, I tend to take the bus. I can't take the bus and visit the museum at the same time.",":- dynamic morning_rush/0, vacation_planned/0.
+rule(r1, take_bus, []).
+rule(r2, visit_museum, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- morning_rush.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- vacation_planned.
+rule(c3, prefer(c2, c1), []).
+complement(take_bus, visit_museum).
+complement(visit_museum, take_bus).",Fail
+17,"If I have a new neighbor, I visit the doctor. If I have a project extension, I go for an evening walk. But if I have both a new neighbor and a project extension, I usually visit the doctor. However, if I also have a job interview, I prefer to go for an evening walk instead. I can't visit the doctor and go for an evening walk at the same time.",":- dynamic new_neighbor/0, project_extension/0, job_interview/0.
+rule(r1, visit_doctor, []) :- new_neighbor.
+rule(r2, evening_walk, []) :- project_extension.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- job_interview.
+rule(c1, prefer(p2, p1), []) :- new_neighbor, project_extension.
+rule(c2, prefer(c1, p1), []) :- new_neighbor, project_extension.
+complement(visit_doctor, evening_walk).
+complement(evening_walk, visit_doctor).",Success
+18,"I can either do laundry or finish the report. Usually, I prefer to do laundry. However, if there is a community event, I choose to finish the report instead. If I have a networking event, I tend to do laundry. I can't do laundry and finish the report at the same time.",":- dynamic community_event/0, networking_event/0.
+rule(r1, do_laundry, []).
+rule(r2, finish_report, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- community_event.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- networking_event.
+rule(c3, prefer(c2, c1), []).
+complement(do_laundry, finish_report).
+complement(finish_report, do_laundry).",Fail
+19,"If there is a team project due, I can either attend a concert or finish a report. Usually, I choose to attend the concert. However, if it's a cloudy day, I finish the report instead. If there's a hail storm, I go back to attending the concert. I can't attend the concert and finish the report at the same time.",":- dynamic team_project_due/0, cloudy_day/0, hail_storm/0.
+rule(r1, attend_concert, []) :- team_project_due.
+rule(r2, finish_report, []) :- team_project_due.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- cloudy_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- hail_storm.
+rule(c3, prefer(c2, c1), []).
+complement(attend_concert, finish_report).
+complement(finish_report, attend_concert).",Success
+20,"I can either give a presentation or reply to emails. Usually, I choose to give the presentation. However, if it's a humid day, I tend to reply to emails instead. I can't give a presentation and reply to emails at the same time.",":- dynamic humid_day/0.
+rule(r1, give_presentation, []).
+rule(r2, reply_to_emails, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- humid_day.
+rule(c1, prefer(p2, p1), []).
+complement(give_presentation, reply_to_emails).
+complement(reply_to_emails, give_presentation).",Success
+21,"If I am moving house, I can either clean the house or go to the park. Usually, I choose to clean the house. However, if I have financial aid, I go to the park instead. I can't go to the park and clean the house at the same time.",":- dynamic moving_house/0, financial_aid/0.
+rule(r1, clean_house, []) :- moving_house.
+rule(r2, go_to_park, []) :- moving_house.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- financial_aid.
+rule(c1, prefer(p2, p1), []).
+complement(clean_house, go_to_park).
+complement(go_to_park, clean_house).",Success
+22,"I can either have a swim session or visit the doctor. Usually, I choose to have a swim session. However, if there's a snowstorm, I go to visit the doctor instead. I can't have a swim session and visit the doctor at the same time.",":- dynamic snowstorm/0.
+rule(r1, swim_session, []).
+rule(r2, visit_doctor, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- snowstorm.
+complement(visit_doctor, swim_session).
+complement(swim_session, visit_doctor).",Success
+23,"I can either plan meals or prepare the report. Usually, I choose to plan meals. I can't plan meals and prepare the report at the same time.",":- dynamic plan_meals/0, prepare_report/0.
+rule(r1, plan_meals, []).
+rule(r2, prepare_report, []).
+rule(p1, prefer(r1, r2), []).
+rule(c1, prefer(p2, p1), []).
+complement(plan_meals, prepare_report).
+complement(prepare_report, plan_meals).",Fail
+24,"If a friend invites me, I can either attend a concert or explore the city. Usually, I choose to attend the concert. However, if I have a job interview, I explore the city instead. I can't attend the concert and explore the city at the same time.",":- dynamic invitation_from_friend/0, job_interview/0.
+rule(r1, attend_concert, []) :- invitation_from_friend.
+rule(r2, explore_city, []) :- invitation_from_friend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- job_interview.
+rule(c1, prefer(p2, p1), []).
+complement(attend_concert, explore_city).
+complement(explore_city, attend_concert).",Success
+25,"If there is a school reunion, I can either attend a workshop or buy groceries. Usually, I choose to attend the workshop. However, if I receive feedback from a client, I buy groceries instead. I can't attend the workshop and buy groceries at the same time.",":- dynamic school_reunion/0, feedback_from_client/0.
+rule(r1, attend_workshop, []) :- school_reunion.
+rule(r2, buy_groceries, []) :- school_reunion.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- feedback_from_client.
+complement(attend_workshop, buy_groceries).
+complement(buy_groceries, attend_workshop).",Success
+26,"If there is a morning rush, I can either take the train or finish my report. Generally, I choose to take the train. However, if I have missed a deadline, I finish my report instead. I can't take the train and finish my report at the same time.",":- dynamic morning_rush/0, missed_deadline/0.
+rule(r1, take_train, []) :- morning_rush.
+rule(r2, finish_report, []) :- morning_rush.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- missed_deadline.
+rule(c1, prefer(p2, p1), []).
+complement(take_train, finish_report).
+complement(finish_report, take_train).",Success
+27,"If it's a rainy day, I can either finish my report or dispose of the trash. Usually, I choose to finish my report. However, if there's a networking event, I dispose of the trash instead. I can't finish my report and dispose of the trash at the same time.",":- dynamic rainy_day/0, networking_event/0.
+rule(r1, finish_report, []) :- rainy_day.
+rule(r2, dispose_trash, []) :- rainy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- networking_event.
+rule(c1, prefer(p2, p1), []).
+complement(finish_report, dispose_trash).
+complement(dispose_trash, finish_report).",Success
+28,"If it's a windy day, I can either go to the gym or go for a morning run. Generally, I choose to go to the gym. However, if the weather is good, I go for a morning run instead. If I receive financial aid, I go back to choosing the gym. I can't go to the gym and go for a morning run at the same time.",":- dynamic windy_day/0, good_weather/0, financial_aid/0.
+rule(r1, go_gym, []) :- windy_day.
+rule(r2, morning_run, []) :- windy_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- good_weather.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- financial_aid.
+rule(c3, prefer(c2, c1), []).
+complement(go_gym, morning_run).
+complement(morning_run, go_gym).",Success
+29,"If I have a project extension, I can either go to the cinema or use the subway. Usually, I choose to go to the cinema. However, if it's night time, I tend to use the subway instead. I can't go to the cinema and use the subway at the same time.",":- dynamic project_extension/0, night_time/0.
+rule(r1, go_cinema, []) :- project_extension.
+rule(r2, use_subway, []) :- project_extension.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- night_time.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []).
+complement(go_cinema, use_subway).
+complement(use_subway, go_cinema).",Success
+30,"If I have a team project due, I review documents. If it's the weekend, I reply to emails. But if it's both the weekend and I have a project due, I usually review documents. If it's also dusk, I prefer to reply to emails instead. I can't review documents and reply to emails at the same time.",":- dynamic team_project_due/0, weekend/0, dusk/0.
+rule(r1, review_documents, []) :- team_project_due.
+rule(r2, reply_emails, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- weekend, team_project_due.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- dusk.
+rule(c3, prefer(c2, c1), []).
+complement(reply_emails, review_documents).
+complement(review_documents, reply_emails).",Fail
+31,"I can either give a presentation or call a client. Usually, I choose to give the presentation. However, if it's my birthday today, I go ahead and call the client instead. I can't give a presentation and call a client at the same time.",":- dynamic birthday_today/0.
+rule(r1, give_presentation, []).
+rule(r2, call_client, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- birthday_today.
+complement(give_presentation, call_client).
+complement(call_client, give_presentation).",Success
+32,"If my subscription is due, I clean the house. If I have an important meeting, I visit the doctor. But if I have both a subscription due and an important meeting, I usually clean the house. If I also have a new restaurant to try, I visit the doctor instead. However, if it's my wedding anniversary, I would rather visit the doctor. If the weather is nice, I prefer to clean the house. If I have a new restaurant to try, I would rather visit the doctor. I can't clean the house and visit the doctor at the same time.",":- dynamic subscription_due/0, important_meeting/0, new_restaurant/0, wedding_anniversary/0, nice_weather/0.
+rule(r1, clean_house, []) :- subscription_due.
+rule(r2, visit_doctor, []) :- important_meeting.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- important_meeting, subscription_due.
+rule(p3, prefer(r1, r2), []) :- nice_weather.
+rule(p4, prefer(r2, r1), []) :- wedding_anniversary.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- new_restaurant.
+rule(c3, prefer(c2, c1), []).
+complement(clean_house, visit_doctor).
+complement(visit_doctor, clean_house).",Fail
+33,"If I receive client feedback, I dispose of the trash. If there is a relationship break, I take the train. But if I have both client feedback and a relationship break, I usually choose to dispose of the trash. However, if there is also a community event, I take the train instead. I can't dispose of the trash and take the train at the same time.",":- dynamic client_feedback/0, relationship_break/0, community_event/0.
+rule(r1, dispose_trash, []) :- client_feedback.
+rule(r2, take_train, []) :- relationship_break.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- relationship_break, client_feedback.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- community_event.
+rule(c3, prefer(c2, c1), []).
+complement(dispose_trash, take_train).
+complement(take_train, dispose_trash).",Fail
+34,"If the weather is good, I take the bus. If my boss is in the office, I plan my meals. But if it's both good weather and my boss is in the office, I usually take the bus. If there's also a community event, I plan my meals instead. However, if I receive a tax refund, I tend to take the bus. If I missed a deadline, I prefer to plan my meals. If I have missed a deadline and received a tax refund, I usually plan my meals. I can't take the bus and plan my meals at the same time.",":- dynamic good_weather/0, boss_in_office/0, community_event/0, tax_refund/0, missed_deadline/0.
+rule(r1, take_bus, []) :- good_weather.
+rule(r2, plan_meals, []) :- boss_in_office.
+rule(r3, take_bus, []) :- good_weather, boss_in_office.
+rule(r4, plan_meals, []) :- good_weather, boss_in_office, community_event.
+rule(r5, take_bus, []) :- tax_refund.
+rule(r6, plan_meals, []) :- missed_deadline.
+rule(r7, plan_meals, []) :- missed_deadline, tax_refund.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- boss_in_office.
+rule(p3, prefer(r3, p1), []).
+rule(p4, prefer(r4, p3), []).
+rule(p5, prefer(r5, r6), []).
+rule(p6, prefer(r6, r5), []) :- missed_deadline.
+rule(p7, prefer(r7, p6), []).
+rule(c1, prefer(p4, p3), []).
+rule(c2, prefer(p5, p6), []).
+complement(take_bus, plan_meals).
+complement(plan_meals, take_bus).",Success
+35,"I can either give a presentation or host a dinner party. Usually, I prefer to give a presentation. However, if I have a job interview, I choose to host the dinner party instead. On the other hand, if I'm expecting a tax refund, I tend to give the presentation. I can't give a presentation and host a dinner party at the same time.",":- dynamic job_interview/0, tax_refund/0.
+rule(r1, give_presentation, []).
+rule(r2, host_dinner_party, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- job_interview.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- tax_refund.
+rule(c3, prefer(c2, c1), []).
+complement(give_presentation, host_dinner_party).
+complement(host_dinner_party, give_presentation).",Fail
+36,"If I'm feeling sick, I can either visit the doctor or plan my meals. Generally, I choose to visit the doctor. I can't plan my meals and visit the doctor at the same time.",":- dynamic feeling_sick/0.
+rule(r1, visit_doctor, []) :- feeling_sick.
+rule(r2, plan_meals, []) :- feeling_sick.
+rule(p1, prefer(r1, r2), []).
+rule(c1, prefer(p1, p2), []).
+complement(visit_doctor, plan_meals).
+complement(plan_meals, visit_doctor).",Fail
+37,"If it's a hot day, I order a taxi. If I'm on a low budget, I go for a cycling session. But if it's both a hot day and I'm on a low budget, I usually order a taxi. However, if it's lunchtime as well, I prefer to go cycling instead. If I have a job interview, I tend to order a taxi. On a humid day, I usually prefer to go cycling. I can't go cycling and order a taxi at the same time.",":- dynamic hot_day/0, low_budget/0, lunchtime/0, job_interview/0, humid_day/0.
+rule(r1, order_taxi, []) :- hot_day.
+rule(r2, go_cycling, []) :- low_budget.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r1, r2), []) :- hot_day, low_budget.
+rule(p3, prefer(r2, r1), []) :- lunchtime.
+rule(p4, prefer(r1, r2), []) :- job_interview.
+rule(p5, prefer(r2, r1), []) :- humid_day.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p3, p1), []).
+rule(c3, prefer(p4, p1), []).
+rule(c4, prefer(p5, p1), []).
+complement(go_cycling, order_taxi).
+complement(order_taxi, go_cycling).",Success
+38,"If the weather is nice, I go for a picnic. If I receive an invitation from a friend, I prepare a report. But if it's both nice weather and I have a friend's invitation, I usually choose to go for a picnic. However, if I also have a party invitation, I prepare the report instead. If there's a concert nearby, I tend to go for a picnic. If I have a low budget, I prefer to prepare the report. But if I have a low budget and a concert nearby, I usually go for a picnic. I can't go for a picnic and prepare a report at the same time.",":- dynamic nice_weather/0, invitation_from_friend/0, party_invitation/0, concert_nearby/0, low_budget/0.
+rule(r1, go_picnic, []) :- nice_weather.
+rule(r2, prepare_report, []) :- invitation_from_friend.
+rule(r3, go_picnic, []) :- nice_weather, invitation_from_friend.
+rule(r4, prepare_report, []) :- nice_weather, party_invitation.
+rule(r5, go_picnic, []) :- concert_nearby.
+rule(r6, prepare_report, []) :- low_budget.
+rule(r7, go_picnic, []) :- low_budget, concert_nearby.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- invitation_from_friend.
+rule(p3, prefer(r3, r4), []).
+rule(p4, prefer(r4, r3), []) :- party_invitation.
+rule(p5, prefer(r5, r6), []).
+rule(p6, prefer(r6, r5), []) :- low_budget.
+rule(p7, prefer(r7, r1), []).
+rule(p8, prefer(r1, r7), []) :- low_budget.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p4, p3), []).
+rule(c3, prefer(p6, p5), []).
+complement(go_picnic, prepare_report).
+complement(prepare_report, go_picnic).",Success
+39,"If it's afternoon, I reply to emails. If my boss is in the office, I go for an evening walk. But if it's both afternoon and my boss is in the office, I usually reply to emails. However, if I also have a subscription due, I prefer to go for an evening walk instead. If I am moving house, I tend to prefer replying to emails. But if it's early morning, I usually choose to go for an evening walk. I can't reply to emails and go for an evening walk at the same time.",":- dynamic afternoon/0, boss_in_office/0, subscription_due/0, moving_house/0, early_morning/0.
+rule(r1, reply_emails, []) :- afternoon.
+rule(r2, evening_walk, []) :- boss_in_office.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- afternoon, boss_in_office.
+rule(p3, prefer(r2, r1), []) :- subscription_due.
+rule(p4, prefer(r1, r2), []) :- moving_house.
+rule(p5, prefer(r2, r1), []) :- early_morning.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p3, p1), []).
+rule(c3, prefer(p4, p1), []).
+rule(c4, prefer(p5, p2), []).
+rule(c5, prefer(c1, c2), []).
+rule(c6, prefer(c3, c4), []).
+complement(reply_emails, evening_walk).
+complement(evening_walk, reply_emails).",Success
+40,"If I have a new neighbor, I rent a car. If I have a project extension, I make coffee. But if I have both a new neighbor and a project extension, I usually rent a car. However, if I also have a vacation planned, I prefer to make coffee instead. If there's an urgent deadline, I tend to rent a car. But if there's a hail storm, I usually make coffee. I can't rent a car and make coffee at the same time.",":- dynamic new_neighbor/0, project_extension/0, vacation_planned/0, urgent_deadline/0, hail_storm/0.
+rule(r1, rent_car, []) :- new_neighbor.
+rule(r2, make_coffee, []) :- project_extension.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_neighbor, project_extension.
+rule(p3, prefer(r1, r2), []) :- urgent_deadline.
+rule(p4, prefer(r2, r1), []) :- hail_storm.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- vacation_planned.
+rule(c3, prefer(c2, c1), []).
+complement(rent_car, make_coffee).
+complement(make_coffee, rent_car).",Fail
+41,"If I have a job interview, I go to the park. If I have a new restaurant to try, I read a book. But if I have both a job interview and a new restaurant to try, I usually go to the park. However, if I also have a vacation planned, I choose to read a book instead. I can't go to the park and read a book at the same time.",":- dynamic job_interview/0, new_restaurant/0, vacation_planned/0.
+rule(r1, go_to_park, []) :- job_interview.
+rule(r2, read_book, []) :- new_restaurant.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- vacation_planned.
+rule(c1, prefer(p2, p1), []) :- job_interview, new_restaurant.
+rule(c2, prefer(c1, p1), []).
+complement(go_to_park, read_book).
+complement(read_book, go_to_park).",Success
+42,"I can either visit the museum or go to the cinema. Usually, I prefer to visit the museum. However, if it's lunchtime, I choose to go to the cinema instead. I can't go to the cinema and visit the museum at the same time.",":- dynamic lunchtime/0.
+rule(r1, visit_museum, []).
+rule(r2, go_to_cinema, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- lunchtime.
+rule(c1, prefer(p2, p1), []).
+complement(go_to_cinema, visit_museum).
+complement(visit_museum, go_to_cinema).",Success
+43,"I can either go to the cinema or rent a car. Usually, I prefer to go to the cinema. However, if there's a community event, I choose to rent a car instead. I can't go to the cinema and rent a car at the same time.",":- dynamic community_event/0.
+rule(r1, go_to_cinema, []).
+rule(r2, rent_car, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- community_event.
+rule(c1, prefer(p2, p1), []).
+complement(go_to_cinema, rent_car).
+complement(rent_car, go_to_cinema).",Success
+44,"If there is a school reunion, I can either use the subway or drive my car. Generally, I choose to use the subway. However, if there's a family emergency, I drive my car instead. I can't use the subway and drive my car at the same time.",":- dynamic school_reunion/0, family_emergency/0.
+rule(r1, use_subway, []) :- school_reunion.
+rule(r2, drive_car, []) :- school_reunion.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- family_emergency.
+complement(use_subway, drive_car).
+complement(drive_car, use_subway).",Success
+45,"I can either go to the gym or call a client. Usually, I prefer to go to the gym. However, if I have a new neighbor, I choose to call the client instead. I can't go to the gym and call the client at the same time.",":- dynamic new_neighbor/0.
+rule(r1, go_to_gym, []).
+rule(r2, call_client, []).
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- new_neighbor.
+complement(go_to_gym, call_client).
+complement(call_client, go_to_gym).",Success
+46,"If I miss a deadline, I can either travel abroad or go for a cycling session. Usually, I choose to travel abroad. I can't travel abroad and go for a cycling session at the same time.",":- dynamic miss_deadline/0.
+rule(r1, travel_abroad, []) :- miss_deadline.
+rule(r2, cycling_session, []) :- miss_deadline.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []).
+complement(travel_abroad, cycling_session).
+complement(cycling_session, travel_abroad).",Success
+47,"If I have a low budget, I go for a morning run. If it's the weekend, I travel abroad. But if it's both a low budget and the weekend, I usually go for a morning run. However, if I also have a friend in town, I choose to travel abroad instead. I can't go for a morning run and travel abroad at the same time.",":- dynamic low_budget/0, weekend/0, friend_in_town/0.
+rule(r1, morning_run, []) :- low_budget.
+rule(r2, travel_abroad, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- low_budget, weekend.
+rule(c1, prefer(p2, p1), []) :- friend_in_town.
+rule(c2, prefer(p1, p2), []) :- low_budget, weekend.
+rule(c3, prefer(c2, c1), []).
+complement(morning_run, travel_abroad).
+complement(travel_abroad, morning_run).",Fail
+48,"If it's the weekend, I can either go to the gym or prepare a report. Usually, I choose to go to the gym. However, if I have an important meeting, I prepare the report instead. I can't go to the gym and prepare the report at the same time.",":- dynamic weekend/0, important_meeting/0.
+rule(r1, go_to_gym, []) :- weekend.
+rule(r2, prepare_report, []) :- weekend.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- important_meeting.
+complement(go_to_gym, prepare_report).
+complement(prepare_report, go_to_gym).",Success
+49,"If I get a tax refund, I go shopping. If I have a vacation planned, I explore the city. But if I have both a tax refund and a vacation planned, I usually go shopping. However, if it's also the holiday season, I prefer to explore the city instead. I can't go shopping and explore the city at the same time.",":- dynamic tax_refund/0, vacation_planned/0, holiday_season/0.
+rule(r1, go_shopping, []) :- tax_refund.
+rule(r2, explore_city, []) :- vacation_planned.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- holiday_season.
+rule(c1, prefer(p2, p1), []) :- tax_refund, vacation_planned.
+rule(c2, prefer(c1, p1), []).
+complement(go_shopping, explore_city).
+complement(explore_city, go_shopping).",Success
+50,"If I have a vacation planned, I rent a car. If it's a hot day, I visit the doctor. But if it's both a hot day and I have a vacation planned, I usually rent a car. However, if it's also a morning rush, I visit the doctor instead. If I have a friend in town, I usually choose to rent a car. I can't rent a car and visit the doctor at the same time.",":- dynamic vacation_planned/0, hot_day/0, morning_rush/0, friend_in_town/0.
+rule(r1, rent_car, []) :- vacation_planned.
+rule(r2, visit_doctor, []) :- hot_day.
+rule(p1, prefer(r1, r2), []).
+rule(p2, prefer(r2, r1), []) :- hot_day, vacation_planned.
+rule(c1, prefer(p2, p1), []).
+rule(c2, prefer(p1, p2), []) :- morning_rush.
+rule(c3, prefer(c2, c1), []).
+rule(c4, prefer(r1, r2), []) :- friend_in_town.
+rule(c5, prefer(c4, p1), []).
+complement(rent_car, visit_doctor).
+complement(visit_doctor, rent_car).",Fail
